@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "base_commit": "80c73751806f45411251711bcfb6bccebc887f0a",
+  "audit_commit": "eaa452615096cca9a498c10c5d492a2a74966123",
+  "previous_record": "provenance/changes/theory-repair-01.json",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "interpretation_only": true,
+  "changes": [
+    {
+      "path": "CLAIM_STATUS.md",
+      "old_sha256": "c7b31dced1f17cc4422017729cc35036108f3e2b471bd5f99126de9c71237fb2",
+      "new_sha256": "f5054fc0ee1f1c206744eabbfafdef3a9f18b4c3383611758589d07294c22630",
+      "reason": "Separate audited mathematics, exact predecessor reductions, candidate contributions, and unperformed experiments."
+    },
+    {
+      "path": "REPORT.md",
+      "old_sha256": "f27b55f3c81b71a893420e4418dc9eed2c8dded2b5d0c84f45fbc80cbc91e263",
+      "new_sha256": "82b4ed425b5601316b034691e36ab0745084248c18588886bb0d5822b55913d1",
+      "reason": "Update contribution attribution and historical verification wording; retain all display equations and operating numbers; use GitHub display delimiters."
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "old_sha256": "859129f299185550f7dc30b05464dd3b6117bd77f6d67fd62078a1b73afa8709",
+      "new_sha256": "1f3ad123f4bc302fb0d4a778a3bcc71ac4c721ed5b78de8fa222433dcaa91487",
+      "reason": "Integrate the completed source inventory and actual retrieval status without claiming further research or priority clearance."
+    },
+    {
+      "path": "experiment/LAB_REVIEW.md",
+      "old_sha256": "823f56b5bb6e789a25fdd4ec5b40538cefb1a5d71eb12f300f1181d88bd1a863",
+      "new_sha256": "d83938c4b365b766159778c33c46b5f9a7e3abd6650be4abe988326637992482",
+      "reason": "Link the contribution/rationale notes and preserve the five original technical questions and physical requirements."
+    }
+  ],
+  "additions": [
+    {
+      "path": "docs/CONTRIBUTIONS.md",
+      "sha256": "f6452ee1a9eb4bf035410f5d1b2b6415016d5b4ece60d829f6bf07e8afa07494",
+      "reason": "Reader-facing note integrating the bounded predecessor comparison, not a new proof or experimental protocol."
+    },
+    {
+      "path": "experiment/REVIEW_RATIONALE.md",
+      "sha256": "1b87f15a011e4d75e48e3e04e6cdd5f7fadabc0955f37b81aa3510c66bfba936",
+      "reason": "Reader-facing note integrating the bounded predecessor comparison, not a new proof or experimental protocol."
+    }
+  ]
+}
