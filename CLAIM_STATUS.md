@@ -38,3 +38,22 @@ for the entire stated photon class.
 
 The first experiment remains single use per independently hidden label. No result
 for adaptive reuse of the same label is inferred.
+
+## Independent audit and bounded repair 01
+
+The completed [audit](audits/theory-01/REPORT.md) supports the core mathematical
+claims under their stated assumptions and records F01-F03. Its original files
+and numerical evidence are unchanged. The repair corrects the score-cap statement,
+the code classicality wording, and numerical support/certificate handling.
+
+`photon_score` now distinguishes nominal rates from exact-rational, outward-rounded
+`score_lower` and `score_upper` endpoints. The reverse certificate uses the upper
+endpoint and outward rounding of its perturbation allowance. Unsupported numeric
+inputs are rejected explicitly. This does not restrict the analytic theorem.
+See [numerical contract](docs/NUMERICAL_CONTRACT.md) and the
+[repair record](repairs/theory-01/REPORT.md) for domains and executed tests.
+
+The exact enclosure concerns only the supplied binary64 photon-support problem.
+It is not a formal proof-assistant certificate, a full interval implementation of
+all classical/statistical formulas, or a guarantee on uncertain physical inputs.
+The laboratory interface, calibration assumptions, and novelty remain unverified.

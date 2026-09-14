@@ -1,0 +1,3 @@
+-r requirements-recorded.txt
+# Independent audit and repair tests only; not a new runtime dependency.
+mpmath==1.3.0

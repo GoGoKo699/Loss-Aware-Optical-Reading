@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
-      - name: Record the checkout and require a clean starting tree
+      - name: Require a clean starting checkout
         shell: bash
         run: |
           set -euo pipefail
@@ -23,67 +23,46 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.13.5'
-      - name: Install the recorded numerical environment
-        run: python -m pip install -r requirements-recorded.txt
-      - name: Verify original bytes and protected working files
+      - name: Install recorded runtime and independent test dependencies
+        run: python -m pip install -r requirements-test.txt
+      - name: Verify complete original inventory and authorized repairs
         run: python scripts/verify_import.py
-      - name: Require a complete one-to-one archive inventory
-        shell: bash
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          from zipfile import ZipFile
-          manifest = json.loads(Path('provenance/IMPORT_MANIFEST.json').read_text())
-          prefix = 'photonic_single_photon_checkpoint_07/'
-          with ZipFile(manifest['archive']) as archive:
-              names = [item.filename for item in archive.infolist() if not item.is_dir()]
-          if not all(name.startswith(prefix) for name in names):
-              raise SystemExit('Unexpected archive root')
-          sources = [entry['source'] for entry in manifest['files']]
-          targets = [entry['path'] for entry in manifest['files']]
-          if len(sources) != len(set(sources)) or len(targets) != len(set(targets)):
-              raise SystemExit('Duplicate source or installed path in import manifest')
-          if sorted(name[len(prefix):] for name in names) != sorted(sources):
-              raise SystemExit('Import manifest does not cover the complete archive')
-          if Path('.github/workflows/bootstrap.yml').exists():
-              raise SystemExit('The one-time import workflow must not remain active')
-          print(f'Complete archive inventory: {len(sources)} unique source members')
-          PY
-      - name: Run engineering regression tests
+      - name: Run engineering and exact-bound regression tests
         run: python -m unittest discover -s tests -v
-      - name: Reproduce checkpoint 07 into a new directory
+      - name: Reproduce inherited checks without changing frozen outputs
         run: python scripts/reproduce.py --output results/runs/ci
-      - name: Ensure the working tree and tracked evidence did not change
+      - name: Reproduce historical defects and repaired independent science cases
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python repairs/theory-01/verify.py --output results/runs/ci-repair
+      - name: Require unchanged working tree and no bootstrap workflow
         shell: bash
         run: |
           set -euo pipefail
+          test ! -e .github/workflows/bootstrap.yml
           git diff --exit-code
           git diff --cached --exit-code
           test -z "$(git status --porcelain --untracked-files=all)"
-      - name: Record the verified commit and reproduction summary
+      - name: Record verified commit and check summaries
         shell: bash
         run: |
           python - <<'PY'
-          import json
-          import os
-          import subprocess
+          import json, os, subprocess
           from pathlib import Path
-          report = json.loads(Path('results/runs/ci/REPRODUCTION.json').read_text())
-          commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
-          summary = report['fresh_summary']
-          lines = [
-              '## Verified research baseline',
+          r=json.loads(Path('results/runs/ci/REPRODUCTION.json').read_text())
+          a=json.loads(Path('results/runs/ci-repair/SUMMARY.json').read_text())
+          commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+          lines=['## Verified research baseline and F01-F03 repair',
               f'- Commit: `{commit}`',
-              f"- Original archive: `{report['integrity']['archive_sha256']}`",
-              f"- Original source members: {report['integrity']['source_members']}",
-              f"- Checkpoint 07: {summary['checks']} checks, {summary['status']}",
-              f"- Frozen-reference comparison: {report['reference_comparison']}",
-              '- Engineering tests and clean-tree checks passed.',
-              '- This is migration/regression verification, not a new scientific or novelty audit.',
-          ]
-          text = '\n'.join(lines) + '\n'
+              f"- Original archive: `{r['integrity']['archive_sha256']}`",
+              f"- Original members: {r['integrity']['source_members']}",
+              f"- Inherited checks: {r['fresh_summary']['checks']}, {r['reference_comparison']}",
+              f"- Historical audit checks: {a['historical_audit_checks']}",
+              f"- Repaired scientific checks: {a['repaired_scientific_checks']}",
+              '- Unit tests and clean-tree checks passed.',
+              '- No laboratory data or novelty clearance; only photon support uses exact-rational enclosures.']
+          text='\n'.join(lines)+'\n'
           print(text)
-          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as stream:
-              stream.write(text)
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as stream:stream.write(text)
           PY

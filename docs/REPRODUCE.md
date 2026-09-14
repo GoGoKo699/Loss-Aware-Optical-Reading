@@ -1,62 +1,75 @@
 # Reproduction and evidence
 
-Use Python 3.13.5 with `requirements-recorded.txt` for the recorded dependency
-versions. `requirements.txt` retains the inherited lower bounds; neither file
-is a complete OS/container lock. No GPU, laboratory connection, or network
-access is used by the validation code after installation.
+Use Python 3.13.5. `requirements-test.txt` includes the unchanged recorded NumPy
+2.3.5/SciPy 1.17.0 environment and test-only mpmath 1.3.0. The new runtime photon
+support module itself uses only the standard library. No file is a complete
+OS/container lock. No GPU, laboratory connection, or network access is used by
+validation after installation.
 
 ```bash
+python -m pip install -r requirements-test.txt
 python scripts/verify_import.py
 python -m unittest discover -s tests -v
 python scripts/reproduce.py --output results/runs/my-first-run
+python repairs/theory-01/verify.py --output results/runs/my-repair-check
 ```
 
-The output directory must not already exist. Without `--output`, a UTC timestamp
-and random suffix select a fresh directory. The wrapper sets one BLAS/OMP thread,
-checks protected hashes before and after execution, captures `run.log`, and writes
-`REPRODUCTION.json` with the environment, source hashes, commit, and comparison.
+Every output directory must be new. The reproduction wrapper uses one BLAS/OMP
+thread, checks protected hashes before and after execution, and writes the full
+run log, environment, source hashes, commit (when a Git checkout exists), and
+frozen-reference comparison. `src/validate.py` also requires an explicit new
+`--output-dir`; direct use omits the reference comparison, so prefer the wrapper.
 
-The historical `python src/validate.py` invocation now fails with a request for
-an explicit output directory. Its only source change is an I/O guard; the body
-from the seeded RNG declaration onward is byte-identical to the archived source.
-A direct invocation is possible with `--output-dir` but does not perform the
-reference comparison. Prefer the wrapper.
+## What is checked
 
-## Comparison policy
+All 5,261 inherited check names, their order, and tolerances still match the
+original archive. Fresh residuals must be finite, nonnegative, and inside their
+original tolerance. Twelve generated CSV/JSON result files are compared at the
+unchanged absolute numeric tolerance 1e-8, with exact schema and nonnumeric data.
+Only the two explicitly declared method-metadata fields change: the summary now
+states that the photon support uses exact-rational enclosures while the other
+calculations are not interval certified. No archived summary is rewritten.
 
-All 5,261 check names, their order, and their tolerances must match the archive.
-Every new residual must be finite, nonnegative, and within its declared bound.
-Twelve generated CSV/JSON files are compared field by field with absolute
-numeric tolerance `1e-8`; schema and nonnumeric values must match exactly.
-The comparison also records whether files are byte-identical. Environment,
-runtime, and summary residual maxima are reported rather than forced to match.
-This tolerance is for regression, not an experimental error bar or a proof.
+The unit suite has the original 12 engineering tests and 16 repair test groups.
+The latter include 135 support-enclosure cases with exact endpoint signs and a
+separate 120-digit original secular equation, domain boundaries, certificate
+caller tests, terminology/cap regressions, and protected-source tamper checks.
+Test counts are a regression inventory, not a substitute for the enclosure proof.
 
-A PASS means this implementation reproduced the checkpoint's checks within that
-policy. It is not an independent proof review, novelty clearance, or evidence
-from an experiment. The complete per-check ledger remains available in each run.
+The repair runner executes the unchanged 998-check audit against an extracted
+historical source, including its historical defect witnesses. It then calls all
+993 scientific checks from that same unchanged audit on repaired source. The
+remaining five historical checks are two defect assertions and three original
+source-hash checks, not scientific cases that should still pass after repairs.
+The repair tests separately establish that F01-F03 are fixed. Derived frontier
+budgets embedded in 74 test-name suffixes change at rounding scale; the runner
+records them and checks the unchanged case order and numeric tolerances. It does
+not require those numerical suffixes to be identical.
 
 ## Frozen and fresh files
 
-`results/` contains the original checkpoint-07 records. Do not overwrite them.
-Fresh runs live under ignored `results/runs/`. To preserve a reviewed new run,
-copy it into a clearly named audit directory with its provenance and scope.
-The initial repository run is under `provenance/migration07/`.
+`results/`, `baseline/`, the source archives, the original import manifest, and
+`audits/theory-01/` are historical evidence. They remain byte-preserved. A separate
+`provenance/changes/theory-repair-01.json` records old/new hashes for the four
+approved canonical changes and hashes for three added numerical-support documents
+or modules. The integrity checker rejects unknown changes; it never replaces the
+original archive hash or refreshes its manifest to bless current bytes.
 
-`provenance/archives/photonic_single_photon_checkpoint_07.zip` is the exact uploaded
-archive. `provenance/IMPORT_MANIFEST.json` maps all 39 source members. The original
-README and hash list are retained in `provenance/checkpoint07/`; their historical
-commands and relative links are not the current entry points. The archive is
-self-contained. `baseline/` holds the inherited checkpoint-06 evidence.
+Fresh runs live under ignored `results/runs/`. The bounded repair evidence is
+preserved under `repairs/theory-01/`. CI repeats the unit tests, old regression,
+and historical/repaired audit cases on an actual clean Git checkout. The initial
+local repair used a verified archive-based snapshot, not an authenticated clone.
 
 ## Analyzing future experimental trials
 
-Use `src/analyze_trials.py` only with a genuinely approved plan, separately
-justified simultaneous calibration and energy bounds, and every attempted trial.
-Templates are synthetic, not calibrated authorizations. `--allow-synthetic`
-never changes that evidential status. The analyzer cannot verify the truth of
-a declaration of preregistration or hardware calibration. Select a fresh output
-filename and preserve raw records and plan versions independently.
+Use `src/analyze_trials.py` only with an approved preregistered plan and externally
+justified simultaneous calibration and energy bounds. Every attempted trial stays
+in the record. Templates remain synthetic; `--allow-synthetic` does not change
+that evidential status. Use a fresh analysis filename and preserve raw records.
 
-No source archives, reference outputs, or experimental records should be deleted
-because a newer script produces a different number. Investigate and document it.
+The reverse certificate now uses the support upper endpoint, not its nominal
+score. This repair does not make every transcendental calculation or the complete
+statistical pipeline interval certified. Read [the numerical contract](NUMERICAL_CONTRACT.md).
+Calibration, phase-reference isolation, source tails, independent fresh labels,
+and absence of optional stopping are still external assumptions, not quantities
+a passing numerical test establishes.

@@ -319,6 +319,6 @@ jsonsave('analyzer_accounting_check.json',{'status':'PASS','counts':audit['count
 summary={'status':'PASS','checks':len(CHECKS),'seed':2026091417,'max_algebraic_residual':max(c['residual'] for c in CHECKS if not c['name'].startswith('independent_dual_solver')),
  'max_dual_solver_gap':max(r['abs_gap'] for r in optrows),'runtime_seconds':time.perf_counter()-START,
  'python':sys.version,'numpy':np.__version__,'scipy':scipy.__version__,'platform':platform.platform(),
- 'sdp_solver_used':False,'interval_arithmetic_used':False,'lab_data_used':False,
- 'scope':'Proof-backed results plus numerical diagnostics. Searches and tests are not substitutes for universal proofs.'}
+ 'sdp_solver_used':False,'interval_arithmetic_used':True,'lab_data_used':False,
+ 'scope':'Proof-backed results plus numerical diagnostics. Photon support uses exact-rational enclosures after audit repair 01; other calculations are not interval certified. Searches and tests are not substitutes for universal proofs.'}
 jsonsave('validation.json',{'summary':summary,'checks':CHECKS});print(json.dumps(summary,indent=2));print('PRIMARY SYNTHETIC:',cert)
