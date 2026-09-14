@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "seed": 2026091501,
+  "baseline_commit": "80c73751806f45411251711bcfb6bccebc887f0a",
+  "checks": 631,
+  "groups": {
+    "srm": 144,
+    "usd": 135,
+    "input_filter": 114,
+    "herzog": 156,
+    "binary_contrast": 40,
+    "nulling": 36,
+    "high_energy": 6
+  },
+  "max_residual": 2.70924301656178e-10,
+  "source_git_blobs": {
+    "src/theory.py": "e038afe2a21c6e54e3fc6eaccfbcb07c9de3ff60",
+    "src/photon_support.py": "133f2b8cb6c41edf6ec873740b58c04eb94e632b",
+    "proofs/THEORY.md": "daa095381a2c21f1a9a9f660fe68cd8354e56bd6"
+  },
+  "source_bytes_unchanged": true,
+  "scope": "Equation/normalization/measurement translations only. Not proof of originality; not a rerun of the full theory audit.",
+  "task_status": "COMPLETE_BOUNDED_COMPARISON",
+  "novelty_status": "NARROWED_CANDIDATE_CLAIMS_NOT_WORLDWIDE_PRIORITY_CLEARANCE",
+  "source_records": 21,
+  "full_text_passages_inspected": 18,
+  "recent_full_text_scope_screens_included": 2,
+  "other_scope_or_indirect_sources": [
+    "S18",
+    "S20",
+    "S21"
+  ],
+  "second_run_result_byte_identical": true,
+  "examples": {
+    "uniform_endpoints": [
+      {
+        "x": 0.001,
+        "constant_overlap": 0.999000499833375,
+        "ME_success": 0.2740770780735185,
+        "USD_success": 0.000999500166624978
+      },
+      {
+        "x": 0.07,
+        "constant_overlap": 0.9323938199059483,
+        "ME_success": 0.4653529919805901,
+        "USD_success": 0.06760618009405173
+      },
+      {
+        "x": 0.7,
+        "constant_overlap": 0.4965853037914095,
+        "ME_success": 0.8586096698183794,
+        "USD_success": 0.5034146962085905
+      },
+      {
+        "x": 1.0,
+        "constant_overlap": 0.36787944117144233,
+        "ME_success": 0.9194761522718224,
+        "USD_success": 0.6321205588285577
+      },
+      {
+        "x": 3.0,
+        "constant_overlap": 0.049787068367863944,
+        "ME_success": 0.9982251024641149,
+        "USD_success": 0.950212931632136
+      },
+      {
+        "x": 6.0,
+        "constant_overlap": 0.0024787521766663585,
+        "ME_success": 0.9999954032068719,
+        "USD_success": 0.9975212478233336
+      }
+    ],
+    "high_energy_scope": {
+      "r": 0.01,
+      "effective_pulse_energy": 3.0,
+      "optimized_nulling_receiver": 0.7362632708334493,
+      "feasible_arbitrary_POVM": 0.8244705334781822,
+      "mean_effective_budget": 0.7,
+      "mean_budget_supporting_line_at_pulse": 1.3595231173463271
+    },
+    "known_reversal": {
+      "transmission": 0.7,
+      "photon_USD": 0.7,
+      "classical_USD": 0.5034146962085905,
+      "photon_ME": 0.7749999999999999,
+      "classical_ME": 0.8586096698183794
+    }
+  },
+  "evidence_archive_sha256": "3d9cb3aa773878d23c76dfb3601bbf6c49587a950944f5efc3eaa29b33c9fbd1",
+  "evidence_members": {
+    "RESULTS.json": "aaf6d71e854a421db0eb63ae579118139ac243c07f5be65bd113ccabc2e5c22f",
+    "SOURCES.json": "e3d1c5aa80329e11bbf719124578151a1da3937b76e0d41c9c533f7c10df6fa5",
+    "REPRODUCTION.json": "0403ff40b17bf4bf99a8e5e317b0fc7af384e2d6a1cf6967eee7c45edc91f103"
+  },
+  "canonical_files_modified": false,
+  "laboratory_data": false,
+  "external_peer_review": false,
+  "merge_performed": false,
+  "execution_utc": "2026-09-14T22:22:19.411440+00:00"
+}

@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-15",
+  "record_type": "Curated search-family and retrieval record, not an exhaustive verbatim browser transcript.",
+  "source_count": 21,
+  "families": [
+    {
+      "topic": "Single-photon phase-code reading and oracle identification",
+      "resolved_sources": [
+        "S01",
+        "S02",
+        "S03"
+      ]
+    },
+    {
+      "topic": "Fixed received ensemble versus joint input/measurement error-margin optimization; loss-aware optical probes",
+      "resolved_sources": [
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09"
+      ]
+    },
+    {
+      "topic": "Gram feasibility, approximate USD, pairwise overlap converse",
+      "resolved_sources": [
+        "S10",
+        "S13",
+        "S14",
+        "S19",
+        "S20"
+      ]
+    },
+    {
+      "topic": "Classical optical discrimination, scattering matrices, displacement and energy allocation",
+      "resolved_sources": [
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "topic": "Recent photonic reliability scans, recycling, abstention exponents, energy-constrained bosonic discrimination",
+      "resolved_sources": [
+        "S15",
+        "S16",
+        "S17",
+        "S18"
+      ]
+    },
+    {
+      "topic": "Fixed-N versus anytime-valid statistics",
+      "resolved_sources": [
+        "S21"
+      ]
+    }
+  ],
+  "verbatim_late_queries": [
+    "Montanaro lower bound probability error quantum state discrimination pairwise overlap",
+    "\"Zhang\" \"Feng\" \"Sun\" \"Ying\" \"062103\" arxiv",
+    "\"Upper bound for the success probability\" \"unambiguous\"",
+    "quantum state discrimination bound success probability average pairwise overlaps errors inconclusive",
+    "\"discrimination\" \"failure\" \"sqrt\" \"m-1\"",
+    "\"coherence\" \"inconclusive\" \"error probability\"",
+    "\"coherent states\" \"rare\" \"pulses\" discrimination bound"
+  ],
+  "recovered_full_texts": [
+    "S07 Herzog PDF instead of failed HTML",
+    "S08 Bagan PDF instead of failed HTML",
+    "S09 Primaatmaja PDF including losses coda"
+  ],
+  "decisive_visual_checks": [
+    "S07 PDF page 9 Eq4.18",
+    "S08 PDF page 2 transformed ensemble",
+    "S04 PDF page 34 Sec8.3"
+  ],
+  "excluded_discovery_artifacts": [
+    "Generic arxiv.org and APS home pages returned with publication-like snippets; not theorem evidence.",
+    "arXiv:2010.15783 was unrelated and rejected; Zhuang identifier corrected to 2010.15753.",
+    "Container download/DNS failure did not imply web PDF content unavailable."
+  ],
+  "remaining_gaps": [
+    "S18 full theorem/appendix comparison was not performed.",
+    "S20 original full text was not recovered; its formula was checked via S19 SecII.",
+    "No exhaustive backward/forward citation graph, subscription-database search, or unpublished-work review.",
+    "No absence-of-prior-art statement inferred from zero search hits."
+  ]
+}

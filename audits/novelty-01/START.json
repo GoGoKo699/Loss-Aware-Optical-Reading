@@ -1,0 +1,18 @@
+{
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "baseline_commit": "80c73751806f45411251711bcfb6bccebc887f0a",
+  "branch": "audit/novelty-01",
+  "branch_previously_existed": false,
+  "work_order_commit": "248fb94f421b51d969b2aa3b151e59c49996a56b",
+  "scope": "Bounded theorem-level predecessor comparison after repair 01; no canonical modifications or merge.",
+  "source_git_blobs": {
+    "src/theory.py": "e038afe2a21c6e54e3fc6eaccfbcb07c9de3ff60",
+    "src/photon_support.py": "133f2b8cb6c41edf6ec873740b58c04eb94e632b",
+    "proofs/THEORY.md": "daa095381a2c21f1a9a9f660fe68cd8354e56bd6"
+  },
+  "source_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "local_git_worktree": null,
+  "local_access": "Fresh extracted selected-source repair package; three inputs matched remote Git blobs; container Git DNS failure. No clean local checkout claimed.",
+  "allowed_path": "audits/novelty-01/",
+  "merge_authorized": false
+}
