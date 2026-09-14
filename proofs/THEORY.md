@@ -334,7 +334,7 @@ For lambda>1/(m-1), let
 
 Maximizing the Theorem 3 upper bound minus lambda E over E>=0 gives
 
-  C-lambda E <= K_lambda[1-exp(-kappa mu)] <= 1.
+  C-lambda E <= min{1, K_lambda[1-exp(-kappa mu)]}.
 
 This upper bound is not always tight. At a fixed reference budget mu0, concavity
 further gives the energy-affine witness
@@ -467,3 +467,13 @@ photon-energy calibration procedure for this laboratory; experimental source
 parameters; global literature priority; or a journal-level novelty conclusion.
 An upper/lower comparison is labelled as such rather than promoted to an exact
 frontier. None of these outstanding items is assumed by the two primary tests.
+
+## Numerical implementation after theory audit 01
+
+The analytic theorems above retain their original domain. The floating-point
+implementation has an explicit accepted domain and distinguishes nominal recipes
+from outward-safe photon support bounds. See [the numerical contract](../docs/NUMERICAL_CONTRACT.md)
+and [repair proof](../repairs/theory-01/NUMERICAL_PROOF.md). The original audit
+report and source archive are preserved; F01 is the score-cap correction in
+section 4, F02 is the numerical repair, and F03 is a code terminology correction.
+These changes do not establish novelty or measured advantage.

@@ -67,8 +67,16 @@ def compare_run(out: Path, reference: Path) -> dict:
                         'maximum_numeric_difference': error}
     old = json.loads((reference/'validation.json').read_text())
     new = json.loads((out/'validation.json').read_text())
-    for key in ('status','checks','seed','sdp_solver_used','interval_arithmetic_used','lab_data_used','scope'):
+    for key in ('status','checks','seed','sdp_solver_used','lab_data_used'):
         compare(old['summary'][key], new['summary'][key], 'summary.'+key)
+    metadata_changes = {
+        'interval_arithmetic_used': (False, True),
+        'scope': (
+            'Proof-backed results plus numerical diagnostics. Searches and tests are not substitutes for universal proofs.',
+            'Proof-backed results plus numerical diagnostics. Photon support uses exact-rational enclosures after audit repair 01; other calculations are not interval certified. Searches and tests are not substitutes for universal proofs.')}
+    for key, (historical, repaired) in metadata_changes.items():
+        compare(old['summary'][key], historical, 'historical_metadata.'+key)
+        compare(new['summary'][key], repaired, 'repaired_metadata.'+key)
     if new['summary']['checks'] != 5261 or len(new['checks']) != 5261:
         raise ValueError('Unexpected checkpoint check count')
     for i, (a,b) in enumerate(zip(old['checks'], new['checks'])):
@@ -78,7 +86,8 @@ def compare_run(out: Path, reference: Path) -> dict:
             raise ValueError('Residual outside declared bound: '+b['name'])
     return {'reference_comparison': 'PASS', 'absolute_numeric_tolerance': ATOL,
             'files': report, 'archived_summary': old['summary'], 'fresh_summary': new['summary'],
-            'validation_policy': 'Same ordered checks and tolerances; residuals need not be byte identical.'}
+            'validation_policy': 'Same ordered checks and tolerances; residuals need not be byte identical.',
+            'approved_metadata_changes':metadata_changes}
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -106,8 +115,8 @@ def main() -> None:
     comparison.update({'integrity': integrity, 'git_start_commit': commit,
         'utc': datetime.now(timezone.utc).isoformat(), 'output_directory': str(out),
         'source_sha256': {p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
-                          for p in ('src/validate.py','src/theory.py','src/optics.py','src/analyze_trials.py')},
-        'purpose': 'Migration/regression reproduction; not an independent proof or novelty audit.',
+                          for p in ('src/validate.py','src/theory.py','src/photon_support.py','src/optics.py','src/analyze_trials.py')},
+        'purpose': 'Post-audit repair regression against preserved checkpoint-07 evidence; not a new novelty audit.',
         'lab_data_used': False})
     (out/'REPRODUCTION.json').write_text(json.dumps(comparison, indent=2)+'\n')
     print('Reproduction and protected-file verification PASS:', out)

@@ -1,0 +1,14 @@
+{
+  "scope": "Audit packet only; excludes this self-referential manifest and the historical START.json already committed separately.",
+  "baseline": "d07e4e2180992ab52ee08d0a0cad689154d2e9bd",
+  "files": {
+    "EVIDENCE.tar.xz": "42febb999f77c6915c1adf31b65e94ed59dbfc4a31f41e04cd7263f31caeea45",
+    "INDEPENDENT_DERIVATIONS.md": "b2ae53ba60ae51d90db6bd97be24ebe55b888a5c4845080ba4649af253d93e8c",
+    "README.md": "97aab407ee916ecb0cc28ecfd781401bad8711d57ff125b053b2418eb634f6e3",
+    "REPORT.md": "3d9247dd721f47e9de5bd46b319a621c09ed376bd7e3b83586bffd683210524d",
+    "SOURCE_CHECKS.md": "28416d898b49e3fb50cd8436091c6217354f318d9e46410465028c05159ec979",
+    "STATUS.json": "c9e60502ac91bec6f2e5038a836afb584a3faae20ae1067195b65089e109602b",
+    "diagnostics.py": "5fe4878d1c243f2bae37f0db8b118a555368dc539d6d797cb0f49c6c6300ad79",
+    "requirements.txt": "1a240446398e0335179391eedd8f87a70c5eabcf2a81946354ee0dcc682d3672"
+  }
+}

@@ -8,6 +8,8 @@ from dataclasses import dataclass
 import numpy as np
 from numpy.typing import ArrayLike
 from scipy.optimize import brentq
+from photon_support import (stable_solution, support_interval, reverse_support_upper,
+                            accepted_inputs, MAX_PENALTY, PhotonNumericalDomainError)
 
 
 def transmissions(eta: ArrayLike) -> np.ndarray:
@@ -22,43 +24,49 @@ def four_code() -> np.ndarray:
 
 
 def photon_score(eta: ArrayLike, penalty: float) -> dict:
-    """Max C-penalty*E over one photon, an orthogonal flat phase code,
-    any probe, and any final POVM. No occupied reference rail or idler.
-    No-click random guessing is allowed only where it improves this score.
+    """Nominal optimum/recipe plus a separate outward-safe ``score_upper``.
+
+    Accepted domain: 2..64 modes, eta in [1e-12,1], penalty in [0,1e18].
+    Values outside that implementation domain raise PhotonNumericalDomainError;
+    the analytic theorem has no such restriction. Do not use ``score`` or the
+    returned matrix's floating-point eigenvalues as certified upper bounds.
+    See docs/NUMERICAL_CONTRACT.md. No bypass, idler, or repeated device call.
     """
-    e = transmissions(eta); m = len(e)
-    if not np.isfinite(penalty) or penalty < 0:
-        raise ValueError('penalty must be finite and nonnegative')
-    threshold = 1/(m-1)
-    lam = max(float(penalty), threshold)
+    e = transmissions(eta)
+    out = stable_solution(e, penalty)
+    lam = out.pop('effective_penalty')
+    out['penalty'] = float(penalty)
+    out['p'] = np.asarray(out['p'], float)
+    out['amplitudes'] = np.sqrt(out['p'])
     v = np.sqrt(e)
-    B = (1+lam)*np.outer(v,v)/m - lam*np.diag(e)
-    eig, U = np.linalg.eigh(B)
-    z = U[:,-1]
-    if z.sum() < 0: z = -z
-    p = z*z; p /= p.sum()
-    C = float(np.sum(np.sqrt(e*p))**2/m)
-    survival = float(e @ p); E = survival-C; F = 1-survival
-    if penalty < threshold:
-        C += F/m; E += (m-1)*F/m; F = 0.
-    return {'penalty':float(penalty),'C':C,'E':max(0.,E),'F':max(0.,F),
-            'score':C-penalty*E,'p':p,'amplitudes':np.sqrt(p),
-            'eigenvalue':float(eig[-1]),'matrix':B}
+    out['matrix'] = (1+lam)*np.outer(v,v)/len(e)-lam*np.diag(e)
+    return out
 
 
 def photon_secular(eta: ArrayLike, penalty: float) -> tuple[float,np.ndarray]:
-    """Independent secular-equation calculation for penalty >= 1/(m-1)."""
-    e=transmissions(eta);m=len(e)
-    if penalty < 1/(m-1): raise ValueError('penalty below photon-only branch')
-    f=lambda b: (1+penalty)/m*np.sum(e/(b+penalty*e))-1
-    b=brentq(f,0,float(e.max())*(1+1e-10),xtol=2e-14)
-    p=e/(b+penalty*e)**2; p/=p.sum()
-    return float(b),p
+    """Separate floating-point scalar check, NOT an outward-safe certificate."""
+    e = transmissions(eta)
+    accepted_inputs(e, penalty)
+    m = len(e)
+    if penalty < 1/(m-1):
+        raise ValueError('penalty below photon-only branch')
+    # Algebraically equivalent monotone equation, without subtracting quantities
+    # of order penalty. Scaling the interval also avoids an absolute root floor.
+    scale = float(e.max())
+    scaled = e/scale
+    u = 1/(1+penalty)
+    s = penalty/(1+penalty)
+    f = lambda b: np.sum(b/(s*scaled+u*b))-m
+    b = brentq(f,0.,1.+1e-14,xtol=5e-324,rtol=9e-16)*scale
+    weights = e/(s*e+u*b)**2
+    weights /= weights.sum()
+    return float(b), weights
 
 
 def photon_frontier(eta: ArrayLike, error_budget: float) -> dict:
     """Exact optimal correct rate with E <= error_budget for a flat orthogonal code."""
     e=transmissions(eta);m=len(e)
+    accepted_inputs(e, 0.)
     if not 0 <= error_budget <= 1: raise ValueError('error_budget outside [0,1]')
     H=m/np.sum(1/e)
     if error_budget == 0:
@@ -74,15 +82,17 @@ def photon_frontier(eta: ArrayLike, error_budget: float) -> dict:
                 'penalty':1/(m-1),'branch':'partial_vacuum_guessing'}
     lo=1/(m-1);hi=1.
     while photon_score(e,hi)['E']>error_budget:
-        hi*=2
-        if hi>1e8: raise ArithmeticError('Use the zero-error limit for such a small error budget')
+        if hi >= MAX_PENALTY:
+            raise PhotonNumericalDomainError('Requested frontier point needs penalty > 1e18; use the explicit zero-error endpoint or separate higher precision')
+        hi=min(2*hi, MAX_PENALTY)
     lam=brentq(lambda l:photon_score(e,l)['E']-error_budget,lo,hi,xtol=2e-12)
     out=photon_score(e,lam);out['branch']='retuned_preparation';return out
 
 
 def classical_uniform_frontier(x: float, error_budget: float) -> dict:
     """Exact four-one-flip classical frontier for uniform loss and x=t*mu.
-    Includes positive-P mixtures, labelled rare bright pulses and arbitrary receivers.
+    Includes nonnegative Glauber-Sudarshan coherent-state mixtures, labelled rare
+    bright pulses and arbitrary receivers.
     """
     if x<0 or not np.isfinite(x) or not 0<=error_budget<=1: raise ValueError('invalid x or error')
     c=np.exp(-x);A=-np.expm1(-x)
@@ -178,8 +188,8 @@ def certify_reverse_counts(counts:dict,penalty:float,eta_upper:ArrayLike,
         raise ValueError('invalid error allocation')
     n=sum(counts.values()); radius=fixed_n_radius(n,penalty,alpha_stat)
     score=(counts['correct']-penalty*counts['wrong'])/n
-    nominal=photon_score(eta_upper,penalty)['score']
-    upper=min(1.,nominal+2*(1+penalty)*operator_radius)
+    # Use the certified support endpoint, never the rounded nominal recipe score.
+    nominal,upper=reverse_support_upper(transmissions(eta_upper),penalty,operator_radius)
     gap=score-radius-upper
     return {'N':n,'score':score,'statistical_radius':radius,
             'one_photon_upper':upper,'nominal_one_photon_upper':nominal,

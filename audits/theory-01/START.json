@@ -1,0 +1,29 @@
+{
+  "task": "independent proof and certificate audit",
+  "status": "IN_PROGRESS",
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "baseline_commit": "d07e4e2180992ab52ee08d0a0cad689154d2e9bd",
+  "baseline_tree": "cb462aa141d679fbc3873d8377513a368db86c06",
+  "branch": "audit/theory-01",
+  "branch_previously_existed": false,
+  "source_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "work_order": "work_orders/CURRENT.md at the baseline commit",
+  "allowed_changes": ["audits/theory-01/"],
+  "canonical_files_may_be_changed": false,
+  "merge_authorized": false,
+  "scope_excludes": ["manuscript drafting", "novelty clearance", "adaptive reading extensions", "laboratory execution", "automatic repairs"],
+  "local_access": "The authenticated GitHub connector supplies baseline files and Git object hashes. Container git access failed because github.com did not resolve. Numerical work uses a new disposable archive-based snapshot, not an authenticated clone.",
+  "local_git_dirty_status": null,
+  "local_status_explanation": "No pre-existing local worktree; git status is unavailable for the archive-based snapshot. Protected-file and archive hashes are checked before and after execution. Remote changes are confined to the audit directory.",
+  "verified_remote_blob_ids": {
+    "provenance/IMPORT_MANIFEST.json": "5756ee7d295229db370f0da98af19fc890e178ef",
+    "proofs/THEORY.md": "5b3006c1b2de1220c8f3e7d7080f087ce30c7d6f",
+    "src/theory.py": "496965b877fdaf9f8966b95ac2674737eb19756a",
+    "src/analyze_trials.py": "247b1fed023aed713dc677a3a47c911ed3da2186",
+    "src/validate.py": "9ee855979f588d685d31fc4fbaae478ae44ed976",
+    "scripts/verify_import.py": "174a335b036571ca9bb5476af384d1f33b4412d3",
+    "scripts/reproduce.py": "5b4e4e8b3c4c523c3bfb9a2cc73c619e496caff2",
+    "experiment/FIRST_EXPERIMENT.md": "44982c838b60ffc11379fe9052defdf8869d2037"
+  },
+  "baseline_regression": "The exact hash-verified scripts/reproduce.py was executed into a new external directory. All 5261 inherited checks and frozen-reference comparisons passed. This is regression evidence, not the independent audit."
+}

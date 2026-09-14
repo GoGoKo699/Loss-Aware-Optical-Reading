@@ -1,0 +1,49 @@
+{
+  "task": "F01-F03 bounded repair",
+  "baseline_main": "d07e4e2180992ab52ee08d0a0cad689154d2e9bd",
+  "audit_commit": "10410caf761ad858236d22c4a2f5d9a53bc94dff",
+  "authorization": "User requested the bounded repair and verified integration after the completed audit.",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "original_import_manifest_unchanged": true,
+  "changes": [
+    {
+      "path": "proofs/THEORY.md",
+      "old_sha256": "d501cde01319850ac3dd28ac49454b1792c64ad976c84f3279369cc43d89254d",
+      "new_sha256": "8812b1d009479d7efe688aed4c6998f558d4968ef121f2247bad06fd1ac9114f",
+      "reason": "F01: minimum cap; numerical-implementation cross-reference."
+    },
+    {
+      "path": "src/theory.py",
+      "old_sha256": "68e01d4f45b0bdc2dc5f87c1c8c14c9dd54325bafce2d274baac71dd707fa3fe",
+      "new_sha256": "e8e9518902aab5d3955c5b432c54b904d06e10476bacc15ebafbbc67bdca2daa",
+      "reason": "F02: stable support/rates, accepted domain, certified reverse caller; F03: classicality docstring."
+    },
+    {
+      "path": "src/validate.py",
+      "old_sha256": "a608c0613832a32e43ac530b1c1a3f109a7902f3c9a5c233f2fb8cdab46c1e30",
+      "new_sha256": "9e4bf4964dd11502622c641d41ca98689e2050f2c959e2e13cdb2126e23da774",
+      "reason": "Only method-disclosure metadata changes: exact-rational enclosures now used. Check identities, mathematics and tolerances unchanged."
+    },
+    {
+      "path": "CLAIM_STATUS.md",
+      "old_sha256": "2f0716728b65c85c302c3b88b4e653732521544df4ed5995e58c7f06b748874d",
+      "new_sha256": "c7b31dced1f17cc4422017729cc35036108f3e2b471bd5f99126de9c71237fb2",
+      "reason": "Record completed audit and repaired numeric contract; no novelty or experiment clearance."
+    }
+  ],
+  "additions": [
+    {
+      "path": "src/photon_support.py",
+      "sha256": "a10f4f8fa98416d42b726fe8b9d398393df364dda5f486ef52a14e5bcce46a29"
+    },
+    {
+      "path": "docs/NUMERICAL_CONTRACT.md",
+      "sha256": "7d146191822bc6dda171f78285a3f64441a86b638092d6a332f6697b2481b133"
+    },
+    {
+      "path": "repairs/theory-01/NUMERICAL_PROOF.md",
+      "sha256": "b20dc1174675bac9d701127930ed2c9bd1b11b53a64438e1ee5dd8951c48010e"
+    }
+  ],
+  "scope": "Original archives, frozen results, original import manifest and audit evidence remain unchanged. No expansion of analytic or physical claims."
+}

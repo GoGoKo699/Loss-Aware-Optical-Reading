@@ -64,14 +64,15 @@ healthy hypothesis. These restrictions belong to the problem definition.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-recorded.txt
+python -m pip install -r requirements-test.txt
 python scripts/verify_import.py
 python -m unittest discover -s tests -v
 python scripts/reproduce.py
+python repairs/theory-01/verify.py --output results/runs/repair-01
 ```
 
 The recorded validation environment is Python 3.13.5, NumPy 2.3.5, and SciPy
-1.17.0. The new run goes under `results/runs/<unique-id>/`; its directory is never
+1.17.0; test-only high-precision comparisons use mpmath 1.3.0. The new run goes under `results/runs/<unique-id>/`; its directory is never
 reused. Reference results remain unchanged. Full instructions and comparison
 tolerances are in [docs/REPRODUCE.md](docs/REPRODUCE.md).
 
@@ -110,10 +111,20 @@ archive, the import changes, and a fresh reproduction. Older checkpoint 06 is
 optional evidence in [baseline/](baseline/). No earlier learning or chirality
 exploration is needed to follow this project.
 
+## Audit and numerical repair
+
+The [independent audit](audits/theory-01/REPORT.md) supports the central results
+under their stated assumptions. Its three limited findings are addressed by the
+[bounded repair](repairs/theory-01/REPORT.md), with the original evidence retained.
+The photon-support code now supplies an exact-rational outward enclosure and
+rejects unsupported numerical inputs. See the [numeric domain and output contract](docs/NUMERICAL_CONTRACT.md)
+before treating a returned value as an upper-bound certificate.
+
 ## Next scientific decisions
 
-Complete the independent proof audit, compare each candidate theorem with its
-direct predecessors, and obtain laboratory feedback on the physical interface.
+Compare each candidate theorem with its direct predecessors and obtain laboratory
+feedback on the physical interface. The bounded mathematical audit is complete;
+publication novelty and actual calibration remain separate open requirements.
 Do not add an optimizer or more modes merely to enlarge the project.
 
 The broader ambition is a predictive, calibration-aware reliability–illumination

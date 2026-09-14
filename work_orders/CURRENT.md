@@ -1,39 +1,30 @@
-# Next task: independent proof and certificate audit
+# Theory audit and repair 01: completed stage
 
-Status: READY, NOT EXECUTED by the repository migration.
+The independent audit is preserved at [audits/theory-01/REPORT.md](../audits/theory-01/REPORT.md).
+Its F01-F03 findings are addressed in the [bounded repair](../repairs/theory-01/REPORT.md).
+The original audit branch and all of its evidence remain unchanged. The repair
+branch starts from that audit so the review record accompanies the corrected code.
 
-## Goal
+The latest user instruction authorizes repairing F01-F03 and merging only after
+validation. It does not authorize a scientific extension, public release, license
+selection, or laboratory execution. The exact integration commit and CI runs are
+recorded in the repair pull request; the report does not self-claim a future run.
 
-Independently check the exact mathematical and operational contracts of checkpoint
-07. Do not draft a manuscript, extend to adaptive multi-query reading, or label
-hypothetical settings as laboratory calibration.
+## Completed work
 
-## Starting point and authority
+Correct the written score cap and classicality docstring. Replace unsafe photon
+support arithmetic with a stable nominal recipe, exact-rational support enclosures,
+explicit numeric-domain rejection, and an outward-safe reverse-bound caller.
+Preserve original import hashes/results and record approved changes separately.
+Repeat the inherited validation, historical audit, repaired science cases, and
+new high-precision/domain/certificate-call tests. Do not change audit findings
+retroactively or reset the old reference outputs.
 
-On execution, record the current main commit and clean/dirty status, read AGENTS.md,
-and create audit/theory-01 from that commit. If the branch exists, inspect its
-status before continuing; do not restart or overwrite an existing audit.
+## Stop and next proposed work
 
-Read proofs/THEORY.md, CLAIM_STATUS.md, SOURCE_AUDIT.md, src/theory.py,
-src/analyze_trials.py, and experiment/FIRST_EXPERIMENT.md. The original archive
-and import manifest give the independent source baseline.
-
-## Deliverables and boundaries
-
-Write only under audits/theory-01/ on the audit branch: a claim-by-claim report,
-independently derived proofs or counterexamples, diagnostic code, source checks,
-and exact limitations. Audit the photon support/frontier, uniform classical
-attainability, all-energy mixture extension, calibrated-map certificate, reverse
-bound, and fixed-N statistical assumptions. The broad classical access model
-must not be silently weakened. One successful numerical scan is not a proof.
-
-Run the standard safe reproduction, plus independent targeted checks. Distinguish
-inherited statements, independently verified arguments, and unresolved gaps.
-Record numerical tolerances and environments. Do not change canonical proofs,
-protocols, or frozen evidence during the audit. Repairs require a separate task.
-
-## Stop
-
-Commit the audit packet and report the branch, commit, findings, and any blocking
-question. Do not merge, launch a new research extension, publish the repository,
-or move on to the novelty audit without the next authorization.
+Stop after verified repair integration. The next scientific stage is the
+claim-by-claim theorem-level comparison with direct prior literature, not another
+optimization architecture. It requires a new bounded work order on a new branch.
+Initial laboratory feedback on the documented source, phase reference, loss model,
+and acquisition interface remains a separate task. No novelty clearance, actual
+calibration, or measured advantage is implied by this repair.
