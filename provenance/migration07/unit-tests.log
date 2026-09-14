@@ -1,0 +1,17 @@
+test_bool_not_number (test_migration.ImportTests.test_bool_not_number) ... ok
+test_existing_external_output_rejected (test_migration.ImportTests.test_existing_external_output_rejected) ... ok
+test_frozen_output_rejected (test_migration.ImportTests.test_frozen_output_rejected) ... ok
+test_missing_output_rejected (test_migration.ImportTests.test_missing_output_rejected) ... ok
+test_nonfinite_rejected (test_migration.ImportTests.test_nonfinite_rejected) ... ok
+test_numeric_tolerance (test_migration.ImportTests.test_numeric_tolerance) ... ok
+test_schema_rejected (test_migration.ImportTests.test_schema_rejected) ... ok
+test_source_integrity (test_migration.ImportTests.test_source_integrity) ... ok
+test_synthetic_labels_retained (test_migration.ImportTests.test_synthetic_labels_retained) ... ok
+test_tampered_copy_rejected (test_migration.ImportTests.test_tampered_copy_rejected) ... ok
+test_trial_template_has_no_data (test_migration.ImportTests.test_trial_template_has_no_data) ... ok
+test_wrapper_existing_output_rejected (test_migration.ImportTests.test_wrapper_existing_output_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.585s
+
+OK

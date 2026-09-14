@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "fresh_directory_rerun": true,
+  "identical_result_files": [
+    "dimension_transfer.csv",
+    "high_precision_check.json",
+    "hypothetical_design_forecast.csv",
+    "hypothetical_design_inputs.json",
+    "independent_dual_checks.csv",
+    "phase_gauge_warning.json",
+    "preparation_recipes.csv",
+    "quantum_frontier.csv",
+    "synthetic_certification_example.json",
+    "synthetic_reverse_example.json",
+    "uniform_exact_comparison.csv",
+    "analyzer_accounting_check.json"
+  ],
+  "identical_validation_check_ledger": true,
+  "checks": 5261,
+  "broken_local_reader_links": [],
+  "baseline_proof_unchanged": true,
+  "no_laboratory_data": true,
+  "runtime_fields_excluded_from_byte_comparison": true
+}

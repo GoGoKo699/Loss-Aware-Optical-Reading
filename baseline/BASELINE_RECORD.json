@@ -1,0 +1,9 @@
+{
+  "original_archive": "photonic_single_photon_checkpoint_06.zip",
+  "sha256": "18b4564a1ed1d7c01fb4402fb39d8823d0e76f0934c6b9a839fbfc7f25f6f28e",
+  "original_archive_modified": false,
+  "proofs_copied_verbatim": true,
+  "fresh_extracted_rerun_status": "PASS",
+  "checks": 4453,
+  "new_results_depend_on_cp06_general_classical_unequal_finite_error_frontier": false
+}

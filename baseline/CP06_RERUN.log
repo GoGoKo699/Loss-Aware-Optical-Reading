@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "seed": 26091406,
+  "checks": 4453,
+  "max_residual": 4.12911926872539e-11,
+  "max_algebraic_residual": 2.8816383444526843e-15,
+  "max_pure_energy_search_gap": 4.12911926872539e-11,
+  "runtime_seconds": 4.583148039999969,
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "statement": "Floating-point consistency tests. Proofs, not finite tests, justify universal claims.",
+  "cvxpy_available": false,
+  "sdp_solver_claimed": false
+}
+
+Main table:
+{'t': 1, 'r': 1, 'quantum_conclusive': 1.0, 'classical_optimum': 0.6321205588285577, 'quantum_minus_classical': 0.36787944117144233, 'quantum_p_bad': 0.25, 'coherent_n_bad': 0.25, 'crossover_r': 0.23571493501692295}
+{'t': 0.7, 'r': 1, 'quantum_conclusive': 0.7, 'classical_optimum': 0.5034146962085905, 'quantum_minus_classical': 0.19658530379140948, 'quantum_p_bad': 0.25, 'coherent_n_bad': 0.25, 'crossover_r': 0.31716763074535936}
+{'t': 0.7, 'r': 0.8, 'quantum_conclusive': 0.6588235294117647, 'classical_optimum': 0.48512409260323175, 'quantum_minus_classical': 0.17369943680853295, 'quantum_p_bad': 0.2941176470588235, 'coherent_n_bad': 0.22379930105644644, 'crossover_r': 0.31716763074535936}
+{'t': 0.7, 'r': 0.5, 'quantum_conclusive': 0.56, 'classical_optimum': 0.45888059936465964, 'quantum_minus_classical': 0.10111940063534042, 'quantum_p_bad': 0.4, 'coherent_n_bad': 0.10293692261716614, 'crossover_r': 0.31716763074535936}
+{'t': 0.7, 'r': 0.2, 'quantum_conclusive': 0.35, 'classical_optimum': 0.4550694593485512, 'quantum_minus_classical': -0.10506945934855122, 'quantum_p_bad': 0.6250000000000001, 'coherent_n_bad': 0.0, 'crossover_r': 0.31716763074535936}
+{'t': 1, 'r': 0.2, 'quantum_conclusive': 0.5, 'classical_optimum': 0.5523021464132049, 'quantum_minus_classical': -0.05230214641320485, 'quantum_p_bad': 0.6250000000000001, 'coherent_n_bad': 0.0, 'crossover_r': 0.23571493501692295}
+{'t': 0.3, 'r': 0.8, 'quantum_conclusive': 0.2823529411764706, 'classical_optimum': 0.24975748818331733, 'quantum_minus_classical': 0.03259545299315325, 'quantum_p_bad': 0.2941176470588235, 'coherent_n_bad': 0.13004150638661038, 'crossover_r': 0.539609597093987}
+{'t': 0.3, 'r': 0.5, 'quantum_conclusive': 0.24, 'classical_optimum': 0.24725996547327045, 'quantum_minus_classical': -0.007259965473270458, 'quantum_p_bad': 0.4, 'coherent_n_bad': 0.0, 'crossover_r': 0.539609597093987}
+
+Phase screen:
+{'sigma_rad': 0, 'quantum_correct': np.float64(0.6588235294117647), 'quantum_wrong': np.float64(-0.0), 'quantum_inconclusive': 0.3411764705882353, 'classical_correct_upper_same_error': 0.5034146962085906, 'certified_margin': np.float64(0.1554088332031741)}
+{'sigma_rad': 0.03, 'quantum_correct': np.float64(0.658379023587037), 'quantum_wrong': np.float64(0.00044450582472767096), 'quantum_inconclusive': 0.3411764705882353, 'classical_correct_upper_same_error': 0.5208359948060477, 'certified_margin': np.float64(0.13754302878098934)}
+{'sigma_rad': 0.05, 'quantum_correct': np.float64(0.6575897781258038), 'quantum_wrong': np.float64(0.0012337512859608801), 'quantum_inconclusive': 0.3411764705882353, 'classical_correct_upper_same_error': 0.5326029867634502, 'certified_margin': np.float64(0.12498679136235358)}
+{'sigma_rad': 0.1, 'quantum_correct': np.float64(0.6539069766760595), 'quantum_wrong': np.float64(0.004916552735705198), 'quantum_inconclusive': 0.3411764705882353, 'classical_correct_upper_same_error': 0.562499926778263, 'certified_margin': np.float64(0.09140704989779647)}
+{'sigma_rad': 0.2, 'quantum_correct': np.float64(0.6394488993458538), 'quantum_wrong': np.float64(0.019374630065910888), 'quantum_inconclusive': 0.3411764705882353, 'classical_correct_upper_same_error': 0.623910756723482, 'certified_margin': np.float64(0.015538142622371853)}
+{'sigma_rad': 0.3, 'quantum_correct': np.float64(0.6162954091928421), 'quantum_wrong': np.float64(0.04252812021892254), 'quantum_inconclusive': 0.3411764705882353, 'classical_correct_upper_same_error': 0.6865454865169707, 'certified_margin': np.float64(-0.07025007732412858)}

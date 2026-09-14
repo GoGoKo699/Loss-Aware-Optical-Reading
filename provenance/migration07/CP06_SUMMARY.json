@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "seed": 26091406,
+  "checks": 4453,
+  "max_residual": 4.12911926872539e-11,
+  "max_algebraic_residual": 3.4585496524699837e-15,
+  "max_pure_energy_search_gap": 4.12911926872539e-11,
+  "runtime_seconds": 2.6238896500000095,
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "python": "3.13.5 (main, Jun 12 2025, 03:51:07) [GCC 13.3.0]",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "statement": "Floating-point consistency tests. Proofs, not finite tests, justify universal claims.",
+  "cvxpy_available": false,
+  "sdp_solver_claimed": false
+}

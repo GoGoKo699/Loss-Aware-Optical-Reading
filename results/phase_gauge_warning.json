@@ -1,0 +1,6 @@
+{
+  "original_kappa": 1.0,
+  "phase_changed_kappa": 1.3333333333333333,
+  "quantum_single_photon_density_matrices_unchanged": true,
+  "warning": "Do not independently discard the global optical phase of each hidden setting."
+}

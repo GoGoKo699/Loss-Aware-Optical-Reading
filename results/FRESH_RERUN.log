@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": 5261,
+  "seed": 2026091417,
+  "max_algebraic_residual": 1.0046144484716451e-12,
+  "max_dual_solver_gap": 3.506639423278557e-12,
+  "runtime_seconds": 2.293241455000043,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "sdp_solver_used": false,
+  "interval_arithmetic_used": false,
+  "lab_data_used": false,
+  "scope": "Proof-backed results plus numerical diagnostics. Searches and tests are not substitutes for universal proofs."
+}
+PRIMARY SYNTHETIC: {'N': 500000, 'score': 0.586518, 'statistical_radius': 0.017279635037918857, 'classical_upper': 0.5356220113030796, 'certified_gap': 0.031616353659001506, 'rejects_classical_null': True, 'familywise_error_upper': 0.00075, 'status': 'SYNTHETIC_ROUNDED_EXPECTATION_NOT_AN_EXPERIMENT', 'counts': {'correct': 295029, 'wrong': 354, 'inconclusive': 204617}, 'multiphoton_tail_subtraction': 0.002, 'certified_gap_before_tail_subtraction': 0.03361635365900151}

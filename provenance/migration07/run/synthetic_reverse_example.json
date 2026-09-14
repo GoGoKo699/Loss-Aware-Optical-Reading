@@ -1,0 +1,16 @@
+{
+  "N": 50000,
+  "score": 0.4265,
+  "statistical_radius": 0.05464300385627359,
+  "one_photon_upper": 0.22202249792047776,
+  "nominal_one_photon_upper": 0.18602249792047776,
+  "certified_gap": 0.14983449822324865,
+  "rejects_four_path_one_photon_null": true,
+  "familywise_error_upper": 0.00075,
+  "status": "SYNTHETIC_ROUNDED_EXPECTATION_NOT_AN_EXPERIMENT",
+  "counts": {
+    "correct": 21455,
+    "wrong": 26,
+    "inconclusive": 28519
+  }
+}

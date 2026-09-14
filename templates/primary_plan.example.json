@@ -1,0 +1,19 @@
+{
+  "approval_status": "PROVISIONAL_NOT_LAB_CALIBRATED",
+  "synthetic": true,
+  "condition_id": "P1_moderate_imbalance",
+  "calibration_id": "EXAMPLE_ONLY",
+  "phase_code_id": "physical_four_one_pi_flips_common_optical_phase",
+  "receiver_id": "D_Jhalf_minus_I_fixed",
+  "label_law": "independent_uniform_per_interrogation",
+  "decoder": "one_click_port_else_inconclusive",
+  "fixed_N": 500000,
+  "penalty": 5.0,
+  "kappa_upper": 0.7071172957397196,
+  "mean_energy_upper": 0.98,
+  "multiphoton_probability_upper": 0.002,
+  "alpha_stat": 0.00025,
+  "alpha_calibration": 0.0005,
+  "calibration_warning": "All numerical values are design targets. Replace with justified simultaneous held-out bounds before declaring a laboratory test. A finite photon-number probability bound alone does not bound mean energy.",
+  "test": "classical_probe_exclusion"
+}

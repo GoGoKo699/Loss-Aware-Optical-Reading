@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "counts": {
+    "correct": 4,
+    "wrong": 12,
+    "inconclusive": 48
+  },
+  "invalid_inputs_rejected": 3,
+  "both_primary_tests_checked": true,
+  "synthetic_only": true
+}
