@@ -1,144 +1,82 @@
-# Primary-source and novelty audit
+# Current source map and contribution boundaries
 
-Date: 2026-09-14. This is a bounded source comparison, not a priority certificate.
-New derivations are in proofs/THEORY.md. External mathematical or experimental
-facts are attributed below. An independently rederived expression is not thereby
-new. No journal submission or empirical claim is made.
+The completed [predecessor comparison](audits/novelty-01/REPORT.md) is now integrated
+into the main reading path. The [source inventory](audits/novelty-01/SOURCES.md)
+records 21 primary references, inspected passages and retrieval limitations.
+The [equation reductions](audits/novelty-01/REDUCTIONS.md) and
+[claim map](audits/novelty-01/CLAIM_MAP.md) are preserved without modification.
+This is a bounded literature comparison, not a worldwide priority certificate.
 
-## Direct predecessors and the precise boundaries
+## Direct reductions that determine the framing
 
-### S1. Guha and Shapiro: single-photon phase-code optical reading
+| Repository statement | Primary predecessor and locator | Use in this project |
+|---|---|---|
+| Single-photon phase-code reading | [Guha and Shapiro, 1207.6435v3](https://arxiv.org/abs/1207.6435), Eqs. (7)-(8) and loss discussion | Inherited mechanism. Keep the total-signal and per-pixel budget conventions distinct. |
+| Fixed code decoder for a supplied input | [Eldar and Forney, quant-ph/0005132](https://arxiv.org/abs/quant-ph/0005132), Sec. 8.3 | Constant-diagonal Gram square-root criterion gives the decoder; R1 makes the substitution. |
+| Error-free minimum-coefficient endpoint | [Chefles and Barnett, quant-ph/9807023](https://arxiv.org/abs/quant-ph/9807023), Eq. (3.15) | Direct Fourier-code specialization, Gram extension and input normalization; R2. |
+| General input/measurement error-margin task | [Hashimoto and colleagues, 0912.2610](https://arxiv.org/abs/0912.2610), Sec. II | The general task is inherited. R3 isolates the additional normalized-input reduction for this loss/code model. |
+| Uniform coherent fixed-alphabet curve | [Herzog, 1206.4412](https://arxiv.org/abs/1206.4412), Eq. (4.18) | Exact specialization with N=4, overlap exp(-t mu), and failure F; R4. |
+| Filter followed by minimum-error discrimination | [Bagan and colleagues, 1206.4145](https://arxiv.org/abs/1206.4145), Eqs. (6)-(8) | Existing receiver method; the input-only result must additionally account for pre-device normalization and loss. |
+| Binary spectral contrast | [Bouchet and colleagues, 2108.03755](https://arxiv.org/abs/2108.03755), Eqs. (1)-(3) | Our binary contrast is one half of their operator; R6. No general multiclass eigenmode optimum is inferred. |
+| Nulling/displacement and click receivers | [Sidhu and colleagues, 2109.00008](https://arxiv.org/abs/2109.00008), Secs. 5.1-5.2 and Appendix B | Established receiver ingredients. R5/R7 distinguish their optimization from the all-source bound. |
 
-Saikat Guha and Jeffrey H. Shapiro, *Capacity of optical reading, Part 1: Reading
-boundless error-free bits using a single photon*, arXiv:1207.6435v3;
-Physical Review A 87, 062306 (2013).
+The candidate contributions are the complete joint input-only retuning statement
+and the multiclass optical source-class converse. The known uniform curve is
+credited separately from the proof that changing the transmitter or intensity
+mixture cannot improve it at the stated mean budget. Standard inequality and
+statistical components are not separate novelty claims. [Contribution note](docs/CONTRIBUTIONS.md).
 
-https://arxiv.org/html/1207.6435v3
-https://doi.org/10.1103/PhysRevA.87.062306
+## Other relevant scope comparisons
 
-Full HTML reviewed. Single-photon path superposition, Hadamard phase coding,
-passive decoding, photon budgets, loss degradation, and distinctions between
-single-shot discrimination and capacity are prior work. This is a direct
-predecessor, not background decoration. The proposed experiment must not claim
-its four-mode routing mechanism or the general possibility of quantum reading
-as new. The unequal-loss joint input/measurement score frontier and calibrated
-finite-record comparison require more specific novelty evaluation.
+[Nair and Yen, 1107.1190](https://arxiv.org/abs/1107.1190) already study optical
+probe optimization in loss with a larger signal-idler class. That class is not
+silently imported into our restricted photon theorem.
+[Primaatmaja, Ho and Scarani, 2012.11104](https://arxiv.org/abs/2012.11104) include
+a losses coda, Sec. V, and phase-reference distinctions. Their work must not be
+characterized as purely lossless. Transmission amplitudes and probabilities
+must be converted before comparing formulas.
 
-### S2. Eldar and Forney: square-root measurement
+[Melo and colleagues, 2411.14537v1](https://arxiv.org/abs/2411.14537) already scan
+error/inconclusive tradeoffs using path-optical emulation with laser light and
+cameras. That is not a measured signal-photon advantage over the allowed classical
+source class, and it is not presented by us as one. Its declared emulation goal
+is distinct from our proposed experiment.
 
-Yonina C. Eldar and G. David Forney Jr., *On Quantum Detection and the Square-Root
-Measurement*, arXiv:quant-ph/0005132.
+Gram feasibility, pairwise overlap bounds, approximate unambiguous discrimination,
+perturbation continuity and concentration also have predecessors. See S10,
+S13-S14 and S19-S21 in the [full inventory](audits/novelty-01/SOURCES.md).
+The bounded fixed-N test imports no optional-stopping guarantee from a time-uniform
+reference and is not a new concentration theorem.
 
-https://arxiv.org/abs/quant-ph/0005132
+## Coverage and unresolved work
 
-Primary abstract and bibliographic record reviewed. The square-root measurement
-and its optimality for appropriate symmetric ensembles are established tools.
-The explicit uniform-loss POVM in this package is checked independently; its
-minimum-error endpoint is not being claimed as a new measurement principle.
+Relevant full-text passages were inspected for 18 of the 21 records; two recent
+full texts were used only for formal scope screening. S18 and S21 were
+abstract/bibliographic screens; S20 was checked indirectly through the explicit
+attribution and equation in primary source S19. Those limited readings cannot
+establish that the complete texts contain no related theorem.
 
-### S3. Primaatmaja, Ho, and Scarani: optical-mode discrimination toolbox
+Herzog, Bagan and Primaatmaja full PDFs were recovered after the earlier HTML
+retrieval failures. The original source-audit text remains in the immutable
+checkpoint-07 archive; its old retrieval gaps are not the current status.
 
-Ignatius William Primaatmaja, Asaph Ho, and Valerio Scarani, *Optimal single-shot
-discrimination of optical modes*, arXiv:2012.11104.
+Remaining concrete gaps are S18, *Efficiently Computable Strategies and Limits
+for Bosonic Channel Discrimination*, full theorem/appendix comparison; S20,
+*Upper bound for the success probability of unambiguous discrimination among
+quantum states*, original full text; and possible equivalent multiclass
+error/failure overlap bounds. The [next work order](work_orders/CURRENT.md)
+sets a bounded follow-up. No absence claim is inferred from search failures.
 
-https://arxiv.org/abs/2012.11104
+## Hardware sources and evidence status
 
-Primary abstract/bibliographic content reviewed; full HTML retrieval failed.
-Do not treat this as a completed theorem-level exclusion. The work addresses
-energy-constrained optical-mode discrimination using rigorous optimization and
-separates phase-referenced channel discrimination from photon-number-diagonal
-source discrimination. Those distinctions predate this project. Its complete
-methods must be compared before a claim of new optimized probe theory is made.
+The project hardware documents ask about balanced path preparation, phase control,
+separated optical sections, calibration, native conventions and simultaneous
+readout. They are laboratory-review questions, not a confirmed inventory.
+No cited paper's source or detector specifications are assigned to the intended
+installation. [Lab brief](experiment/LAB_REVIEW.md).
 
-### S4. Error margins and fixed inconclusive rates
-
-Ulrike Herzog, *Optimal state discrimination with a fixed rate of inconclusive
-results: Analytical solutions and relation to state discrimination with a fixed
-error rate*, arXiv:1206.4412.
-
-https://arxiv.org/abs/1206.4412
-
-E. Bagan, R. Munoz-Tapia, G. A. Olivares-Renteria, and J. A. Bergou,
-*Optimal discrimination of quantum states with a fixed rate of inconclusive
-outcomes*, arXiv:1206.4145.
-
-https://arxiv.org/abs/1206.4145
-
-Primary abstracts and descriptions reviewed; attempted full HTML retrievals
-failed. These works already connect minimum-error, error-margin, and unambiguous
-strategies and solve important symmetric cases. The full uniform classical curve
-is at high risk of being an immediate specialization of existing state-measurement
-results. Its all-coherent-illumination mean-budget upper proof is recorded, but
-that alone does not establish its novelty. The broader single-photon theorem
-also optimizes the input BEFORE an unknown loss/phase operation, which should be
-compared separately rather than assumed novel because its notation differs.
-
-### S5. Experimental error/inconclusive tradeoffs in path optics
-
-L. F. Melo, M. A. Solis-Prosser, O. Jimenez, A. Delgado, and L. Neves,
-*Experimental optimal discrimination of N states of a qubit with fixed rates of
-inconclusive outcomes*, arXiv:2411.14537v1.
-
-https://arxiv.org/html/2411.14537v1
-
-Full HTML reviewed, especially the definitions and separation-plus-minimum-error
-construction. It reports path-qubit implementations for 2,3,5,7 equally likely
-symmetric input states. The ability to experimentally scan a reliability
-tradeoff is not new by itself. Our proposed source retuning, flat code, loss
-contract, and all-classical illumination comparison are the quantities requiring
-an exact difference analysis. No comparison of uninspected figures is used.
-
-### S6. Clements and colleagues: universal passive mode meshes
-
-William R. Clements, Peter C. Humphreys, Benjamin J. Metcalf, W. Steven Kolthammer,
-and Ian A. Walmsley, *An Optimal Design for Universal Multiport Interferometers*,
-arXiv:1603.08788v2; Optica 3, 1460–1465 (2016).
-
-https://arxiv.org/html/1603.08788v2
-
-Full HTML reviewed. Universal mode unitaries and their beam-splitter/phase-shifter
-implementation justify the decoder primitive. They do not confirm the intended
-lab's source, phase bank, simultaneous output readout, native MZI convention, or
-ability to isolate the hidden operation from compilation.
-
-### S7. Statistical scope
-
-Steven R. Howard, Aaditya Ramdas, Jon McAuliffe, and Jasjeet Sekhon,
-*Time-uniform Chernoff bounds via nonnegative supermartingales*, arXiv:1808.03204.
-
-https://arxiv.org/abs/1808.03204
-
-Referenced to distinguish fixed-budget confidence from anytime-valid testing.
-The implemented test is the elementary fixed-N bounded-score Hoeffding bound,
-whose moment-generating-function proof is reproduced in THEORY.md. This package
-does not implement or claim an optional-stopping guarantee from this reference.
-
-## Project hardware source
-
-The user's 24 August 2026 LAB_REVIEW_QUESTIONS.txt asks about balanced four-path
-preparation, 0/pi phase control, separate/cascaded preparation and receiver,
-native MZI conventions, simultaneous outputs, coherent versus photon tests, and
-calibration/drift. It is a list of questions for initial review, not a confirmed
-hardware inventory. The older global-mode report explicitly distinguishes one
-photon in M paths from M-basis labels interpreted as multiple qubits.
-
-No reference paper's source/detector specification is imported as the current
-lab's equipment. No larger photon architecture is assumed.
-
-## What this stage does and does not clear
-
-The physical mechanism and the use of reliability tradeoffs are inherited.
-The explicit fixed-decoder optimal-input theorem and general map-based classical
-certificate have self-contained proofs and independent diagnostics here. They
-are candidate technical contributions, not cleared novelty claims.
-
-No exact full classical finite-error optimum for arbitrary unequal losses was
-established. A rigorous upper bound supports the positive experimental test, and
-an achieved classical score can support the reverse test. The gap between those
-bounds must remain visible.
-
-A specialist comparison of S2–S5 and the wider optimal-probe literature is still
-required before manuscript-level priority assertions. The source audit records
-failed full-text retrievals rather than pretending an abstract establishes the
-absence of a result. The experiment can be reviewed for feasibility without
-resolving every publication question in advance; a journal-level claim cannot.
+The integrated comparison changes attribution and reader-facing framing, not
+canonical proofs, numerical routines, the acquisition protocol or archived
+results. Mathematical audit, predecessor coverage, external peer review, actual
+calibration and experimental data remain separate. No release or license decision
+is made by this source map.

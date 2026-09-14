@@ -1,59 +1,72 @@
 # Claim-status ledger
 
-This ledger separates mathematical correctness in a model, numerical validation,
-implementation assumptions, and novelty. None can stand in for another.
+Mathematical validity, novelty, numerical reliability and experimental evidence
+are different questions. The completed [theory audit](audits/theory-01/REPORT.md)
+and [repair](repairs/theory-01/REPORT.md) support the model results below. The
+completed [bounded predecessor comparison](audits/novelty-01/REPORT.md) narrows
+candidate contributions; it does not establish worldwide priority.
 
-| Claim | Evidence in this package | Domain or missing step |
+## Two candidate contributions
+
+| Statement | Mathematical status | Contribution status and boundary |
 |---|---|---|
-| Fixed decoder reaches the entire ideal photon reliability frontier | Explicit upper bound and attaining preparation; independent eigenproblem/dual/POVM checks | Uniform flat orthogonal code, arbitrary positive diagonal loss, one photon in tested paths, no occupied reference/idler |
-| Zero-error harmonic-mean rule | Recovered as a limit and independently rerun baseline proof | Error-free answers, not arbitrary finite-error preparation |
-| Complete classical finite-error frontier at uniform four-one-flip loss | General coherent-mixture upper bound plus matching Gram/POVM construction | Arbitrary receiver exists mathematically; not all points implemented by the proposed click receiver |
-| General calibrated-map classical correct/error certificate | Coherent-overlap and measurement-fidelity proof; concavity handles all intensity mixtures | Passive coherent maps, uniform labels, signal mean budget, phase-referenced map envelope; generally not tight |
-| Robust contrast from operator-norm intervals | Triangle/operator norm inequality | Calibration must actually supply simultaneous valid radii, not fit residuals |
-| Linear fixed-score test and fixed-N confidence | Analytic supporting witness and bounded-mgf proof | Preregistration; iid or explicit conditional predictable-budget assumptions; energy tails externally bounded |
-| Robust reverse comparison against all four-path photons | Exact score bound plus trace-distance perturbation bound | A measured coherent receiver is still needed; excludes only the declared one-photon architecture |
-| Moderate-imbalance positive margin | Finite-source/detector model and synthetic count example | Hypothetical parameters only; source presence and map calibration not measured |
-| Severe-imbalance reverse margin | Explicit coherent nulling model and synthetic count example | Coherent displacement, phase stability, energy upper bound, and real readout to be confirmed |
-| 5,261 new consistency checks | Reproducible scripts and per-check ledger | Floating-point checks; not external validation or an exact interval certificate |
-| Checkpoint-06 results retained | Original archive hash; independent extracted rerun with 4,453 checks | Its claims stay under its original scope, not generalized silently |
-| The optical mechanism or general error-margin method is new | NOT CLAIMED | Direct predecessors are listed in SOURCE_AUDIT.md |
-| The new theorem package clears publication novelty | NOT ESTABLISHED | Further theorem-by-theorem comparison and specialist review required |
-| Exact arbitrary-loss classical finite-error boundary | NOT ESTABLISHED | Current arbitrary-map upper bound suffices for positive certification; do not plot it as an attained frontier |
-| Adaptive multi-query or total-dose advantage | NOT ESTABLISHED | Different access model; iid repeated single-use gates do not prove it |
-| Actual laboratory implementation fits the proposed margins | NOT ESTABLISHED | Initial technical review, then pilot calibration, then preregistered held-out test |
+| A. Input-only retuning attains the joint photon reliability frontier with a fixed code decoder | Analytic upper bound and attaining preparation; Theorems 1 and 2, independently audited | Candidate model-specific reduction. Uniform flat orthogonal code, positive diagonal loss, photon in tested paths; no occupied reference rail, idler or repeated call. |
+| B. Multiclass passive-map bound covers all allowed classical illumination at a mean signal budget | Coherent-overlap and measurement-statistics proof; all intensity mixtures handled by concavity; Theorems 3 and 4 | Candidate source-class converse. Uniform labels, phase-referenced passive maps and arbitrary permitted receivers. The general bound is not necessarily tight. |
+| Uniform four-symbol classical source optimum | General all-source upper bound plus matching alphabet/POVM; Theorem 5 | The fixed-alphabet curve is inherited from Herzog. Its all-source mean-budget optimality is a separate part of B, not a new measurement curve. |
 
-## Changes to the interpretation of earlier checkpoints
+See the [two-claim note](docs/CONTRIBUTIONS.md) for assumptions and precise
+predecessor distinctions. Candidate means the complete statement was not
+subsumed by the inspected passages. It is not a guarantee that no equivalent
+result exists elsewhere.
 
-The main new result is finite-error input retuning with a fixed ideal decoder.
-The inverse-loss preparation is optimal only at the zero-error endpoint, not
-throughout the decision tradeoff.
+## Results to credit as inherited or supporting consequences
 
-The classical comparison must retain the optical phase of every hidden physical
-setting. Independently choosing global phases for four SU(4) matrices changes the
-coherent comparator even when it leaves one-photon probabilities unchanged.
+| Result | Classification |
+|---|---|
+| Single-photon Hadamard phase reading and passive decoding | Established optical mechanism; Guha and Shapiro. |
+| Code decoder for a fixed input | Square-root-measurement specialization; Eldar and Forney. |
+| Zero-error inverse-loss preparation and harmonic mean | Unambiguous-discrimination/Gram-positivity plus normalization corollary. Not the optimal preparation at every nonzero error budget. |
+| Uniform fixed-alphabet correct/error/inconclusive curve | Exact specialization of Herzog Eq. (4.18), including its minimum-error endpoint. |
+| Binary contrast operator | Bouchet and colleagues' optical discrimination operator up to normalization. Multiclass eigenmode optimality is not claimed. |
+| Coherent nulling, within-receiver illumination allocation | Established receiver ingredients and ordinary constrained optimization. Not a universal receiver optimum at every energy. |
+| One-bad-path classical mean-budget comparison and crossover | Restricted supporting result from checkpoint 06. The full POVM and intensity-mixture argument matters; a general first loss-driven reversal is not claimed. |
+| Calibration norm, trace-distance, supporting-line and fixed-N statistical wrappers | Standard mathematical tools applied to this task; not independent new physical principles or an anytime-valid test. |
 
-A predicted crossing is not an observed reverse advantage. The negative primary
-test now requires an actually implemented coherent control above an upper bound
-for the entire stated photon class.
+The [source map](SOURCE_AUDIT.md) and preserved [18-item comparison](audits/novelty-01/CLAIM_MAP.md)
+provide references and explicit reductions. Prior result credit is not a claim
+that the current composite statement is trivial or fully anticipated.
 
-The first experiment remains single use per independently hidden label. No result
-for adaptive reuse of the same label is inferred.
+## Numerical and experimental status
 
-## Independent audit and bounded repair 01
+| Item | Established evidence | Limitation |
+|---|---|---|
+| Photon support calculation | Exact-rational outward support endpoints with explicit accepted numeric domain | For supplied binary64 inputs only. Nominal preparations/rates and physical calibration are not interval certified. |
+| Positive fixed-N test | Analytic all-classical score bound and bounded-score confidence proof | Requires preregistration, valid external calibration and the stated independent-trial or conditional predictable-budget assumptions. |
+| Reverse test | Photon upper bound plus perturbation allowance | An actual coherent receiver is required; only the declared photon class is excluded. |
+| Reference calculations and synthetic examples | 5,261 inherited checks and preserved reference outputs; separate repaired audit cases | No laboratory data or full-pipeline formal verification. |
+| Predecessor translations | 631 focused checks with an explicit source inventory and reductions | Checks validate equations, not originality. |
+| P1/P2/M1 proposed measurements | Self-contained initial laboratory-review protocol and hypothetical forecasts | Source, phase reference, loss model, detector readout and acquisition interface remain unconfirmed. |
 
-The completed [audit](audits/theory-01/REPORT.md) supports the core mathematical
-claims under their stated assumptions and records F01-F03. Its original files
-and numerical evidence are unchanged. The repair corrects the score-cap statement,
-the code classicality wording, and numerical support/certificate handling.
+`score_lower` and `score_upper` enclose the mathematical photon optimum. Only the
+upper endpoint is used by the reverse certificate. The lower endpoint is not a
+certificate of the rounded preparation's physical score. The
+[numerical contract](docs/NUMERICAL_CONTRACT.md) states the remaining qualifications.
+All source archives, historical audit results and frozen reference outputs remain
+preserved; updated document hashes are recorded separately.
 
-`photon_score` now distinguishes nominal rates from exact-rational, outward-rounded
-`score_lower` and `score_upper` endpoints. The reverse certificate uses the upper
-endpoint and outward rounding of its perturbation allowance. Unsupported numeric
-inputs are rejected explicitly. This does not restrict the analytic theorem.
-See [numerical contract](docs/NUMERICAL_CONTRACT.md) and the
-[repair record](repairs/theory-01/REPORT.md) for domains and executed tests.
+## Unresolved and outside current claims
 
-The exact enclosure concerns only the supplied binary64 photon-support problem.
-It is not a formal proof-assistant certificate, a full interval implementation of
-all classical/statistical formulas, or a guarantee on uncertain physical inputs.
-The laboratory interface, calibration assumptions, and novelty remain unverified.
+Publication novelty is not cleared. The current source gaps include S18's full
+theorem/appendix comparison, S20's original full text and possible other forms
+of the multiclass overlap bound. The [next work item](work_orders/CURRENT.md)
+is bounded to those comparisons.
+
+Exact arbitrary-loss classical finite-error optimality, adaptive repeated-query
+or total-dose advantage, a healthy fifth hypothesis, total-apparatus energy
+advantage and actual measured advantage are not established. No new claims in
+those directions follow from integrating the predecessor comparison.
+
+Physical maps must retain their shared optical phase reference. Every counted
+interrogation uses a fresh hidden label. No-click and multiple-click outcomes
+remain trials. Known mechanisms, a good simulation or a larger mode count cannot
+substitute for either the missing laboratory evidence or a distinct contribution.

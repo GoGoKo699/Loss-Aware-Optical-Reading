@@ -1,0 +1,47 @@
+{
+  "task": "Integrate completed predecessor comparison and reader-facing claims",
+  "baseline_main": "80c73751806f45411251711bcfb6bccebc887f0a",
+  "audit_commit": "eaa452615096cca9a498c10c5d492a2a74966123",
+  "authorization": "User requested integration after the completed bounded predecessor comparison.",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "previous_change_record": "provenance/changes/theory-repair-01.json",
+  "previous_change_record_sha256": "a4b1f7eb9ec25d8ba737de30abc7ea787dd25eaeb15289207d191c2cd20c6c10",
+  "mathematics_changed": false,
+  "acquisition_protocol_changed": false,
+  "changes": [
+    {
+      "path": "CLAIM_STATUS.md",
+      "old_sha256": "c7b31dced1f17cc4422017729cc35036108f3e2b471bd5f99126de9c71237fb2",
+      "new_sha256": "e7772573cb3d44aff79817a021622add71690049ba2645b97e9486fc2a743c71",
+      "reason": "Integrate predecessor attribution and current review status; no quantitative model change."
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "old_sha256": "859129f299185550f7dc30b05464dd3b6117bd77f6d67fd62078a1b73afa8709",
+      "new_sha256": "eb05b77b395441eb3d965462c8cde97809ca178344f5d2e85020c75bb116ed42",
+      "reason": "Integrate predecessor attribution and current review status; no quantitative model change."
+    },
+    {
+      "path": "REPORT.md",
+      "old_sha256": "f27b55f3c81b71a893420e4418dc9eed2c8dded2b5d0c84f45fbc80cbc91e263",
+      "new_sha256": "b5b032ebe4a981ad20989005b794053ad025ab35767c854be53ff8a13284da4a",
+      "reason": "Integrate predecessor attribution and current review status; no quantitative model change. Normalize GitHub math delimiters without changing expressions."
+    },
+    {
+      "path": "experiment/LAB_REVIEW.md",
+      "old_sha256": "823f56b5bb6e789a25fdd4ec5b40538cefb1a5d71eb12f300f1181d88bd1a863",
+      "new_sha256": "0716be0cd918c4e90242ff8b1cba366df804d5b55929343e078f9ee2e4ce2c6a",
+      "reason": "Integrate predecessor attribution and current review status; no quantitative model change."
+    }
+  ],
+  "additions": [
+    {
+      "path": "docs/CONTRIBUTIONS.md",
+      "sha256": "cf80c920666232f96fc37f16056136c79bce27321e152561e0061ab17156084f"
+    },
+    {
+      "path": "experiment/CLAIMS_TO_TESTS.md",
+      "sha256": "b8b0a8ab89bf1ea80337a046c8be35ecda92fe1a2d575e8cfca6b38fac44716f"
+    }
+  ]
+}

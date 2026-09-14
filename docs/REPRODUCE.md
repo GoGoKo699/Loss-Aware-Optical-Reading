@@ -1,10 +1,9 @@
 # Reproduction and evidence
 
-Use Python 3.13.5. `requirements-test.txt` includes the unchanged recorded NumPy
-2.3.5/SciPy 1.17.0 environment and test-only mpmath 1.3.0. The new runtime photon
-support module itself uses only the standard library. No file is a complete
-OS/container lock. No GPU, laboratory connection, or network access is used by
-validation after installation.
+Use Python 3.13.5. `requirements-test.txt` includes the recorded NumPy 2.3.5,
+SciPy 1.17.0 and test-only mpmath 1.3.0. No dependency version is changed by the
+claims integration. No GPU or laboratory connection is required. This is not a
+complete OS/container lock.
 
 ```bash
 python -m pip install -r requirements-test.txt
@@ -12,64 +11,66 @@ python scripts/verify_import.py
 python -m unittest discover -s tests -v
 python scripts/reproduce.py --output results/runs/my-first-run
 python repairs/theory-01/verify.py --output results/runs/my-repair-check
+python audits/novelty-01/comparison_checks.py --source-root . --output results/runs/my-source-comparison
 ```
 
-Every output directory must be new. The reproduction wrapper uses one BLAS/OMP
-thread, checks protected hashes before and after execution, and writes the full
-run log, environment, source hashes, commit (when a Git checkout exists), and
-frozen-reference comparison. `src/validate.py` also requires an explicit new
-`--output-dir`; direct use omits the reference comparison, so prefer the wrapper.
+Every output directory must be new. The reproduction wrapper checks protected
+hashes before and after execution and records logs, source hashes, environment,
+commit when available, and the frozen-reference comparison. Direct use of
+`src/validate.py` requires `--output-dir` and omits that comparison.
 
-## What is checked
+## Different checks answer different questions
 
-All 5,261 inherited check names, their order, and tolerances still match the
-original archive. Fresh residuals must be finite, nonnegative, and inside their
-original tolerance. Twelve generated CSV/JSON result files are compared at the
-unchanged absolute numeric tolerance 1e-8, with exact schema and nonnumeric data.
-Only the two explicitly declared method-metadata fields change: the summary now
-states that the photon support uses exact-rational enclosures while the other
-calculations are not interval certified. No archived summary is rewritten.
+The 5,261 inherited checks keep their names, order and tolerances. Twelve generated
+CSV/JSON files are compared at the unchanged absolute tolerance 1e-8, with exact
+schema and nonnumeric data. The repair's two declared method-metadata changes
+remain explicit; archived summaries are not rewritten.
 
-The unit suite has the original 12 engineering tests and 16 repair test groups.
-The latter include 135 support-enclosure cases with exact endpoint signs and a
-separate 120-digit original secular equation, domain boundaries, certificate
-caller tests, terminology/cap regressions, and protected-source tamper checks.
-Test counts are a regression inventory, not a substitute for the enclosure proof.
+The original 12 engineering tests and 16 repair groups remain unchanged. The
+repair groups include exact support endpoints, an independent 120-digit equation,
+135 enclosure cases, accepted-domain tests and caller/tamper regressions.
+The repair runner executes the historical 998-check audit on historical source,
+then its 993 scientific cases on repaired source. Its five defect/hash assertions
+belong to historical source, not the repaired implementation. Derived floating
+budget suffixes can change at rounding scale; case order and tolerances remain.
 
-The repair runner executes the unchanged 998-check audit against an extracted
-historical source, including its historical defect witnesses. It then calls all
-993 scientific checks from that same unchanged audit on repaired source. The
-remaining five historical checks are two defect assertions and three original
-source-hash checks, not scientific cases that should still pass after repairs.
-The repair tests separately establish that F01-F03 are fixed. Derived frontier
-budgets embedded in 74 test-name suffixes change at rounding scale; the runner
-records them and checks the unchanged case order and numeric tolerances. It does
-not require those numerical suffixes to be identical.
+The added claims-integration tests check the documentation hash chain, unchanged
+canonical mathematics and acquisition protocol, preserved novelty audit, report
+math expressions, lab questions and local reading links. They also execute the
+631 predecessor-translation checks in a new temporary directory and compare case
+identities, tolerances and example values with the archived comparison. Original
+scientific tests are not replaced. This means normal CI now executes the focused
+comparison, rather than only checking that its script exists.
 
-## Frozen and fresh files
+Passing translations is not evidence of originality. Passing mathematics is not
+laboratory calibration. Only the photon-support bounds and documented perturbation
+addition have exact-rational/outward guarantees; nominal rates and the complete
+classical/statistical pipeline are not interval certified.
+[Numerical contract](NUMERICAL_CONTRACT.md).
 
-`results/`, `baseline/`, the source archives, the original import manifest, and
-`audits/theory-01/` are historical evidence. They remain byte-preserved. A separate
-`provenance/changes/theory-repair-01.json` records old/new hashes for the four
-approved canonical changes and hashes for three added numerical-support documents
-or modules. The integrity checker rejects unknown changes; it never replaces the
-original archive hash or refreshes its manifest to bless current bytes.
+## Frozen and fresh content
 
-Fresh runs live under ignored `results/runs/`. The bounded repair evidence is
-preserved under `repairs/theory-01/`. CI repeats the unit tests, old regression,
-and historical/repaired audit cases on an actual clean Git checkout. The initial
-local repair used a verified archive-based snapshot, not an authenticated clone.
+The original checkpoint ZIP, `provenance/IMPORT_MANIFEST.json`, `baseline/`,
+frozen `results/`, earlier audits and repair evidence remain byte-preserved.
+The existing `theory-repair-01.json` ledger is also unchanged. A separate
+[documentation ledger](../provenance/changes/claims-integration-01.json) records
+post-repair old/new hashes for four documents and hashes for two added notes.
+The verifier checks each transition without resetting an old hash. That ledger
+cannot authorize changes to numerical modules or acquisition settings.
 
-## Analyzing future experimental trials
+Fresh outputs belong under ignored `results/runs/`. Preserve reviewed runs with
+their scope and provenance, not by overwriting reference files. The
+[integration record](../integrations/claims-01/REPORT.md) distinguishes local
+archive-based checks from full remote-checkout CI. The novelty audit's historical
+execution record is not rewritten to claim later remote runs.
 
-Use `src/analyze_trials.py` only with an approved preregistered plan and externally
-justified simultaneous calibration and energy bounds. Every attempted trial stays
-in the record. Templates remain synthetic; `--allow-synthetic` does not change
-that evidential status. Use a fresh analysis filename and preserve raw records.
+## Future experimental records
 
-The reverse certificate now uses the support upper endpoint, not its nominal
-score. This repair does not make every transcendental calculation or the complete
-statistical pipeline interval certified. Read [the numerical contract](NUMERICAL_CONTRACT.md).
-Calibration, phase-reference isolation, source tails, independent fresh labels,
-and absence of optional stopping are still external assumptions, not quantities
-a passing numerical test establishes.
+Use `src/analyze_trials.py` only with a genuinely preregistered plan and externally
+justified calibration, illumination and source-tail bounds. All attempted trials
+stay in the record. Templates remain synthetic, including with `--allow-synthetic`.
+A plan field cannot establish that calibration, blinding or source assumptions
+are true. Do not stop a fixed-budget test at the first apparent violation.
+
+Use fresh analysis filenames and preserve raw records independently. Hypothetical
+forecasts, rounded synthetic counts and acquired data must remain separate.

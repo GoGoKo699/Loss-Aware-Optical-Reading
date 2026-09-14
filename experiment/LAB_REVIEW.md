@@ -20,6 +20,21 @@ No computational multiphoton source, quantum memory, recirculation, or invented
 component is requested. A herald outside the computation is permitted. Detector
 and source capabilities below are questions, not confirmed inventory.
 
+## Why these measurements matter
+
+The optical phase-reading mechanism and uniform fixed-alphabet curve are known.
+The proposed technical contribution is twofold: input-only retuning attains the
+joint optimum in the stated photon model; a separate bound covers all allowed
+classical illumination, not just the control receiver available in the lab.
+These remain candidate contributions after a bounded predecessor comparison.
+
+M1 tests the predicted input redistribution with the receiver fixed. P1 tests
+whether unconditional data exclude the classical source class under calibrated
+assumptions. P2 requires an implemented coherent strategy above the bound for
+the whole declared photon class. The test identifiers, settings and acquisition
+requirements are unchanged. See [claims to tests](CLAIMS_TO_TESTS.md) and the
+[two-claim note](../docs/CONTRIBUTIONS.md).
+
 ## Required responses
 
 1. **Physical separation.** Can preparation, the hidden phase/loss bank, and the
@@ -49,4 +64,5 @@ that limitation rather than substitute an unmatched laser receiver.
 A block diagram, the answers above, relevant existing calibration files, and the
 lab's assessment of whether independent pilot data can support the declared score
 margins. No precise test transmission or 500,000-shot commitment is frozen until
-that review. Full protocol: FIRST_EXPERIMENT.md. Theory: ../proofs/THEORY.md.
+that review. Full protocol: [FIRST_EXPERIMENT.md](FIRST_EXPERIMENT.md).
+Theory: [proofs](../proofs/THEORY.md).

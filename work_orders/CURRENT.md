@@ -1,30 +1,39 @@
-# Theory audit and repair 01: completed stage
+# Next task: close the named predecessor-comparison gaps
 
-The independent audit is preserved at [audits/theory-01/REPORT.md](../audits/theory-01/REPORT.md).
-Its F01-F03 findings are addressed in the [bounded repair](../repairs/theory-01/REPORT.md).
-The original audit branch and all of its evidence remain unchanged. The repair
-branch starts from that audit so the review record accompanies the corrected code.
+Status: READY for the next authorized research turn; not executed by claims integration.
 
-The latest user instruction authorizes repairing F01-F03 and merging only after
-validation. It does not authorize a scientific extension, public release, license
-selection, or laboratory execution. The exact integration commit and CI runs are
-recorded in the repair pull request; the report does not self-claim a future run.
+The [mathematical audit](../audits/theory-01/REPORT.md),
+[numerical repair](../repairs/theory-01/REPORT.md) and
+[bounded predecessor comparison](../audits/novelty-01/REPORT.md) are complete.
+The [two-claim note](../docs/CONTRIBUTIONS.md) and
+[claims-to-tests rationale](../experiment/CLAIMS_TO_TESTS.md) now define the reading path.
+Candidate contribution status is not publication priority clearance.
 
-## Completed work
+## Bounded objective
 
-Correct the written score cap and classicality docstring. Replace unsafe photon
-support arithmetic with a stable nominal recipe, exact-rational support enclosures,
-explicit numeric-domain rejection, and an outward-safe reverse-bound caller.
-Preserve original import hashes/results and record approved changes separately.
-Repeat the inherited validation, historical audit, repaired science cases, and
-new high-precision/domain/certificate-call tests. Do not change audit findings
-retroactively or reset the old reference outputs.
+Resolve the explicit gaps in [SOURCE_AUDIT.md](../SOURCE_AUDIT.md):
+S18's complete theorem/appendix scope, S20's original full text, and closely
+related formulations of the multiclass correct/error/failure overlap bound.
+Read the actual primary sources and translate their assumptions and equations.
+Distinguish a fixed-alphabet result from a joint transmitter/receiver optimum,
+and a binary exponent from this finite multiclass mean-budget problem.
 
-## Stop and next proposed work
+Record the starting main commit and working-tree status. Use a new
+`audit/novelty-02` branch; inspect and resume it if it exists. Preserve the
+first novelty audit. Write only under `audits/novelty-02/` for this next task.
+Produce a source-access record, explicit reductions or differences, and a concise
+verdict on whether claim A or B needs reclassification. Add focused checks only
+when needed to verify a translation. Failed retrieval is not evidence of absence.
 
-Stop after verified repair integration. The next scientific stage is the
-claim-by-claim theorem-level comparison with direct prior literature, not another
-optimization architecture. It requires a new bounded work order on a new branch.
-Initial laboratory feedback on the documented source, phase reference, loss model,
-and acquisition interface remains a separate task. No novelty clearance, actual
-calibration, or measured advantage is implied by this repair.
+## Boundaries and stop
+
+Do not change canonical mathematics, reference outputs, accepted numeric domains,
+physical access or the experiment during this follow-up. Do not start adaptive
+reading, a manuscript, hardware execution, licensing or public release. Commit
+the comparison packet and stop without merging; any resulting repair or framing
+change requires a separate reviewed integration.
+
+Initial laboratory feedback remains a separate, useful task. No laboratory contact,
+calibration, source capability or measured advantage is assumed here. The completed
+[claims integration record](../integrations/claims-01/REPORT.md) records its own
+checks and merge separately from this unexecuted next work item.
