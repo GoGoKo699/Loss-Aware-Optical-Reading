@@ -1,0 +1,20 @@
+{
+  "status": "LOCAL_CHECKS_PASS",
+  "baseline_main": "80c73751806f45411251711bcfb6bccebc887f0a",
+  "preserved_audit": "eaa452615096cca9a498c10c5d492a2a74966123",
+  "local_utc": "2026-09-14T23:04:41.831357+00:00",
+  "local_document_test_groups": 9,
+  "focused_comparison_checks": 631,
+  "focused_comparison_max_residual": 2.70924301656178e-10,
+  "comparison_results_sha256": "aaf6d71e854a421db0eb63ae579118139ac243c07f5be65bd113ccabc2e5c22f",
+  "comparison_results_identical_to_preserved_audit": true,
+  "full_regression_location": "Read-only GitHub CI, to be checked at the exact integration head and merged main; not a local full-checkout claim.",
+  "local_access": "Fresh archive-based selected-source snapshot; no authenticated local Git worktree. Repaired source and original manifest matched recorded Git blob identities.",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "new_research": false,
+  "laboratory_data": false,
+  "proof_or_mathematical_source_edits": false,
+  "known_local_preliminary_issue": "A link test initially found four references to a repair report absent from the selected local snapshot. Copied the existing report from the supplied repair archive; no assertion or tolerance was changed. CI will validate the full repository checkout."
+}

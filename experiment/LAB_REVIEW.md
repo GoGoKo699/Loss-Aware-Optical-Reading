@@ -4,6 +4,14 @@ Purpose: decide whether the proposed experiment has a defensible physical input,
 unknown-operation, receiver, and calibration interface. The lab is not being asked
 to execute or fully engineer the experiment before giving feedback.
 
+The [review rationale](REVIEW_RATIONALE.md) maps the existing M1/P1/P2 tests to
+the two [candidate contributions](../docs/CONTRIBUTIONS.md). The phase-code
+mechanism and uniform fixed-alphabet curve have direct predecessors. The target
+is input-only optimal retuning and a calibrated comparison with the allowed
+classical source class, not a new interference trick. The predecessor comparison
+is complete within its recorded coverage; priority and hardware feasibility
+remain separate open questions. There are no acquired laboratory data.
+
 ## The requested experiment
 
 A single photon in four paths interrogates one hidden, independently chosen pi
@@ -49,4 +57,5 @@ that limitation rather than substitute an unmatched laser receiver.
 A block diagram, the answers above, relevant existing calibration files, and the
 lab's assessment of whether independent pilot data can support the declared score
 margins. No precise test transmission or 500,000-shot commitment is frozen until
-that review. Full protocol: FIRST_EXPERIMENT.md. Theory: ../proofs/THEORY.md.
+that review. Full protocol: [FIRST_EXPERIMENT.md](FIRST_EXPERIMENT.md).
+Theory: [proofs/THEORY.md](../proofs/THEORY.md).

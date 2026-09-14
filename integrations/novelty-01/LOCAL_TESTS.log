@@ -1,0 +1,14 @@
+test_changed_note_rejected (test_documentation_integration.DocumentationIntegrationTests.test_changed_note_rejected) ... ok
+test_claim_boundaries_are_visible (test_documentation_integration.DocumentationIntegrationTests.test_claim_boundaries_are_visible) ... ok
+test_document_chain_passes (test_documentation_integration.DocumentationIntegrationTests.test_document_chain_passes) ... ok
+test_document_ledger_cannot_authorize_source_or_missing_document (test_documentation_integration.DocumentationIntegrationTests.test_document_ledger_cannot_authorize_source_or_missing_document) ... ok
+test_predecessor_audit_preserved (test_documentation_integration.DocumentationIntegrationTests.test_predecessor_audit_preserved) ... ok
+test_reader_links_resolve (test_documentation_integration.DocumentationIntegrationTests.test_reader_links_resolve) ... ok
+test_reader_math_delimiters_and_headings (test_documentation_integration.DocumentationIntegrationTests.test_reader_math_delimiters_and_headings) ... ok
+test_report_equations_and_lab_questions_preserved (test_documentation_integration.DocumentationIntegrationTests.test_report_equations_and_lab_questions_preserved) ... ok
+test_stale_document_preimage_rejected (test_documentation_integration.DocumentationIntegrationTests.test_stale_document_preimage_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.062s
+
+OK
