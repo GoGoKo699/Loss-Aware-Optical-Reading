@@ -1,0 +1,10 @@
+{
+  "bundle_sha256": "cf82595947e7fefec9c3cb02fe5591d3f1796fde42612b5e60ccb7f2810d8a00",
+  "bundle_size": 22156,
+  "format": "xz-compressed UTF-8 JSON copy/add source delta",
+  "parts": [
+    {"path": "repairs/theory-01/transport/DELTA_00.b64", "git_blob": "77b1cd54b086e15a98285c3d74c6874c6aaabf42", "sha256": "a2c371e5617e03f82e8c629446f1fd0fb845dbf30c1fa71cd4fc1d760011b785"},
+    {"path": "repairs/theory-01/transport/DELTA_01.b64", "git_blob": "0c091621b2e6fd9841e3ceec41a7d25103c8f5ca", "sha256": "649edb6f837c10b11145bf1694effc890ed7a93cda3e2930131af95167a65508"},
+    {"path": "repairs/theory-01/transport/DELTA_02.b64", "git_blob": "07234c9a5f8867c4ee155b0bb0b2910be661d325", "sha256": "2ef70ba49d8638bb988e67821d8ce55086eb32b93de2e33a60d33cc0c5972c0f"}
+  ]
+}
