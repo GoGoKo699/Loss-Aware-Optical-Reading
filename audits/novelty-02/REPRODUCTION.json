@@ -1,0 +1,10 @@
+{
+  "run1_results_sha256": "13eaa17fbad16eeffb616fafed0eaad1d91c748302023418b924e4ab67982e38",
+  "run2_results_sha256": "13eaa17fbad16eeffb616fafed0eaad1d91c748302023418b924e4ab67982e38",
+  "byte_identical": true,
+  "execution_utc": "2026-09-14T23:41:39.759041+00:00",
+  "canonical_code_imported": false,
+  "canonical_files_written": false,
+  "local_git_checkout": null,
+  "scope": "New independent comparison script only; no full canonical suite rerun locally."
+}
