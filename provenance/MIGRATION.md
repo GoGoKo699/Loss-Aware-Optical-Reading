@@ -37,6 +37,16 @@ result tables/JSON files match within the declared absolute tolerance of 1e-8;
 all 5,261 check identities/tolerances are unchanged and all fresh residuals pass.
 The reference `results/` directory was not regenerated or overwritten.
 
+## Remote completion
+
+The GitHub import was independently confirmed at commit
+`4cc807a766218e4037b8983297a69d3277ecdd51`. Its actual import-job log and a subsequent
+successful normal development workflow were inspected. See the
+[remote verification record](migration07/REMOTE_VERIFICATION.md) for exact commit
+and run identifiers, additional source-archive checks, and the completion PR.
+The archived execution above remains the original import evidence; it was not
+replaced by the subsequent verification.
+
 ## Remaining boundaries
 
 No acquired laboratory data, physical calibration, outside peer review, formal
