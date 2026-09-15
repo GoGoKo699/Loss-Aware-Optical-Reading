@@ -1,36 +1,38 @@
-# Reader-facing claim integration: completed scope
+# Attribution integration 02
 
-The mathematical audit and F01-F03 repair are preserved in
-[audits/theory-01](../audits/theory-01/REPORT.md) and
-[repairs/theory-01](../repairs/theory-01/REPORT.md). The completed
-[predecessor comparison](../audits/novelty-01/REPORT.md) narrows the contribution
-without changing the canonical mathematics.
+The mathematical audit, F01-F03 repair, and bounded source comparisons are
+preserved. The named S18/S20 follow-up and a close-equivalent multiclass bound
+comparison are complete; [audit 02](../audits/novelty-02/REPORT.md) records the
+result. They do not authorize a new research campaign.
 
-## This task
+## Authorized task
 
-The user's instruction after that comparison authorized integrating its source
-map and reader-facing claims, a short two-claim contribution note, and a
-matching laboratory-review rationale. The bounded work order is
-[integrations/novelty-01/WORK_ORDER.md](../integrations/novelty-01/WORK_ORDER.md).
-It permits a history-preserving merge only after validation.
+The user's instruction after the follow-up authorizes integrating that evidence
+and correcting the contribution hierarchy. The existing
+[work order](../integrations/novelty-02/WORK_ORDER.md) and
+[continuation record](../integrations/novelty-02/RESUME.md) define this task.
 
-The new entry points are [CONTRIBUTIONS.md](../docs/CONTRIBUTIONS.md),
-[SOURCE_AUDIT.md](../SOURCE_AUDIT.md), and
-[REVIEW_RATIONALE.md](../experiment/REVIEW_RATIONALE.md). All mathematical source,
-proofs, physical access definitions, raw templates, operational acquisition
-protocol, frozen results, and original audit packets remain unchanged. Protected
-document edits have a separate chained old/new hash ledger.
+Lead with A as the candidate joint input-only retuning result. Retain B as the
+derived optical source-class benchmark with credited predecessors. Update source access status and the
+lab rationale. Keep all performance formulas, resource classes, penalties,
+confidence allocation, acquisition rules, and original questions unchanged.
+Preserve the committed 572-check audit and separate supplied 717-assertion packet
+without replacing their records. Approved protected-document edits have a new
+old/new hash layer after the existing ledgers.
 
-The integration report and pull-request record identify actual verification
-runs and the merged commit; this file does not predict their outcome.
+The [integration report](../integrations/novelty-02/REPORT.md) and PR history
+identify actual checks and final commits. A configured workflow or a local
+archive run is not evidence that a future complete-checkout run has passed.
 
-## Stop and next proposed work
+## Completion and next boundary
 
-Stop after verified integration. No new scientific extension, source search,
-laboratory message, hardware execution, manuscript, license, or public release
-is included. Future work requires a new bounded work order on a new branch.
+Stop after a reviewed, history-preserving merge and verified main CI. No canonical
+mathematical/protocol change, new literature campaign, lab contact, hardware
+execution, manuscript, license, release, or privacy change is included.
 
-The remaining publication-facing task is the recorded S18/S20 source follow-up
-and close-equivalent comparison for the two candidate statements. Initial
-laboratory feedback on the documented physical interface is a separate task.
-Priority, external peer review, calibration, and measured advantage remain open.
+After this stage, the next scoped research decision should concern the
+significance and physical robustness of A, not repeating the resolved S18/S20
+task or claiming B as an independent new generic inequality. Initial lab feedback
+remains separate. Any scientific extension needs its own bounded work order.
+World-wide priority, external proof review, actual calibration, and measured
+advantage remain unestablished.

@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-15",
+  "record_type": "Curated query/retrieval record; not an exhaustive verbatim tool transcript",
+  "named_targets": [
+    "S18 arXiv:2603.19911v1",
+    "S20 PRA64 062103"
+  ],
+  "decisive_additional_source": "S22 arXiv:1708.03968v1, PRL120050402",
+  "query_examples": [
+    "2603.19911 Efficiently Computable Strategies and Limits for Bosonic Channel Discrimination",
+    "Upper bound for the success probability of unambiguous discrimination among quantum states 062103",
+    "duality inconclusive Bagan",
+    "discrimination inconclusive coherence bound",
+    "Duality games and operational duality relations error",
+    "1708.03968 050402",
+    "coherence discrimination sqrt n-2",
+    "Lower bound on inconclusive probability Feng",
+    "Xin Lu An upper bound discrimination"
+  ],
+  "retrieval": [
+    {
+      "source": "S18",
+      "successful": "Full arXiv v1 HTML and parsed PDF; relevant definitions, lemmas and appendix proofs inspected",
+      "failed": "Local HTTP downloads failed due container DNS; publisher accepted-page direct open failed",
+      "not_done": "Ancillary-code reproduction, figure-value extraction, independent audit of all external proofs, publisher-version comparison"
+    },
+    {
+      "source": "S20",
+      "successful": "Author-uploaded embedded original three-page article text; official APS metadata",
+      "failed": "Direct DOI/APS/harvest PDF and standalone author-host PDF download",
+      "qualification": "Original text recovered; no downloaded publisher PDF or screenshot claimed"
+    },
+    {
+      "source": "S22",
+      "successful": "Complete parsed 8-page arXiv PDF; main lemma and supplemental weighted-Gram proof; author full-text host as additional access",
+      "failed": "HTML/versioned-PDF and screenshots for pages 3,6,7",
+      "qualification": "No figures used; equation text read, not OCR"
+    },
+    {
+      "source": "S08",
+      "successful": "Parsed arXiv PDF, Eqs6-10 and general filter-method scope",
+      "qualification": "Used with transformed priors and support restriction"
+    },
+    {
+      "source": "S23",
+      "successful": "Parsed arXiv v2 PDF, earlier quadratic relation; main variable definitions"
+    },
+    {
+      "source": "S24",
+      "successful": "Publisher abstract/introduction/conclusion",
+      "failed": "Exact Eq17 not exposed; author host has no full text",
+      "qualification": "Discovery lead only; not needed for the decisive S22 reduction"
+    },
+    {
+      "source": "S25",
+      "successful": "Official abstract and original-author publication listing",
+      "qualification": "No full-text comparison; not a new unresolved prerequisite for the exact S20 recovery"
+    }
+  ],
+  "discarded_discovery_hits": [
+    "Unrelated engineering reliability and financial/accounting results from broad failure-probability queries",
+    "Generic indexes and secondary summaries were not treated as theorem evidence",
+    "Compromised-looking mirror of a university author page was not used"
+  ],
+  "scope_limit": "Explicit implication of already published statements established; no proof of exhaustive worldwide priority or nonexistence of additional equivalents."
+}

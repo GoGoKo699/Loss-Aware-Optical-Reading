@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "source_zip_sha256": "e0e6558b99d15451ed02388dee3a579e03b6f37dc906d87d7cec2287fcd6f557",
+  "archive": "integrations/novelty-02/SUPPLIED_FOLLOWUP.tar.xz",
+  "archive_sha256": "ed819f672fb24f767a8545d7fb8517d907d4795608bcb0ba1ae9909136407e34",
+  "members": {
+    "audits/novelty-02/MANIFEST.json": "441afd44f641831ea63e7816d88c84251143555dc962cf07b4cdd83986406261",
+    "audits/novelty-02/PROPOSED_CLAIM_UPDATE.md": "613ce8ffe52e1ac51df35ab2cea1cee200c84a465186f15454dfebdf41c30d16",
+    "audits/novelty-02/README.md": "570967590eaba436d16a2542650d1b10672a8938e38a41b15fb16db68426437a",
+    "audits/novelty-02/REDUCTIONS.md": "78e4ebf56d9b649febd511b4fc312c90eb5f1ca82eeb4d2f0ee542987ab62255",
+    "audits/novelty-02/REPORT.md": "e710662e94ff7adef60acccc02e9ff4bdec096752f52da30ea773a7925fb1ad4",
+    "audits/novelty-02/SEARCH_LOG.json": "2aefb2bfe307ff5987c7ce35479d1f1dafdf82546ae954b2a0f35fad8c405356",
+    "audits/novelty-02/SOURCES.md": "f0d42e4f68629791c7fd44b2ea1eec7980ad8a967d26bcbf82c4ba51cdeccbce",
+    "audits/novelty-02/START.json": "0ab5a64b6cda241ac53e8b4076547f1237a96a6df78c4d422a9b344164e516f3",
+    "audits/novelty-02/SUMMARY.json": "6554572ff24f4a2f0ee7b35fc389b213af2dacbfe60efa00cd5a5db57a7839ea",
+    "audits/novelty-02/WORK_ORDER.md": "e9dd51945b53957f836182fbdc4f63dae14de18450232c745b4e58d6bf013d16",
+    "audits/novelty-02/check_equivalences.py": "13989727d9d605fa1f7b65e1e911bc204673da3909def8a3442aacfa1c8ff85f",
+    "audits/novelty-02/results/ENVIRONMENT.json": "20df8ca45a3e13b9bd8f35659ab906f5b879272cae86ab52fe64864c21a65b6d",
+    "audits/novelty-02/results/ENVIRONMENT_run2.json": "125d4d66fa2689ff524f9727d735eabfe280b20e463f85696949f5f33ad06abf",
+    "audits/novelty-02/results/REPRODUCTION.json": "f1e2157384b284d41758ecce00fbca6acc931892e8648849640b001002f4cd18",
+    "audits/novelty-02/results/RESULTS.json": "606f9ff2ed2116c2c09caac2400fc92fd4f6365b6a5eddf02d9b5bf866fc79ee",
+    "audits/novelty-02/results/run1.log": "24c28cd7efe36ff67fc530237632b293e9da72f2495b30fbba44ab1c53456589",
+    "audits/novelty-02/results/run2.log": "24c28cd7efe36ff67fc530237632b293e9da72f2495b30fbba44ab1c53456589",
+    "audits/novelty-02/verify_packet.py": "d0e74bd3ed736864d423ee1a7c1043716186e693b0089b93d09c8bde4181514f"
+  },
+  "scope": "All original audit-directory members preserved byte for byte. Outer transport patch/instructions are not reapplied or substituted for the committed 572-check audit."
+}

@@ -4,13 +4,14 @@ Purpose: decide whether the proposed experiment has a defensible physical input,
 unknown-operation, receiver, and calibration interface. The lab is not being asked
 to execute or fully engineer the experiment before giving feedback.
 
-The [review rationale](REVIEW_RATIONALE.md) maps the existing M1/P1/P2 tests to
-the two [candidate contributions](../docs/CONTRIBUTIONS.md). The phase-code
-mechanism and uniform fixed-alphabet curve have direct predecessors. The target
-is input-only optimal retuning and a calibrated comparison with the allowed
-classical source class, not a new interference trick. The predecessor comparison
-is complete within its recorded coverage; priority and hardware feasibility
-remain separate open questions. There are no acquired laboratory data.
+The [review rationale](REVIEW_RATIONALE.md) links the unchanged M1/P1/P2 tests
+to the [candidate contribution and derived benchmark](../docs/CONTRIBUTIONS.md).
+A, input-only joint optimal retuning, is the leading candidate theoretical result.
+B is a credited optical corollary used for the all-classical-source comparison,
+not a new general discrimination inequality. The named full-text comparisons
+are resolved; priority for A and hardware feasibility remain separate questions.
+There are no acquired laboratory data. This attribution update changes none of
+the five technical questions or the operational protocol.
 
 ## The requested experiment
 

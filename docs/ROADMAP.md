@@ -1,46 +1,58 @@
 # Research roadmap
 
-The organizing question is when a simple single-photon reader is preferable to
-the allowed classical source class after loss, wrong answers, and failed trials
-are counted. A substantive result or usable certificate matters more than a new
-algorithm name or a larger mode count.
+The central question is when a simple photon reader is useful after loss,
+reliability, and failed attempts are counted. The experimental stretch ambition
+requires a substantive result and a defensible measured resource comparison,
+not a higher mode count or a new algorithm name.
 
-## Established working baseline
+## Established working position
 
-The mathematical audit is complete and its three bounded repairs are integrated.
-The predecessor comparison is also complete within its recorded coverage. The
-current [two-claim note](CONTRIBUTIONS.md) distinguishes candidate technical
-contributions from known measurement formulas and optical mechanisms. This is a
-working research baseline, not priority clearance or experimental validation.
+The theory audit and numerical repair are complete. The bounded predecessor
+comparisons, including the named S18/S20 full-text tasks, are complete at their
+recorded access levels. Their consequence is explicit:
 
-## Next decisions
+**A: input-only joint optimal retuning is the leading candidate contribution.
+B: the all-classical certificate is a derived optical benchmark.**
 
-**Publication-facing evidence.** Resolve the explicitly recorded S18 full-text
-comparison and S20 retrieval gap, check close equivalents of the multiclass
-bound, and seek outside specialist evaluation of the two narrow claims. This
-requires a new bounded research task; the integration did not execute it.
+The benchmark remains strong and necessary. It does not become a second
+independent general theorem because it is useful experimentally. Wider priority
+and outside specialist evaluation remain open. See
+[the contribution note](CONTRIBUTIONS.md) and [source map](../SOURCE_AUDIT.md).
 
-**Laboratory-facing evidence.** Obtain initial feedback using
-[the review brief](../experiment/LAB_REVIEW.md). The first question is whether the
-source statistics, separated optical sections, common-phase calibration, full
-records, and coherent displacement option support the proposed comparison.
-No external message or hardware execution has been performed by this integration.
+## Next decisions, not automatically executed tasks
 
-If independent pilot characterization supports a conservative margin, freeze the
-settings and statistical plan before held-out acquisition. M1 tests preparation
-retuning, P1 tests an all-classical-source ceiling, and P2 requires an actual
-coherent receiver above the restricted photon bound. These remain the existing
-tests, not three newly invented claims.
+The next theoretical decision is whether A's exact model-specific reduction and
+its physically useful operating range substantiate the desired paper. A bounded
+study may compare A more closely with joint probe/measurement results and examine
+robustness that matters to the existing lab interface. Define its assumptions,
+outputs, and stop condition first; do not initiate an unrelated apparatus search.
 
-## Later extensions, not current results
+The parallel practical decision is initial laboratory feedback on source
+statistics, independent preparation/hidden-operation/receiver control, shared
+phase calibration, complete records, and coherent displacement. The
+[review rationale](../experiment/REVIEW_RATIONALE.md) and
+[five questions](../experiment/LAB_REVIEW.md) are ready for that discussion.
+No message or experiment is authorized simply by this roadmap.
 
-A second genuinely orthogonal flat phase code or calibrated configuration could
-test transfer beyond four paths. Eight single-path flips are not an eight-state
-orthogonal code. Exact arbitrary-imbalance classical finite-error optimality,
-adaptive repeated reading, and total-illumination advantages need separate
-proofs and access models. More modes alone do not demonstrate scaling or an
-advantage.
+After feedback, a pilot can determine whether the conservative margins are
+reachable. Only then should a preregistered held-out acquisition be frozen.
+M1 tests retuning; P1 tests above the credited classical ceiling; P2 tests an
+actual coherent strategy above the whole restricted photon ceiling. The current
+[protocol](../experiment/FIRST_EXPERIMENT.md) is unchanged.
 
-No journal outcome, experimental date, calibrated inventory, or public release
-is promised. The next workspace should read
-[work_orders/CURRENT.md](../work_orders/CURRENT.md) before changing scope.
+## Later extensions, not current claims
+
+A second phase code or independently calibrated configuration could test transfer.
+It must answer a scientific question, not repeat four-mode behavior in an
+unnecessarily large mesh. Eight single-path flips are not the four-mode
+orthogonal code scaled up.
+
+Exact arbitrary-imbalance classical finite-error optimality and adaptive total-
+illumination advantages require new proofs. Unconfirmed lab values are not
+inputs to a readiness claim. New hardware, multiple interacting photons, idlers,
+occupied bypass rails, and quantum memory are not implicit resources.
+
+The named source tasks should not remain listed as unexecuted. Partial S24/S25
+leads are recorded, not promoted indefinitely into prerequisites after the
+explicit inherited reduction is already established. No journal outcome,
+experiment date, public release, or licensing decision is promised.

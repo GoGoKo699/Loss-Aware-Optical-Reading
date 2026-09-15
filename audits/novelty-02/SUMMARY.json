@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "seed": 2026091502,
+  "baseline": "db17e1ec1868107b0fe1042d5a480769b552633e",
+  "checks": 572,
+  "groups": {
+    "S20": 64,
+    "S22_no_failure": 52,
+    "filtered_lift": 248,
+    "finite_failure_attainment": 144,
+    "optical_composition": 54,
+    "S18_scope": 10
+  },
+  "max_residual": 1.2168044349891716e-13,
+  "declared_tolerance": 2e-10,
+  "script_sha256": "62455a64ed9bfd2b0446ef4b8bcddafd3c52c227bb689926d1325aa2fdb54fec",
+  "scope": "Finite predecessor-normalization, conclusive-filter and optical-composition checks. Universal reasoning is in REDUCTIONS.md. No originality or experimental certificate.",
+  "examples": {
+    "S20_not_universally_tight": {
+      "priors": [
+        0.99,
+        0.01
+      ],
+      "overlap": 0.5,
+      "S20_upper": 0.900501256289338,
+      "binary_USD_optimum_from_S08_Eq10": 0.7424999999999999
+    },
+    "conditional_filters": [
+      {
+        "case": "nonuniform_conditionals",
+        "C": 0.375,
+        "E": 0.0,
+        "F": 0.625,
+        "R": 0.0,
+        "conditional_priors": [
+          0.026666666666666672,
+          0.10666666666666669,
+          0.3266666666666666,
+          0.54
+        ],
+        "conditional_success": 1.0
+      },
+      {
+        "case": "zero_conditional_prior",
+        "C": 0.365,
+        "E": 0.0,
+        "F": 0.635,
+        "R": 0.0,
+        "conditional_priors": [
+          0.0,
+          0.10958904109589043,
+          0.33561643835616434,
+          0.5547945205479452
+        ],
+        "conditional_success": 1.0
+      },
+      {
+        "case": "deliberately_wrong",
+        "C": 0.0,
+        "E": 0.48999999999999994,
+        "F": 0.51,
+        "R": 0.0,
+        "conditional_priors": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "conditional_success": 0.0
+      }
+    ],
+    "rare_bright_finite_example": {
+      "weights": [
+        0.999,
+        0.001
+      ],
+      "energies": [
+        0.0,
+        500.0
+      ],
+      "mean": 0.5,
+      "kappa": 0.6983296880986629,
+      "C": 0.20060000000000017,
+      "E": 0.5993999999999998,
+      "classical_C_upper": 0.9798505897692567
+    },
+    "S18_pure_output_support": [
+      {
+        "t_mu": 0.01,
+        "overlap": 0.9900498337491681,
+        "outside_support": 0.019801326693244636,
+        "regularized_relative_entropies": [
+          0.15099817466722457,
+          0.2872911618604295,
+          0.42407339139502187
+        ]
+      },
+      {
+        "t_mu": 0.7,
+        "overlap": 0.4965853037914095,
+        "outside_support": 0.7534030360583935,
+        "regularized_relative_entropies": [
+          5.726666319119585,
+          10.930866912696745,
+          16.135190526656245
+        ]
+      },
+      {
+        "t_mu": 1.0,
+        "overlap": 0.36787944117144233,
+        "outside_support": 0.8646647167633873,
+        "regularized_relative_entropies": [
+          6.572299856890231,
+          12.54512450181276,
+          18.518016672393376
+        ]
+      },
+      {
+        "t_mu": 5.0,
+        "overlap": 0.006737946999085467,
+        "outside_support": 0.9999546000702375,
+        "regularized_relative_entropies": [
+          7.60055740180993,
+          14.507999046504647,
+          21.41544071385743
+        ]
+      }
+    ],
+    "S18_reference_distinction": {
+      "signal_marginal_difference": 0.0,
+      "joint_trace_distance": 0.0662493357113661
+    }
+  },
+  "task_status": "COMPLETE_BOUNDED_FOLLOWUP",
+  "branch": "audit/novelty-02",
+  "work_order_commit": "15661fccf1c323ee4571d9c6e36f12e408e00792",
+  "S18_status": "RELEVANT_FULL_TEXT_AND_APPENDIX_COMPARISON_COMPLETE_ARXIV_V1",
+  "S20_status": "ORIGINAL_AUTHOR_UPLOADED_TEXT_RECOVERED_AND_COMPARED_PUBLISHER_PDF_NOT_DOWNLOADED",
+  "generic_multiclass_core_status": "S22_NO_FAILURE_MATCH_PLUS_S08_FILTER_COROLLARY",
+  "optical_bound_status": "CREDITED_OPTICAL_SOURCE_CLASS_COROLLARY_NOT_INDEPENDENT_NEW_GENERAL_DISCRIMINATION_THEOREM",
+  "claim_A_status": "CANDIDATE_JOINT_DESIGN_REDUCTION_NOT_SUBSUMED_BY_INSPECTED_SOURCES_PRIORITY_UNESTABLISHED",
+  "second_run_byte_identical": true,
+  "evidence_sha256": "194f3761b71a85a471fb013797cdd2ff2c463af811520353a983e1685ac506f5",
+  "evidence_members": {
+    "RESULTS.json": "13eaa17fbad16eeffb616fafed0eaad1d91c748302023418b924e4ab67982e38",
+    "ENVIRONMENT.json": "89c4e1696fe151f8f79eb23723a75aac29ad301ffe0ebe9a1e2926336caf99d2",
+    "REPRODUCTION.json": "ba1f73aee5fd14db13daf9a94384452c3092989a4970de2f6dcd5045e5ab07fa"
+  },
+  "canonical_changes": false,
+  "lab_data_used": false,
+  "merge_performed": false
+}
