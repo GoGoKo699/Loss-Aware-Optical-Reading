@@ -1,0 +1,15 @@
+{
+  "task": "Repair GFM table layout and remove editorial approval/discussion traces from current reader pages",
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "verified_remote_main": "55a90a3162326e924b460977d4c19714f39ae606",
+  "base_tree": "bf45ef1360e19fd6cc51c6f41fd2d0fac86a90eb",
+  "initial_local_branch": "handover/math-approval-03",
+  "initial_local_head": "044745bc814ef58236e7b097e99464352534bb8a",
+  "initial_local_status": "clean",
+  "local_access": "Existing exact API-materialized Git checkout. Signed main merge object verified locally; dedicated branch created without resets or authenticated-clone claims.",
+  "branch": "handover/table-cleanup-04",
+  "equivalent_task_found": false,
+  "open_PRs_at_start": [],
+  "authority": "Owner requested repair of the commissioning-table layout and removal of discussion/approval markers from reader-facing explanations. Existing reviewed history-preserving merge authorization applies.",
+  "scope": "Exactly five reader documents plus bounded validation and new integration evidence. Approved philosophy body and confirmed SU4/SU8 availability remain intact. Prior evidence, scientific routines, claims, numerical tolerances, protocols, archives and earlier ledgers are preserved."
+}

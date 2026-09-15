@@ -16,10 +16,16 @@ channels; the mathematical convention does not claim their physical order.
 | Role | Exact target | Physical implementation to identify |
 |---|---|---|
 | Preparation | A photon with amplitudes `a_i = sqrt(p_i)`, `sum(p_i) = 1` | A programmable preparation section, the other chip, or a separate preparation network |
-| Hidden operation | `O_j = I4 - 2 |j><j|`, uniformly selected `j = 0,1,2,3` | An independently controlled phase section, hidden from the reader |
+| Hidden operation | Pi phase flip on path j; uniformly selected `j = 0,1,2,3` | An independently controlled phase section, hidden from the reader |
 | Device loss | `T = diag(sqrt(eta_0),...,sqrt(eta_3))`, `0 < eta_i <= 1` | Characterized physical attenuation between P0 and P1; independent of the label in the ideal model |
 | Photon receiver | `D4 = J4/2 - I4` | A four-mode programmed interferometer after P1 |
 | Decision | A single click in output `k` reports `k` | A recorded, fixed-window detector arrangement; no or multiple clicks are inconclusive |
+
+The hidden operation is
+
+```math
+O_j=I_4-2|j\rangle\langle j|,\qquad j=0,1,2,3.
+```
 
 The exact matrices are
 

@@ -1,6 +1,6 @@
 """Static handover navigation/math checks; no browser rendering or instrument I/O.
 
-This script checks files, Markdown anchors, simple display-math syntax, and the
+This script checks files, Markdown anchors, table widths, simple display-math syntax, and the
 existence of Python scripts named in runnable shell blocks. Actual reference
 execution and numerical verification remain separate recorded checks.
 """
@@ -95,10 +95,72 @@ def _math(text: str) -> None:
             raise ValueError('Unbalanced display-math braces')
 
 
+def _table_cells(line: str) -> list[str]:
+    """Split GFM table cells: backticks do not protect a literal pipe."""
+    boundaries = []
+    code_fence = 0
+    index = 0
+    while index < len(line):
+        char = line[index]
+        preceding = len(line[:index]) - len(line[:index].rstrip('\\'))
+        escaped = preceding % 2 == 1
+        if char == '`' and not escaped:
+            end = index + 1
+            while end < len(line) and line[end] == '`':
+                end += 1
+            length = end-index
+            if not code_fence:
+                code_fence = length
+            elif length == code_fence:
+                code_fence = 0
+            index = end
+            continue
+        if char == '|' and not escaped:
+            if code_fence:
+                raise ValueError('Unescaped pipe inside table code; move the formula outside the table')
+            boundaries.append(index)
+        index += 1
+    starts, ends = [-1] + boundaries, boundaries + [len(line)]
+    cells = [line[left+1:right].strip() for left, right in zip(starts, ends)]
+    if boundaries and not cells[0]:
+        cells.pop(0)
+    if boundaries and not cells[-1]:
+        cells.pop()
+    return cells
+
+
+def _tables(text: str) -> tuple[int, int]:
+    """Check explicit table widths before GFM can truncate or fill cells."""
+    lines = _outside_fences(text).splitlines()
+    tables = rows = 0
+    for index, line in enumerate(lines):
+        if '|' not in line or not re.fullmatch(r'[\s|:\-]+', line):
+            continue
+        separator = _table_cells(line)
+        if not separator or not all(re.fullmatch(r':?-+:?', cell) for cell in separator):
+            continue
+        if index == 0 or not lines[index-1].strip():
+            continue
+        width = len(separator)
+        header = _table_cells(lines[index-1])
+        if len(header) != width:
+            raise ValueError(f'Table header has {len(header)} cells; expected {width}')
+        tables += 1
+        cursor = index + 1
+        while cursor < len(lines) and lines[cursor].strip() and '|' in lines[cursor]:
+            cells = _table_cells(lines[cursor])
+            if len(cells) != width:
+                raise ValueError(f'Table row at line {cursor+1} has {len(cells)} cells; expected {width}')
+            rows += 1
+            cursor += 1
+    return tables, rows
+
+
 def verify_documents(root: Path, documents: list[Path]) -> dict:
     root = root.resolve()
     links = 0
     script_references = 0
+    tables = table_rows = 0
     for document in documents:
         document = document.resolve()
         if root not in document.parents:
@@ -107,6 +169,9 @@ def verify_documents(root: Path, documents: list[Path]) -> dict:
         text = _outside_fences(original)
         try:
             _math(original)
+            document_tables, document_rows = _tables(original)
+            tables += document_tables
+            table_rows += document_rows
         except ValueError as error:
             raise ValueError(str(document.relative_to(root))+': '+str(error)) from error
         for target in re.findall(r'\]\(([^)]+)\)', text):
@@ -136,8 +201,9 @@ def verify_documents(root: Path, documents: list[Path]) -> dict:
     return {
         'status': 'PASS', 'documents_checked': len(documents),
         'local_links_checked': links, 'python_script_references_checked': script_references,
+        'tables_checked': tables, 'table_body_rows_checked': table_rows,
         'visual_rendering_checked': False, 'commands_executed_by_this_check': False,
-        'scope': 'Static local navigation, simple Markdown/math syntax, and script-path checks only',
+        'scope': 'Static local navigation, table widths, simple Markdown/math syntax, and script-path checks only',
     }
 
 

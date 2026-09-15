@@ -1,7 +1,7 @@
 # Physical setting and scope
 
-**Both an SU(4) chip and an SU(8) chip are available in the laboratory, as confirmed
-by the project owner.** Use [SU4](../experiment/SU4.md) or
+**Both an SU(4) chip and an SU(8) chip are available in the laboratory.**
+Use [SU4](../experiment/SU4.md) or
 [SU8](../experiment/SU8.md) to choose an experiment. This confirmation concerns
 the processors; their complete experimental interfaces and calibration have not
 been supplied.

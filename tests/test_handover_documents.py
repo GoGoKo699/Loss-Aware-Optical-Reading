@@ -8,7 +8,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
-from verify_handover import verify, verify_documents, _anchors
+from verify_handover import verify, verify_documents, _anchors, _tables
 
 
 class HandoverDocumentTests(unittest.TestCase):
@@ -56,6 +56,29 @@ class HandoverDocumentTests(unittest.TestCase):
     def test_duplicate_headings_and_fences(self):
         text = '# Port 0\n\n## Port 0\n\n```python\n# Not a heading\n```\n'
         self.assertEqual(_anchors(text), {'port-0', 'port-0-1'})
+
+    def test_tables_reject_pipes_inside_code_and_truncated_rows(self):
+        cases = [
+            ('| SU4 | `O_j=I4-2|j><j|` | Port j |', 'Unescaped pipe'),
+            ('| SU4 | ``A |j>`` | Port j |', 'Unescaped pipe'),
+            ('| SU4 | target | output | discarded |', 'has 4 cells; expected 3'),
+            ('| SU4 | target |', 'has 2 cells; expected 3'),
+            ('SU4 | target | output | discarded', 'has 4 cells; expected 3'),
+        ]
+        for row, message in cases:
+            with self.subTest(row=row):
+                with self.assertRaisesRegex(ValueError, message):
+                    _tables('| Route | Target | Output |\n|---|---|---|\n' + row)
+        with self.assertRaisesRegex(ValueError, 'Table header'):
+            _tables('| Route | Target | Output |\n|---|---|\n| SU4 | Target |')
+
+    def test_tables_accept_escaped_pipes_and_ignore_fenced_examples(self):
+        text = ('| Route | Target | Output |\n|---|:---|---:|\n'
+                r'| SU4 | `O_j=I4-2\|j><j\|` | Port j |' + '\n\n'
+                '```text\n| Invalid | Example |\n|---|---|\n| a | b | c |\n```\n\n'
+                '```math\n|j\\rangle\n```\n\n'
+                'Route | Result\n--- | ---\nSU8 | Port j\n')
+        self.assertEqual(_tables(text), (2, 2))
 
     def test_math_fences_preserve_markdown_sensitive_expressions(self):
         # Literal fences protect escaped braces; relation macros also avoid
@@ -111,7 +134,8 @@ class HandoverDocumentTests(unittest.TestCase):
             ('docs/THEORY_ROUTE.md', 15), ('docs/CONTRIBUTIONS.md', 3),
             ('docs/ROBUSTNESS_GUIDE.md', 1), ('experiment/M1.md', 3),
             ('experiment/P1.md', 4), ('experiment/P2.md', 4),
-            ('experiment/SU4.md', 5), ('experiment/SU8.md', 7),
+            ('experiment/SU4.md', 6), ('experiment/SU8.md', 7),
+            ('experiment/COMMISSIONING.md', 7),
         ]
         for name, count in pages:
             with self.subTest(document=name):
