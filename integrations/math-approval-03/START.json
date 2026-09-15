@@ -1,0 +1,17 @@
+{
+  "task": "Residual math rendering correction and recording explicit owner approval of philosophy",
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "verified_remote_main": "01d715a80dbe48c3c20f43337fb524753e3cdb54",
+  "base_tree": "1cf08840ad2f735d6132372df2bffb21718ccef9",
+  "initial_local_branch": "handover/layout-motivation-02",
+  "initial_local_head": "499e726ed64fd50b4bba17f6e7ed9f13b46ec551",
+  "initial_local_status": "clean",
+  "local_access": "Existing API-materialized Git checkout; exact signed main merge object verified locally, then a new branch created. No authenticated clone claimed.",
+  "branch": "handover/math-approval-03",
+  "open_PRs_at_start": [],
+  "equivalent_task_found": false,
+  "authority": "Owner reports a remaining layout error and explicitly approves the inspiration/philosophy text. Existing reviewed history-preserving merge authorization remains in effect.",
+  "approved_philosophy_base_sha256": "7d9577da1547261cfb563a69b44335f5a7a03c28b859d38d768b03d5c98f3ee8",
+  "approved_body_unchanged": true,
+  "boundary": "Five current reader documents plus bounded validators/tests and new evidence. No changes to science, acquisition protocol, original source/study data, archives, frozen outputs, earlier ledgers, privacy, licensing or release state."
+}

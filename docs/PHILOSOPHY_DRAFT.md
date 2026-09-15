@@ -1,7 +1,7 @@
 # Inspiration and working philosophy
 
-**Draft for owner approval.** This text is an editorial draft, not an approved
-personal statement or a novelty claim. The factual claim ledger is separate.
+**Approved by the project owner on 2026-09-15.** The factual claim ledger is
+separate; this statement of working philosophy does not establish novelty.
 
 We want to start with a small task whose mechanism can be explained from end to
 end. Here the question is simple: which phase pattern did one photon encounter?

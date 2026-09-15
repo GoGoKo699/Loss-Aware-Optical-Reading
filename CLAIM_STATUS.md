@@ -82,7 +82,7 @@ certificates, numerical proposals and laboratory calibration remain distinct.
 No measured advantage, universal noise tolerance or native SU8 robustness is claimed.
 
 The [uncertainty worksheet](experiment/UNCERTAINTY.md) leaves actual laboratory
-values to supply. [Philosophy](docs/PHILOSOPHY_DRAFT.md) is a draft for owner approval.
+values to supply. [Philosophy](docs/PHILOSOPHY_DRAFT.md) is approved by the project owner.
 It does not change A's candidate status or B's derived attribution. The existing
 M1/P1/P2 meanings and full acquisition contract remain unchanged.
 

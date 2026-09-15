@@ -18,6 +18,7 @@ sys.path.insert(0, str(ROOT/'scripts'))
 from verify_import import (
     verify, LAYOUT_RECORD, LAYOUT_PATHS, LAYOUT_PREIMAGES, LAYOUT_BASE_COMMIT,
     LAYOUT_BASE_TREE, HANDOVER_RECORD, HISTORICAL_LEDGER_SHA256, _layout_hash,
+    MATH_APPROVAL_RECORD, _math_approval_hash,
 )
 
 
@@ -57,9 +58,12 @@ class LayoutIntegrationTests(unittest.TestCase):
         self.assertEqual(ledger['previous_record'], HANDOVER_RECORD)
         self.assertEqual(ledger['previous_record_sha256'],
                          HISTORICAL_LEDGER_SHA256[HANDOVER_RECORD])
+        math_approval = {entry['path']: entry for entry in
+                         json.loads((ROOT/MATH_APPROVAL_RECORD).read_text())['changes']}
         for entry in ledger['changes']:
             self.assertEqual(entry['old_sha256'], LAYOUT_PREIMAGES[entry['path']])
-            self.assertEqual(entry['new_sha256'],
+            expected = _math_approval_hash(entry['path'], entry['new_sha256'], math_approval)
+            self.assertEqual(expected,
                              hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest())
 
     def test_baseline_cannot_be_retargeted(self):

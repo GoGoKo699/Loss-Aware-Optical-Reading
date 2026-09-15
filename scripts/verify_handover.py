@@ -82,6 +82,10 @@ def _math(text: str) -> None:
     if outside.count('$$') % 2:
         raise ValueError('Unpaired display-math delimiters')
     for expression in expressions:
+        # A later HTML stage can misread j<k even when Markdown preserved it.
+        # TeX relation macros keep the same comparison without tag characters.
+        if '<' in expression or '>' in expression:
+            raise ValueError('Raw HTML-sensitive comparison in display math; use \\lt or \\gt')
         level = 0
         for match in re.finditer(r'(?<!\\)[{}]', expression):
             level += 1 if match.group() == '{' else -1

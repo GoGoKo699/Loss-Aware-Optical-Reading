@@ -67,7 +67,7 @@ C\le\min\left\{1-E,
 Here m is the number of labels and kappa is the operator norm of
 
 ```math
-H_\Delta=\frac{1}{m(m-1)}\sum_{j<k}
+H_\Delta=\frac{1}{m(m-1)}\sum_{j\lt k}
 (A_j-A_k)^\dagger(A_j-A_k).
 ```
 

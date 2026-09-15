@@ -1,0 +1,227 @@
+{
+  "status": "PASS",
+  "baseline": "01d715a80dbe48c3c20f43337fb524753e3cdb54",
+  "node_version": "v24.19.0",
+  "mathjax_full_version": "3.2.2",
+  "markdown_it_version": "14.1.0",
+  "katex_version": "0.16.22",
+  "parse5_version": "7.2.1",
+  "documents_checked": 2,
+  "displays_checked": 18,
+  "changed_displays": 3,
+  "scope": "Exact relation-macro substitution; identical direct mathematical renders; controlled HTML5-before-TeX transport.",
+  "live_github_rendering_checked": false,
+  "visual_inspection_by_this_script": false,
+  "user_renderer_implementation_identified": false,
+  "transport_cases": [
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 3,
+      "kind": "pair-sum subscript",
+      "original_tex": "H_\\Delta=\\frac{1}{m(m-1)}\\sum_{j<k}\n(A_j-A_k)^\\dagger(A_j-A_k).",
+      "original_after_html5": "H_\\Delta=\\frac{1}{m(m-1)}\\sum_{j",
+      "old_transport_preserved": false,
+      "old_after_html5_mathjax_parses": false,
+      "old_after_html5_katex_parses": false,
+      "old_katex_error": "KaTeX parse error: Expected '}', got 'EOF' at end of input: …{m(m-1)}\\sum_{j",
+      "corrected_tex": "H_\\Delta=\\frac{1}{m(m-1)}\\sum_{j\\lt k}\n(A_j-A_k)^\\dagger(A_j-A_k).",
+      "corrected_transport_preserved": true,
+      "corrected_after_html5_mathjax_parses": true,
+      "corrected_after_html5_katex_parses": true
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 2,
+      "kind": "positive transmission condition",
+      "original_tex": "O_j=I_4-2|j\\rangle\\langle j|,\\qquad\nT=\\mathrm{diag}(\\sqrt{\\eta_0},\\ldots,\\sqrt{\\eta_3}),\n\\qquad 0<\\eta_i\\leq1.",
+      "original_after_html5": "O_j=I_4-2|j\\rangle\\langle j|,\\qquad\nT=\\mathrm{diag}(\\sqrt{\\eta_0},\\ldots,\\sqrt{\\eta_3}),\n\\qquad 0<\\eta_i\\leq1.",
+      "old_transport_preserved": true,
+      "old_after_html5_mathjax_parses": true,
+      "old_after_html5_katex_parses": true,
+      "old_katex_error": null,
+      "corrected_tex": "O_j=I_4-2|j\\rangle\\langle j|,\\qquad\nT=\\mathrm{diag}(\\sqrt{\\eta_0},\\ldots,\\sqrt{\\eta_3}),\n\\qquad 0\\lt\\eta_i\\leq1.",
+      "corrected_transport_preserved": true,
+      "corrected_after_html5_mathjax_parses": true,
+      "corrected_after_html5_katex_parses": true
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 12,
+      "kind": "pair-sum subscript",
+      "original_tex": "H_\\Delta=\\frac{1}{m(m-1)}\\sum_{j<k}\n(A_j-A_k)^\\dagger(A_j-A_k),\\qquad\n\\kappa=\\|H_\\Delta\\|_{\\mathrm{op}}.",
+      "original_after_html5": "H_\\Delta=\\frac{1}{m(m-1)}\\sum_{j",
+      "old_transport_preserved": false,
+      "old_after_html5_mathjax_parses": false,
+      "old_after_html5_katex_parses": false,
+      "old_katex_error": "KaTeX parse error: Expected '}', got 'EOF' at end of input: …{m(m-1)}\\sum_{j",
+      "corrected_tex": "H_\\Delta=\\frac{1}{m(m-1)}\\sum_{j\\lt k}\n(A_j-A_k)^\\dagger(A_j-A_k),\\qquad\n\\kappa=\\|H_\\Delta\\|_{\\mathrm{op}}.",
+      "corrected_transport_preserved": true,
+      "corrected_after_html5_mathjax_parses": true,
+      "corrected_after_html5_katex_parses": true
+    }
+  ],
+  "results": [
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 1,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-CONTRIBUTIONS-1.svg",
+      "svg_sha256": "21b3a7a4503edbb598d5d3120a90f2f1fe15154ec23f3517cf7d162fbaef7e3d"
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 2,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-CONTRIBUTIONS-2.svg",
+      "svg_sha256": "533ec2f392a6d7ffa71948c33fa3ff35545c34bc95c4931d9bb611ca357831d8"
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 3,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-CONTRIBUTIONS-3.svg",
+      "svg_sha256": "9157a35b8bd535d49b695ebff0b1ebddeee303374f794f5169dba853eb9cc6f8"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 1,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-1.svg",
+      "svg_sha256": "7b723ebcde9adf730640771e7035efa0162fef663fe25d2e1957347d9053b671"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 2,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-2.svg",
+      "svg_sha256": "6f6a4d90c6ab41048f19ce13ad07b93ba0f0677d74fd45b829b23551c3e79a02"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 3,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-3.svg",
+      "svg_sha256": "d18578d6e2dfac0143c61fbbb4d088339a191b9725beb70759e2f681fbfdabc4"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 4,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-4.svg",
+      "svg_sha256": "b59404fe2797c6de1ffabdd99d154cf31448440ff68e896727e61ae31af23243"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 5,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-5.svg",
+      "svg_sha256": "3db8fbf9fb9309ad29b67dfa6184b85052bb55a4102f8de88d130b3e872bdf3b"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 6,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-6.svg",
+      "svg_sha256": "ba8c77d5ac4fe988d430049d4657d2b13eac46d5687344e3e03a77d919446d99"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 7,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-7.svg",
+      "svg_sha256": "8cd623fbf8fe40774cc24da122328327f642517e384d6dce652bce1622285d06"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 8,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-8.svg",
+      "svg_sha256": "648112bf93e54d0b47cc84be7cb9f873ad84c41697f73299a560ae4eabcbfbb2"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 9,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-9.svg",
+      "svg_sha256": "28cc3cd603466fde82a74cbc85f0064f7d9438dde1e149b849a157ed12bf00e1"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 10,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-10.svg",
+      "svg_sha256": "b263a224f2722523ed9e3674d6f52e713800b56a811fcf6ccf868bcd1a3ba271"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 11,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-11.svg",
+      "svg_sha256": "d2f0e224c920fb7748cd383e1f7be0b1648f425cfbe2f1f52be0d33fbe37523e"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 12,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-12.svg",
+      "svg_sha256": "45e1cdc4d93cc2b3a6a6936ce285e523151f58ff61b6bec9cb050c9fde53e0ef"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 13,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-13.svg",
+      "svg_sha256": "533ec2f392a6d7ffa71948c33fa3ff35545c34bc95c4931d9bb611ca357831d8"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 14,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-14.svg",
+      "svg_sha256": "c5a0013f81ccbc3c82d38481ada7e4e1f640f6be7779a150a5dcc4054df416b8"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 15,
+      "exact_permitted_text_change": true,
+      "mathjax_svg_identical": true,
+      "katex_html_identical": true,
+      "svg": "docs-THEORY_ROUTE-15.svg",
+      "svg_sha256": "44602a4322bffc113d554bd8c196a26caa7f81fecf2eaa8aab0a78e361acc37b"
+    }
+  ]
+}

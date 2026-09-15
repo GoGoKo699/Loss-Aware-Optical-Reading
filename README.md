@@ -118,8 +118,8 @@ Generated examples are calculations, not calibrated device specifications.
 
 ## Why this small experiment?
 
-The [inspiration and philosophy draft](docs/PHILOSOPHY_DRAFT.md) is for owner
-approval. It explains the preference for a small task with a clear mechanism,
+The [inspiration and working philosophy](docs/PHILOSOPHY_DRAFT.md) explains
+the preference for a small task with a clear mechanism,
 a simple receiver and an operational resource comparison. Negative regions,
 including regimes where a classical strategy wins, are part of the account.
 
