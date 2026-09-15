@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "scope": "New files only; do not replace existing work order or any canonical path",
+  "target_branch": "research/robustness-01",
+  "expected_parent": "ddb17c5040e17cb0078121081afe15de70158fe8",
+  "files": {
+    "CALIBRATION_WORKSHEET.md": "7f8b7519ce2702e3144bb9de6a4c9cfbf385a40e9b1bcd8257a734d0974cda6e",
+    "DEVELOPMENT_NOTES.md": "b23abc0eebf9078c1ae122c2bb8712120379777ac51b8348928cbd6ebf31a2f6",
+    "EVIDENCE.tar.xz": "b65074d1733bc648d5f0ac20a6dd6b1eea3334317fb73261ef8aff0573188f8b",
+    "PROOFS.md": "722155ce5c119a81defb63c1432013d260003e30028ef9441110baf67f1b6fed",
+    "README.md": "2612f017e2d3bb88a6263a1d2622ce6cd8cdf1e3e706b7046097c558056606ee",
+    "REPORT.md": "bfce35293ec634b4ac825cce52cf500c35a5fb87a9d9964d865303dfe67030b2",
+    "SOURCES.md": "f4cbbc6f69454529e85b3c26d3e7b6611bdd117c65b91eba27e4b870c5acc485",
+    "SUMMARY.json": "6676b6dd6294b00f2f1d14bba7be8ec486157fde5f51cab1185d20b9c6f1a3fc",
+    "UNIT_TESTS.log": "a29c4280202e16e884d163a855f02ce2e49d01800fd756dac6e44a2d9da3d9e6",
+    "exact.py": "d1222b53932e420df1304af1602b12618dc7784cd296b7cb84b8520f5d5fe8ba",
+    "requirements.txt": "6a4b42599550469871476474c0d3d97975b99e25ff69802d0f4df3a2186c50eb",
+    "study.py": "4053de6fe1bac9e4ca6805be26eeb129c494c3cedaf4abc36d4e222ca76eca8f",
+    "test_local.py": "4892fb6cd969e82b9a5697cdc5130512c89082c3801a00c39cd4c30dcd824d13",
+    "verify_certificates.py": "df41ea141b25947c378862c5a500c271a472f8fde8d643b189df077e8eea8e8f"
+  }
+}
