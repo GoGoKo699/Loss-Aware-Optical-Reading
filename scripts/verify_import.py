@@ -19,6 +19,26 @@ DOCUMENT_PATHS = frozenset({'CLAIM_STATUS.md', 'SOURCE_AUDIT.md', 'REPORT.md',
 DOCUMENT_ADDITIONS = frozenset({'docs/CONTRIBUTIONS.md', 'experiment/REVIEW_RATIONALE.md'})
 FOLLOWUP_RECORD = 'provenance/changes/novelty-integration-02.json'
 FOLLOWUP_PATHS = DOCUMENT_PATHS | DOCUMENT_ADDITIONS
+HANDOVER_RECORD = 'provenance/changes/lab-handover-01.json'
+HANDOVER_BASE_COMMIT = 'de73c9b094036b756d1ff008eaccbc52cec46207'
+# Exact bytes read with git show at the owner's verified handover baseline.
+# This allowlist is deliberately document-only. A new numerical module, proof,
+# protocol, source archive, or result cannot be authorized through this layer.
+HANDOVER_PREIMAGES = {
+    'README.md': '5665bb7a14c0db3448600b17ab1c29f05920aae126103e13194b921890225efe',
+    'CLAIM_STATUS.md': '20896a2e7a613bd997b77bde7dea25f140b1762c6eeaf84c965401048ecd7116',
+    'docs/PHYSICAL_SETTING.md': 'd2fbb932a6436ce90f942b030b92f20d36f6dda63b568d7672678289890313ab',
+    'docs/REPRODUCE.md': '829246ef60b6681dbfdbd5ec3cc0e2b41298b46499ec0a017579a775e1fb568f',
+    'work_orders/CURRENT.md': 'fe6a277cfc4a1830385e08ddc1c1e16d4c2bf67aa0ad03d77d53a3b35684ac5e',
+    'docs/ROADMAP.md': '9977d3130167188f6d6b5ebceec2415120a60481b07708b08ab54b2229120b50',
+    'experiment/LAB_REVIEW.md': 'ccd011603280c3fb1bee7b9a53e1f0a14431ba52f89262719bbe2269b181750f',
+}
+HANDOVER_PATHS = frozenset(HANDOVER_PREIMAGES)
+HISTORICAL_LEDGER_SHA256 = {
+    CHANGE_RECORD: 'a4b1f7eb9ec25d8ba737de30abc7ea787dd25eaeb15289207d191c2cd20c6c10',
+    DOCUMENT_RECORD: '9cc64044ccfdf2bc38a3900e8141089a383bd116d7ff259c729cffe47afa2b29',
+    FOLLOWUP_RECORD: 'f363b6343ce93093f6f5474ea4e1c4aca7c8d5d80a943f1aafb865346efb857d',
+}
 
 
 def sha(data: bytes) -> str:
@@ -89,6 +109,43 @@ def _followup_hash(path: str, expected: str, changes: dict) -> str:
     return entry['new_sha256']
 
 
+def _handover_approvals(root: Path) -> dict:
+    """Authorize exactly seven named explanations, with pinned old bytes."""
+    ledger = json.loads((root/HANDOVER_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('interpretation_only') is not True or
+        ledger.get('original_archive_sha256') != ORIGINAL_ARCHIVE_SHA256 or
+        ledger.get('previous_record') != FOLLOWUP_RECORD or
+        ledger.get('previous_record_sha256') != HISTORICAL_LEDGER_SHA256[FOLLOWUP_RECORD] or
+        ledger.get('base_commit') != HANDOVER_BASE_COMMIT):
+        raise ValueError('Invalid handover documentation ledger contract')
+    entries = ledger.get('changes', [])
+    changes = {entry['path']: entry for entry in entries}
+    if (len(changes) != len(entries) or changes.keys() != HANDOVER_PATHS or
+        ledger.get('additions')):
+        raise ValueError('Handover ledger is not the authorized document set')
+    for path, entry in changes.items():
+        reason = entry.get('reason')
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError('Handover documentation reason is missing: '+path)
+        for key in ('old_sha256', 'new_sha256'):
+            value = entry.get(key)
+            if (not isinstance(value, str) or len(value) != 64 or
+                any(c not in '0123456789abcdef' for c in value)):
+                raise ValueError('Invalid handover documentation hash: '+path)
+        if entry['old_sha256'] != HANDOVER_PREIMAGES[path]:
+            raise ValueError('Handover documentation baseline hash mismatch: '+path)
+    return changes
+
+
+def _handover_hash(path: str, expected: str, changes: dict) -> str:
+    entry = changes.get(path)
+    if entry is None:
+        return expected
+    if entry['old_sha256'] != expected:
+        raise ValueError('Handover documentation previous hash mismatch: '+path)
+    return entry['new_sha256']
+
+
 def verify(root: Path = ROOT) -> dict:
     manifest_bytes = (root/'provenance/IMPORT_MANIFEST.json').read_bytes()
     if _git_blob(manifest_bytes) != ORIGINAL_MANIFEST_GIT_BLOB:
@@ -113,6 +170,7 @@ def verify(root: Path = ROOT) -> dict:
     if document_additions.keys() & (installed.keys() | additions.keys()):
         raise ValueError('Documentation addition collides with protected source')
     followup = _followup_approvals(root)
+    handover = _handover_approvals(root)
     sources = [e['source'] for e in manifest['files']]
     if len(sources) != len(set(sources)):
         raise ValueError('Duplicate source member')
@@ -139,6 +197,7 @@ def verify(root: Path = ROOT) -> dict:
                     raise ValueError('Documentation ledger previous hash mismatch: '+name)
                 expected = document['new_sha256']
             expected = _followup_hash(entry['path'], expected, followup)
+            expected = _handover_hash(entry['path'], expected, handover)
             if sha(current) != expected:
                 raise ValueError('Protected working file changed: '+entry['path'])
             if approved is None and document is None:
@@ -154,8 +213,19 @@ def verify(root: Path = ROOT) -> dict:
             raise ValueError('Protected added file changed: '+path)
     for path, entry in document_additions.items():
         expected = _followup_hash(path, entry['sha256'], followup)
+        expected = _handover_hash(path, expected, handover)
         if sha(_safe_path(root,path).read_bytes()) != expected:
             raise ValueError('Protected documentation changed: '+path)
+    # Includes the five navigation documents outside the older import set.
+    for path, entry in handover.items():
+        if sha(_safe_path(root, path).read_bytes()) != entry['new_sha256']:
+            raise ValueError('Protected handover document changed: '+path)
+    # Check immutable predecessor bytes after their semantic checks. This keeps
+    # older diagnostic failures informative while also rejecting silent rewrites
+    # of historical reasons, metadata, or accepted hash-chain entries.
+    for path, expected in HISTORICAL_LEDGER_SHA256.items():
+        if sha((root/path).read_bytes()) != expected:
+            raise ValueError('Historical change ledger changed: '+path)
     return {'status':'PASS','source_members':count,'archive_sha256':ORIGINAL_ARCHIVE_SHA256,
             'source_archive_unchanged':True,'original_import_manifest_unchanged':True,
             'scientific_content_unchanged':not changes,
@@ -168,6 +238,10 @@ def verify(root: Path = ROOT) -> dict:
             'followup_change_record':FOLLOWUP_RECORD,
             'authorized_followup_documents_verified':sorted(followup),
             'mathematics_changed_by_followup':False,
+            'handover_change_record':HANDOVER_RECORD,
+            'authorized_handover_documents_verified':sorted(handover),
+            'mathematics_changed_by_handover':False,
+            'historical_change_ledgers_unchanged':True,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 
 

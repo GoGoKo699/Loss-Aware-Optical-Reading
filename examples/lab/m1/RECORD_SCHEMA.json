@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "fields": [
+    "trial_id",
+    "condition_id",
+    "calibration_id",
+    "phase_code_id",
+    "receiver_id",
+    "preparation_id",
+    "hidden_label",
+    "click_mask",
+    "source_herald_time",
+    "gate_open_time",
+    "gate_close_time",
+    "energy_bound_id",
+    "quality_flags",
+    "mode_count",
+    "record_status"
+  ],
+  "mask_convention": "integer sum(2**port for each clicked logical output port); port 0 is least significant bit",
+  "route_mode_and_label_counts": {
+    "su4": [
+      4,
+      4
+    ],
+    "su8-embed": [
+      8,
+      4
+    ],
+    "su8-walsh": [
+      8,
+      8
+    ]
+  },
+  "allowed_quality_flags": [
+    "",
+    "NONE",
+    "integrity_rejected"
+  ],
+  "failure_rule": "zero/multiple clicks, any inactive-port click, and integrity_rejected stay in N and yield inconclusive",
+  "record_status": "SYNTHETIC_NOT_AN_EXPERIMENT or externally declared real-data status",
+  "times": "Real records require gate_open_time and gate_close_time on a laboratory common clock; source_herald_time is optional for clock-defined trials; synthetic timestamps may be blank; no hardware time unit is invented",
+  "labels": "offline scoring join only: seal receiver records before joining separately held hidden labels",
+  "trial_definition": "one upstream clock/herald gate per attempted P0 exposure; output detection never creates the trial",
+  "native_eight_limit": "descriptive C/E/F only; no four-label frontier or certification"
+}

@@ -1,0 +1,19 @@
+test_all_port_routes_and_common_su_phases (test_lab_reference.LabMatrixTests.test_all_port_routes_and_common_su_phases) ... ok
+test_embedding_preserves_active_input_and_receiver (test_lab_reference.LabMatrixTests.test_embedding_preserves_active_input_and_receiver) ... ok
+test_invalid_preparation_or_mode_map_rejected (test_lab_reference.LabMatrixTests.test_invalid_preparation_or_mode_map_rejected) ... ok
+test_native8_rule_against_independent_eigenproblem_and_amplitudes (test_lab_reference.LabMatrixTests.test_native8_rule_against_independent_eigenproblem_and_amplitudes) ... ok
+test_registered_forecasts_and_reverse_receiver (test_lab_reference.LabMatrixTests.test_registered_forecasts_and_reverse_receiver) ... ok
+test_walsh_entries_and_exact_integer_orthogonality (test_lab_reference.LabMatrixTests.test_walsh_entries_and_exact_integer_orthogonality) ... ok
+test_descriptive_conditions_are_not_hidden_by_pooling (test_lab_reference.LabRecordTests.test_descriptive_conditions_are_not_hidden_by_pooling) ... ok
+test_every_eight_bit_mask_accounted_in_embedding (test_lab_reference.LabRecordTests.test_every_eight_bit_mask_accounted_in_embedding) ... ok
+test_four_label_adapter_invokes_existing_fixed_N_contract (test_lab_reference.LabRecordTests.test_four_label_adapter_invokes_existing_fixed_N_contract) ... ok
+test_malformed_records_refused (test_lab_reference.LabRecordTests.test_malformed_records_refused) ... ok
+test_native8_descriptive_only_and_bit7_is_label7 (test_lab_reference.LabRecordTests.test_native8_descriptive_only_and_bit7_is_label7) ... ok
+test_outputs_never_replace_existing_or_frozen_evidence (test_lab_reference.LabRecordTests.test_outputs_never_replace_existing_or_frozen_evidence) ... ok
+test_rejected_no_multiple_and_leakage_remain_in_N (test_lab_reference.LabRecordTests.test_rejected_no_multiple_and_leakage_remain_in_N) ... ok
+test_runnable_cli_round_trip_and_generated_examples (test_lab_reference.LabRecordTests.test_runnable_cli_round_trip_and_generated_examples) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.961s
+
+OK

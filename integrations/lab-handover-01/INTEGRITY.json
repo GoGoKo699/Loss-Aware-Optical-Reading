@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "source_members": 39,
+  "archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "source_archive_unchanged": true,
+  "original_import_manifest_unchanged": true,
+  "scientific_content_unchanged": false,
+  "authorized_changes_verified": [
+    "CLAIM_STATUS.md",
+    "proofs/THEORY.md",
+    "src/theory.py",
+    "src/validate.py"
+  ],
+  "authorized_additions_verified": [
+    "docs/NUMERICAL_CONTRACT.md",
+    "repairs/theory-01/NUMERICAL_PROOF.md",
+    "src/photon_support.py"
+  ],
+  "change_record": "provenance/changes/theory-repair-01.json",
+  "document_change_record": "provenance/changes/novelty-integration-01.json",
+  "authorized_document_changes_verified": [
+    "CLAIM_STATUS.md",
+    "REPORT.md",
+    "SOURCE_AUDIT.md",
+    "experiment/LAB_REVIEW.md"
+  ],
+  "authorized_document_additions_verified": [
+    "docs/CONTRIBUTIONS.md",
+    "experiment/REVIEW_RATIONALE.md"
+  ],
+  "followup_change_record": "provenance/changes/novelty-integration-02.json",
+  "authorized_followup_documents_verified": [
+    "CLAIM_STATUS.md",
+    "REPORT.md",
+    "SOURCE_AUDIT.md",
+    "docs/CONTRIBUTIONS.md",
+    "experiment/LAB_REVIEW.md",
+    "experiment/REVIEW_RATIONALE.md"
+  ],
+  "mathematics_changed_by_followup": false,
+  "handover_change_record": "provenance/changes/lab-handover-01.json",
+  "authorized_handover_documents_verified": [
+    "CLAIM_STATUS.md",
+    "README.md",
+    "docs/PHYSICAL_SETTING.md",
+    "docs/REPRODUCE.md",
+    "docs/ROADMAP.md",
+    "experiment/LAB_REVIEW.md",
+    "work_orders/CURRENT.md"
+  ],
+  "mathematics_changed_by_handover": false,
+  "historical_change_ledgers_unchanged": true,
+  "validator_change": "original I/O guard; approved numerical-method metadata update only"
+}

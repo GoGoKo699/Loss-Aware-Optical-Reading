@@ -13,6 +13,17 @@ are resolved; priority for A and hardware feasibility remain separate questions.
 There are no acquired laboratory data. This attribution update changes none of
 the five technical questions or the operational protocol.
 
+## Confirmed processors and practical entry points
+
+Both the SU4 and SU8 chips are available. Their possession is not a question for
+this review. Start with [SU4](SU4.md), [SU8](SU8.md) or
+[classical-light commissioning](COMMISSIONING.md). The five questions below
+concern supporting interfaces and calibration. Port ordering, compiler
+conventions, wavelength/polarization, control sections, sources, readout,
+inter-chip coupling and timing are collected in [INTERFACES.md](INTERFACES.md)
+and [UNCERTAINTY.md](UNCERTAINTY.md). Missing values do not prevent reviewing the
+self-contained recipes; they must be supplied before certified acquisition.
+
 ## The requested experiment
 
 A single photon in four paths interrogates one hidden, independently chosen pi

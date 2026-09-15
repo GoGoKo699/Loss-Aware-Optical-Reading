@@ -1,127 +1,127 @@
 # Loss-Aware Optical Reading
 
-**Retune the incident photon for the loss and required reliability. Keep the
-receiver fixed. Test the result against a credited classical-source benchmark.**
+**The laboratory has both an SU(4) chip and an SU(8) chip.**
 
-A single photon interrogates four paths. Exactly one path receives a pi phase
-flip, selected uniformly and hidden from the reader. The receiver returns a
-path label or an inconclusive outcome. Known unequal losses and the penalty
-for wrong answers determine the optimal input amplitudes.
+Retune the incident photon for the loss and required reliability. Keep the
+receiver fixed where the theorem applies. Measure all outcomes and compare
+performance with the appropriate theoretical benchmark.
 
-The phase-reading mechanism is established. **A, joint input-only retuning, is
-the leading candidate theoretical contribution. B is a derived optical benchmark,
-not a second independently new general discrimination theorem.** The completed
-full-text follow-up supplies the specific predecessor reductions for B.
-
-Current stage: audited and numerically repaired theory, completed bounded
-predecessor comparisons, and an initial technical laboratory-review proposal.
-Priority for A and publication significance remain unestablished. There are no
-acquired laboratory data or confirmed device calibrations. This is a private
-working repository, not a public release.
-
-## Start here
-
-| Route | Entry | Purpose |
+| What can we try? | Start here | First practical step |
 |---|---|---|
-| Understand | [Contribution and benchmark](docs/CONTRIBUTIONS.md), then [scientific report](REPORT.md) | Read the task, mechanism, and scope. |
-| Check | [Claim status](CLAIM_STATUS.md), [source map](SOURCE_AUDIT.md), [proofs](proofs/THEORY.md) | Separate validity, attribution, and candidate novelty. |
-| Laboratory review | [Why these tests](experiment/REVIEW_RATIONALE.md), then [five questions](experiment/LAB_REVIEW.md) | Assess feasibility before acquisition. |
-| Reproduce or develop | [Reproduction guide](docs/REPRODUCE.md), [current task boundary](work_orders/CURRENT.md) | Work from preserved evidence, not earlier chats. |
+| Our SU4 chip | [SU4: four-symbol phase reading](experiment/SU4.md) | Check preparation, four phase patterns and output routing with classical light. |
+| Our SU8 chip | [SU8: two explicit routes](experiment/SU8.md) | Embed the same four-label task, or commission the native eight-mode Walsh code. |
+| Choose a scientific test | [Experiment index](experiment/INDEX.md) | Separate commissioning, mechanism tests and source-class certification. |
 
-## A. Optimal input-only retuning
+One photon occupies a superposition of paths. Four or eight paths are not four
+or eight photons, nor independently carried gate-based qubits. The four-symbol
+task asks which one of four paths received a pi phase flip, in one interrogation.
+The native eight-mode task uses eight different Walsh phase patterns.
 
-For uniform labels, a square flat orthogonal phase code, and known positive
-diagonal losses independent of the label, the joint optimum over the incident
-photon and arbitrary final measurements is attained by retuning the input and
-the no-click decision rule while keeping the code decoder fixed.
+**Ready now:** self-contained procedures, target matrices, synthetic records and
+runnable reference calculations. **Before certified acquisition:** the laboratory
+must supply its interfaces, calibration and uncertainty budget. Processor
+availability is confirmed; it does not specify ports, control sections, sources,
+detectors or inter-chip connections. No laboratory data have been acquired here.
 
-For the four-path experiment,
+## From hardware to a recorded answer
 
-$$
-O_j=I-2|j\rangle\langle j|,\qquad D=\frac12J-I,
-$$
+1. **Prepare.** Set a normalized path-amplitude vector before the hidden label is
+   selected. Known loss and the preselected penalty for a wrong answer determine
+   the target input. Preparation itself is calculated classically.
+2. **Interrogate.** An independent hidden section applies its phase pattern and
+   loss. P0 is the incident signal-accounting plane; P1 is the accessible output
+   of that declared device. Attenuation needs a physical loss section: a unitary
+   phase setting does not implement it.
+3. **Decode.** Program the fixed code decoder. The reader never receives the
+   hidden answer as a compiler input. One combined matrix is useful for optical
+   transfer checks; it does not by itself implement an unknown-operation task.
+4. **Record.** Save every attempted gate, its full detector mask, no-click,
+   multiple-click, leakage and rejected records. Unseal hidden labels only after
+   reader records and decisions are fixed. Score correct (C), wrong (E) and
+   inconclusive (F) per attempt, with C+E+F=1.
+5. **Interpret.** Compare a measured score with the bound appropriate to its
+   declared optical map, source budget and uncertainty. A good routing pattern
+   alone is not evidence of a source-class advantage.
 
-where J is the four-by-four all-ones matrix. At zero error the preparation
-balances the surviving amplitudes. At finite error it generally changes with
-the wrong-answer penalty. The fixed-input square-root measurement and
-harmonic-mean endpoint are credited ingredients; the candidate result is the
-complete joint optimization with erasure accounting, not a new receiver.
+The [interface guide](experiment/INTERFACES.md) maps the physical roles, including
+an optional arrangement using the existing SU4 for preparation and SU8 for
+reception. Its coupling and independent hidden section require confirmation.
+The [commissioning procedure](experiment/COMMISSIONING.md) explains intensity
+checks, phase-referenced transfer measurements and absolute power accounting.
+It can be understood without reading either external anchor.
 
-## B. A derived benchmark for classical illumination
+## Which result would mean what?
 
-The competitor may choose a different coherent input, randomize pulse energies,
-keep the preparation label, use a phase reference, and perform any measurement.
-Arbitrarily rare bright pulses remain allowed under the mean incident signal
-budget. The general calibrated-map bound is a ceiling, not an attained optimum
-for every map.
+| Route | Change / hold fixed | Recorded result and meaning |
+|---|---|---|
+| Classical-light commissioning | Program known preparations and phase patterns; verify the target receiver | Port and transfer checks establish classical-wave implementation. Normalized intensities do not establish loss or a quantum advantage. |
+| [M1: input retuning](experiment/M1.md) | Compare uniform, inverse-loss and finite-penalty inputs; keep the decoder fixed | Test predicted unconditional C/E/F. A scan is neither a proof of global optimality nor a source-class certificate. |
+| [P1: positive comparison](experiment/P1.md) | Freeze the four-label photon preparation, receiver, calibration and plan | Seek unconditional photon performance above the derived all-classical-source ceiling. |
+| [P2: reverse comparison](experiment/P2.md) | Implement a label-blind coherent displacement receiver at severe imbalance | Seek an achieved coherent score above the entire declared four-path single-photon upper bound. |
+| SU8 four-active-mode route | Use ports 0–3, vacuum inputs 4–7; measure all eight outputs | Same four-label task. Extra outputs record leakage as inconclusive attempts. |
+| SU8 native Walsh route | Program the eight-mode orthogonal phase code and its fixed decoder | Existing photon theorem specialization and teaching/commissioning example. No transferred four-symbol classical frontier or four-mode robustness claim. |
 
-Its discrimination ingredient follows from Zhang et al.'s zero-error bound and
-Bagan et al.'s duality relation with the conclusive-filter completion. Coherent
-optical overlaps and concavity extend it to the classical source class. At
-uniform four-path loss, a known alphabet attains the source-class frontier; its
-fixed-alphabet curve is Herzog's Eq. (4.18) in different variables. See the
-[full-text follow-up](audits/novelty-02/REPORT.md) and [source map](SOURCE_AUDIT.md).
+M1/P1/P2 retain the registered meanings, penalties, confidence allocation and
+provisional trial budgets in the [first-experiment protocol](experiment/FIRST_EXPERIMENT.md).
+Its native eight-mode “later” language records the earlier four-mode acquisition
+scope; the new Walsh recipe is now provided separately, with descriptive records.
+The native eight-mode data never enter the four-detector certification analyzer.
 
-This attribution correction does not weaken the comparator or alter a formula.
-A valid, credited benchmark can support an experimental advance without being
-a new fundamental inequality. The named S18/S20 comparisons are resolved at the
-recorded access levels; this is not worldwide priority clearance for A.
+## Run the reference calculations
 
-## What the first experiment would establish
-
-| Test | Meaning |
-|---|---|
-| M1: input retuning | Test the predicted preparations with an unchanged decoder; a finite scan alone does not prove global optimality or certify a quantum advantage. |
-| P1: positive comparison | Seek unconditional performance above the all-classical-source ceiling using justified calibration and energy bounds. |
-| P2: reverse comparison | Seek an implemented coherent score above the upper bound for the entire restricted four-path photon class, not merely one tested input. |
-
-The [operational protocol](experiment/FIRST_EXPERIMENT.md) is unchanged. Count
-no-click and multiple-click attempts. Each interrogation gets a fresh independent
-hidden label. Preparation, unknown operation, and receiver are separate physical
-roles; the answer must not enter the reader's compiler.
-
-The platform is SU(4)/SU(8)-first with one computational photon at a time. A
-source herald is not an interacting auxiliary photon. The theorem excludes an
-occupied bypass rail, retained idler, repeated use of one setting, and a fifth
-healthy hypothesis. See the [physical setting](docs/PHYSICAL_SETTING.md). Signal
-illumination is not total apparatus energy, source cost, or wall-clock time.
-
-## Reproduce without replacing evidence
+From the repository root, install the recorded dependencies and use a new output
+directory for each command. [Reproduction instructions](docs/REPRODUCE.md) also
+cover the full historical and repaired checks.
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 python -m pip install -r requirements-test.txt
 python scripts/verify_import.py
+python scripts/lab_reference.py --help
 python -m unittest discover -s tests -v
-python scripts/reproduce.py
-python repairs/theory-01/verify.py --output results/runs/repair-01
-python audits/novelty-01/comparison_checks.py --source-root . --output results/runs/novelty-01
-python audits/novelty-02/comparison_checks.py --output results/runs/novelty-02
 ```
 
-Every output directory must be new. The recorded numerical environment is
-Python 3.13.5, NumPy 2.3.5, SciPy 1.17.0, with mpmath 1.3.0 for independent tests.
-The [numerical contract](docs/NUMERICAL_CONTRACT.md) separates nominal rates from
-outward-safe photon-support bounds; it does not interval-certify the whole pipeline.
+The chip and test pages give exact generation/analysis commands and explain their
+synthetic outputs. No script is a vendor driver or a working instrument adapter.
+Generated examples are calculations, not calibrated device specifications.
 
-The committed follow-up has 572 checks. A separate supplied 717-assertion packet
-is preserved, without replacing that audit, in the
-[integration record](integrations/novelty-02/REPORT.md). Their counts and results
-remain distinct; neither is evidence of originality.
+## Why this small experiment?
 
-## Evidence and remaining work
+The [inspiration and philosophy draft](docs/PHILOSOPHY_DRAFT.md) is for owner
+approval. It explains the preference for a small task with a clear mechanism,
+a simple receiver and an operational resource comparison. Negative regions,
+including regimes where a classical strategy wins, are part of the account.
 
-Hypothetical forecasts, synthetic certification examples, and uncalibrated
-[templates](templates/) are not laboratory data. Fresh runs go in `results/runs/`.
-The [theory audit](audits/theory-01/REPORT.md), [repair](repairs/theory-01/REPORT.md),
-[first comparison](audits/novelty-01/REPORT.md), and
-[full-text follow-up](audits/novelty-02/REPORT.md) retain their original evidence.
+The factual contribution hierarchy is separate: **A, complete joint input-only
+retuning, remains the leading candidate contribution. B is a derived optical
+benchmark, not a second independently new general discrimination theorem.**
+The fixed-input square-root measurement and zero-error endpoint are credited
+ingredients. Named predecessor comparisons are resolved at their documented
+access levels; worldwide priority and publication significance remain open.
+See [contributions](docs/CONTRIBUTIONS.md), [claim status](CLAIM_STATUS.md) and
+[source attribution](SOURCE_AUDIT.md).
 
-Next: assess the significance and physical robustness of A, and obtain initial
-laboratory feedback. The [roadmap](docs/ROADMAP.md) separates those questions from
-new research requiring authorization. Exact arbitrary-loss classical finite-error
-optimality, adaptive multi-query advantage, and measured advantage are not established.
-More modes or a learning label do not address these gaps.
+## Understand or inspect the support
 
-No redistribution license has been selected. Contact: gogoko699@gmail.com.
+| Need | Route |
+|---|---|
+| Learn the experiment's theory | [Self-contained theory route](docs/THEORY_ROUTE.md): states, measurements, C/E/F, then optimization and benchmarks |
+| Connect to familiar material | [Optional reading crosswalk](docs/READING_CROSSWALK.md): Capmany–Pérez engineering chapters and Barnett–Croke discrimination review |
+| Decide how an error changes interpretation | [Robustness guide](docs/ROBUSTNESS_GUIDE.md) and [practical uncertainty worksheet](experiment/UNCERTAINTY.md) |
+| Inspect complete arguments | [Canonical proofs](proofs/THEORY.md), [numerical contract](docs/NUMERICAL_CONTRACT.md), [robustness proofs](studies/robustness-01/PROOFS.md) |
+| Reproduce or trace evidence | [Reproduction](docs/REPRODUCE.md), [handover integration](integrations/lab-handover-01/REPORT.md), [current scope](work_orders/CURRENT.md) |
+
+The classical comparator includes arbitrary permitted receivers, coherent
+mixtures with receiver-known preparation labels, phase references and rare bright
+pulses under a mean signal budget at P0. Our receiver and detector losses reduce
+our achieved performance; they do not automatically lower that ceiling at P1.
+Signal photons are counted separately from pump, herald and reference energy,
+total apparatus energy and wall-clock cost.
+
+Fresh independent hidden labels, reader blinding, separate pilot/test records
+and fixed-N acquisition remain required. There is no optional-stopping claim,
+occupied bypass, retained idler, interacting ancillary photon, memory or repeated
+interrogation of one setting in the main class. Further extensions are listed
+in the [roadmap](docs/ROADMAP.md), with their present limits.
+
+Private working repository. No redistribution license has been selected.
+Contact: gogoko699@gmail.com.

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "documents_checked": 24,
+  "local_links_checked": 275,
+  "python_script_references_checked": 33,
+  "visual_rendering_checked": false,
+  "commands_executed_by_this_check": false,
+  "scope": "Static local navigation, simple Markdown/math syntax, and script-path checks only"
+}

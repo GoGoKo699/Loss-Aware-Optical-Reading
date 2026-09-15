@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "commands": [
+    {
+      "command": "python scripts/lab_reference.py --recipe commission-su4 --output results/runs/lab-commission-su4",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-commission-su4\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "commissioning_transfer_reference.csv": "3bfb9734bd4d0f7249382a28a1980835862f62a33a6bde9d9c47f66620d2d839",
+        "synthetic_summary.json": "8671bc8ecac45f3cc5224a6fbb7ffe62d4d10b9a594a67ccf7adc322aeb4dbce",
+        "target_matrices.json": "804de444253c73f63ae2b9dab5a0daa087ab18c9d496c4b41c85107a4d7daafc",
+        "MANIFEST.json": "8f127e438e02ff6173cfebf0b214505c9ee481a382b82b30e4ea9147faf9823e",
+        "synthetic_trials.csv": "86e0f573f09baa32b601690ed2b1007162c2194dafb8c5d467f4547e400c111a",
+        "forecast.json": "b9e3679e5f4a4664024107d41354391c8e4e7ffce3a4a24dbfc4084793623931",
+        "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949"
+      }
+    },
+    {
+      "command": "python scripts/lab_reference.py --recipe commission-su8-embed --output results/runs/lab-commission-su8-embed",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-commission-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "commissioning_transfer_reference.csv": "c17733f72dbcb3e8433f6beb300aa66c06c939701f340b728585ef755357818a",
+        "synthetic_summary.json": "567454ea711dd11bdb47ae8bb0f6240bdc494595410f30628f41e1ca3c2913f5",
+        "target_matrices.json": "f69880c77db2f945c0c0f1c03f7eff2c849c39eb999ef2ed7604cd579dd6374f",
+        "MANIFEST.json": "0aba5bce3f1aac745ea42bfc40d153769cb355a9f984365de44607ed7314e9e2",
+        "synthetic_trials.csv": "5786fd3177d932ba72be29bc7764da7ae93c01cbceeaff8c951a678b3670e4a5",
+        "forecast.json": "097a0b816c6b6cf5683cd916b9988e834773844bca8386e94d8d7bf54b8e6ea9",
+        "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949"
+      }
+    },
+    {
+      "command": "python scripts/lab_reference.py --recipe commission-su8-walsh --output results/runs/lab-commission-su8-walsh",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-commission-su8-walsh\", \"route\": \"su8-walsh\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "commissioning_transfer_reference.csv": "45f599b9ae45e81cb3682c78d95bffc8fccaa9ca38d3c941dae31bf60431944e",
+        "synthetic_summary.json": "f541093cf7ade77ebd6e8d1b9c5e3b3d302e707973575d9fdae1d96f5144ce3a",
+        "target_matrices.json": "badcb872df13f28b78f9c3e5dc6be9b50f56bf81ae8f32881c9469fe666238e8",
+        "MANIFEST.json": "e25a4665699f02f414287a644b392c39c1e5ade34ab272442670b3933f42d4f3",
+        "synthetic_trials.csv": "9f02a0d110eeda900d405db7b33704d3cf91cae6b028637877ea5041d1397fce",
+        "forecast.json": "9e4d346bce427aa44814ecc74668ea42525b5926ec75d1a7622d526e3a2bf294",
+        "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949"
+      }
+    },
+    {
+      "command": "python scripts/lab_reference.py --recipe m1 --output results/runs/lab-m1",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-m1\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "synthetic_summary.json": "a5f2cfb1854a4e327bf3dd00e6927b362925a5e09e7e36da6be15f4c85305019",
+        "target_matrices.json": "128f5ce4fd8b9a06a9b93317943611679b9a6b8e13fd038e1e2057664d9c3a39",
+        "MANIFEST.json": "7598cd6c2f494d00e5079a8a84455c1f2230e9f6a3bd77df2a73c161212bd5e3",
+        "synthetic_trials.csv": "e2499b098ae18320e46011103fb27907a998159be4cfa2f7a5deced719050b52",
+        "forecast.json": "576443ebb5a165e5d5aae95a3efee748355b47723b16534da52f46a258bb4c78",
+        "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949"
+      }
+    },
+    {
+      "command": "python scripts/lab_reference.py --recipe p1 --output results/runs/lab-p1",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-p1\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "synthetic_summary.json": "f361e3a9049514c9416947880260776804ab3acfb5c758ef63cb082dc6163bd1",
+        "target_matrices.json": "4b089561a36ee00ce9748fd91384707af3f3dd49241368ba1d15dbbd2f7b3e45",
+        "MANIFEST.json": "8d1afbc58094863e8f5f742201e69f8f262d22f6e4634d764df91d3636dec66d",
+        "synthetic_trials.csv": "73c87843dc3d12a4cee07372349962753c36e1f1f7b1c3cbcb62c80077b5ed23",
+        "forecast.json": "2b8f8b06f7df4069ee6adb977ff2d588c17eb6889ee198884d1113f536010466",
+        "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949"
+      }
+    },
+    {
+      "command": "python scripts/lab_reference.py --recipe p2 --output results/runs/lab-p2",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-p2\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "synthetic_summary.json": "a1e09ca3130016f403f6ce028db82438eca1f6d73aa6664cc723b5b08c58bbad",
+        "target_matrices.json": "b415f6fc064dc7589d19a5880dfe027418c66b19784d1d153496e9d6aeaf06aa",
+        "MANIFEST.json": "9bdbfd60bda88f3c99e16a8320a81c272f2bbb9b104cdb597a1ee413157ba1bf",
+        "synthetic_trials.csv": "1c9a32e40a2fae4533f59a4af3592c3708d4da73f95f817a9564eb90b369d93a",
+        "forecast.json": "90f6e52e338c9d94b493f774644ef9317e885bc33b690f79c39575e66ad25452",
+        "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949"
+      }
+    },
+    {
+      "command": "python scripts/lab_records.py --route su4 --trials examples/lab/p1/synthetic_trials.csv --output results/runs/lab-descriptive-p1",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-descriptive-p1\", \"N\": 64, \"counts\": {\"correct\": 35, \"wrong\": 0, \"inconclusive\": 29}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "summary.json": "4ea89be819192ada2cc4b2681056609dd0fb10309000092c97cc3eeba301c0b9",
+        "adapted_four_label_trials.csv": "3f29402ce99ae7ae928b7c1ef2e2d9dd076eff3c1fe7dec0412bea4b4b9df2a3"
+      }
+    },
+    {
+      "command": "python scripts/lab_records.py --route su8-embed --trials examples/lab/commission-su8-embed/synthetic_trials.csv --output results/runs/lab-descriptive-embed",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-descriptive-embed\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "summary.json": "148eff52ceb3779f65e5aea0f887da04fa32f42603f63c6681febd24740b9347",
+        "adapted_four_label_trials.csv": "1c7f54d548884665ddfc9a75d1dc53fa77e3cd6c899f7bb5bee660cea241374e"
+      }
+    },
+    {
+      "command": "python scripts/lab_records.py --route su8-walsh --trials examples/lab/commission-su8-walsh/synthetic_trials.csv --output results/runs/lab-descriptive-walsh",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-descriptive-walsh\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "repeat_exit_code": 1,
+      "outputs_unchanged": true,
+      "output_hashes": {
+        "summary.json": "dc6d2eecd377ca45d448f7869ef0c4e6cf7b0378a949c075f8f67ac931eb446d"
+      }
+    }
+  ],
+  "count": 9
+}

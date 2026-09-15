@@ -1,0 +1,13 @@
+{
+  "status": "SYNTHETIC_TEACHING_OUTPUT",
+  "recipe": "p1",
+  "seed": 20260915,
+  "sample_attempts": 64,
+  "files": {
+    "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+    "forecast.json": "2b8f8b06f7df4069ee6adb977ff2d588c17eb6889ee198884d1113f536010466",
+    "synthetic_summary.json": "d13dfa5d0b0797b8f1454aa7ddd48df07181ce6d0d5cef2c94931f011cbdef94",
+    "synthetic_trials.csv": "3f29402ce99ae7ae928b7c1ef2e2d9dd076eff3c1fe7dec0412bea4b4b9df2a3",
+    "target_matrices.json": "4b089561a36ee00ce9748fd91384707af3f3dd49241368ba1d15dbbd2f7b3e45"
+  }
+}
