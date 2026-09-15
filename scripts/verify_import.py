@@ -1,7 +1,7 @@
 """Verify frozen import bytes and explicit repair/documentation hash chains.
 
-The original import manifest and ZIP remain immutable. Documentation integration
-cannot authorize a numerical-source or proof change. Unknown edits are rejected.
+Original archives and old ledgers are immutable. Each new document layer must
+match its predecessor hash and cannot authorize numerical-source/proof changes.
 """
 from __future__ import annotations
 import hashlib
@@ -17,6 +17,8 @@ DOCUMENT_RECORD = 'provenance/changes/novelty-integration-01.json'
 DOCUMENT_PATHS = frozenset({'CLAIM_STATUS.md', 'SOURCE_AUDIT.md', 'REPORT.md',
                             'experiment/LAB_REVIEW.md'})
 DOCUMENT_ADDITIONS = frozenset({'docs/CONTRIBUTIONS.md', 'experiment/REVIEW_RATIONALE.md'})
+FOLLOWUP_RECORD = 'provenance/changes/novelty-integration-02.json'
+FOLLOWUP_PATHS = DOCUMENT_PATHS | DOCUMENT_ADDITIONS
 
 
 def sha(data: bytes) -> str:
@@ -53,6 +55,40 @@ def _document_approvals(root: Path) -> tuple[dict, dict]:
     return changes, additions
 
 
+def _followup_approvals(root: Path) -> dict:
+    """Accept exactly the six existing documents, never code or new paths."""
+    ledger = json.loads((root/FOLLOWUP_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('interpretation_only') is not True or
+        ledger.get('original_archive_sha256') != ORIGINAL_ARCHIVE_SHA256 or
+        ledger.get('previous_record') != DOCUMENT_RECORD or
+        ledger.get('base_commit') != 'db17e1ec1868107b0fe1042d5a480769b552633e' or
+        ledger.get('audit_commit') != 'ca0480eec0064dbcdf50ff3d60032022deff5d3c'):
+        raise ValueError('Invalid follow-up documentation ledger contract')
+    entries = ledger.get('changes', [])
+    changes = {e['path']: e for e in entries}
+    if (len(changes) != len(entries) or changes.keys() != FOLLOWUP_PATHS or
+        ledger.get('additions')):
+        raise ValueError('Follow-up ledger is not the authorized document set')
+    for entry in entries:
+        if not entry.get('reason'):
+            raise ValueError('Follow-up documentation reason is missing')
+        for key in ('old_sha256', 'new_sha256'):
+            value = entry.get(key)
+            if (not isinstance(value, str) or len(value) != 64 or
+                any(c not in '0123456789abcdef' for c in value)):
+                raise ValueError('Invalid follow-up documentation hash')
+    return changes
+
+
+def _followup_hash(path: str, expected: str, changes: dict) -> str:
+    entry = changes.get(path)
+    if entry is None:
+        return expected
+    if entry['old_sha256'] != expected:
+        raise ValueError('Follow-up documentation previous hash mismatch: '+path)
+    return entry['new_sha256']
+
+
 def verify(root: Path = ROOT) -> dict:
     manifest_bytes = (root/'provenance/IMPORT_MANIFEST.json').read_bytes()
     if _git_blob(manifest_bytes) != ORIGINAL_MANIFEST_GIT_BLOB:
@@ -76,6 +112,7 @@ def verify(root: Path = ROOT) -> dict:
     document_changes, document_additions = _document_approvals(root)
     if document_additions.keys() & (installed.keys() | additions.keys()):
         raise ValueError('Documentation addition collides with protected source')
+    followup = _followup_approvals(root)
     sources = [e['source'] for e in manifest['files']]
     if len(sources) != len(set(sources)):
         raise ValueError('Duplicate source member')
@@ -101,6 +138,7 @@ def verify(root: Path = ROOT) -> dict:
                 if document['old_sha256'] != expected:
                     raise ValueError('Documentation ledger previous hash mismatch: '+name)
                 expected = document['new_sha256']
+            expected = _followup_hash(entry['path'], expected, followup)
             if sha(current) != expected:
                 raise ValueError('Protected working file changed: '+entry['path'])
             if approved is None and document is None:
@@ -115,7 +153,8 @@ def verify(root: Path = ROOT) -> dict:
         if sha(_safe_path(root,path).read_bytes()) != entry['sha256']:
             raise ValueError('Protected added file changed: '+path)
     for path, entry in document_additions.items():
-        if sha(_safe_path(root,path).read_bytes()) != entry['sha256']:
+        expected = _followup_hash(path, entry['sha256'], followup)
+        if sha(_safe_path(root,path).read_bytes()) != expected:
             raise ValueError('Protected documentation changed: '+path)
     return {'status':'PASS','source_members':count,'archive_sha256':ORIGINAL_ARCHIVE_SHA256,
             'source_archive_unchanged':True,'original_import_manifest_unchanged':True,
@@ -126,6 +165,9 @@ def verify(root: Path = ROOT) -> dict:
             'document_change_record':DOCUMENT_RECORD,
             'authorized_document_changes_verified':sorted(document_changes),
             'authorized_document_additions_verified':sorted(document_additions),
+            'followup_change_record':FOLLOWUP_RECORD,
+            'authorized_followup_documents_verified':sorted(followup),
+            'mathematics_changed_by_followup':False,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 
 

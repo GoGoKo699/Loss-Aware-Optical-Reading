@@ -1,30 +1,28 @@
-# Two candidate contributions
+# Candidate contribution and derived benchmark
 
 **Working scientific position, not a manuscript or a priority clearance.**
-The mathematical statements are supported by the repository's independent audit
-and bounded numerical repair. The completed predecessor comparison narrows what
-may be distinct. There are no acquired laboratory data.
+The independent audit and bounded repair support the mathematical statements.
+The full-text follow-up changes their novelty hierarchy, not their validity.
+A is the leading candidate theoretical contribution. B is a credited optical
+corollary and benchmark, not a second independently new general inequality.
+There are no acquired laboratory data.
 
-The task is to identify one of four equally likely optical phase patterns with
-one interrogation. Exactly one tested path receives a pi phase flip. The reader
-returns a path label or an inconclusive result. Let C, E, and F be the correct,
-wrong, and inconclusive probabilities **per attempted interrogation**, so
-C+E+F=1. A chosen penalty lambda gives the score C-lambda E.
-
-The simple mechanism is established: prepare path amplitudes, apply the unknown
-optical operation, interfere the returned light, and read the outputs. The two
-candidate contributions concern the optimal preparation and the comparison with
-classical illumination, not a new reading circuit or learning architecture.
+The task identifies one of four equally likely optical phase patterns in one
+interrogation. Exactly one tested path receives a pi phase flip. Let C, E, and F
+be the correct, wrong, and inconclusive probabilities **per attempted interrogation**,
+with C+E+F=1. A preselected wrong-answer penalty lambda gives C-lambda E.
+The established physical mechanism is preparation, interrogation, interference,
+and detection. It is not a new learning architecture.
 
 ## A. Retune the input and keep the receiver fixed
 
-**Statement.** For a square flat orthogonal phase code, uniform hidden labels,
-and known positive diagonal losses independent of the label, a fixed code
-decoder attains the optimal single-photon reliability tradeoff when the incident
-amplitudes and the no-click decision rule may be chosen appropriately.
+For a square flat orthogonal phase code, uniform hidden labels, and known
+positive diagonal losses independent of the label, one fixed code decoder
+attains the optimal single-photon reliability tradeoff when the input amplitudes
+and no-click decision rule are chosen appropriately.
 
-For the four-path code, put v_i=sqrt(eta_i), where eta_i is the transmission
-probability of path i. For lambda at least 1/3, the optimum is
+For the four-path code, v_i=sqrt(eta_i), with transmission probabilities eta_i.
+For lambda at least 1/3, the exact optimum is
 
 $$
 \max(C-\lambda E)=\lambda_{\max}\left[
@@ -32,35 +30,34 @@ $$
 \right].
 $$
 
-Prepare p_i=z_i^2 from its normalized positive principal eigenvector and use
-D=J/2-I, where J is the four-by-four all-ones matrix. No click is inconclusive
-on this branch. The minimum-error endpoint and partial guessing on vacuum
-outcomes complete the frontier. This is classical calculation of a preparation,
-not a coherent parameter register.
+Prepare p_i=z_i^2 from the normalized positive principal eigenvector and use
+D=J/2-I. No click is inconclusive on this branch. The minimum-error endpoint and
+partial guessing on vacuum complete the frontier. The preparation is computed
+classically; there is no coherent parameter register.
 
-**What is inherited.** The fixed-input decoder is a known square-root
-measurement. The zero-error harmonic-mean rule follows from established
-unambiguous-discrimination arguments and normalization. Joint probe/measurement
-optimization and error-margin tasks also predate this work.
+**Inherited ingredients.** The decoder for a fixed input is a known square-root
+measurement. The zero-error harmonic mean follows from established unambiguous
+state discrimination and normalization. Joint input/measurement optimization
+and error-margin tasks also predate this project.
 
-**What remains a candidate contribution.** The particular joint optimization
-collapses to input-only retuning despite unequal losses and erasure. The proof
-compares with arbitrary final measurements, not only the chosen decoder.
-Normalizing a putative receiver filter into a different pre-device input explains
-why that filter need not remain in the receiver. It does not reverse loss or
-condition the reported statistics on detection.
+**Candidate distinction.** The complete lossy joint optimization compares with
+arbitrary final measurements, not only the selected decoder. A possible receiver
+filter can be absorbed into a different normalized input before interrogation.
+This neither reverses loss nor conditions the score on detection. The
+[original reductions R1-R3](../audits/novelty-01/REDUCTIONS.md) identify the exact
+remaining step after crediting the predecessors.
 
 The theorem excludes an occupied bypass rail, retained idler, repeated calls to
-one hidden setting, and an additional healthy hypothesis. It is not an optimum
-for an arbitrary noisy chip. See [Theorems 1-2](../proofs/THEORY.md) and
-[reductions R1-R3](../audits/novelty-01/REDUCTIONS.md), including the Eldar-Forney,
-Chefles-Barnett, Hashimoto, and Bagan predecessors.
+one setting, and a fifth healthy hypothesis. It is not an optimum for every
+noisy chip. The named follow-up sources did not state this complete contract;
+that is not proof of worldwide priority. See
+[Theorems 1-2](../proofs/THEORY.md) and the [claim ledger](../CLAIM_STATUS.md).
 
-## B. Bound the classical source class, not one implemented laser receiver
+## B. A derived benchmark over the classical source class
 
-**Statement.** For uniform hidden labels selecting declared passive coherent
-maps A_j, a mean incident signal budget mu, and inaccessible loss modes, every
-allowed nonnegative Glauber-Sudarshan coherent-state mixture satisfies
+For uniform hidden labels selecting passive coherent maps A_j, a mean incident signal budget
+mu, and inaccessible loss modes, every permitted nonnegative Glauber-Sudarshan
+coherent-state mixture satisfies
 
 $$
 C\le\min\left\{1-E,
@@ -75,46 +72,51 @@ H_\Delta=\frac{1}{m(m-1)}\sum_{j<k}
 $$
 
 The receiver may know the illumination's mixture label, use a phase reference,
-and perform an arbitrary measurement. The illumination may contain arbitrarily
-rare bright pulses. The energy budget counts signal photons entering the tested
-section, not total apparatus energy. The maps must share a physical phase
-reference; independent label-dependent global phases cannot be discarded.
+and perform any measurement. The illumination may contain arbitrarily
+rare bright pulses. Count signal photons entering the tested section, not total
+apparatus energy. The physical maps share a phase reference; independent
+label-dependent global phases cannot be discarded.
 
-**What is inherited.** Overlap bounds, the binary scattering contrast, concavity,
-and error/inconclusive measurements are established. At uniform four-path loss,
-the attained fixed-alphabet curve is exactly Herzog's Eq. (4.18) after a change
-of variables. Calibration norm bounds and the fixed-N statistical wrappers are
-supporting tools, not separate novelty claims.
+**Attribution.** S20, Zhang et al. (2001), supplies the zero-error overlap bound.
+S22, Bagan et al. (2018), gives the exact no-failure multiclass relation. The
+established conclusive-filter transformation S08, with reweighted conditional
+priors, gives the useful arbitrary-failure upper-C consequence. A separate
+failure-row argument in the supplied follow-up reaches the same interpretation.
+Coherent-state overlaps, the map norm, and concavity produce the mean-energy
+optical corollary. See [the explicit follow-up reductions](../audits/novelty-02/REDUCTIONS.md).
 
-**What remains a candidate contribution.** The multiclass optical converse
-covers alternative transmitters and their entire intensity mixtures, not just
-measurements of one given alphabet. It supplies an all-source upper bound to
-which an unconditional experimental score can be compared. Combining it with
-the known uniform alphabet gives an exact source-class frontier there; the
-general-map ceiling is not claimed to be attainable everywhere.
+The uniform four-symbol fixed-alphabet curve is Herzog's Eq. (4.18). The optical
+source-class converse rules out alternative transmitters and intensity mixtures,
+so it remains necessary, but the short reduction does not support claiming a
+new generic discrimination theorem. The general-map ceiling is not asserted to
+be attained everywhere. Binary spectral contrast, nulling receivers, calibration
+norm bounds, and fixed-N statistics are also credited supporting methods.
 
-See [Theorems 3-5 and the score witnesses](../proofs/THEORY.md),
-[reductions R4-R8](../audits/novelty-01/REDUCTIONS.md), and the
+**Experimental role.** B is a strong comparison for P1, not merely a model of
+one laboratory laser receiver. A useful new implementation or calibrated source
+comparison need not invent its benchmark. No exact experimental advantage or
+publication significance follows merely from writing down this corollary.
+
+See [Theorems 3-5 and score witnesses](../proofs/THEORY.md) and the
 [numerical contract](NUMERICAL_CONTRACT.md). Only the photon-support enclosure
-and its specified perturbation addition have outward-safe arithmetic; this is
-not an interval certificate for the entire experimental pipeline.
+and its specified perturbation addition use outward-safe arithmetic; this is
+not an interval certificate for the full experimental pipeline.
 
-## What would substantiate the paper
+## What the paper and experiment must establish
 
-The mechanism test M1 measures predicted input redistribution with the same
-receiver. The positive test P1 seeks an unconditional score above the classical
-ceiling using independently justified calibration and energy bounds. The reverse
-test P2 seeks an actually measured coherent score above the entire stated
-four-path photon bound. Neither a theoretical forecast nor a favorable normalized
-intensity pattern is an observed advantage.
+M1 tests predicted input retuning while the decoder stays fixed. A scan is not
+a proof of global optimality. P1 seeks unconditional performance above B using
+independently justified calibration and energy bounds. P2 requires a measured
+coherent score above the entire declared four-path photon ceiling, not one poor
+photon preparation and not every possible quantum architecture.
 
-The narrow one-bad-path zero-error crossover remains a supporting solved case,
-not a third general framework. The uniform curve is a credited control. More
-modes are unnecessary for these first tests.
+The one-bad-path zero-error crossover remains a supporting solved case under
+its original restrictions. Known uniform curves are controls. No more modes or
+new algorithmic name is required by this attribution update.
 
-The bounded search did not subsume A or the complete B contract in the inspected
-passages. That is not proof of priority. In particular, the original S20 text,
-a full S18 theorem/appendix comparison, and potentially equivalent multiclass
-bounds remain coverage gaps. See the [source map](../SOURCE_AUDIT.md) and
-[lab-review rationale](../experiment/REVIEW_RATIONALE.md). No experimental date,
-external endorsement, or journal outcome is implied.
+The named S18/S20 comparisons are resolved at the recorded access levels. S20
+was read in embedded author-uploaded original text, not a downloaded publisher
+PDF. S18 includes finite-n results but uses a different binary/reference-assisted
+contract. Partial additional leads and wider priority remain open; they do not
+undo the explicit S22 reduction. See the [source map](../SOURCE_AUDIT.md) and
+[lab-review rationale](../experiment/REVIEW_RATIONALE.md).

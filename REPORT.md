@@ -8,14 +8,18 @@ and final click detection. No iterative quantum optimizer is needed.
 
 ## Contribution and source status
 
-The [two-claim note](docs/CONTRIBUTIONS.md) is the current contribution statement.
-The fixed-input decoder, zero-error harmonic-mean endpoint, and uniform coherent
-fixed-alphabet curve have direct predecessors. The two candidate additions are
-the joint normalized-input/fixed-decoder optimum under unequal loss and the
-multiclass bound over the allowed classical source class. Their mathematical
-validity is supported by the theory audit; publication-level priority is not
-established. [SOURCE_AUDIT.md](SOURCE_AUDIT.md) records the distinctions and
-remaining coverage gaps. This update changes no equations or test settings.
+The [contribution and benchmark note](docs/CONTRIBUTIONS.md) states the current
+hierarchy. A, the joint normalized-input/fixed-decoder optimum under unequal
+loss, remains the leading candidate theoretical contribution. B is a derived
+optical source-class benchmark, not an independent new general discrimination
+theorem. The fixed-input decoder, harmonic-mean endpoint, uniform fixed-alphabet
+curve, and B's overlap inequality have identified predecessors. The mathematical
+statements remain supported by the audit and repair; priority for A is not cleared.
+
+The [full-text follow-up](audits/novelty-02/REPORT.md) resolves the named S18/S20
+comparisons and supplies the S22 duality/filter reduction. [SOURCE_AUDIT.md](SOURCE_AUDIT.md)
+records exact attribution and access limitations. This integration changes no
+equations, operating values, or experimental settings.
 
 ## 1. Main result: retune the input, not the receiver
 
@@ -108,9 +112,9 @@ When an answer is mandatory, it loses: .775 versus .8586096698. The receiver
 attaining the coherent minimum-error number is an abstract quantum measurement;
 the report does not assume that our four-click classical control implements it.
 The fixed-alphabet curve is exactly Herzog's Eq. (4.18) after the substitution
-recorded in [reduction R4](audits/novelty-01/REDUCTIONS.md). The separate
-source-class claim rules out alternative coherent transmitters and intensity
-mixtures. The curve and its square-root measurement are not claimed as new.
+recorded in [reduction R4](audits/novelty-01/REDUCTIONS.md). The derived optical
+source-class guarantee rules out alternative coherent transmitters and intensity
+mixtures. Neither the curve nor its square-root measurement is claimed as new.
 
 ## 3. A certificate from actual phase-referenced device maps
 
@@ -133,7 +137,11 @@ allows unequal and even hypothesis-dependent attenuation, subject to the
 specified passive coherent-map model and inaccessible loss environment. For
 the ideal four-one-flip code, $\kappa=\max_i\eta_i$.
 
-The proof combines coherent-state overlaps, measurement fidelity, and concavity.
+The certificate is an optical corollary of established discrimination results:
+S20 supplies the zero-error overlap bound, S22 the no-failure multiclass relation,
+and S08 the conclusive-filter transformation. Their failure-inclusive consequence
+is derived in [audit 02](audits/novelty-02/REDUCTIONS.md). The optical step combines
+coherent-state overlaps, the map norm, and concavity.
 It therefore covers rare bright pulses analytically. A bounded numerical scan
 would not do so. The binary contrast is an established scattering-discrimination
 operator up to normalization; the multiclass average is used here as a converse
@@ -309,7 +317,7 @@ are completed.
 
 ## Reading routes
 
-- Candidate contributions: [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md)
+- Candidate contribution and derived benchmark: [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md)
 - Laboratory rationale: [experiment/REVIEW_RATIONALE.md](experiment/REVIEW_RATIONALE.md)
 
 - Full protocol: [experiment/FIRST_EXPERIMENT.md](experiment/FIRST_EXPERIMENT.md)

@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "base_commit": "db17e1ec1868107b0fe1042d5a480769b552633e",
+  "audit_commit": "ca0480eec0064dbcdf50ff3d60032022deff5d3c",
+  "previous_record": "provenance/changes/novelty-integration-01.json",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "interpretation_only": true,
+  "changes": [
+    {
+      "path": "CLAIM_STATUS.md",
+      "old_sha256": "f5054fc0ee1f1c206744eabbfafdef3a9f18b4c3383611758589d07294c22630",
+      "new_sha256": "20896a2e7a613bd997b77bde7dea25f140b1762c6eeaf84c965401048ecd7116",
+      "reason": "Integrate completed full-text attribution: A remains candidate; B is a derived optical benchmark. Preserve formulas and acquisition semantics."
+    },
+    {
+      "path": "REPORT.md",
+      "old_sha256": "82b4ed425b5601316b034691e36ab0745084248c18588886bb0d5822b55913d1",
+      "new_sha256": "85bb81ffccc33fcee17a2e3566945d9e3b8386f069d25779cab2f00c2ee9febd",
+      "reason": "Integrate completed full-text attribution: A remains candidate; B is a derived optical benchmark. Preserve formulas and acquisition semantics."
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "old_sha256": "1f3ad123f4bc302fb0d4a778a3bcc71ac4c721ed5b78de8fa222433dcaa91487",
+      "new_sha256": "04a72930a94daba1df17d632746259eb58eb9e42ea7c080df81139c1bf47141f",
+      "reason": "Integrate completed full-text attribution: A remains candidate; B is a derived optical benchmark. Preserve formulas and acquisition semantics."
+    },
+    {
+      "path": "docs/CONTRIBUTIONS.md",
+      "old_sha256": "f6452ee1a9eb4bf035410f5d1b2b6415016d5b4ece60d829f6bf07e8afa07494",
+      "new_sha256": "d7f8b22cbe104c682108307598be028b7b127aaddf8b2fe9be62afe84e90a5fa",
+      "reason": "Integrate completed full-text attribution: A remains candidate; B is a derived optical benchmark. Preserve formulas and acquisition semantics."
+    },
+    {
+      "path": "experiment/LAB_REVIEW.md",
+      "old_sha256": "d83938c4b365b766159778c33c46b5f9a7e3abd6650be4abe988326637992482",
+      "new_sha256": "ccd011603280c3fb1bee7b9a53e1f0a14431ba52f89262719bbe2269b181750f",
+      "reason": "Integrate completed full-text attribution: A remains candidate; B is a derived optical benchmark. Preserve formulas and acquisition semantics."
+    },
+    {
+      "path": "experiment/REVIEW_RATIONALE.md",
+      "old_sha256": "1b87f15a011e4d75e48e3e04e6cdd5f7fadabc0955f37b81aa3510c66bfba936",
+      "new_sha256": "270fd55ba8dcdb6f902d7f746e3885bd1cd9a67a9d7ec49129b77f3667db31d8",
+      "reason": "Integrate completed full-text attribution: A remains candidate; B is a derived optical benchmark. Preserve formulas and acquisition semantics."
+    }
+  ]
+}
