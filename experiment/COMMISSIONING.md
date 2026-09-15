@@ -9,16 +9,70 @@ experiment.
 
 ## Pick the exact target
 
-| Route | Prepared classical amplitudes at P0 | Phase family and receiver | Ideal equal-loss output |
-|---|---|---|---|
-| SU4 | `A(1,1,1,1)/2` on 0–3 | `O_j=I4-2|j><j|`, `D4=J4/2-I4` | `A sqrt(t) |j>`, `j=0..3` |
-| SU8 four active | `A(1,1,1,1,0,0,0,0)/2` | `O_j ⊕ I4`, `D4 ⊕ I4` | Same four labels, spare outputs ideally dark |
-| SU8 native | `A(1,1,1,1,1,1,1,1)/sqrt(8)` | `O_j=diag(Z8[:,j])`, `D8=Z8†/sqrt(8)` | `A sqrt(t) |j>`, `j=0..7` |
+Use equal input amplitudes for the first routing check. Logical ports and hidden
+labels use the ordering below; record how they map to physical connectors.
 
-`|A|^2` sets the incident classical amplitude normalization in the selected
-mode convention. For unequal transmissions the target is `D T O_j a`, scaled
-by `A`, with `T=diag(sqrt(eta))`. An attenuation block is required to realize
-`T`; it cannot be supplied by a unitary compiler. The full signed matrices,
+| Route | Prepared paths | Hidden labels | Expected bright output |
+|---|---|---|---|
+| SU4 | Equal amplitudes on 0–3 | 0–3 | Port j |
+| SU8 four active | Equal amplitudes on 0–3; vacuum on 4–7 | 0–3 | Port j; outputs 4–7 stay dark |
+| SU8 native | Equal amplitudes on 0–7 | 0–7 | Port j |
+
+The exact targets follow. Each input vector is normalized; the prepared classical
+amplitudes are **A times that vector**, where A is the incident complex amplitude.
+Vectors are columns, with output ports in matrix rows and input ports in columns.
+
+**SU4.** Prepare the four equal amplitudes and use the marked-path phase family:
+
+```math
+a_4=\frac{1}{2}(1,1,1,1)^T.
+```
+
+```math
+O_{4,j}=I_4-2|j\rangle\langle j|,\qquad D_4=\frac{J_4}{2}-I_4,
+\qquad j=0,1,2,3.
+```
+
+Here J4 is the all-ones matrix. Only path j receives the pi phase flip.
+
+**SU8, four active modes.** Use the same task on ports 0–3:
+
+```math
+a_{\rm emb}=\frac{1}{2}(1,1,1,1,0,0,0,0)^T.
+```
+
+```math
+O_{{\rm emb},j}=O_{4,j}\oplus I_4,\qquad
+D_{\rm emb}=D_4\oplus I_4,\qquad j=0,1,2,3.
+```
+
+Inputs 4–7 remain in vacuum. Record these outputs too, so leakage cannot disappear.
+
+**SU8, native eight modes.** Use the Walsh phase family in port order 0–7:
+
+```math
+a_8=\frac{1}{\sqrt{8}}(1,1,1,1,1,1,1,1)^T.
+```
+
+```math
+O_{8,j}=\mathrm{diag}(Z_8[:,j]),\qquad
+D_8=\frac{Z_8^\dagger}{\sqrt{8}},\qquad j=0,1,\ldots,7.
+```
+
+The signed Walsh matrix Z8, with three-bit indices, is listed on [SU8](SU8.md#route-b-native-eight-mode-walsh-code).
+This is the eight-label route; the four-active-mode route above still has four labels.
+
+**Expected output.** For uniform power transmission t, all three ideal targets give
+
+```math
+b_j=A\sqrt{t}\,|j\rangle.
+```
+
+Only output port j is bright, with power proportional to `|A|^2 t`, before
+receiver/readout losses. `|A|^2` sets the incident classical amplitude normalization
+in the selected mode convention. For unequal transmissions the target is
+`A D T O_j a`, with `T=diag(sqrt(eta))`. An attenuation block is required to realize
+T; it cannot be supplied by a unitary compiler. The full signed matrices,
 first-column preparation completion, logical ports, and consistent SU phases
 are on [SU4](SU4.md) and [SU8](SU8.md), and are exported by the reference below.
 

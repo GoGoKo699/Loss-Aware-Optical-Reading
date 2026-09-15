@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "base_commit": "55a90a3162326e924b460977d4c19714f39ae606",
+  "base_tree": "bf45ef1360e19fd6cc51c6f41fd2d0fac86a90eb",
+  "previous_record": "provenance/changes/math-approval-03.json",
+  "previous_record_sha256": "633f19203678abe72938ee3b6661009a5a488c0c65861f3ab4d5002300f28fa5",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "interpretation_only": true,
+  "mathematical_content_changed": false,
+  "authorization": "The owner requested correction of the remaining table layout problem and removal of approval/discussion traces from reader-facing text. The existing history-preserving merge authorization remains in force.",
+  "scope": "Exactly five reader documents. Preserve all six predecessor ledgers, canonical proofs, numerical sources, acquisition protocols, archives and frozen evidence. This record is internal provenance, outside the experimental reader route.",
+  "changes": [
+    {
+      "path": "CLAIM_STATUS.md",
+      "old_sha256": "d75a41a878c68520c7ab36819d095471abdc1ba2bd4e8c1a944b198fb72677ec",
+      "new_sha256": "81d99b44e8af559959ab67f282a74667e0cfcfd0e9e578ca5a1d0a6ecd0ea563",
+      "reason": "Remove approval commentary and owner attribution from the reader-facing status ledger, preserving unequivocal availability of both chips and every scientific claim status."
+    },
+    {
+      "path": "docs/PHILOSOPHY_DRAFT.md",
+      "old_sha256": "98cc25e8e0c7affe56d4692c4fa60325821ce0f97b542db6a3fffa852f1caaf7",
+      "new_sha256": "f8f017aad26fff019b5fedf675adc9be0d05ff38cbdb19bc4b3ee6457c847fbd",
+      "reason": "Remove the opening approval/editorial paragraph as requested; preserve the approved philosophy body and stable link path."
+    },
+    {
+      "path": "docs/PHYSICAL_SETTING.md",
+      "old_sha256": "3b7fb85e8dbc2c55c2b4967a9850086d58c80399cadbae59cbe256b9a98e2536",
+      "new_sha256": "8ca9a2d0a7dd0be06d81903af03403bc3c659665d2709844ca0620681a3e1112",
+      "reason": "State confirmed availability of both laboratory chips directly without owner attribution; preserve all supporting-interface and physical-scope qualifications."
+    },
+    {
+      "path": "experiment/COMMISSIONING.md",
+      "old_sha256": "97a8a3ed4a2064877511f6603e56b24c02f790d210efd68e866d55b14ff604ac",
+      "new_sha256": "0b7ee9db47a21bebc1c6902764fd171a233fd8e0d89fd9a99fe2f5316bd338db",
+      "reason": "Replace the broken pipe-containing target table with a compact route table and adjacent exact matrix displays, preserving preparations, ports, physical targets, commands and trial accounting."
+    },
+    {
+      "path": "experiment/SU4.md",
+      "old_sha256": "cb6fcc768b4bd9fdb0be04cb6f19468a05aa3e9c6f76ac3821cabdece0f892b0",
+      "new_sha256": "57a216128e905f162e032921d32d806f03fa80e759cb3555d4f671eeceb332b7",
+      "reason": "Replace the pipe-containing hidden-operation table cell with a plain-language target and put the same exact formula directly below the table; preserve the four-label task and all procedures."
+    }
+  ],
+  "test_adjustments": [
+    {
+      "path": "tests/test_handover_integrity.py",
+      "test": "test_visible_preimages_and_predecessor_chain",
+      "previous_assertion": "The existing authorized hash chain ends at the current document bytes.",
+      "new_assertion": "The unchanged existing chain must additionally match this restricted layer old hash before its final hash is compared with current bytes; other documents still compare directly.",
+      "reason": "Preserve every historical ledger byte while admitting only the explicitly requested later editorial changes. No scientific assertion or numerical tolerance is changed."
+    },
+    {
+      "path": "tests/test_layout_integration.py",
+      "test": "test_exact_recorded_baseline_and_old_new_bytes",
+      "previous_assertion": "The existing authorized hash chain ends at the current document bytes.",
+      "new_assertion": "The unchanged existing chain must additionally match this restricted layer old hash before its final hash is compared with current bytes; other documents still compare directly.",
+      "reason": "Preserve every historical ledger byte while admitting only the explicitly requested later editorial changes. No scientific assertion or numerical tolerance is changed."
+    },
+    {
+      "path": "tests/test_math_approval_integration.py",
+      "test": "test_exact_authorized_chain_and_current_bytes",
+      "previous_assertion": "The existing authorized hash chain ends at the current document bytes.",
+      "new_assertion": "The unchanged existing chain must additionally match this restricted layer old hash before its final hash is compared with current bytes; other documents still compare directly.",
+      "reason": "Preserve every historical ledger byte while admitting only the explicitly requested later editorial changes. No scientific assertion or numerical tolerance is changed."
+    }
+  ]
+}

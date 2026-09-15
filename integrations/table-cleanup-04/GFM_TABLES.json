@@ -1,0 +1,1566 @@
+{
+  "status": "PASS",
+  "baseline": "55a90a3162326e924b460977d4c19714f39ae606",
+  "node_version": "v24.19.0",
+  "markdown_it_version": "14.1.0",
+  "mathjax_full_version": "3.2.2",
+  "markdown_parser_mode": "CommonMark with GFM table rule enabled",
+  "documents_checked": 24,
+  "tables_parsed": 28,
+  "table_body_rows": 169,
+  "old_defective_rows_reproduced": 3,
+  "corrected_expected_rows_preserved": 4,
+  "math_displays_parsed": 13,
+  "live_github_rendering_checked": false,
+  "visual_inspection_by_script": false,
+  "previews": [
+    {
+      "name": "commissioning.html",
+      "sha256": "b9f26100f68cd370dcde3447fdb7e310172c6ee428173174378e2d2673d42eb5"
+    },
+    {
+      "name": "su4.html",
+      "sha256": "4e4f48ca734d603c038b89828285571871dc8c7ae0dbe63a4d285ab3b6cd0089"
+    }
+  ],
+  "page_sha256": {
+    "CLAIM_STATUS.md": "81d99b44e8af559959ab67f282a74667e0cfcfd0e9e578ca5a1d0a6ecd0ea563",
+    "README.md": "22f28dbdf826a26e560b58b38d457be089814fd6c60a5d57614c6d5691445701",
+    "docs/CONTRIBUTIONS.md": "bae9c077e4f8074de7b97dbc48280dd918a40e4dfdc64bdc32bd3c7727f85f33",
+    "docs/NUMERICAL_CONTRACT.md": "7d146191822bc6dda171f78285a3f64441a86b638092d6a332f6697b2481b133",
+    "docs/PHILOSOPHY_DRAFT.md": "f8f017aad26fff019b5fedf675adc9be0d05ff38cbdb19bc4b3ee6457c847fbd",
+    "docs/PHYSICAL_SETTING.md": "8ca9a2d0a7dd0be06d81903af03403bc3c659665d2709844ca0620681a3e1112",
+    "docs/READING_CROSSWALK.md": "369119a0aaf31d8a8f8da2a40e0a8dbdead723795397e7d6876a6c869f33a012",
+    "docs/REPRODUCE.md": "f03e65d30264917a5996cc39c119ccfd58bb96c97843f21ce0d313468480cb06",
+    "docs/ROADMAP.md": "ea82fd364fda4822c08d49f4e109658e199178abf038ef934790cf301158be9b",
+    "docs/ROBUSTNESS_GUIDE.md": "bbd4b9e2a4fb6d2fb02f90b440bcc75a4b2f5c218f77be52adfab025ec7f3006",
+    "docs/THEORY_ROUTE.md": "7d34e4c8a969d1f69eff7232ea518bc6d959ed25c33914f458769bce035271d4",
+    "experiment/COMMISSIONING.md": "0b7ee9db47a21bebc1c6902764fd171a233fd8e0d89fd9a99fe2f5316bd338db",
+    "experiment/FIRST_EXPERIMENT.md": "3bfaceace27b652a3fe2a22c43c1282dc3118c5f43bab8faa93ff64951ec6be2",
+    "experiment/INDEX.md": "617d096e5e0127c07653830a6a23596f4fcde8d2db1999782c059482fff2084f",
+    "experiment/INTERFACES.md": "1546f9212a3814220075367ab26531587c79725369000da122698fcdbf1305ba",
+    "experiment/LAB_REVIEW.md": "21b7f87e9595c7030278c1bda6dcc1ac8750992da929c289ad71bad5685fdda0",
+    "experiment/M1.md": "ec3613bea0fd19efcdc94ca83f2a3a02c3f1f0c13309e4eeb1502676e6b478e7",
+    "experiment/P1.md": "bdb7a77114ef1a7da6ba918cbec0feae516d9eeb88d44045faa6131a20e880ea",
+    "experiment/P2.md": "5099d72191f08589b40610bc9f484d510d711717d37b77287e1968f79bd9cf5e",
+    "experiment/REVIEW_RATIONALE.md": "270fd55ba8dcdb6f902d7f746e3885bd1cd9a67a9d7ec49129b77f3667db31d8",
+    "experiment/SU4.md": "57a216128e905f162e032921d32d806f03fa80e759cb3555d4f671eeceb332b7",
+    "experiment/SU8.md": "f5e6fff30cdb81add4020fc872fc9a3702e8f4c5bfffe9e287a3ca2827578d32",
+    "experiment/UNCERTAINTY.md": "2b2e2816a5efe57440e0e688054068c9c559ec6423457868a2bc8cb69e38b34f",
+    "work_orders/CURRENT.md": "2735a0ef4d8b77de776e7c3390cd9ea3261f478f79a785df53431b6d34bcd582"
+  },
+  "old_defect": {
+    "commissioning": {
+      "source_lines": [
+        11,
+        16
+      ],
+      "rows": [
+        [
+          "Route",
+          "Prepared classical amplitudes at P0",
+          "Phase family and receiver",
+          "Ideal equal-loss output"
+        ],
+        [
+          "SU4",
+          "A(1,1,1,1)/2 on 0\u20133",
+          "`O_j=I4-2",
+          "j><j"
+        ],
+        [
+          "SU8 four active",
+          "A(1,1,1,1,0,0,0,0)/2",
+          "O_j \u2295 I4, D4 \u2295 I4",
+          "Same four labels, spare outputs ideally dark"
+        ],
+        [
+          "SU8 native",
+          "A(1,1,1,1,1,1,1,1)/sqrt(8)",
+          "O_j=diag(Z8[:,j]), D8=Z8\u2020/sqrt(8)",
+          "`A sqrt(t)"
+        ]
+      ]
+    },
+    "su4": {
+      "source_lines": [
+        15,
+        22
+      ],
+      "rows": [
+        [
+          "Role",
+          "Exact target",
+          "Physical implementation to identify"
+        ],
+        [
+          "Preparation",
+          "A photon with amplitudes a_i = sqrt(p_i), sum(p_i) = 1",
+          "A programmable preparation section, the other chip, or a separate preparation network"
+        ],
+        [
+          "Hidden operation",
+          "`O_j = I4 - 2",
+          "j><j"
+        ],
+        [
+          "Device loss",
+          "T = diag(sqrt(eta_0),...,sqrt(eta_3)), 0 < eta_i <= 1",
+          "Characterized physical attenuation between P0 and P1; independent of the label in the ideal model"
+        ],
+        [
+          "Photon receiver",
+          "D4 = J4/2 - I4",
+          "A four-mode programmed interferometer after P1"
+        ],
+        [
+          "Decision",
+          "A single click in output k reports k",
+          "A recorded, fixed-window detector arrangement; no or multiple clicks are inconclusive"
+        ]
+      ]
+    }
+  },
+  "corrected": {
+    "commissioning": {
+      "source_lines": [
+        14,
+        19
+      ],
+      "rows": [
+        [
+          "Route",
+          "Prepared paths",
+          "Hidden labels",
+          "Expected bright output"
+        ],
+        [
+          "SU4",
+          "Equal amplitudes on 0\u20133",
+          "0\u20133",
+          "Port j"
+        ],
+        [
+          "SU8 four active",
+          "Equal amplitudes on 0\u20133; vacuum on 4\u20137",
+          "0\u20133",
+          "Port j; outputs 4\u20137 stay dark"
+        ],
+        [
+          "SU8 native",
+          "Equal amplitudes on 0\u20137",
+          "0\u20137",
+          "Port j"
+        ]
+      ]
+    },
+    "su4": {
+      "source_lines": [
+        15,
+        22
+      ],
+      "rows": [
+        [
+          "Role",
+          "Exact target",
+          "Physical implementation to identify"
+        ],
+        [
+          "Preparation",
+          "A photon with amplitudes a_i = sqrt(p_i), sum(p_i) = 1",
+          "A programmable preparation section, the other chip, or a separate preparation network"
+        ],
+        [
+          "Hidden operation",
+          "Pi phase flip on path j; uniformly selected j = 0,1,2,3",
+          "An independently controlled phase section, hidden from the reader"
+        ],
+        [
+          "Device loss",
+          "T = diag(sqrt(eta_0),...,sqrt(eta_3)), 0 < eta_i <= 1",
+          "Characterized physical attenuation between P0 and P1; independent of the label in the ideal model"
+        ],
+        [
+          "Photon receiver",
+          "D4 = J4/2 - I4",
+          "A four-mode programmed interferometer after P1"
+        ],
+        [
+          "Decision",
+          "A single click in output k reports k",
+          "A recorded, fixed-window detector arrangement; no or multiple clicks are inconclusive"
+        ]
+      ]
+    }
+  },
+  "tables": [
+    {
+      "file": "CLAIM_STATUS.md",
+      "source_lines": [
+        10,
+        19
+      ],
+      "rows": [
+        [
+          "Result",
+          "Evidence",
+          "Boundary"
+        ],
+        [
+          "Joint photon preparation/measurement optimum with fixed decoder",
+          "Analytic upper bound and attainment, independent audit, repaired support code",
+          "Uniform flat orthogonal code, positive diagonal loss, one photon in tested paths; no occupied bypass, idler, or repeated call"
+        ],
+        [
+          "Zero-error harmonic mean",
+          "Analytic endpoint and baseline checks",
+          "Not the optimal preparation for every nonzero error allowance"
+        ],
+        [
+          "Uniform four-symbol classical frontier",
+          "Derived all-source converse plus known attaining alphabet/POVM",
+          "Not every point implemented by the proposed click receiver"
+        ],
+        [
+          "Calibrated-map classical certificate",
+          "Credited overlap/discrimination reduction plus optical concavity",
+          "Passive maps, uniform labels, shared phase, mean signal budget; generally not tight"
+        ],
+        [
+          "Calibration and reverse-score bounds",
+          "Norm/trace-distance arguments, photon-support upper endpoint",
+          "Physical uncertainty must be justified externally; reverse test excludes only the stated photon class"
+        ],
+        [
+          "Fixed-N trial certificate",
+          "Bounded-mgf proof and audit controls",
+          "Preselected test, independent or conditional predictable-energy contract, justified tails; no optional-stopping guarantee"
+        ],
+        [
+          "Numerical enclosure",
+          "Exact rational support endpoints for accepted binary64 inputs",
+          "Photon support and specified addition only, not the whole pipeline"
+        ]
+      ]
+    },
+    {
+      "file": "CLAIM_STATUS.md",
+      "source_lines": [
+        26,
+        40
+      ],
+      "rows": [
+        [
+          "Claim or ingredient",
+          "Current classification",
+          "Evidence route"
+        ],
+        [
+          "Phase-code reader and passive decoder",
+          "Established",
+          "S01/S03"
+        ],
+        [
+          "Fixed-input square-root measurement and harmonic mean",
+          "Known result and short corollary",
+          "S02/S04; audit-01 R1-R2"
+        ],
+        [
+          "A: joint input-only retuning across the lossy reliability frontier",
+          "Leading candidate model-specific contribution; priority not established",
+          "Audit-01 R3 and audit-02 comparison"
+        ],
+        [
+          "B: zero-error overlap",
+          "Direct S20 specialization",
+          "Original author-uploaded article text, Theorem 1"
+        ],
+        [
+          "B: no-failure multiclass relation",
+          "Exact S22 normalization",
+          "Bagan et al. 2018, Lemma 1"
+        ],
+        [
+          "B: arbitrary-failure upper-C bound",
+          "Short conclusive-filter corollary with changed priors",
+          "S08 plus S22; audit-02 reductions"
+        ],
+        [
+          "B: all-classical optical mean-energy certificate",
+          "Derived optical benchmark, not an independent new general discrimination theorem",
+          "Coherent overlaps, contrast norm, concavity, credited statistics bound"
+        ],
+        [
+          "Uniform fixed-alphabet curve",
+          "Exact Herzog Eq. (4.18) specialization",
+          "S07; audit-01 R4"
+        ],
+        [
+          "Binary contrast and coherent nulling",
+          "Established ingredients",
+          "S11/S12"
+        ],
+        [
+          "One-bad-path zero-error comparison",
+          "Supporting restricted result; no generalized novelty clearance",
+          "Audit-01 R7; retain non-nulling high-energy branch"
+        ],
+        [
+          "KKT, norm perturbations, concentration, scalar-root enclosure",
+          "Standard supporting methods",
+          "No separate physical novelty asserted"
+        ],
+        [
+          "Worldwide priority or journal significance",
+          "NOT ESTABLISHED",
+          "Named source gaps resolved; wider priority and outside evaluation remain distinct"
+        ]
+      ]
+    },
+    {
+      "file": "CLAIM_STATUS.md",
+      "source_lines": [
+        48,
+        58
+      ],
+      "rows": [
+        [
+          "Item",
+          "Status"
+        ],
+        [
+          "M1 preparation test",
+          "Proposed mechanism test; not a proof of global optimum or a standalone quantum-source certificate"
+        ],
+        [
+          "P1 positive comparison",
+          "Hypothetical forecasts/synthetic counts only; retain the full classical comparator"
+        ],
+        [
+          "P2 reverse comparison",
+          "Requires an implemented coherent receiver above the entire restricted photon bound; no measured reversal"
+        ],
+        [
+          "SU4 and SU8 processors",
+          "BOTH AVAILABLE"
+        ],
+        [
+          "Supporting interfaces, calibration, source statistics, trial rate",
+          "NOT SUPPLIED; see the uncertainty worksheet"
+        ],
+        [
+          "Exact arbitrary-loss classical finite-error optimum",
+          "NOT ESTABLISHED; a ceiling is not an attained frontier"
+        ],
+        [
+          "Adaptive multi-query, total-dose, wall-clock advantage",
+          "NOT ESTABLISHED"
+        ],
+        [
+          "A fifth healthy state or generic fault diagnosis",
+          "NOT COVERED by the four-label promise"
+        ]
+      ]
+    },
+    {
+      "file": "README.md",
+      "source_lines": [
+        8,
+        13
+      ],
+      "rows": [
+        [
+          "What can we try?",
+          "Start here",
+          "First practical step"
+        ],
+        [
+          "Our SU4 chip",
+          "SU4: four-symbol phase reading",
+          "Check preparation, four phase patterns and output routing with classical light."
+        ],
+        [
+          "Our SU8 chip",
+          "SU8: two explicit routes",
+          "Embed the same four-label task, or commission the native eight-mode Walsh code."
+        ],
+        [
+          "Choose a scientific test",
+          "Experiment index",
+          "Separate commissioning, mechanism tests and source-class certification."
+        ]
+      ]
+    },
+    {
+      "file": "README.md",
+      "source_lines": [
+        54,
+        62
+      ],
+      "rows": [
+        [
+          "Route",
+          "Change / hold fixed",
+          "Recorded result and meaning"
+        ],
+        [
+          "Classical-light commissioning",
+          "Program known preparations and phase patterns; verify the target receiver",
+          "Port and transfer checks establish classical-wave implementation. Normalized intensities do not establish loss or a quantum advantage."
+        ],
+        [
+          "M1: input retuning",
+          "Compare uniform, inverse-loss and finite-penalty inputs; keep the decoder fixed",
+          "Test predicted unconditional C/E/F. A scan is neither a proof of global optimality nor a source-class certificate."
+        ],
+        [
+          "P1: positive comparison",
+          "Freeze the four-label photon preparation, receiver, calibration and plan",
+          "Seek unconditional photon performance above the derived all-classical-source ceiling."
+        ],
+        [
+          "P2: reverse comparison",
+          "Implement a label-blind coherent displacement receiver at severe imbalance",
+          "Seek an achieved coherent score above the entire declared four-path single-photon upper bound."
+        ],
+        [
+          "SU8 four-active-mode route",
+          "Use ports 0\u20133, vacuum inputs 4\u20137; measure all eight outputs",
+          "Same four-label task. Extra outputs record leakage as inconclusive attempts."
+        ],
+        [
+          "SU8 native Walsh route",
+          "Program the eight-mode orthogonal phase code and its fixed decoder",
+          "Existing photon theorem specialization and teaching/commissioning example. No transferred four-symbol classical frontier or four-mode robustness claim."
+        ]
+      ]
+    },
+    {
+      "file": "README.md",
+      "source_lines": [
+        136,
+        143
+      ],
+      "rows": [
+        [
+          "Need",
+          "Route"
+        ],
+        [
+          "Learn the experiment's theory",
+          "Self-contained theory route: states, measurements, C/E/F, then optimization and benchmarks"
+        ],
+        [
+          "Connect to familiar material",
+          "Optional reading crosswalk: Capmany\u2013P\u00e9rez engineering chapters and Barnett\u2013Croke discrimination review"
+        ],
+        [
+          "Decide how an error changes interpretation",
+          "Robustness guide and practical uncertainty worksheet"
+        ],
+        [
+          "Inspect complete arguments",
+          "Canonical proofs, numerical contract, robustness proofs"
+        ],
+        [
+          "Reproduce or trace evidence",
+          "Reproduction, handover integration, current scope"
+        ]
+      ]
+    },
+    {
+      "file": "docs/PHYSICAL_SETTING.md",
+      "source_lines": [
+        47,
+        59
+      ],
+      "rows": [
+        [
+          "Laboratory input",
+          "Why it matters"
+        ],
+        [
+          "Physical port ordering and measured logical-port map",
+          "Repository indices are 0-based conventions, not inferred vendor labels."
+        ],
+        [
+          "Compiler row/column, phase, sign and determinant conventions",
+          "Complex transfer amplitudes and common optical phase must match the target."
+        ],
+        [
+          "Accessible control sections and independent phase/loss operations",
+          "Establish preparation/hidden-operation/receiver separation; identify actual attenuation."
+        ],
+        [
+          "Wavelength, polarization, bandwidth and stability",
+          "Determine the optical mode to which the model and calibration apply."
+        ],
+        [
+          "Source statistics and P0 mean/tail bounds",
+          "Establish the charged incident resource, including vacuum and high-number tails."
+        ],
+        [
+          "Detector arrangement and complete readout",
+          "Count no-click, multiple-click and leakage on every fixed gate."
+        ],
+        [
+          "Inter-chip coupling and losses",
+          "Determine whether the proposed cascade is feasible and where its losses belong."
+        ],
+        [
+          "Timing, settling, gates, independent label control and blinding",
+          "Establish the single-use iid-label contract and attainable attempt rate."
+        ],
+        [
+          "Simultaneous calibration uncertainty and test-time drift",
+          "Turn fitted maps into justified bounds rather than illustrative parameters."
+        ],
+        [
+          "Coherent displacement and phase-reference arrangement for P2",
+          "Implement the particular classical receiver without label knowledge."
+        ]
+      ]
+    },
+    {
+      "file": "docs/READING_CROSSWALK.md",
+      "source_lines": [
+        18,
+        24
+      ],
+      "rows": [
+        [
+          "External topic and verified chapter",
+          "Local explanation",
+          "Relevant experiment",
+          "Detailed local proof or contract"
+        ],
+        [
+          "Chapter 2: Basic Building Blocks and Techniques: component matrices, couplers, phase shifts, composition",
+          "State, phase, and loss; interfaces",
+          "Classical-light commissioning on both chips",
+          "Canonical photon model, \u00a71"
+        ],
+        [
+          "Chapter 4: Integrated Multi-port Interferometers: multiport unitaries and programmed transforms",
+          "Fixed decoder and chip port maps",
+          "SU4; SU8 routes A/B",
+          "Theorems 1\u20132"
+        ],
+        [
+          "Chapter 6: Practical Implementation of Programmable Photonic Circuits: nonidealities, control, characterization",
+          "Uncertainty worksheet and physical interfaces",
+          "Commissioning, then M1",
+          "Map calibration and photon perturbation bounds, \u00a7\u00a72/5; numerical contract"
+        ],
+        [
+          "Chapter 7: Programmable Integrated Photonics for Quantum Systems: integrated quantum optics, external sources/detectors, Hadamard transforms",
+          "Global path encoding; Walsh specialization",
+          "SU8 native eight-mode route",
+          "Flat-code photon theorem, \u00a71"
+        ]
+      ]
+    },
+    {
+      "file": "docs/READING_CROSSWALK.md",
+      "source_lines": [
+        43,
+        51
+      ],
+      "rows": [
+        [
+          "Inspected external topic",
+          "Local explanation",
+          "Relevant experiment",
+          "Detailed local proof"
+        ],
+        [
+          "\u00a71: possible states and priors; \u00a72: generalized measurements",
+          "Returned ensemble, vacuum, and C/E/F",
+          "M1, P1, P2",
+          "Scope and notation, \u00a70"
+        ],
+        [
+          "\u00a73.1: minimum error; \u00a73.1.a: measurement optimality conditions",
+          "Two optimization questions; achieved/bound/optimum",
+          "M1",
+          "Theorems 1\u20132"
+        ],
+        [
+          "\u00a73.1.b: square-root measurement",
+          "Fixed decoder and credited ingredient",
+          "SU4 mechanism; SU8 photon specialization",
+          "Fixed-input reductions R1\u2013R3"
+        ],
+        [
+          "\u00a73.2 and \u00a73.2.a: unambiguous discrimination and inconclusive outcomes",
+          "Inverse-loss preparation",
+          "M1 zero-error control",
+          "Theorem 2, zero-error endpoint"
+        ],
+        [
+          "\u00a73.3.a and \u00a73.4: alternative objectives and error/inconclusive tradeoffs",
+          "Score and vacuum decision",
+          "M1; registered P1/P2 scores",
+          "Theorems 1\u20132 and score witnesses, \u00a7\u00a71/4"
+        ],
+        [
+          "\u00a74.1\u2013\u00a74.3: optical implementations",
+          "Commissioning",
+          "Both chip routes, followed by single-photon tests",
+          "Physical scope; trial contract"
+        ]
+      ]
+    },
+    {
+      "file": "docs/ROADMAP.md",
+      "source_lines": [
+        25,
+        31
+      ],
+      "rows": [
+        [
+          "Stage",
+          "Concrete next work",
+          "Boundary"
+        ],
+        [
+          "Classical-light commissioning",
+          "Map ports and verify target preparation, phase patterns and decoder; measure complex transfer when needed",
+          "Classical-wave checks, not a source-class certificate"
+        ],
+        [
+          "Interface review",
+          "Supply independent optical roles, timing, source/readout and common-phase calibration approach",
+          "Both processors already available; supporting connections remain to confirm"
+        ],
+        [
+          "Independent pilot, when separately authorized",
+          "Measure attainable maps, errors, energy/tails, gating and score margins",
+          "Keep pilot and held-out data separate"
+        ],
+        [
+          "Certified test, when separately authorized",
+          "Freeze uncertainty, N, penalty, confidence allocation and blinding, then follow M1/P1/P2",
+          "No optional stopping or postselection on detected photons"
+        ]
+      ]
+    },
+    {
+      "file": "docs/ROBUSTNESS_GUIDE.md",
+      "source_lines": [
+        12,
+        19
+      ],
+      "rows": [
+        [
+          "Measured or hypothesized structure",
+          "Result under its precise assumptions",
+          "What the lab must establish"
+        ],
+        [
+          "Common calibratable basis change",
+          "If every map is V T O_j W, known common unitary V and W are absorbed into preparation and one decoder. The ideal optimum is unchanged.",
+          "The same V/W must apply across all hidden labels and every point claimed to share a fixed physical receiver. Label-dependent correction is forbidden."
+        ],
+        [
+          "Specified symmetric dephasing",
+          "The channel sends rho to v rho + (1\u2212v) diag(rho), with the same real v on every off-diagonal pair. At four-mode score C\u22125E the jointly optimal input still uses the fixed D4.",
+          "One measured visibility or one RMS phase value does not establish this channel. It must be label independent; unequal coherence factors and deterministic bias are different models."
+        ],
+        [
+          "Systematic marked-phase bias",
+          "Replacing the marked pi by pi+delta breaks orthogonality. Exact finite examples prove positive regret for the old optics even after optimizing its input and all 625 click-assignment policies.",
+          "Identify the actual phase-error pattern. These examples use exact rational unit-circle parameters, not a universal tolerance on any reported phase error."
+        ],
+        [
+          "General coherent-map deviation",
+          "A simultaneous operator-norm radius epsilon gives conservative score/regret envelopes including the vacuum. They are often loose.",
+          "Bound the full maps and test-time drift, not just a fit residual or mean amplitude matrix."
+        ],
+        [
+          "Common downstream rotated loss",
+          "Data processing supplies a joint ceiling, and a feasible fixed score supplies a conservative gap bound.",
+          "Establish the actual placement/map. This gap can contain information loss and is not an attained receiver regret."
+        ]
+      ]
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "source_lines": [
+        130,
+        134
+      ],
+      "rows": [
+        [
+          "Question",
+          "What may change?",
+          "What must be established?"
+        ],
+        [
+          "Best receiver for a fixed received ensemble",
+          "Measurement only; input and device fixed",
+          "An upper bound over measurements and a measurement attaining it."
+        ],
+        [
+          "Best permitted photon strategy",
+          "Input and final measurement; device and resource contract fixed",
+          "An upper bound over both choices and an attaining preparation/receiver."
+        ]
+      ]
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "source_lines": [
+        182,
+        188
+      ],
+      "rows": [
+        [
+          "Statement",
+          "Meaning in this repository"
+        ],
+        [
+          "Achieved score",
+          "Performance of a specified preparation and receiver. A synthetic calculation is a prediction, not a measurement."
+        ],
+        [
+          "Upper bound or ceiling",
+          "No allowed strategy can exceed it under the stated assumptions. Attainment may be unknown."
+        ],
+        [
+          "Proved optimum",
+          "A universal upper bound and an allowed strategy attaining it agree."
+        ],
+        [
+          "Finite-data certificate",
+          "A registered statistical comparison using justified external calibration bounds; it is not automatic proof of those inputs."
+        ]
+      ]
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "source_lines": [
+        14,
+        19
+      ],
+      "rows": [
+        [
+          "Route",
+          "Prepared paths",
+          "Hidden labels",
+          "Expected bright output"
+        ],
+        [
+          "SU4",
+          "Equal amplitudes on 0\u20133",
+          "0\u20133",
+          "Port j"
+        ],
+        [
+          "SU8 four active",
+          "Equal amplitudes on 0\u20133; vacuum on 4\u20137",
+          "0\u20133",
+          "Port j; outputs 4\u20137 stay dark"
+        ],
+        [
+          "SU8 native",
+          "Equal amplitudes on 0\u20137",
+          "0\u20137",
+          "Port j"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/INDEX.md",
+      "source_lines": [
+        8,
+        17
+      ],
+      "rows": [
+        [
+          "Start here",
+          "Chip and labels",
+          "What is established or tested",
+          "Status"
+        ],
+        [
+          "SU4 worked example",
+          "SU(4), four labels",
+          "Exact four-symbol matrices and output decisions",
+          "Existing photon theorem; ready for reference calculations"
+        ],
+        [
+          "SU8 route A",
+          "SU(8), four labels, four spare inputs in vacuum",
+          "Same task embedded in ports 0\u20133",
+          "Existing four-mode result with explicit leakage accounting"
+        ],
+        [
+          "SU8 route B",
+          "SU(8), eight labels",
+          "Native flat orthogonal Walsh phase code",
+          "Verified specialization of the photon theorem; separate eight-mode records"
+        ],
+        [
+          "Classical-light commissioning",
+          "Either chip; all three routes above",
+          "Preparation, transfer, phase-pattern routing, port identification",
+          "Classical-wave implementation verification"
+        ],
+        [
+          "M1: input-only retuning",
+          "SU4 or four active SU8 modes",
+          "Change the input while retaining the decoder",
+          "Single-photon mechanism test; no standalone source-class certificate"
+        ],
+        [
+          "P1: positive comparison",
+          "SU4 or four active SU8 modes",
+          "Photon score above the derived all-classical-source ceiling",
+          "Requires calibrated bounds and a fixed-N held-out acquisition"
+        ],
+        [
+          "P2: reverse comparison",
+          "Either chip in the four-label task",
+          "Implemented coherent receiver above the whole declared photon bound",
+          "Requires coherent displacement and its own held-out acquisition"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/INDEX.md",
+      "source_lines": [
+        54,
+        62
+      ],
+      "rows": [
+        [
+          "Question",
+          "Local route"
+        ],
+        [
+          "Which block performs preparation, loss, phase encoding, or decoding?",
+          "Interfaces and proposed arrangements"
+        ],
+        [
+          "Which lab-specific values must be supplied?",
+          "Uncertainty and readiness worksheet"
+        ],
+        [
+          "Why do these input settings work?",
+          "Theory route, then canonical proofs"
+        ],
+        [
+          "What happens when the ideal assumptions are imperfect?",
+          "Robustness guide and the study worksheet"
+        ],
+        [
+          "Which acquisition and statistics rules control M1/P1/P2?",
+          "Preserved first-experiment protocol"
+        ],
+        [
+          "What is candidate novelty, and what is credited prior work?",
+          "Contributions, claim ledger, source map"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/INTERFACES.md",
+      "source_lines": [
+        10,
+        18
+      ],
+      "rows": [
+        [
+          "Role or plane",
+          "Meaning",
+          "Who may know the current hidden label?"
+        ],
+        [
+          "Preparation",
+          "Set the photon amplitudes or declared coherent illumination using pretest information",
+          "No current label"
+        ],
+        [
+          "P0: incident signal-accounting plane",
+          "Immediately before the declared hidden device; charge every signal pulse crossing it",
+          "No answer-dependent selection of illumination"
+        ],
+        [
+          "Hidden section",
+          "Apply the actual label-selected phase operation and declared device loss",
+          "An isolated controller knows the label"
+        ],
+        [
+          "P1: accessible device-output plane",
+          "End of the declared hidden device, before the reader's receiver",
+          "The reader receives only the permitted optical output"
+        ],
+        [
+          "Receiver",
+          "Apply D4, D4 \u2295 I4, D8, or the separately declared P2 displacement",
+          "No current label"
+        ],
+        [
+          "Readout",
+          "Record every attempted gate, then apply the frozen decision rule",
+          "Labels unsealed only after records are sealed"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/INTERFACES.md",
+      "source_lines": [
+        31,
+        40
+      ],
+      "rows": [
+        [
+          "Order along the light path",
+          "Block",
+          "Status and exact role"
+        ],
+        [
+          "1",
+          "Compatible source entering logical SU4 port 0",
+          "Source statistics, wavelength/polarization and coupling not supplied"
+        ],
+        [
+          "2",
+          "Available SU(4) chip",
+          "Program a preparation unitary whose first column is (sqrt(p_0),...,sqrt(p_3))"
+        ],
+        [
+          "3",
+          "P0",
+          "Meter/bound signal energy here after preparation and its coupling losses"
+        ],
+        [
+          "4",
+          "Independent four-path hidden phase/loss section",
+          "Proposed; implements T O_j, common phase convention, fresh isolated label controller"
+        ],
+        [
+          "5",
+          "P1",
+          "Define the accessible output and the start of the unrestricted receiver comparison"
+        ],
+        [
+          "6",
+          "Available SU(8) chip",
+          "Couple the four signal outputs into logical ports 0\u20133, vacuum at 4\u20137; program D4 \u2295 I4"
+        ],
+        [
+          "7",
+          "Output detection",
+          "Record all eight outputs or establish a complete bounded leakage treatment; arrangement not supplied"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/INTERFACES.md",
+      "source_lines": [
+        50,
+        58
+      ],
+      "rows": [
+        [
+          "Arrangement",
+          "What the available chip performs",
+          "Supporting capability to identify"
+        ],
+        [
+          "SU4 receiver",
+          "D4 after a four-path hidden section",
+          "Independent preparation network and hidden phase/loss section"
+        ],
+        [
+          "SU8 receiver, route A",
+          "D4 \u2295 I4 on four active modes",
+          "Independent four-path preparation/hidden section and monitoring of spare outputs"
+        ],
+        [
+          "SU8 receiver, route B",
+          "D8 for eight Walsh labels",
+          "Independent eight-mode preparation and hidden phase/loss section"
+        ],
+        [
+          "An available chip prepares",
+          "Uprep from one populated input",
+          "An independent hidden section and an appropriate separate receiver"
+        ],
+        [
+          "Separately accessible sections within a chip",
+          "Preparation or receiver blocks in separately controlled portions",
+          "Actual topology and control access demonstrating those sections; a universal overall compiler alone is insufficient"
+        ],
+        [
+          "One compiled matrix for commissioning",
+          "Known-label optical transfer check",
+          "Compatible test light and transfer measurement only; no reading claim"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/INTERFACES.md",
+      "source_lines": [
+        67,
+        79
+      ],
+      "rows": [
+        [
+          "Interface input",
+          "Required record",
+          "Why the SU label does not settle it"
+        ],
+        [
+          "Port ordering",
+          "Logical-to-connector and connector-to-detector maps; input/output direction",
+          "Mathematical row/column indices need not match connector labels"
+        ],
+        [
+          "Compiler convention",
+          "Matrix direction, transpose/conjugation convention, phase gauge, determinant handling and quantization",
+          "A vendor may accept a different convention or choose a global phase"
+        ],
+        [
+          "Control access",
+          "Which elements/sections can be changed independently and which are shared",
+          "Overall universality does not imply separable preparation/oracle/receiver roles"
+        ],
+        [
+          "Operating light",
+          "Wavelength, bandwidth, polarization and permitted modes",
+          "Calibration only applies to its specified optical mode"
+        ],
+        [
+          "Hidden section",
+          "Phase/loss locations, independent actuation, phase references and isolation",
+          "O_j is unitary while T requires actual attenuation"
+        ],
+        [
+          "Chip connection",
+          "Coupling map, path stability, crosstalk, additional modes, loss and accessible output definition",
+          "Two available chips do not imply a characterized interconnection"
+        ],
+        [
+          "Source",
+          "Pre-exposure herald/clock, vacuum/one-/multi-photon statistics, mean and tail-energy bounds",
+          "A photon presence probability does not establish its tail-energy budget"
+        ],
+        [
+          "Readout",
+          "Detector channel map, simultaneous monitoring, gate width, dark counts, efficiencies, dead time and leakage handling",
+          "Eight ports do not imply eight simultaneous calibrated detectors"
+        ],
+        [
+          "Timing",
+          "Phase settling, gated single exposure, label draw and isolation timing",
+          "A fast chip update is not itself a valid single-use trial rate"
+        ],
+        [
+          "Calibration",
+          "Common-phase complex maps, uncertainty coverage and held-out drift model",
+          "Intensity fits and nominal specifications are not simultaneous confidence bounds"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/M1.md",
+      "source_lines": [
+        36,
+        42
+      ],
+      "rows": [
+        [
+          "Preparation",
+          "Exact rule",
+          "Illustrative weak-path probability p_3"
+        ],
+        [
+          "Uniform",
+          "p_i=1/4",
+          ".25"
+        ],
+        [
+          "Zero-error",
+          "p_i=(1/eta_i)/sum_k(1/eta_k)",
+          ".625"
+        ],
+        [
+          "Penalty 1",
+          "Positive normalized top eigenvector z of B_1, p_i=z_i^2",
+          "About .193814"
+        ],
+        [
+          "Penalty 5",
+          "Positive normalized top eigenvector z of B_5, p_i=z_i^2",
+          "About .457125"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/REVIEW_RATIONALE.md",
+      "source_lines": [
+        34,
+        39
+      ],
+      "rows": [
+        [
+          "Test",
+          "What changes",
+          "What it could establish"
+        ],
+        [
+          "M1",
+          "Change preparation and error penalty; keep the decoder fixed",
+          "Agreement with the predicted retuning rule. A finite scan is not proof of global optimality or a nonclassical-source certificate."
+        ],
+        [
+          "P1",
+          "Use preselected photon inputs and count every attempt",
+          "A measured score above the valid all-classical ceiling excludes every permitted coherent mixture/receiver, not just the laser control."
+        ],
+        [
+          "P2",
+          "Implement a coherent displacement-and-click receiver at severe imbalance",
+          "A measured score above the whole four-path photon bound excludes that restricted class, not every quantum architecture."
+        ]
+      ]
+    },
+    {
+      "file": "experiment/SU4.md",
+      "source_lines": [
+        15,
+        22
+      ],
+      "rows": [
+        [
+          "Role",
+          "Exact target",
+          "Physical implementation to identify"
+        ],
+        [
+          "Preparation",
+          "A photon with amplitudes a_i = sqrt(p_i), sum(p_i) = 1",
+          "A programmable preparation section, the other chip, or a separate preparation network"
+        ],
+        [
+          "Hidden operation",
+          "Pi phase flip on path j; uniformly selected j = 0,1,2,3",
+          "An independently controlled phase section, hidden from the reader"
+        ],
+        [
+          "Device loss",
+          "T = diag(sqrt(eta_0),...,sqrt(eta_3)), 0 < eta_i <= 1",
+          "Characterized physical attenuation between P0 and P1; independent of the label in the ideal model"
+        ],
+        [
+          "Photon receiver",
+          "D4 = J4/2 - I4",
+          "A four-mode programmed interferometer after P1"
+        ],
+        [
+          "Decision",
+          "A single click in output k reports k",
+          "A recorded, fixed-window detector arrangement; no or multiple clicks are inconclusive"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/SU4.md",
+      "source_lines": [
+        114,
+        119
+      ],
+      "rows": [
+        [
+          "Recipe",
+          "Changes",
+          "Fixed during each held-out condition"
+        ],
+        [
+          "M1",
+          "Compare uniform, inverse-loss, and penalty-selected inputs",
+          "Decoder, task, port decisions; each calibration/configuration is identified"
+        ],
+        [
+          "P1",
+          "Select input from pretest calibration",
+          "Decoder, penalty, trial budget, source/energy contract, decision rule"
+        ],
+        [
+          "P2",
+          "Use a declared coherent preparation and background displacement",
+          "Hidden task, energy budget and displacement independent of the current label; P2 has its own receiver"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/SU8.md",
+      "source_lines": [
+        95,
+        105
+      ],
+      "rows": [
+        [
+          "Path / label",
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        [
+          "0: 000",
+          "+",
+          "+",
+          "+",
+          "+",
+          "+",
+          "+",
+          "+",
+          "+"
+        ],
+        [
+          "1: 001",
+          "+",
+          "\u2212",
+          "+",
+          "\u2212",
+          "+",
+          "\u2212",
+          "+",
+          "\u2212"
+        ],
+        [
+          "2: 010",
+          "+",
+          "+",
+          "\u2212",
+          "\u2212",
+          "+",
+          "+",
+          "\u2212",
+          "\u2212"
+        ],
+        [
+          "3: 011",
+          "+",
+          "\u2212",
+          "\u2212",
+          "+",
+          "+",
+          "\u2212",
+          "\u2212",
+          "+"
+        ],
+        [
+          "4: 100",
+          "+",
+          "+",
+          "+",
+          "+",
+          "\u2212",
+          "\u2212",
+          "\u2212",
+          "\u2212"
+        ],
+        [
+          "5: 101",
+          "+",
+          "\u2212",
+          "+",
+          "\u2212",
+          "\u2212",
+          "+",
+          "\u2212",
+          "+"
+        ],
+        [
+          "6: 110",
+          "+",
+          "+",
+          "\u2212",
+          "\u2212",
+          "\u2212",
+          "\u2212",
+          "+",
+          "+"
+        ],
+        [
+          "7: 111",
+          "+",
+          "\u2212",
+          "\u2212",
+          "+",
+          "\u2212",
+          "+",
+          "+",
+          "\u2212"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/SU8.md",
+      "source_lines": [
+        164,
+        172
+      ],
+      "rows": [
+        [
+          "Record item",
+          "Four-label SU8 embedding",
+          "Native eight-mode Walsh"
+        ],
+        [
+          "Hidden labels",
+          "0\u20133",
+          "0\u20137"
+        ],
+        [
+          "Correct single-click masks",
+          "1 << j for j=0..3",
+          "1 << j for j=0..7"
+        ],
+        [
+          "Output masks retained",
+          "All 256",
+          "All 256"
+        ],
+        [
+          "Spare-port outcome",
+          "Any click on 4\u20137 is failure",
+          "All eight are answer ports"
+        ],
+        [
+          "Analysis",
+          "Explicit four-label adaptation preserves leakage failures",
+          "Separate eight-label descriptive analysis"
+        ],
+        [
+          "Registered source-class certificate",
+          "Only applicable four-label P1/P2 contract after calibration",
+          "None supplied by this recipe"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/UNCERTAINTY.md",
+      "source_lines": [
+        14,
+        29
+      ],
+      "rows": [
+        [
+          "Input to supply",
+          "Required detail and boundary",
+          "Needed for"
+        ],
+        [
+          "Logical/physical mode map",
+          "Actual input/output connector and detector ordering; matrix direction and units",
+          "All physical commissioning and tests"
+        ],
+        [
+          "Compiler convention",
+          "Transpose/conjugate rules, phase gauge, determinant handling and independently accessible sections",
+          "All routes; common hidden phase is essential for source comparison"
+        ],
+        [
+          "Wavelength/polarization",
+          "Operating wavelength, bandwidth, polarization and defined temporal/spectral modes",
+          "Transfer calibration and all subsequent claims"
+        ],
+        [
+          "Independent roles",
+          "Physical preparation, hidden phase/loss, receiver and readout blocks; isolation of the current label",
+          "M1/P1/P2 and genuine native-eight interrogation"
+        ],
+        [
+          "Connections",
+          "Inter-chip port map if used, path/phase stability, coupling loss, crosstalk and accessible extra modes",
+          "Any proposed two-chip arrangement"
+        ],
+        [
+          "P0 source law",
+          "Vacuum/one-/multi-photon contributions per charged attempt; herald/clock definition",
+          "Photon mechanism and resource comparison"
+        ],
+        [
+          "P0 energy guarantee",
+          "Upper mean including unbounded-tail treatment, method, uncertainty coverage and test-time stability",
+          "P1/P2 certification"
+        ],
+        [
+          "P0-to-P1 maps",
+          "Complex maps for all physical labels in one optical phase convention; accessible outputs explicitly defined",
+          "Benchmarks for the actual task"
+        ],
+        [
+          "Map uncertainty",
+          "Simultaneous norm/channel envelope and coverage over held-out trials; drift and missing modes addressed",
+          "Certified P1/P2; model comparison in M1"
+        ],
+        [
+          "Receiver and readout",
+          "Actual target, per-port efficiency, dark probability per fixed gate, dead time, leakage and nulling error where applicable",
+          "Forecasts and complete empirical scores"
+        ],
+        [
+          "All-attempt data",
+          "Unique IDs, raw masks/time tags, integrity flags, no-exposure abort ledger and sealed label join",
+          "Every scientific run"
+        ],
+        [
+          "Timing and randomization",
+          "Phase settling, one gated exposure per fresh independent hidden draw, source/reader isolation",
+          "Single-use interpretation and statistics"
+        ],
+        [
+          "Pretest plan",
+          "Pilot/test separation, fixed N, penalty, confidence allocation, calibration hashes and whole-run abort rule",
+          "Certified acquisition"
+        ]
+      ]
+    },
+    {
+      "file": "experiment/UNCERTAINTY.md",
+      "source_lines": [
+        39,
+        47
+      ],
+      "rows": [
+        [
+          "Observation or model",
+          "Correct use",
+          "What it does not establish"
+        ],
+        [
+          "A common, known calibratable basis change",
+          "Identify whether it can be absorbed into preparation and receiver under the study's assumptions",
+          "That every unknown basis drift is harmless, or that the original receiver is automatically still optimal"
+        ],
+        [
+          "The specified symmetric dephasing model",
+          "Use only its defined channel, parameter regime and proved bounds",
+          "A result for arbitrary phase noise, correlated drift or every eight-mode chip"
+        ],
+        [
+          "Systematic marked-phase bias",
+          "Use the study's four-mode physical operation and fixed phase convention",
+          "Permission to erase label-dependent global phase or replace a biased phase by an ideal pi flip"
+        ],
+        [
+          "General map deviations",
+          "Apply only the norm/channel envelope that was actually justified",
+          "A confidence interval derived merely from fit residuals"
+        ],
+        [
+          "Distributed-loss examples",
+          "Diagnose why a single ideal diagonal T may fail to describe the actual device",
+          "Four independently adjustable loss knobs, or an automatically tight noisy-channel optimum"
+        ],
+        [
+          "Noisy measured fixed-receiver score",
+          "Achieved performance with every attempt included",
+          "The globally optimal receiver score or information irretrievably lost by the channel"
+        ]
+      ]
+    }
+  ],
+  "math_displays": [
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "display": 1,
+      "tex": "a_4=\\frac{1}{2}(1,1,1,1)^T.",
+      "rendered_sha256": "62f7d6200e1394f85b287db23a9aee3f92e4b37cc01fae71bf8aa74d584492d9"
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "display": 2,
+      "tex": "O_{4,j}=I_4-2|j\\rangle\\langle j|,\\qquad D_4=\\frac{J_4}{2}-I_4,\n\\qquad j=0,1,2,3.",
+      "rendered_sha256": "1e8cc45cd999b1b58e9dcf48f94c8e52b057080732ef304bc1b3d40530ef8234"
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "display": 3,
+      "tex": "a_{\\rm emb}=\\frac{1}{2}(1,1,1,1,0,0,0,0)^T.",
+      "rendered_sha256": "88266c5821983fd4de2be9cae301bb740b17db0778eb98921aed759d5f1d1180"
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "display": 4,
+      "tex": "O_{{\\rm emb},j}=O_{4,j}\\oplus I_4,\\qquad\nD_{\\rm emb}=D_4\\oplus I_4,\\qquad j=0,1,2,3.",
+      "rendered_sha256": "ebcb5d7b43770d8149c3fee9caeb3de5eede3a827c32bd2b3fa3d55745366537"
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "display": 5,
+      "tex": "a_8=\\frac{1}{\\sqrt{8}}(1,1,1,1,1,1,1,1)^T.",
+      "rendered_sha256": "f5a2c1064b9f5a853308e0938ec50234130a362ca70a066eb14d79a5d050ac39"
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "display": 6,
+      "tex": "O_{8,j}=\\mathrm{diag}(Z_8[:,j]),\\qquad\nD_8=\\frac{Z_8^\\dagger}{\\sqrt{8}},\\qquad j=0,1,\\ldots,7.",
+      "rendered_sha256": "6031ca513acbc6ceda41ae2a816657d341106e1c1444e79a708ca97af14a7d76"
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "display": 7,
+      "tex": "b_j=A\\sqrt{t}\\,|j\\rangle.",
+      "rendered_sha256": "88fcef92a4ea568df50fc63dad15b6fea6b019c5595616351390ecdb16063162"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 1,
+      "tex": "O_j=I_4-2|j\\rangle\\langle j|,\\qquad j=0,1,2,3.",
+      "rendered_sha256": "3e3ed204c95cedd6196630ee9488c4c668c9a744a2583d095e0c2f6971e684a5"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 2,
+      "tex": "O_0=\\mathrm{diag}(-1,1,1,1),\\quad O_1=\\mathrm{diag}(1,-1,1,1),",
+      "rendered_sha256": "5445e29bb104d0806a8f84b9ec78d7ecc642db7eed3d5e92288717304c094e79"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 3,
+      "tex": "O_2=\\mathrm{diag}(1,1,-1,1),\\quad O_3=\\mathrm{diag}(1,1,1,-1),",
+      "rendered_sha256": "6cdbb67581eeab06470047cf94ad2a64f7def09e02722077da9bbfc9eee9d4e6"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 4,
+      "tex": "D_4=\\frac{1}{2}\n\\begin{pmatrix}\n-1&1&1&1\\\\\n1&-1&1&1\\\\\n1&1&-1&1\\\\\n1&1&1&-1\n\\end{pmatrix}.",
+      "rendered_sha256": "57aab55603f8f717d10e9a641888f744db7dc1d9d5235a524079c84801759274"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 5,
+      "tex": "w=\\frac{|0\\rangle-a}{\\|\\,|0\\rangle-a\\,\\|},\\qquad\nU_{\\rm prep}=(I-2ww^\\dagger)(I-2|1\\rangle\\langle1|).",
+      "rendered_sha256": "219ca7dd332c48616ea67fa8544edb138a059115a6b6fc5516e676c1d6b8e62f"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 6,
+      "tex": "B_\\lambda=\\frac{1+\\lambda}{4}vv^T-\\lambda\\,\\mathrm{diag}(\\eta),\n\\qquad v_i=\\sqrt{\\eta_i},\\qquad p_i=z_i^2.",
+      "rendered_sha256": "3c7bbd2ec5991ca1d7de15499824bf9ccb4a89e940c22cf58a66fe4f9806b028"
+    }
+  ],
+  "limitations": "Local GFM parsing and MathJax rendering; simplified CSS, not an authenticated GitHub preview.",
+  "output_safety_checks": {
+    "existing_output": {
+      "refused": true,
+      "reason": "Refusing to overwrite existing output."
+    },
+    "repository_output": {
+      "refused": true,
+      "reason": "Output must be outside the repository."
+    }
+  }
+}

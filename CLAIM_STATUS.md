@@ -51,7 +51,7 @@ classification is superseded for current interpretation by
 | M1 preparation test | Proposed mechanism test; not a proof of global optimum or a standalone quantum-source certificate |
 | P1 positive comparison | Hypothetical forecasts/synthetic counts only; retain the full classical comparator |
 | P2 reverse comparison | Requires an implemented coherent receiver above the entire restricted photon bound; no measured reversal |
-| SU4 and SU8 processors | BOTH AVAILABLE, explicitly confirmed by the project owner |
+| SU4 and SU8 processors | BOTH AVAILABLE |
 | Supporting interfaces, calibration, source statistics, trial rate | NOT SUPPLIED; see the uncertainty worksheet |
 | Exact arbitrary-loss classical finite-error optimum | NOT ESTABLISHED; a ceiling is not an attained frontier |
 | Adaptive multi-query, total-dose, wall-clock advantage | NOT ESTABLISHED |
@@ -82,9 +82,8 @@ certificates, numerical proposals and laboratory calibration remain distinct.
 No measured advantage, universal noise tolerance or native SU8 robustness is claimed.
 
 The [uncertainty worksheet](experiment/UNCERTAINTY.md) leaves actual laboratory
-values to supply. [Philosophy](docs/PHILOSOPHY_DRAFT.md) is approved by the project owner.
-It does not change A's candidate status or B's derived attribution. The existing
-M1/P1/P2 meanings and full acquisition contract remain unchanged.
+values to supply. The existing M1/P1/P2 meanings and full acquisition contract
+remain unchanged.
 
 ## Evidence
 
