@@ -155,5 +155,7 @@ occupied bypass, retained idler, interacting ancillary photon, memory or repeate
 interrogation of one setting in the main class. Further extensions are listed
 in the [roadmap](docs/ROADMAP.md), with their present limits.
 
-Private working repository. No redistribution license has been selected.
+Original project material is available under the [MIT License](LICENSE).
+Third-party material retains its own terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
 Contact: gogoko699@gmail.com.

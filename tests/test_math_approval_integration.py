@@ -12,6 +12,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
 from verify_import import (
+    _license_approval, _license_hash,
     TABLE_CLEANUP_RECORD, _table_cleanup_hash,
     verify, MATH_APPROVAL_RECORD, MATH_APPROVAL_PATHS, MATH_APPROVAL_PREIMAGES,
     MATH_APPROVAL_BASE_COMMIT, MATH_APPROVAL_BASE_TREE, LAYOUT_RECORD,
@@ -32,9 +33,11 @@ class MathApprovalIntegrationTests(unittest.TestCase):
         self.assertEqual(ledger['previous_record_sha256'], HISTORICAL_LEDGER_SHA256[LAYOUT_RECORD])
         table_cleanup = {entry['path']: entry for entry in
                          json.loads((ROOT/TABLE_CLEANUP_RECORD).read_text())['changes']}
+        license_approval = _license_approval(ROOT)
         for entry in ledger['changes']:
             self.assertEqual(entry['old_sha256'], MATH_APPROVAL_PREIMAGES[entry['path']])
             expected = _table_cleanup_hash(entry['path'], entry['new_sha256'], table_cleanup)
+            expected = _license_hash(entry['path'], expected, license_approval)
             self.assertEqual(expected,
                              hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest())
         result = verify()
