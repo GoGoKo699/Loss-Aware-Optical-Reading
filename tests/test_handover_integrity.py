@@ -19,7 +19,7 @@ from verify_import import (
     verify, HANDOVER_RECORD, HANDOVER_PATHS, HANDOVER_PREIMAGES,
     HANDOVER_BASE_COMMIT, HISTORICAL_LEDGER_SHA256, FOLLOWUP_RECORD,
     CHANGE_RECORD, DOCUMENT_RECORD, ORIGINAL_ARCHIVE_SHA256, _handover_hash,
-    LAYOUT_RECORD, _layout_hash,
+    LAYOUT_RECORD, _layout_hash, MATH_APPROVAL_RECORD, _math_approval_hash,
 )
 
 
@@ -58,11 +58,14 @@ class HandoverIntegrityTests(unittest.TestCase):
         self.assertEqual(ledger['original_archive_sha256'], ORIGINAL_ARCHIVE_SHA256)
         layout = {entry['path']: entry for entry in
                   json.loads((ROOT/LAYOUT_RECORD).read_text())['changes']}
+        math_approval = {entry['path']: entry for entry in
+                         json.loads((ROOT/MATH_APPROVAL_RECORD).read_text())['changes']}
         for entry in ledger['changes']:
             self.assertEqual(entry['old_sha256'], HANDOVER_PREIMAGES[entry['path']])
-            # The old ledger remains immutable. The later authorized README edit
-            # must begin at its exact old hash before reaching the current bytes.
+            # Old ledgers remain immutable. Every later authorized edit must
+            # begin at its exact previous hash before reaching the current bytes.
             expected = _layout_hash(entry['path'], entry['new_sha256'], layout)
+            expected = _math_approval_hash(entry['path'], expected, math_approval)
             self.assertEqual(expected, hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest())
         for path, expected in HISTORICAL_LEDGER_SHA256.items():
             self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(), expected)

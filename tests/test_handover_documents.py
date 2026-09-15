@@ -58,12 +58,12 @@ class HandoverDocumentTests(unittest.TestCase):
         self.assertEqual(_anchors(text), {'port-0', 'port-0-1'})
 
     def test_math_fences_preserve_markdown_sensitive_expressions(self):
-        # The user-reported failures contain escaped braces and j<k; these must
-        # reach the TeX processor literally, without Markdown preprocessing.
+        # Literal fences protect escaped braces; relation macros also avoid
+        # tag-like characters in a later HTML stage (the repeated screenshot).
         expressions = [
             r'C\leq\min\left\{1-E,\left[\sqrt{1-e^{-\kappa\mu}}'
             r'+\sqrt{E/(m-1)}\right]^2\right\}.',
-            r'H_\Delta=\frac{1}{m(m-1)}\sum_{j<k}'
+            r'H_\Delta=\frac{1}{m(m-1)}\sum_{j\lt k}'
             r'(A_j-A_k)^\dagger(A_j-A_k).',
         ]
         with tempfile.TemporaryDirectory() as directory:
@@ -72,6 +72,22 @@ class HandoverDocumentTests(unittest.TestCase):
             document.write_text('# Benchmark\n\n' + '\n\n'.join(
                 '```math\n'+expression+'\n```' for expression in expressions))
             self.assertEqual(verify_documents(root, [document])['status'], 'PASS')
+
+    def test_display_comparisons_avoid_html_tag_characters(self):
+        for wrapper in ('```math\n{}\n```', '$$\n{}\n$$'):
+            for relation in ('j<k', 'j>k', r'0<\eta_i\leq1'):
+                with self.subTest(wrapper=wrapper, relation=relation), \
+                        tempfile.TemporaryDirectory() as directory:
+                    root = Path(directory)
+                    document = root/'README.md'
+                    document.write_text(wrapper.format(relation))
+                    with self.assertRaisesRegex(ValueError, 'HTML-sensitive'):
+                        verify_documents(root, [document])
+            with self.subTest(wrapper=wrapper), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                document = root/'README.md'
+                document.write_text(wrapper.format(r'j\lt k,\quad k\gt j,\quad 0\lt\eta_i\leq1'))
+                self.assertEqual(verify_documents(root, [document])['status'], 'PASS')
 
     def test_math_fences_are_checked_instead_of_silently_skipped(self):
         cases = {

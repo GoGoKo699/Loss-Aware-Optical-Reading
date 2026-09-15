@@ -35,7 +35,7 @@ output plane P1 has
 ```math
 O_j=I_4-2|j\rangle\langle j|,\qquad
 T=\mathrm{diag}(\sqrt{\eta_0},\ldots,\sqrt{\eta_3}),
-\qquad 0<\eta_i\leq1.
+\qquad 0\lt\eta_i\leq1.
 ```
 
 O_j is a phase operation. T describes label-independent loss and is a
@@ -204,7 +204,7 @@ remain allowed under the mean signal-photon budget mu at P0.
 For actual passive coherent maps A_j from P0 to P1, define
 
 ```math
-H_\Delta=\frac{1}{m(m-1)}\sum_{j<k}
+H_\Delta=\frac{1}{m(m-1)}\sum_{j\lt k}
 (A_j-A_k)^\dagger(A_j-A_k),\qquad
 \kappa=\|H_\Delta\|_{\mathrm{op}}.
 ```

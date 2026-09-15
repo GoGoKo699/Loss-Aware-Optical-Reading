@@ -52,11 +52,24 @@ LAYOUT_PREIMAGES = {
     'experiment/SU8.md': '3e01a031233afd52c1cbb9bde47bde662c68787a9fb51cd29809e4b5c5ca77bf',
 }
 LAYOUT_PATHS = frozenset(LAYOUT_PREIMAGES)
+MATH_APPROVAL_RECORD = 'provenance/changes/math-approval-03.json'
+MATH_APPROVAL_BASE_COMMIT = '01d715a80dbe48c3c20f43337fb524753e3cdb54'
+MATH_APPROVAL_BASE_TREE = '1cf08840ad2f735d6132372df2bffb21718ccef9'
+# Owner-approved philosophy status and HTML-safe TeX comparison spelling only.
+MATH_APPROVAL_PREIMAGES = {
+    'README.md': '05adb47638334ff75c0d4c5400f02c55c362e8416d9ef231fd041e8daf316daa',
+    'CLAIM_STATUS.md': 'be34c9bcedd9e9e44c427f2da9617dbc9d647b605d57068a32359fb1252b3117',
+    'docs/PHILOSOPHY_DRAFT.md': '7d9577da1547261cfb563a69b44335f5a7a03c28b859d38d768b03d5c98f3ee8',
+    'docs/CONTRIBUTIONS.md': '5acd8fa9335ef6f2a8b408c7c0335480b1ae17d53748a71b2f5c601e897b4226',
+    'docs/THEORY_ROUTE.md': '68e9e8a933e76582fa78d16c2a4f35e52d7cbf62fb05e1bdc0b6c549b9a0a91d',
+}
+MATH_APPROVAL_PATHS = frozenset(MATH_APPROVAL_PREIMAGES)
 HISTORICAL_LEDGER_SHA256 = {
     CHANGE_RECORD: 'a4b1f7eb9ec25d8ba737de30abc7ea787dd25eaeb15289207d191c2cd20c6c10',
     DOCUMENT_RECORD: '9cc64044ccfdf2bc38a3900e8141089a383bd116d7ff259c729cffe47afa2b29',
     FOLLOWUP_RECORD: 'f363b6343ce93093f6f5474ea4e1c4aca7c8d5d80a943f1aafb865346efb857d',
     HANDOVER_RECORD: '763adbbd6e003aee1a03e380fa9436c7e761e31c458e845327582e81fce984fa',
+    LAYOUT_RECORD: '4c92f5c0d232ab369ef6ab5bde63cd32d67f7dddf9699fd8fec4fdc4c9c4e83a',
 }
 
 
@@ -204,6 +217,45 @@ def _layout_hash(path: str, expected: str, changes: dict) -> str:
     return entry['new_sha256']
 
 
+def _math_approval_approvals(root: Path) -> dict:
+    """Accept only the five display/approval-status edits at their pinned base."""
+    ledger = json.loads((root/MATH_APPROVAL_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('interpretation_only') is not True or
+        ledger.get('mathematical_content_changed') is not False or
+        ledger.get('original_archive_sha256') != ORIGINAL_ARCHIVE_SHA256 or
+        ledger.get('previous_record') != LAYOUT_RECORD or
+        ledger.get('previous_record_sha256') != HISTORICAL_LEDGER_SHA256[LAYOUT_RECORD] or
+        ledger.get('base_commit') != MATH_APPROVAL_BASE_COMMIT or
+        ledger.get('base_tree') != MATH_APPROVAL_BASE_TREE):
+        raise ValueError('Invalid math/approval documentation ledger contract')
+    entries = ledger.get('changes', [])
+    changes = {entry['path']: entry for entry in entries}
+    if (len(changes) != len(entries) or changes.keys() != MATH_APPROVAL_PATHS or
+        ledger.get('additions')):
+        raise ValueError('Math/approval ledger is not the authorized document set')
+    for path, entry in changes.items():
+        reason = entry.get('reason')
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError('Math/approval documentation reason is missing: '+path)
+        for key in ('old_sha256', 'new_sha256'):
+            value = entry.get(key)
+            if (not isinstance(value, str) or len(value) != 64 or
+                any(c not in '0123456789abcdef' for c in value)):
+                raise ValueError('Invalid math/approval documentation hash: '+path)
+        if entry['old_sha256'] != MATH_APPROVAL_PREIMAGES[path]:
+            raise ValueError('Math/approval documentation baseline hash mismatch: '+path)
+    return changes
+
+
+def _math_approval_hash(path: str, expected: str, changes: dict) -> str:
+    entry = changes.get(path)
+    if entry is None:
+        return expected
+    if entry['old_sha256'] != expected:
+        raise ValueError('Math/approval documentation previous hash mismatch: '+path)
+    return entry['new_sha256']
+
+
 def verify(root: Path = ROOT) -> dict:
     manifest_bytes = (root/'provenance/IMPORT_MANIFEST.json').read_bytes()
     if _git_blob(manifest_bytes) != ORIGINAL_MANIFEST_GIT_BLOB:
@@ -230,6 +282,7 @@ def verify(root: Path = ROOT) -> dict:
     followup = _followup_approvals(root)
     handover = _handover_approvals(root)
     layout = _layout_approvals(root)
+    math_approval = _math_approval_approvals(root)
     sources = [e['source'] for e in manifest['files']]
     if len(sources) != len(set(sources)):
         raise ValueError('Duplicate source member')
@@ -258,6 +311,7 @@ def verify(root: Path = ROOT) -> dict:
             expected = _followup_hash(entry['path'], expected, followup)
             expected = _handover_hash(entry['path'], expected, handover)
             expected = _layout_hash(entry['path'], expected, layout)
+            expected = _math_approval_hash(entry['path'], expected, math_approval)
             if sha(current) != expected:
                 raise ValueError('Protected working file changed: '+entry['path'])
             if approved is None and document is None:
@@ -275,17 +329,23 @@ def verify(root: Path = ROOT) -> dict:
         expected = _followup_hash(path, entry['sha256'], followup)
         expected = _handover_hash(path, expected, handover)
         expected = _layout_hash(path, expected, layout)
+        expected = _math_approval_hash(path, expected, math_approval)
         if sha(_safe_path(root,path).read_bytes()) != expected:
             raise ValueError('Protected documentation changed: '+path)
     # Includes the five navigation documents outside the older import set.
     for path, entry in handover.items():
         expected = _layout_hash(path, entry['new_sha256'], layout)
+        expected = _math_approval_hash(path, expected, math_approval)
         if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected handover document changed: '+path)
     # Includes the eight previously unfrozen teaching/experiment explanations.
     for path, entry in layout.items():
-        if sha(_safe_path(root, path).read_bytes()) != entry['new_sha256']:
+        expected = _math_approval_hash(path, entry['new_sha256'], math_approval)
+        if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected layout document changed: '+path)
+    for path, entry in math_approval.items():
+        if sha(_safe_path(root, path).read_bytes()) != entry['new_sha256']:
+            raise ValueError('Protected math/approval document changed: '+path)
     # Check immutable predecessor bytes after their semantic checks. This keeps
     # older diagnostic failures informative while also rejecting silent rewrites
     # of historical reasons, metadata, or accepted hash-chain entries.
@@ -310,6 +370,9 @@ def verify(root: Path = ROOT) -> dict:
             'layout_change_record':LAYOUT_RECORD,
             'authorized_layout_documents_verified':sorted(layout),
             'mathematics_changed_by_layout':False,
+            'math_approval_change_record':MATH_APPROVAL_RECORD,
+            'authorized_math_approval_documents_verified':sorted(math_approval),
+            'mathematics_changed_by_math_approval':False,
             'historical_change_ledgers_unchanged':True,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 
