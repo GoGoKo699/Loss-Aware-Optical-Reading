@@ -76,6 +76,10 @@ TABLE_CLEANUP_PREIMAGES = {
     'experiment/SU4.md': 'cb6fcc768b4bd9fdb0be04cb6f19468a05aa3e9c6f76ac3821cabdece0f892b0',
 }
 TABLE_CLEANUP_PATHS = frozenset(TABLE_CLEANUP_PREIMAGES)
+LICENSE_RECORD = 'provenance/changes/license-01.json'
+LICENSE_BASE_COMMIT = '5cc20457cbdc9b55a62bf92304e6f17caf49fa48'
+LICENSE_BASE_TREE = '89039afd56a8c3ad95a58a322df2a2d47de8cbdf'
+LICENSE_README_PREIMAGE = '22f28dbdf826a26e560b58b38d457be089814fd6c60a5d57614c6d5691445701'
 HISTORICAL_LEDGER_SHA256 = {
     CHANGE_RECORD: 'a4b1f7eb9ec25d8ba737de30abc7ea787dd25eaeb15289207d191c2cd20c6c10',
     DOCUMENT_RECORD: '9cc64044ccfdf2bc38a3900e8141089a383bd116d7ff259c729cffe47afa2b29',
@@ -83,6 +87,7 @@ HISTORICAL_LEDGER_SHA256 = {
     HANDOVER_RECORD: '763adbbd6e003aee1a03e380fa9436c7e761e31c458e845327582e81fce984fa',
     LAYOUT_RECORD: '4c92f5c0d232ab369ef6ab5bde63cd32d67f7dddf9699fd8fec4fdc4c9c4e83a',
     MATH_APPROVAL_RECORD: '633f19203678abe72938ee3b6661009a5a488c0c65861f3ab4d5002300f28fa5',
+    TABLE_CLEANUP_RECORD: 'ea4ed2a9a3bfe4ecf702a8924e27963ad22d057389343c370392f7b00304fd22',
 }
 
 
@@ -308,6 +313,40 @@ def _table_cleanup_hash(path: str, expected: str, changes: dict) -> str:
     return entry['new_sha256']
 
 
+def _license_approval(root: Path) -> dict:
+    """Authorize only the pinned README licensing notice, never scientific edits."""
+    ledger = json.loads((root/LICENSE_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('license_only') is not True or
+        ledger.get('mathematical_content_changed') is not False or
+        ledger.get('original_archive_sha256') != ORIGINAL_ARCHIVE_SHA256 or
+        ledger.get('previous_record') != TABLE_CLEANUP_RECORD or
+        ledger.get('previous_record_sha256') != HISTORICAL_LEDGER_SHA256[TABLE_CLEANUP_RECORD] or
+        ledger.get('base_commit') != LICENSE_BASE_COMMIT or
+        ledger.get('base_tree') != LICENSE_BASE_TREE):
+        raise ValueError('Invalid licensing documentation ledger contract')
+    entries = ledger.get('changes', [])
+    if (len(entries) != 1 or entries[0].get('path') != 'README.md' or ledger.get('additions')):
+        raise ValueError('Licensing ledger is not the authorized README change')
+    entry = entries[0]
+    if entry.get('old_sha256') != LICENSE_README_PREIMAGE:
+        raise ValueError('Licensing documentation baseline hash mismatch')
+    reason, value = entry.get('reason'), entry.get('new_sha256')
+    if not isinstance(reason, str) or not reason.strip():
+        raise ValueError('Licensing documentation reason is missing')
+    if (not isinstance(value, str) or len(value) != 64 or
+        any(c not in '0123456789abcdef' for c in value)):
+        raise ValueError('Invalid licensing documentation hash')
+    return entry
+
+
+def _license_hash(path: str, expected: str, approval: dict) -> str:
+    if path != 'README.md':
+        return expected
+    if approval['old_sha256'] != expected:
+        raise ValueError('Licensing documentation previous hash mismatch: '+path)
+    return approval['new_sha256']
+
+
 def verify(root: Path = ROOT) -> dict:
     manifest_bytes = (root/'provenance/IMPORT_MANIFEST.json').read_bytes()
     if _git_blob(manifest_bytes) != ORIGINAL_MANIFEST_GIT_BLOB:
@@ -336,6 +375,7 @@ def verify(root: Path = ROOT) -> dict:
     layout = _layout_approvals(root)
     math_approval = _math_approval_approvals(root)
     table_cleanup = _table_cleanup_approvals(root)
+    license_approval = _license_approval(root)
     sources = [e['source'] for e in manifest['files']]
     if len(sources) != len(set(sources)):
         raise ValueError('Duplicate source member')
@@ -366,6 +406,7 @@ def verify(root: Path = ROOT) -> dict:
             expected = _layout_hash(entry['path'], expected, layout)
             expected = _math_approval_hash(entry['path'], expected, math_approval)
             expected = _table_cleanup_hash(entry['path'], expected, table_cleanup)
+            expected = _license_hash(entry['path'], expected, license_approval)
             if sha(current) != expected:
                 raise ValueError('Protected working file changed: '+entry['path'])
             if approved is None and document is None:
@@ -385,6 +426,7 @@ def verify(root: Path = ROOT) -> dict:
         expected = _layout_hash(path, expected, layout)
         expected = _math_approval_hash(path, expected, math_approval)
         expected = _table_cleanup_hash(path, expected, table_cleanup)
+        expected = _license_hash(path, expected, license_approval)
         if sha(_safe_path(root,path).read_bytes()) != expected:
             raise ValueError('Protected documentation changed: '+path)
     # Includes the five navigation documents outside the older import set.
@@ -392,16 +434,19 @@ def verify(root: Path = ROOT) -> dict:
         expected = _layout_hash(path, entry['new_sha256'], layout)
         expected = _math_approval_hash(path, expected, math_approval)
         expected = _table_cleanup_hash(path, expected, table_cleanup)
+        expected = _license_hash(path, expected, license_approval)
         if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected handover document changed: '+path)
     # Includes the eight previously unfrozen teaching/experiment explanations.
     for path, entry in layout.items():
         expected = _math_approval_hash(path, entry['new_sha256'], math_approval)
         expected = _table_cleanup_hash(path, expected, table_cleanup)
+        expected = _license_hash(path, expected, license_approval)
         if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected layout document changed: '+path)
     for path, entry in math_approval.items():
         expected = _table_cleanup_hash(path, entry['new_sha256'], table_cleanup)
+        expected = _license_hash(path, expected, license_approval)
         if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected math/approval document changed: '+path)
     # Commissioning is newly protected here, at its recorded baseline preimage.
@@ -438,6 +483,9 @@ def verify(root: Path = ROOT) -> dict:
             'table_cleanup_change_record':TABLE_CLEANUP_RECORD,
             'authorized_table_cleanup_documents_verified':sorted(table_cleanup),
             'mathematics_changed_by_table_cleanup':False,
+            'license_change_record':LICENSE_RECORD,
+            'authorized_licensing_documents_verified':['README.md'],
+            'mathematics_changed_by_licensing':False,
             'historical_change_ledgers_unchanged':True,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 

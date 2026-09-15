@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "base_commit": "5cc20457cbdc9b55a62bf92304e6f17caf49fa48",
+  "base_tree": "89039afd56a8c3ad95a58a322df2a2d47de8cbdf",
+  "previous_record": "provenance/changes/table-cleanup-04.json",
+  "previous_record_sha256": "ea4ed2a9a3bfe4ecf702a8924e27963ad22d057389343c370392f7b00304fd22",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "license_only": true,
+  "mathematical_content_changed": false,
+  "authorization": "The owner explicitly requested adding a license in preparation for making the repository public. Existing reviewed history-preserving merge authorization applies; this change does not alter visibility or publish a release.",
+  "scope": "The sole protected-document edit is the README licensing notice. The root license, third-party notices and contribution instructions are recorded in the integration report. All seven predecessor ledgers, source archives, canonical proofs, protocols, numerical sources and frozen evidence remain unchanged.",
+  "changes": [
+    {
+      "path": "README.md",
+      "old_sha256": "22f28dbdf826a26e560b58b38d457be089814fd6c60a5d57614c6d5691445701",
+      "new_sha256": "113af6192e55a803c68dacc8b34286284415afecb058b1988aaf2a9fc1e49275",
+      "reason": "Replace the obsolete no-license notice with the MIT license route for original project material and the third-party terms notice; preserve all scientific and experiment text."
+    }
+  ],
+  "test_adjustments": [
+    {
+      "path": "tests/test_handover_integrity.py",
+      "test": "test_visible_preimages_and_predecessor_chain",
+      "previous_assertion": "The existing authorized hash chain ends at current README bytes.",
+      "new_assertion": "The unchanged existing chain must match the licensing layer old hash before its final README hash is compared with current bytes.",
+      "reason": "Preserve historical ledger bytes while allowing only the explicitly requested later README license notice; scientific assertions and tolerances are unchanged."
+    },
+    {
+      "path": "tests/test_layout_integration.py",
+      "test": "test_exact_recorded_baseline_and_old_new_bytes",
+      "previous_assertion": "The existing authorized hash chain ends at current README bytes.",
+      "new_assertion": "The unchanged existing chain must match the licensing layer old hash before its final README hash is compared with current bytes.",
+      "reason": "Preserve historical ledger bytes while allowing only the explicitly requested later README license notice; scientific assertions and tolerances are unchanged."
+    },
+    {
+      "path": "tests/test_math_approval_integration.py",
+      "test": "test_exact_authorized_chain_and_current_bytes",
+      "previous_assertion": "The existing authorized hash chain ends at current README bytes.",
+      "new_assertion": "The unchanged existing chain must match the licensing layer old hash before its final README hash is compared with current bytes.",
+      "reason": "Preserve historical ledger bytes while allowing only the explicitly requested later README license notice; scientific assertions and tolerances are unchanged."
+    }
+  ]
+}

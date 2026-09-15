@@ -1,0 +1,16 @@
+{
+  "task": "Add a redistribution license for original project material",
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "branch": "maintenance/license-01",
+  "verified_remote_main": "5cc20457cbdc9b55a62bf92304e6f17caf49fa48",
+  "base_tree": "89039afd56a8c3ad95a58a322df2a2d47de8cbdf",
+  "initial_local_branch": "handover/table-cleanup-04",
+  "initial_local_head": "ace952d40a242cfd24b636bd8a018d29d9d27fbe",
+  "initial_local_status": "clean",
+  "local_access": "Existing API-materialized Git checkout; signed main merge object verified locally before creating the dedicated branch. No reset or authenticated-clone claim.",
+  "open_PRs_at_start": [],
+  "equivalent_task_found": false,
+  "authority": "User explicitly requested adding a license before they make the repository public. Existing reviewed history-preserving merge authorization applies. This task does not change visibility or create a release.",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Ruge Lin"
+}

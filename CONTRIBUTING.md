@@ -1,7 +1,7 @@
 # Contributing
 
-This is a private working repository. No redistribution license has been chosen.
-The project owner controls access, publication, and licensing decisions.
+Original project material is available under the [MIT License](LICENSE).
+See [third-party notices](THIRD_PARTY_NOTICES.md) for separately licensed material.
 
 Start with work_orders/CURRENT.md. Use one branch and one reviewable change for
 one bounded task. State assumptions before conclusions and preserve counterexamples

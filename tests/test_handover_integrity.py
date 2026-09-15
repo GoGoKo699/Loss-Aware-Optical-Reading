@@ -16,6 +16,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
 from verify_import import (
+    _license_approval, _license_hash,
     TABLE_CLEANUP_RECORD, _table_cleanup_hash,
     verify, HANDOVER_RECORD, HANDOVER_PATHS, HANDOVER_PREIMAGES,
     HANDOVER_BASE_COMMIT, HISTORICAL_LEDGER_SHA256, FOLLOWUP_RECORD,
@@ -63,6 +64,7 @@ class HandoverIntegrityTests(unittest.TestCase):
                          json.loads((ROOT/MATH_APPROVAL_RECORD).read_text())['changes']}
         table_cleanup = {entry['path']: entry for entry in
                          json.loads((ROOT/TABLE_CLEANUP_RECORD).read_text())['changes']}
+        license_approval = _license_approval(ROOT)
         for entry in ledger['changes']:
             self.assertEqual(entry['old_sha256'], HANDOVER_PREIMAGES[entry['path']])
             # Old ledgers remain immutable. Every later authorized edit must
@@ -70,6 +72,7 @@ class HandoverIntegrityTests(unittest.TestCase):
             expected = _layout_hash(entry['path'], entry['new_sha256'], layout)
             expected = _math_approval_hash(entry['path'], expected, math_approval)
             expected = _table_cleanup_hash(entry['path'], expected, table_cleanup)
+            expected = _license_hash(entry['path'], expected, license_approval)
             self.assertEqual(expected, hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest())
         for path, expected in HISTORICAL_LEDGER_SHA256.items():
             self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(), expected)
