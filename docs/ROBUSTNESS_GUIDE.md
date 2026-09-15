@@ -37,10 +37,10 @@ score to beat the classical source class.
 For the symmetric dephasing model, let a_i=sqrt(eta_i). The exact joint optimum
 at the registered penalty is
 
-$$
+```math
 J=\max\{0,\lambda_{\max}(B_v)\},\qquad
-B_v=\frac32 v aa^T-\left(\frac72+\frac32v\right)\mathrm{diag}(\eta).
-$$
+B_v=\frac{3}{2} v aa^T-\left(\frac{7}{2}+\frac{3}{2}v\right)\mathrm{diag}(\eta).
+```
 
 When positive, its positive top eigenvector gives the retuned input and D4
 attains it. Otherwise always inconclusive attains zero. Positive score requires

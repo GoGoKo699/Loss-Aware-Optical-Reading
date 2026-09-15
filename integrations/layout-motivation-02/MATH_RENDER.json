@@ -1,0 +1,425 @@
+{
+  "status": "PASS",
+  "baseline": "1b0a79073050766f12317f27a0b0e9260896b90f",
+  "node_version": "v24.19.0",
+  "mathjax_full_version": "3.2.2",
+  "markdown_it_version": "14.1.0",
+  "current_github_renderer_version_known": false,
+  "live_github_rendering_checked": false,
+  "visual_inspection_by_this_script": false,
+  "scope": "Exact formatting-only comparison; CommonMark literal fence extraction; local TeX-to-SVG parsing.",
+  "documents_checked": 8,
+  "displays_checked": 42,
+  "screenshot_cases": [
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 12,
+      "commonmark_changes_payload": true,
+      "commonmark_then_tex_parses": true,
+      "corrected_fence_preserves_tex": true
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 13,
+      "commonmark_changes_payload": true,
+      "commonmark_then_tex_parses": false,
+      "corrected_fence_preserves_tex": true
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 2,
+      "commonmark_changes_payload": true,
+      "commonmark_then_tex_parses": false,
+      "corrected_fence_preserves_tex": true
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 3,
+      "commonmark_changes_payload": false,
+      "commonmark_then_tex_parses": true,
+      "corrected_fence_preserves_tex": true
+    }
+  ],
+  "results": [
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-1.svg",
+      "svg_sha256": "7b723ebcde9adf730640771e7035efa0162fef663fe25d2e1957347d9053b671"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 2,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-2.svg",
+      "svg_sha256": "6f6a4d90c6ab41048f19ce13ad07b93ba0f0677d74fd45b829b23551c3e79a02"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 3,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-3.svg",
+      "svg_sha256": "d18578d6e2dfac0143c61fbbb4d088339a191b9725beb70759e2f681fbfdabc4"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 4,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-4.svg",
+      "svg_sha256": "b59404fe2797c6de1ffabdd99d154cf31448440ff68e896727e61ae31af23243"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 5,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-5.svg",
+      "svg_sha256": "3db8fbf9fb9309ad29b67dfa6184b85052bb55a4102f8de88d130b3e872bdf3b"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 6,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-6.svg",
+      "svg_sha256": "ba8c77d5ac4fe988d430049d4657d2b13eac46d5687344e3e03a77d919446d99"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 7,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-7.svg",
+      "svg_sha256": "8cd623fbf8fe40774cc24da122328327f642517e384d6dce652bce1622285d06"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 8,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-8.svg",
+      "svg_sha256": "648112bf93e54d0b47cc84be7cb9f873ad84c41697f73299a560ae4eabcbfbb2"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 9,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-9.svg",
+      "svg_sha256": "28cc3cd603466fde82a74cbc85f0064f7d9438dde1e149b849a157ed12bf00e1"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 10,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-10.svg",
+      "svg_sha256": "b263a224f2722523ed9e3674d6f52e713800b56a811fcf6ccf868bcd1a3ba271"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 11,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-11.svg",
+      "svg_sha256": "d2f0e224c920fb7748cd383e1f7be0b1648f425cfbe2f1f52be0d33fbe37523e"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 12,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-12.svg",
+      "svg_sha256": "45e1cdc4d93cc2b3a6a6936ce285e523151f58ff61b6bec9cb050c9fde53e0ef"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 13,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-13.svg",
+      "svg_sha256": "533ec2f392a6d7ffa71948c33fa3ff35545c34bc95c4931d9bb611ca357831d8"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 14,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-14.svg",
+      "svg_sha256": "c5a0013f81ccbc3c82d38481ada7e4e1f640f6be7779a150a5dcc4054df416b8"
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "display": 15,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-THEORY_ROUTE-15.svg",
+      "svg_sha256": "44602a4322bffc113d554bd8c196a26caa7f81fecf2eaa8aab0a78e361acc37b"
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-CONTRIBUTIONS-1.svg",
+      "svg_sha256": "21b3a7a4503edbb598d5d3120a90f2f1fe15154ec23f3517cf7d162fbaef7e3d"
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 2,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-CONTRIBUTIONS-2.svg",
+      "svg_sha256": "533ec2f392a6d7ffa71948c33fa3ff35545c34bc95c4931d9bb611ca357831d8"
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "display": 3,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-CONTRIBUTIONS-3.svg",
+      "svg_sha256": "9157a35b8bd535d49b695ebff0b1ebddeee303374f794f5169dba853eb9cc6f8"
+    },
+    {
+      "file": "docs/ROBUSTNESS_GUIDE.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "docs-ROBUSTNESS_GUIDE-1.svg",
+      "svg_sha256": "5ade6d607b4b4384ea3d4477968b787abe096c432abb9a86164ffd04d139285c"
+    },
+    {
+      "file": "experiment/M1.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-M1-1.svg",
+      "svg_sha256": "94c01f0426462bb99466e9d8e6d3b04595da91b7baf7af73c11e201f92244e38"
+    },
+    {
+      "file": "experiment/M1.md",
+      "display": 2,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-M1-2.svg",
+      "svg_sha256": "a0df0159d46a4ff4ae22a1cdb955c4df81e5d42448734e47fa48e1c6727269fa"
+    },
+    {
+      "file": "experiment/M1.md",
+      "display": 3,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-M1-3.svg",
+      "svg_sha256": "06a2003a9d96836f7a355781e042bc019b69cc6ec9eef43ee02fbff85097d4a6"
+    },
+    {
+      "file": "experiment/P1.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P1-1.svg",
+      "svg_sha256": "e12f20610aa61afd5fe39a6e19bc2dd3939fb2132e46bd7450fa24507533dbe9"
+    },
+    {
+      "file": "experiment/P1.md",
+      "display": 2,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P1-2.svg",
+      "svg_sha256": "55addaea00076b581befc93b114d09aa1a565b2f0cebbc9eb215bad8cf01f804"
+    },
+    {
+      "file": "experiment/P1.md",
+      "display": 3,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P1-3.svg",
+      "svg_sha256": "4e11e18fe0d8d6389869d688300e78a473c58c0c45f2e84857be13135a346e83"
+    },
+    {
+      "file": "experiment/P1.md",
+      "display": 4,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P1-4.svg",
+      "svg_sha256": "8c21b2016b6a86077b4a45d2a2021d39a63d1560e75cb84f5b11f2d962827e54"
+    },
+    {
+      "file": "experiment/P2.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P2-1.svg",
+      "svg_sha256": "94c01f0426462bb99466e9d8e6d3b04595da91b7baf7af73c11e201f92244e38"
+    },
+    {
+      "file": "experiment/P2.md",
+      "display": 2,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P2-2.svg",
+      "svg_sha256": "9b82dda13d1b4a8659d0f44a131ef8dc94834e97dc268ef3c4f406be2e4a7172"
+    },
+    {
+      "file": "experiment/P2.md",
+      "display": 3,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P2-3.svg",
+      "svg_sha256": "3f7365c9fdca1388de01ae43a7648918b7e1dc9a7e80e31567d85e1b56c369ee"
+    },
+    {
+      "file": "experiment/P2.md",
+      "display": 4,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-P2-4.svg",
+      "svg_sha256": "9371eb2158b006af07b37d633048c0d9afeda6052a950a5e31a752a191c5f7f3"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU4-1.svg",
+      "svg_sha256": "76810e8beb65d1067fda92024ca4a454fab820b773452ab0adcf4ca0d7b00aba"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 2,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU4-2.svg",
+      "svg_sha256": "c87dbbcb086c026d922265985b0f583acdbf70e4a9737b21780d7d594d8c2e26"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 3,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU4-3.svg",
+      "svg_sha256": "16f844ac09fc7c54abd7612ae446cdf9f321679504e25c610e3f603b8ef2cc0c"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 4,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU4-4.svg",
+      "svg_sha256": "454760161df6ff6dbe0ca87955a62ba9dc4b9a2511d462b3cd4cd56dd9384e8c"
+    },
+    {
+      "file": "experiment/SU4.md",
+      "display": 5,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU4-5.svg",
+      "svg_sha256": "8d43c6afa3bc6a7d0681591aea42cc651e5a67bee94bb03246a5349d644d112a"
+    },
+    {
+      "file": "experiment/SU8.md",
+      "display": 1,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU8-1.svg",
+      "svg_sha256": "632b8f978543c0c4b822cc555ee91c4b51bb9068272bc21612a10305b495032d"
+    },
+    {
+      "file": "experiment/SU8.md",
+      "display": 2,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU8-2.svg",
+      "svg_sha256": "2e385aba0cd1faf4ff0f3b0ae3af40cb2f56d765fc264ff23725c0bd569a024c"
+    },
+    {
+      "file": "experiment/SU8.md",
+      "display": 3,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU8-3.svg",
+      "svg_sha256": "84b8d5e1df0078b9e2e7640ea103373f30fda03f23b23169c813ede7ca8fb0b0"
+    },
+    {
+      "file": "experiment/SU8.md",
+      "display": 4,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU8-4.svg",
+      "svg_sha256": "6f7141a3baa300ce3ec18ac43436f59efba319307ba1c12259ad14598b6134c0"
+    },
+    {
+      "file": "experiment/SU8.md",
+      "display": 5,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU8-5.svg",
+      "svg_sha256": "494581c6c3a61e3b0d2980c8168e7faa58e1e0525360bded8c2178dbddb6e3bb"
+    },
+    {
+      "file": "experiment/SU8.md",
+      "display": 6,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU8-6.svg",
+      "svg_sha256": "883f55051863b5f2a39320a27ac34ff952b487a4d0aac1d48909fe2d1597ee84"
+    },
+    {
+      "file": "experiment/SU8.md",
+      "display": 7,
+      "equivalent": true,
+      "direct_old_tex_parses": true,
+      "fenced_math_payload_parses": true,
+      "svg": "experiment-SU8-7.svg",
+      "svg_sha256": "b6d5a6a1553fc3fab877a0504674d0b0e40ba13f0722014af1222fc250249cd3"
+    }
+  ],
+  "existing_output_refusal_checked": true,
+  "existing_output_preserved_files": 43
+}

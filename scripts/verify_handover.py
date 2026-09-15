@@ -15,25 +15,33 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def _outside_fences(text: str) -> str:
-    result = []
-    fence = None
-    for line in text.splitlines():
-        marker = re.match(r'^\s*(`{3,}|~{3,})', line)
-        if marker:
-            symbol = marker.group(1)[0]
-            if fence is None:
-                fence = symbol
-            elif fence == symbol:
-                fence = None
-            result.append('')
-        elif fence is None:
-            result.append(line)
+def _fenced_blocks(text: str) -> list[tuple[int, int, str, str]]:
+    """Return line spans, language, and literal contents of fenced blocks."""
+    blocks = []
+    opening = None
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        if opening is None:
+            marker = re.match(r'^\s*(`{3,}|~{3,})([^`\n]*)$', line)
+            if marker:
+                opening = (index, marker.group(1), marker.group(2).strip())
         else:
-            result.append('')
-    if fence is not None:
+            start, fence, language = opening
+            marker = re.match(r'^\s*(' + re.escape(fence[0]) + r'{'
+                              + str(len(fence)) + r',})\s*$', line)
+            if marker:
+                blocks.append((start, index, language, '\n'.join(lines[start+1:index])))
+                opening = None
+    if opening is not None:
         raise ValueError('Unclosed fenced code block')
-    return '\n'.join(result)
+    return blocks
+
+
+def _outside_fences(text: str) -> str:
+    lines = text.splitlines()
+    for start, end, _, _ in _fenced_blocks(text):
+        lines[start:end+1] = [''] * (end-start+1)
+    return '\n'.join(lines)
 
 
 def _anchors(text: str) -> set[str]:
@@ -56,14 +64,24 @@ def _anchors(text: str) -> set[str]:
 
 
 def _math(text: str) -> None:
-    if any('$' in line for line in text.splitlines() if re.match(r'^#{1,6}\s', line)):
+    outside = _outside_fences(text)
+    if any('$' in line for line in outside.splitlines() if re.match(r'^#{1,6}\s', line)):
         raise ValueError('Math delimiter in a heading')
+    expressions = re.findall(r'\$\$(.*?)\$\$', outside, flags=re.S)
+    for _, _, language, expression in _fenced_blocks(text):
+        if language == 'math':
+            if '$' in expression:
+                raise ValueError('Dollar delimiter inside a fenced math block')
+            if not expression.strip():
+                raise ValueError('Empty fenced math block')
+            expressions.append(expression)
+    math_text = outside + '\n' + '\n'.join(expressions)
     for value in ('\\operatorname', '\\[', '\\]', '\\(', '\\)'):
-        if value in text:
+        if value in math_text:
             raise ValueError('Unsupported or raw math delimiter/macro: '+value)
-    if text.count('$$') % 2:
+    if outside.count('$$') % 2:
         raise ValueError('Unpaired display-math delimiters')
-    for expression in re.findall(r'\$\$(.*?)\$\$', text, flags=re.S):
+    for expression in expressions:
         level = 0
         for match in re.finditer(r'(?<!\\)[{}]', expression):
             level += 1 if match.group() == '{' else -1
@@ -84,7 +102,7 @@ def verify_documents(root: Path, documents: list[Path]) -> dict:
         original = document.read_text()
         text = _outside_fences(original)
         try:
-            _math(text)
+            _math(original)
         except ValueError as error:
             raise ValueError(str(document.relative_to(root))+': '+str(error)) from error
         for target in re.findall(r'\]\(([^)]+)\)', text):

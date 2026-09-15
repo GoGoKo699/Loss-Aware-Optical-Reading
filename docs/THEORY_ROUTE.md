@@ -23,20 +23,20 @@ still needed for that mapping.
 
 Choose nonnegative probabilities p_i adding to one and prepare
 
-$$
+```math
 |\psi\rangle=\sum_{i=0}^{3}\sqrt{p_i}\,|i\rangle.
-$$
+```
 
 Relative input phases are fixed in this convention. Known preparation phases
 can be compensated before freezing the receiver; the source cannot use j.
 The ideal device between the signal-accounting plane P0 and the accessible
 output plane P1 has
 
-$$
+```math
 O_j=I_4-2|j\rangle\langle j|,\qquad
 T=\mathrm{diag}(\sqrt{\eta_0},\ldots,\sqrt{\eta_3}),
 \qquad 0<\eta_i\leq1.
-$$
+```
 
 O_j is a phase operation. T describes label-independent loss and is a
 contraction; programming unitary phases does not implement T. The
@@ -48,17 +48,17 @@ device loss from preparation, receiver, and detector imperfections.
 
 The unnormalized surviving vector and its probability are
 
-$$
+```math
 |\phi_j\rangle=T O_j|\psi\rangle,\qquad
 s=\langle\phi_j|\phi_j\rangle=\sum_i\eta_i p_i.
-$$
+```
 
 The full state available at P1 is
 
-$$
+```math
 \rho_j=|\phi_j\rangle\langle\phi_j|
  +(1-s)|\mathrm{vac}\rangle\langle\mathrm{vac}|.
-$$
+```
 
 The vacuum term is the same for every label in this model, so it carries no
 label information. It still occurs on a counted attempt. Dividing the surviving
@@ -73,14 +73,14 @@ question mark means that no label is reported.
 
 Before optimizing anything, define the three unconditional rates:
 
-$$
-C=\frac14\sum_j\mathrm{Tr}(\Pi_j\rho_j),\qquad
-E=\frac14\sum_j\sum_{k\ne j}\mathrm{Tr}(\Pi_k\rho_j),
-$$
+```math
+C=\frac{1}{4}\sum_j\mathrm{Tr}(\Pi_j\rho_j),\qquad
+E=\frac{1}{4}\sum_j\sum_{k\ne j}\mathrm{Tr}(\Pi_k\rho_j),
+```
 
-$$
-F=\frac14\sum_j\mathrm{Tr}(\Pi_{?}\rho_j),\qquad C+E+F=1.
-$$
+```math
+F=\frac{1}{4}\sum_j\mathrm{Tr}(\Pi_{?}\rho_j),\qquad C+E+F=1.
+```
 
 Here k in the error sum runs over conclusive labels. C is correct, E is wrong,
 and F is inconclusive, all per attempted interrogation. Actual records also
@@ -90,9 +90,9 @@ the denominator.
 
 A wrong-answer penalty lambda, fixed before testing, defines
 
-$$
+```math
 S_\lambda=C-\lambda E.
-$$
+```
 
 A correct answer scores 1, a wrong answer scores minus lambda, and an
 inconclusive answer scores 0. A clock or source herald before exposure defines
@@ -104,9 +104,9 @@ rules, pilot/test separation, blinding, and original confidence allocation.
 
 Let J_4 be the all-ones matrix and use
 
-$$
+```math
 D_4=J_4/2-I_4.
-$$
+```
 
 With equal loss eta_i=t and p_i=1/4, the returned photon reaches output j
 with certainty **when it survives**. Unconditionally, the no-click-as-failure
@@ -116,10 +116,10 @@ Unequal loss changes the surviving path amplitudes. To remove their imbalance,
 choose p_i proportional to 1/eta_i. Then every surviving amplitude has equal
 magnitude again. The same decoder gives the zero-error endpoint
 
-$$
-H_\eta=\frac4{\sum_i1/\eta_i},\qquad
+```math
+H_\eta=\frac{4}{\sum_i1/\eta_i},\qquad
 C=H_\eta,\quad E=0,\quad F=1-H_\eta.
-$$
+```
 
 More input weight goes into weak paths. This does not recover lost photons:
 it changes the incident state, and its survival probability remains in the
@@ -143,19 +143,19 @@ See [contribution boundaries](CONTRIBUTIONS.md) and the
 
 For the four-path task, let v_i=sqrt(eta_i). For lambda at least 1/3, form
 
-$$
+```math
 B_\lambda=\frac{1+\lambda}{4}vv^T-\lambda\,\mathrm{diag}(\eta).
-$$
+```
 
 Its largest eigenvalue beta_q(lambda) is the optimum score over every permitted
 input and final measurement. If z is its normalized positive top eigenvector,
 prepare p_i=z_i^2. Keep D_4 fixed and call vacuum inconclusive. The achieved rates
 are
 
-$$
-C=\frac14\left(\sum_i\sqrt{\eta_i p_i}\right)^2,\qquad
+```math
+C=\frac{1}{4}\left(\sum_i\sqrt{\eta_i p_i}\right)^2,\qquad
 E=\sum_i\eta_i p_i-C,\qquad F=1-\sum_i\eta_i p_i.
-$$
+```
 
 The proof first bounds every receiver, then shows that this preparation and
 decoder attain that bound. In particular, allowing receiver filtering does not
@@ -203,18 +203,18 @@ remain allowed under the mean signal-photon budget mu at P0.
 
 For actual passive coherent maps A_j from P0 to P1, define
 
-$$
-H_\Delta=\frac1{m(m-1)}\sum_{j<k}
+```math
+H_\Delta=\frac{1}{m(m-1)}\sum_{j<k}
 (A_j-A_k)^\dagger(A_j-A_k),\qquad
 \kappa=\|H_\Delta\|_{\mathrm{op}}.
-$$
+```
 
 The derived source-class benchmark B is
 
-$$
+```math
 C\leq\min\left\{1-E,
 \left[\sqrt{1-e^{-\kappa\mu}}+\sqrt{E/(m-1)}\right]^2\right\}.
-$$
+```
 
 For the ideal four-label model, m=4 and kappa=max_i eta_i. A general-map
 ceiling is not an exact frontier. The exact uniform-loss four-symbol frontier
@@ -258,11 +258,11 @@ into an eight-label result; see [SU8 route A](../experiment/SU8.md).
 **Route B uses an actual eight-label flat phase code.** With i,j ordered as the
 three-bit representations of 0 through 7, take
 
-$$
+```math
 Z_8[i,j]=(-1)^{i\cdot j},\qquad
 O_j=\mathrm{diag}(Z_8[:,j]),\qquad
-D_8=Z_8^\dagger/\sqrt8.
-$$
+D_8=Z_8^\dagger/\sqrt{8}.
+```
 
 The binary dot product is evaluated modulo two. Columns have squared norm 8.
 Two distinct columns have zero inner product: their product is a nonconstant
@@ -275,10 +275,10 @@ The existing photon theorem therefore applies with m=8: replace 4 by 8 in the
 matrix/rate formulas and use the vacuum-as-inconclusive branch for lambda at
 least 1/7. In particular,
 
-$$
+```math
 B_\lambda^{(8)}=\frac{1+\lambda}{8}vv^T-\lambda\,\mathrm{diag}(\eta),
 \qquad p_i=z_i^2,
-$$
+```
 
 and the zero-error correct rate is 8 divided by the sum of inverse
 transmissions. This is a specialization of the existing proof, with a separate

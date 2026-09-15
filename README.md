@@ -67,6 +67,38 @@ Its native eight-mode “later” language records the earlier four-mode acquisi
 scope; the new Walsh recipe is now provided separately, with descriptive records.
 The native eight-mode data never enter the four-detector certification analyzer.
 
+## What successful experiments could establish
+
+The aim is a paper with one clear physical message: **adapt the incident photon
+to the loss and required reliability, then identify when that strategy has a
+measurable advantage and where its limits lie.** The existing SU4 and SU8 chips
+let us test this with explicit preparations, phase patterns and receivers.
+
+The strongest planned result would combine three pieces of evidence. M1 would
+show the predicted preparation changes working with one fixed decoder. P1 would
+establish a certified single-photon advantage over the entire declared classical
+source class at the same mean incident signal budget. P2 would show the opposite
+ordering in a separate severe-imbalance regime: an implemented coherent receiver
+outperforming the entire declared four-path single-photon class.
+
+Together, these results could support a theory-and-experiment paper explaining
+**when single photons help, when coherent illumination wins, and why loss changes
+the best choice.** The complete input-only retuning reduction (contribution A)
+would remain the leading candidate contribution; the derived optical benchmark
+(B) would supply the credited comparison.
+Calibrated robustness measurements could show how closely the laboratory follows
+the ideal model and which imperfections matter.
+
+There are useful smaller outcomes too. Commissioning establishes optical
+implementation; M1 alone supports a mechanism result. A source-class advantage
+claim needs P1's full certificate. P2 makes the boundary scientifically useful
+even where the photon strategy loses. Native Walsh8 remains a separate
+implementation example until its own source-class comparison is established.
+
+This is an experimental and publication objective, not a report of measured
+results. The eventual venue and significance should be judged from the data,
+calibration, complete comparisons and a current novelty assessment.
+
 ## Run the reference calculations
 
 From the repository root, install the recorded dependencies and use a new output

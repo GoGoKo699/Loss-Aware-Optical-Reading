@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "base_commit": "1b0a79073050766f12317f27a0b0e9260896b90f",
+  "base_tree": "0bf473a570347441887953505483b94149f7d44e",
+  "previous_record": "provenance/changes/lab-handover-01.json",
+  "previous_record_sha256": "763adbbd6e003aee1a03e380fa9436c7e761e31c458e845327582e81fce984fa",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "interpretation_only": true,
+  "mathematical_content_changed": false,
+  "authorization": "Owner requested correction of layout/math rendering, removal of the private-chat reference from the reader-facing philosophy, and motivation explaining what successful experiments could support as a publication.",
+  "scope": "Exactly ten current reader documents; source routines, canonical proofs, registered first-experiment protocol, frozen outputs, source archives and all predecessor ledgers remain unchanged.",
+  "changes": [
+    {
+      "path": "README.md",
+      "old_sha256": "b7b9110f28af13e3bf1eaa030ec3a79c522000857554b3b2c89ef76f2419cf2d",
+      "new_sha256": "05adb47638334ff75c0d4c5400f02c55c362e8416d9ef231fd041e8daf316daa",
+      "reason": "Add conditional publication motivation tied to the unchanged M1/P1/P2 claims, separating commissioning, mechanism evidence, source-class certification and native SU8 limitations."
+    },
+    {
+      "path": "docs/CONTRIBUTIONS.md",
+      "old_sha256": "d7f8b22cbe104c682108307598be028b7b127aaddf8b2fe9be62afe84e90a5fa",
+      "new_sha256": "5acd8fa9335ef6f2a8b408c7c0335480b1ae17d53748a71b2f5c601e897b4226",
+      "reason": "Repair display-math transport with fenced math blocks and explicit TeX operand braces while preserving every formula, hypothesis, attribution and contribution claim."
+    },
+    {
+      "path": "docs/PHILOSOPHY_DRAFT.md",
+      "old_sha256": "d5f4f02db38c086f54bbe49f2608f80a7bc820e5c3de7e888c2d0979da69e16c",
+      "new_sha256": "7d9577da1547261cfb563a69b44335f5a7a03c28b859d38d768b03d5c98f3ee8",
+      "reason": "Remove the inaccessible private-chat motivation and explain the scientific purpose directly for a laboratory reader; retain owner-approval draft status and conditional publication language."
+    },
+    {
+      "path": "docs/ROBUSTNESS_GUIDE.md",
+      "old_sha256": "8bbbe30e151c99559baa14247de0d7639136a0eb56199a94911575c98abaa9a6",
+      "new_sha256": "bbd4b9e2a4fb6d2fb02f90b440bcc75a4b2f5c218f77be52adfab025ec7f3006",
+      "reason": "Use fenced math blocks consistently for current-reader display equations; retain exactly the imported study assumptions, bounds and interpretation."
+    },
+    {
+      "path": "docs/THEORY_ROUTE.md",
+      "old_sha256": "23782cf35b99a9183258c2f4f3deb44e1d720a64580d9f87171461b866434612",
+      "new_sha256": "68e9e8a933e76582fa78d16c2a4f35e52d7cbf62fb05e1bdc0b6c549b9a0a91d",
+      "reason": "Repair display-math transport with fenced math blocks and explicit TeX operand braces; no equation, physical/statistical definition or benchmark changes."
+    },
+    {
+      "path": "experiment/M1.md",
+      "old_sha256": "27011acc7b043323792426c822848c0cb45becc54d4e76681fe95b38f470f741",
+      "new_sha256": "ec3613bea0fd19efcdc94ca83f2a3a02c3f1f0c13309e4eeb1502676e6b478e7",
+      "reason": "Use fenced math blocks for existing target equations; leave the M1 mechanism question, all controls, numerical examples and acquisition rules unchanged."
+    },
+    {
+      "path": "experiment/P1.md",
+      "old_sha256": "81a4b4a4515c48e446ffc3d9cb65a08cb73797e8f71ce7fd9ed2d5e37fb998b8",
+      "new_sha256": "bdb7a77114ef1a7da6ba918cbec0feae516d9eeb88d44045faa6131a20e880ea",
+      "reason": "Use fenced math blocks for existing target equations; leave the P1 certification claim, all controls, numerical examples and acquisition rules unchanged."
+    },
+    {
+      "path": "experiment/P2.md",
+      "old_sha256": "d5e70d47039930e7b7f9f39c5704a8306353b5e11112ce8b1de661ddda9d9f64",
+      "new_sha256": "5099d72191f08589b40610bc9f484d510d711717d37b77287e1968f79bd9cf5e",
+      "reason": "Use fenced math blocks for existing target equations; leave the P2 certification claim, all controls, numerical examples and acquisition rules unchanged."
+    },
+    {
+      "path": "experiment/SU4.md",
+      "old_sha256": "2357cc9550d53cd3c953da2e36ea67399840b307cb6128522cc638f796aeca2d",
+      "new_sha256": "cb6fcc768b4bd9fdb0be04cb6f19468a05aa3e9c6f76ac3821cabdece0f892b0",
+      "reason": "Use fenced math blocks for existing preparation, hidden phase/loss and decoder equations; retain exact logical ports, phases and physical roles."
+    },
+    {
+      "path": "experiment/SU8.md",
+      "old_sha256": "3e01a031233afd52c1cbb9bde47bde662c68787a9fb51cd29809e4b5c5ca77bf",
+      "new_sha256": "f5e6fff30cdb81add4020fc872fc9a3702e8f4c5bfffe9e287a3ca2827578d32",
+      "reason": "Use fenced math blocks for existing embedded and Walsh8 equations; retain exact logical ports, phase convention, vacuum/leakage treatment and bounded claims."
+    }
+  ],
+  "test_adjustments": [
+    {
+      "path": "tests/test_handover_integrity.py",
+      "test": "test_visible_preimages_and_predecessor_chain",
+      "previous_assertion": "The previous handover ledger final hash directly equals the current document hash.",
+      "new_assertion": "The previous handover ledger final hash must equal this authorized layer old hash before this layer final hash is compared with the current document; unchanged documents still compare directly.",
+      "reason": "An authorized later README edit requires another explicit chain link. The old ledger is retained byte-for-byte and newly hash-pinned; no scientific assertion, numerical tolerance or archival check is weakened."
+    }
+  ]
+}
