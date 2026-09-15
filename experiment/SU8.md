@@ -18,19 +18,19 @@ Use logical input/output ports **0, 1, 2, 3** as the active block, in that order
 Inputs **4, 5, 6, 7 are vacuum**. Record the actual connector and detector map.
 Vectors are columns; matrix rows are outputs and columns are inputs.
 
-$$
+```math
 a^{(8)}=(\sqrt{p_0},\sqrt{p_1},\sqrt{p_2},\sqrt{p_3},0,0,0,0)^T,
-$$
+```
 
-$$
+```math
 O_j^{(8)}=(I_4-2|j\rangle\langle j|)\oplus I_4,
 \quad j=0,1,2,3,
-$$
+```
 
-$$
+```math
 T^{(8)}=\mathrm{diag}(\sqrt{\eta_0},\ldots,\sqrt{\eta_3})\oplus I_4,
 \qquad D^{(8)}=(J_4/2-I_4)\oplus I_4.
-$$
+```
 
 `I4` on the spare block is the ideal reference target, not a measured claim
 about spare-path loss. `T` is physical attenuation, not a unitary setting.
@@ -84,10 +84,10 @@ Use ports and labels **0–7**, each written as three-bit binary strings
 `000, 001, 010, 011, 100, 101, 110, 111`. The parity of the bitwise product
 defines the physical phase code:
 
-$$
+```math
 Z_8[i,j]=(-1)^{\sum_{b=0}^{2}i_bj_b},\qquad
-O_j=\mathrm{diag}(Z_8[:,j]),\qquad D_8=Z_8^\dagger/\sqrt8.
-$$
+O_j=\mathrm{diag}(Z_8[:,j]),\qquad D_8=Z_8^\dagger/\sqrt{8}.
+```
 
 The exponent is evaluated modulo two. Rows below are **input paths**; columns
 are **hidden labels**. A minus sign means a pi phase relative to the common
@@ -108,9 +108,9 @@ Every column has norm `sqrt(8)`. For distinct columns `j,k`, the nonzero bit
 string `j XOR k` pairs the paths into opposite contributions, giving zero inner
 product. Thus `Z8† Z8 = 8 I8`, `D8† D8 = I8`, and
 
-$$
-a=(1,1,1,1,1,1,1,1)^T/\sqrt8,\qquad D_8O_ja=|j\rangle.
-$$
+```math
+a=(1,1,1,1,1,1,1,1)^T/\sqrt{8},\qquad D_8O_ja=|j\rangle.
+```
 
 All `O_j` have determinant one: label 0 has no minus signs; every other column
 has four. This ordering also gives `det(D8)=1`, so no extra SU phase is required.
@@ -123,17 +123,17 @@ use `T8 = diag(sqrt(eta_0),...,sqrt(eta_7))` and input `a_i=sqrt(p_i)`.
 The same explicit first-column preparation completion on [SU4](SU4.md) works
 in eight dimensions. Theorem 1 specializes with `m=8`:
 
-$$
+```math
 B_\lambda=\frac{1+\lambda}{8}vv^T-\lambda\,\mathrm{diag}(\eta),
 \quad v_i=\sqrt{\eta_i},\quad p_i=z_i^2,\quad \lambda\ge1/7,
-$$
+```
 
 where `z` is the positive normalized top eigenvector. Keep `D8` fixed and no
 click inconclusive. With `s=sum_i eta_i p_i`, the unconditional ideal rates are
 
-$$
+```math
 C=\frac{(\sum_i\sqrt{\eta_ip_i})^2}{8},\qquad E=s-C,\qquad F=1-s.
-$$
+```
 
 At zero error use `p_i=(1/eta_i)/sum_k(1/eta_k)` and
 `C=8/sum_i(1/eta_i)`. For uniform `eta_i=t`, uniform preparation gives

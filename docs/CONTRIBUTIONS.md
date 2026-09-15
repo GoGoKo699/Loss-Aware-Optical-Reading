@@ -24,11 +24,11 @@ and no-click decision rule are chosen appropriately.
 For the four-path code, v_i=sqrt(eta_i), with transmission probabilities eta_i.
 For lambda at least 1/3, the exact optimum is
 
-$$
+```math
 \max(C-\lambda E)=\lambda_{\max}\left[
 \frac{1+\lambda}{4}vv^T-\lambda\,\mathrm{diag}(\eta)
 \right].
-$$
+```
 
 Prepare p_i=z_i^2 from the normalized positive principal eigenvector and use
 D=J/2-I. No click is inconclusive on this branch. The minimum-error endpoint and
@@ -59,17 +59,17 @@ For uniform hidden labels selecting passive coherent maps A_j, a mean incident s
 mu, and inaccessible loss modes, every permitted nonnegative Glauber-Sudarshan
 coherent-state mixture satisfies
 
-$$
+```math
 C\le\min\left\{1-E,
 \left[\sqrt{1-e^{-\kappa\mu}}+\sqrt{E/(m-1)}\right]^2\right\}.
-$$
+```
 
 Here m is the number of labels and kappa is the operator norm of
 
-$$
+```math
 H_\Delta=\frac{1}{m(m-1)}\sum_{j<k}
 (A_j-A_k)^\dagger(A_j-A_k).
-$$
+```
 
 The receiver may know the illumination's mixture label, use a phase reference,
 and perform any measurement. The illumination may contain arbitrarily

@@ -23,23 +23,23 @@ channels; the mathematical convention does not claim their physical order.
 
 The exact matrices are
 
-$$
+```math
 O_0=\mathrm{diag}(-1,1,1,1),\quad O_1=\mathrm{diag}(1,-1,1,1),
-$$
+```
 
-$$
+```math
 O_2=\mathrm{diag}(1,1,-1,1),\quad O_3=\mathrm{diag}(1,1,1,-1),
-$$
+```
 
-$$
-D_4=\frac12
+```math
+D_4=\frac{1}{2}
 \begin{pmatrix}
 -1&1&1&1\\
 1&-1&1&1\\
 1&1&-1&1\\
 1&1&1&-1
 \end{pmatrix}.
-$$
+```
 
 Here `J4` is the all-ones matrix. In the ideal device the returned amplitude
 vector is `T O_j a`, and the detector amplitude vector is `D4 T O_j a`.
@@ -59,10 +59,10 @@ correctly.
 The reference files supply an explicit unitary whose first column is `a`.
 For a real normalized target `a != |0>`, one convenient completion is
 
-$$
+```math
 w=\frac{|0\rangle-a}{\|\,|0\rangle-a\,\|},\qquad
 U_{\rm prep}=(I-2ww^\dagger)(I-2|1\rangle\langle1|).
-$$
+```
 
 This has determinant one and maps input port 0 to `a`; use the identity for
 `a = |0>`. The other columns are a programming convention, not extra occupied
@@ -96,10 +96,10 @@ existing chip as one role and a proposed use of both chips together.
 For positive diagonal loss and penalty `lambda >= 1/3`, take the positive
 normalized top eigenvector `z` of
 
-$$
+```math
 B_\lambda=\frac{1+\lambda}{4}vv^T-\lambda\,\mathrm{diag}(\eta),
 \qquad v_i=\sqrt{\eta_i},\qquad p_i=z_i^2.
-$$
+```
 
 Keep `D4` fixed and make no click inconclusive. At the zero-error endpoint,
 `p_i = (1/eta_i)/sum_k(1/eta_k)`. The known square-root receiver and this endpoint

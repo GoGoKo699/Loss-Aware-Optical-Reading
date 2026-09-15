@@ -57,6 +57,52 @@ class HandoverDocumentTests(unittest.TestCase):
         text = '# Port 0\n\n## Port 0\n\n```python\n# Not a heading\n```\n'
         self.assertEqual(_anchors(text), {'port-0', 'port-0-1'})
 
+    def test_math_fences_preserve_markdown_sensitive_expressions(self):
+        # The user-reported failures contain escaped braces and j<k; these must
+        # reach the TeX processor literally, without Markdown preprocessing.
+        expressions = [
+            r'C\leq\min\left\{1-E,\left[\sqrt{1-e^{-\kappa\mu}}'
+            r'+\sqrt{E/(m-1)}\right]^2\right\}.',
+            r'H_\Delta=\frac{1}{m(m-1)}\sum_{j<k}'
+            r'(A_j-A_k)^\dagger(A_j-A_k).',
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            document = root/'README.md'
+            document.write_text('# Benchmark\n\n' + '\n\n'.join(
+                '```math\n'+expression+'\n```' for expression in expressions))
+            self.assertEqual(verify_documents(root, [document])['status'], 'PASS')
+
+    def test_math_fences_are_checked_instead_of_silently_skipped(self):
+        cases = {
+            '```math\n\\frac{1}{2\n```': 'Unbalanced',
+            '~~~math\nx=1}\n~~~': 'Unbalanced',
+            '````math\n\\operatorname{Tr}(x)\n````': 'Unsupported',
+            '```math\n$$x=1$$\n```': 'Dollar delimiter',
+            '```math\n\n```': 'Empty',
+            '````math\nx=1\n```': 'Unclosed fenced',
+        }
+        for text, expected in cases.items():
+            with self.subTest(text=text), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                document = root/'README.md'
+                document.write_text(text)
+                with self.assertRaisesRegex(ValueError, expected):
+                    verify_documents(root, [document])
+
+    def test_reported_pages_keep_math_out_of_markdown_preprocessing(self):
+        pages = [
+            ('docs/THEORY_ROUTE.md', 15), ('docs/CONTRIBUTIONS.md', 3),
+            ('docs/ROBUSTNESS_GUIDE.md', 1), ('experiment/M1.md', 3),
+            ('experiment/P1.md', 4), ('experiment/P2.md', 4),
+            ('experiment/SU4.md', 5), ('experiment/SU8.md', 7),
+        ]
+        for name, count in pages:
+            with self.subTest(document=name):
+                text = (ROOT/name).read_text()
+                self.assertNotIn('$$', text)
+                self.assertEqual(text.count('```math\n'), count)
+
 
 if __name__ == '__main__':
     unittest.main()

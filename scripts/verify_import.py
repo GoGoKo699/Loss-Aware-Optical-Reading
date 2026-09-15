@@ -34,10 +34,29 @@ HANDOVER_PREIMAGES = {
     'experiment/LAB_REVIEW.md': 'ccd011603280c3fb1bee7b9a53e1f0a14431ba52f89262719bbe2269b181750f',
 }
 HANDOVER_PATHS = frozenset(HANDOVER_PREIMAGES)
+LAYOUT_RECORD = 'provenance/changes/layout-motivation-02.json'
+LAYOUT_BASE_COMMIT = '1b0a79073050766f12317f27a0b0e9260896b90f'
+LAYOUT_BASE_TREE = '0bf473a570347441887953505483b94149f7d44e'
+# Pinned bytes at the merged handover. This follow-up only repairs presentation
+# and gives the experiments a self-contained, conditional publication motivation.
+LAYOUT_PREIMAGES = {
+    'README.md': 'b7b9110f28af13e3bf1eaa030ec3a79c522000857554b3b2c89ef76f2419cf2d',
+    'docs/CONTRIBUTIONS.md': 'd7f8b22cbe104c682108307598be028b7b127aaddf8b2fe9be62afe84e90a5fa',
+    'docs/THEORY_ROUTE.md': '23782cf35b99a9183258c2f4f3deb44e1d720a64580d9f87171461b866434612',
+    'docs/PHILOSOPHY_DRAFT.md': 'd5f4f02db38c086f54bbe49f2608f80a7bc820e5c3de7e888c2d0979da69e16c',
+    'docs/ROBUSTNESS_GUIDE.md': '8bbbe30e151c99559baa14247de0d7639136a0eb56199a94911575c98abaa9a6',
+    'experiment/M1.md': '27011acc7b043323792426c822848c0cb45becc54d4e76681fe95b38f470f741',
+    'experiment/P1.md': '81a4b4a4515c48e446ffc3d9cb65a08cb73797e8f71ce7fd9ed2d5e37fb998b8',
+    'experiment/P2.md': 'd5e70d47039930e7b7f9f39c5704a8306353b5e11112ce8b1de661ddda9d9f64',
+    'experiment/SU4.md': '2357cc9550d53cd3c953da2e36ea67399840b307cb6128522cc638f796aeca2d',
+    'experiment/SU8.md': '3e01a031233afd52c1cbb9bde47bde662c68787a9fb51cd29809e4b5c5ca77bf',
+}
+LAYOUT_PATHS = frozenset(LAYOUT_PREIMAGES)
 HISTORICAL_LEDGER_SHA256 = {
     CHANGE_RECORD: 'a4b1f7eb9ec25d8ba737de30abc7ea787dd25eaeb15289207d191c2cd20c6c10',
     DOCUMENT_RECORD: '9cc64044ccfdf2bc38a3900e8141089a383bd116d7ff259c729cffe47afa2b29',
     FOLLOWUP_RECORD: 'f363b6343ce93093f6f5474ea4e1c4aca7c8d5d80a943f1aafb865346efb857d',
+    HANDOVER_RECORD: '763adbbd6e003aee1a03e380fa9436c7e761e31c458e845327582e81fce984fa',
 }
 
 
@@ -146,6 +165,45 @@ def _handover_hash(path: str, expected: str, changes: dict) -> str:
     return entry['new_sha256']
 
 
+def _layout_approvals(root: Path) -> dict:
+    """Accept the ten revised explanations, retaining every predecessor byte."""
+    ledger = json.loads((root/LAYOUT_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('interpretation_only') is not True or
+        ledger.get('mathematical_content_changed') is not False or
+        ledger.get('original_archive_sha256') != ORIGINAL_ARCHIVE_SHA256 or
+        ledger.get('previous_record') != HANDOVER_RECORD or
+        ledger.get('previous_record_sha256') != HISTORICAL_LEDGER_SHA256[HANDOVER_RECORD] or
+        ledger.get('base_commit') != LAYOUT_BASE_COMMIT or
+        ledger.get('base_tree') != LAYOUT_BASE_TREE):
+        raise ValueError('Invalid layout documentation ledger contract')
+    entries = ledger.get('changes', [])
+    changes = {entry['path']: entry for entry in entries}
+    if (len(changes) != len(entries) or changes.keys() != LAYOUT_PATHS or
+        ledger.get('additions')):
+        raise ValueError('Layout ledger is not the authorized document set')
+    for path, entry in changes.items():
+        reason = entry.get('reason')
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError('Layout documentation reason is missing: '+path)
+        for key in ('old_sha256', 'new_sha256'):
+            value = entry.get(key)
+            if (not isinstance(value, str) or len(value) != 64 or
+                any(c not in '0123456789abcdef' for c in value)):
+                raise ValueError('Invalid layout documentation hash: '+path)
+        if entry['old_sha256'] != LAYOUT_PREIMAGES[path]:
+            raise ValueError('Layout documentation baseline hash mismatch: '+path)
+    return changes
+
+
+def _layout_hash(path: str, expected: str, changes: dict) -> str:
+    entry = changes.get(path)
+    if entry is None:
+        return expected
+    if entry['old_sha256'] != expected:
+        raise ValueError('Layout documentation previous hash mismatch: '+path)
+    return entry['new_sha256']
+
+
 def verify(root: Path = ROOT) -> dict:
     manifest_bytes = (root/'provenance/IMPORT_MANIFEST.json').read_bytes()
     if _git_blob(manifest_bytes) != ORIGINAL_MANIFEST_GIT_BLOB:
@@ -171,6 +229,7 @@ def verify(root: Path = ROOT) -> dict:
         raise ValueError('Documentation addition collides with protected source')
     followup = _followup_approvals(root)
     handover = _handover_approvals(root)
+    layout = _layout_approvals(root)
     sources = [e['source'] for e in manifest['files']]
     if len(sources) != len(set(sources)):
         raise ValueError('Duplicate source member')
@@ -198,6 +257,7 @@ def verify(root: Path = ROOT) -> dict:
                 expected = document['new_sha256']
             expected = _followup_hash(entry['path'], expected, followup)
             expected = _handover_hash(entry['path'], expected, handover)
+            expected = _layout_hash(entry['path'], expected, layout)
             if sha(current) != expected:
                 raise ValueError('Protected working file changed: '+entry['path'])
             if approved is None and document is None:
@@ -214,12 +274,18 @@ def verify(root: Path = ROOT) -> dict:
     for path, entry in document_additions.items():
         expected = _followup_hash(path, entry['sha256'], followup)
         expected = _handover_hash(path, expected, handover)
+        expected = _layout_hash(path, expected, layout)
         if sha(_safe_path(root,path).read_bytes()) != expected:
             raise ValueError('Protected documentation changed: '+path)
     # Includes the five navigation documents outside the older import set.
     for path, entry in handover.items():
-        if sha(_safe_path(root, path).read_bytes()) != entry['new_sha256']:
+        expected = _layout_hash(path, entry['new_sha256'], layout)
+        if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected handover document changed: '+path)
+    # Includes the eight previously unfrozen teaching/experiment explanations.
+    for path, entry in layout.items():
+        if sha(_safe_path(root, path).read_bytes()) != entry['new_sha256']:
+            raise ValueError('Protected layout document changed: '+path)
     # Check immutable predecessor bytes after their semantic checks. This keeps
     # older diagnostic failures informative while also rejecting silent rewrites
     # of historical reasons, metadata, or accepted hash-chain entries.
@@ -241,6 +307,9 @@ def verify(root: Path = ROOT) -> dict:
             'handover_change_record':HANDOVER_RECORD,
             'authorized_handover_documents_verified':sorted(handover),
             'mathematics_changed_by_handover':False,
+            'layout_change_record':LAYOUT_RECORD,
+            'authorized_layout_documents_verified':sorted(layout),
+            'mathematics_changed_by_layout':False,
             'historical_change_ledgers_unchanged':True,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 

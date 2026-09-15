@@ -32,11 +32,14 @@ phase error requires another receiver, it also tells us something useful. We
 should not hide either outcome by selecting favorable inputs, detected events
 or a weak comparison.
 
-The earlier coherent-learning discussion helped motivate a search for a simple
-idea. The present task stands on its own as single-use optical reading. Its
-value should be judged through explicit assumptions, understandable predictions,
-reproducible calculations and experiments that can distinguish success from
-failure.
+The scientific motivation is to find a useful rule for reading an unknown
+optical setting when photons can be lost. A successful experiment would show
+which preparation to use, whether the same fixed receiver suffices, and when
+one source class outperforms another under the same declared signal budget.
+Together, theory and measurements could support a paper about that operational
+rule and its limits. The strength of the paper should come from a clear
+mechanism, an honest comparison and reproducible evidence. A journal destination
+can be judged once those results exist.
 
 Factual attribution and current novelty status: [CONTRIBUTIONS.md](CONTRIBUTIONS.md)
 and [CLAIM_STATUS.md](../CLAIM_STATUS.md).

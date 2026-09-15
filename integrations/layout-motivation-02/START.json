@@ -1,0 +1,15 @@
+{
+  "task": "Correct reader math layout, remove chat-dependent philosophy, and explain conditional experimental/publication motivation",
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "verified_remote_main": "1b0a79073050766f12317f27a0b0e9260896b90f",
+  "starting_tree": "0bf473a570347441887953505483b94149f7d44e",
+  "initial_local_branch": "handover/lab-01",
+  "initial_local_head": "d1b8dc1c4846cd13d0a752e8bd340db7985dc46d",
+  "initial_local_status": "clean",
+  "local_checkout": "Existing exact API-materialized shallow Git checkout; no authenticated clone claimed. Verified signed main merge commit installed into local object database; new branch created from main without resetting prior branch.",
+  "branch": "handover/layout-motivation-02",
+  "equivalent_open_task_found": false,
+  "open_PRs_at_start": [],
+  "authority": "User follow-up requests actual layout fixes, removal of private-chat references, and publication motivation. Existing reviewed history-preserving merge authorization continues. No acquisition, submission, release, licensing or privacy change.",
+  "edit_boundary": "Ten named current reader documents plus bounded integrity/math validation and new evidence. All original scientific routines, theorem/protocol statements, studies, archives, frozen results and previous ledgers preserved."
+}
