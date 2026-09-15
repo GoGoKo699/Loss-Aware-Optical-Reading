@@ -1,0 +1,599 @@
+﻿2026-09-15T06:37:23.8833250Z Current runner version: '2.337.0'
+2026-09-15T06:37:23.8870697Z ##[group]Runner Image Provisioner
+2026-09-15T06:37:23.8872356Z Hosted Compute Agent
+2026-09-15T06:37:23.8873429Z Version: 20260828.587
+2026-09-15T06:37:23.8874717Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-15T06:37:23.8876061Z Build Date: 2026-08-28T16:44:25Z
+2026-09-15T06:37:23.8877336Z Worker ID: {b4a58cd4-54c9-4c18-8ef3-70fde15c4f6a}
+2026-09-15T06:37:23.8879172Z Azure Region: westus
+2026-09-15T06:37:23.8880292Z ##[endgroup]
+2026-09-15T06:37:23.8882750Z ##[group]Operating System
+2026-09-15T06:37:23.8883967Z Ubuntu
+2026-09-15T06:37:23.8884873Z 24.04.5
+2026-09-15T06:37:23.8885938Z LTS
+2026-09-15T06:37:23.8886874Z ##[endgroup]
+2026-09-15T06:37:23.8887861Z ##[group]Runner Image
+2026-09-15T06:37:23.8889388Z Image: ubuntu-24.04
+2026-09-15T06:37:23.8890446Z Version: 20260907.300.1
+2026-09-15T06:37:23.8892828Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-15T06:37:23.8895731Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-15T06:37:23.8897743Z ##[endgroup]
+2026-09-15T06:37:23.8900139Z ##[group]GITHUB_TOKEN Permissions
+2026-09-15T06:37:23.8903128Z Contents: read
+2026-09-15T06:37:23.8904254Z Metadata: read
+2026-09-15T06:37:23.8905387Z ##[endgroup]
+2026-09-15T06:37:23.8908658Z Secret source: Actions
+2026-09-15T06:37:23.8910736Z Cache mode: write
+2026-09-15T06:37:23.8912079Z Prepare workflow directory
+2026-09-15T06:37:23.9608546Z Prepare all required actions
+2026-09-15T06:37:23.9683769Z Getting action download info
+2026-09-15T06:37:24.3607353Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-15T06:37:24.5058654Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-09-15T06:37:24.7054267Z Complete job name: verify
+2026-09-15T06:37:24.7842126Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-15T06:37:24.7851637Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-15T06:37:24.7852597Z with:
+2026-09-15T06:37:24.7853059Z   persist-credentials: false
+2026-09-15T06:37:24.7853681Z   repository: GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:37:24.7857528Z   token: ***
+2026-09-15T06:37:24.7857983Z   ssh-strict: true
+2026-09-15T06:37:24.7858469Z   ssh-user: git
+2026-09-15T06:37:24.7859149Z   clean: true
+2026-09-15T06:37:24.7859622Z   sparse-checkout-cone-mode: true
+2026-09-15T06:37:24.7860170Z   fetch-depth: 1
+2026-09-15T06:37:24.7860613Z   fetch-tags: false
+2026-09-15T06:37:24.7861083Z   show-progress: true
+2026-09-15T06:37:24.7861592Z   lfs: false
+2026-09-15T06:37:24.7862039Z   submodules: false
+2026-09-15T06:37:24.7862501Z   set-safe-directory: true
+2026-09-15T06:37:24.7863330Z ##[endgroup]
+2026-09-15T06:37:24.9188640Z Syncing repository: GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:37:24.9192735Z ##[group]Getting Git version info
+2026-09-15T06:37:24.9195101Z Working directory is '/home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading'
+2026-09-15T06:37:24.9198385Z [command]/usr/bin/git version
+2026-09-15T06:37:24.9285617Z git version 2.55.0
+2026-09-15T06:37:24.9294696Z ##[endgroup]
+2026-09-15T06:37:24.9302541Z Temporarily overriding HOME='/home/runner/work/_temp/91180d3d-6aed-4f3d-9b6c-84a50c466004' before making global git config changes
+2026-09-15T06:37:24.9311919Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-15T06:37:24.9322552Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading
+2026-09-15T06:37:24.9421671Z Deleting the contents of '/home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading'
+2026-09-15T06:37:24.9424497Z ##[group]Initializing the repository
+2026-09-15T06:37:24.9427156Z [command]/usr/bin/git init /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading
+2026-09-15T06:37:24.9600282Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-15T06:37:24.9620437Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-15T06:37:24.9630551Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-15T06:37:24.9632419Z hint: call:
+2026-09-15T06:37:24.9633777Z hint:
+2026-09-15T06:37:24.9635034Z hint: 	git config --global init.defaultBranch <name>
+2026-09-15T06:37:24.9636770Z hint:
+2026-09-15T06:37:24.9638023Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-15T06:37:24.9640696Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-15T06:37:24.9642504Z hint:
+2026-09-15T06:37:24.9644086Z hint: 	git branch -m <name>
+2026-09-15T06:37:24.9645560Z hint:
+2026-09-15T06:37:24.9647858Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-15T06:37:24.9651033Z Initialized empty Git repository in /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/.git/
+2026-09-15T06:37:24.9656132Z [command]/usr/bin/git remote add origin https://github.com/GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:37:24.9687884Z ##[endgroup]
+2026-09-15T06:37:24.9689855Z ##[group]Disabling automatic garbage collection
+2026-09-15T06:37:24.9691681Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-15T06:37:24.9746966Z ##[endgroup]
+2026-09-15T06:37:24.9750456Z ##[group]Setting up auth
+2026-09-15T06:37:24.9751658Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-15T06:37:24.9824577Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-15T06:37:25.1335508Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-15T06:37:25.1339515Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-15T06:37:25.1343394Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-15T06:37:25.1346453Z ##[endgroup]
+2026-09-15T06:37:25.1347697Z ##[group]Fetching the repository
+2026-09-15T06:37:25.1349953Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6d04d2aef3838c879e2a09e65bf95406aad729c8:refs/remotes/pull/6/merge
+2026-09-15T06:37:25.7534134Z From https://github.com/GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:37:25.7540526Z  * [new ref]         6d04d2aef3838c879e2a09e65bf95406aad729c8 -> pull/6/merge
+2026-09-15T06:37:25.7546663Z ##[endgroup]
+2026-09-15T06:37:25.7549724Z ##[group]Determining the checkout info
+2026-09-15T06:37:25.7552570Z ##[endgroup]
+2026-09-15T06:37:25.7557457Z [command]/usr/bin/git sparse-checkout disable
+2026-09-15T06:37:25.7619587Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-15T06:37:25.7656818Z ##[group]Checking out the ref
+2026-09-15T06:37:25.7662926Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+2026-09-15T06:37:25.7914377Z Note: switching to 'refs/remotes/pull/6/merge'.
+2026-09-15T06:37:25.7916261Z 
+2026-09-15T06:37:25.7918221Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-15T06:37:25.7921113Z changes and commit them, and you can discard any commits you make in this
+2026-09-15T06:37:25.7923523Z state without impacting any branches by switching back to a branch.
+2026-09-15T06:37:25.7925287Z 
+2026-09-15T06:37:25.7929149Z If you want to create a new branch to retain commits you create, you may
+2026-09-15T06:37:25.7932004Z do so (now or later) by using -c with the switch command. Example:
+2026-09-15T06:37:25.7935017Z 
+2026-09-15T06:37:25.7936025Z   git switch -c <new-branch-name>
+2026-09-15T06:37:25.7937461Z 
+2026-09-15T06:37:25.7938403Z Or undo this operation with:
+2026-09-15T06:37:25.7940925Z 
+2026-09-15T06:37:25.7943081Z   git switch -
+2026-09-15T06:37:25.7957613Z 
+2026-09-15T06:37:25.7959735Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-15T06:37:25.7963771Z 
+2026-09-15T06:37:25.7966408Z HEAD is now at 6d04d2a Merge 3e51f7da0fe1a5508814419bcd3a3d5aef936a02 into de73c9b094036b756d1ff008eaccbc52cec46207
+2026-09-15T06:37:25.7976082Z ##[endgroup]
+2026-09-15T06:37:25.8009792Z [command]/usr/bin/git log -1 --format=%H
+2026-09-15T06:37:25.8042055Z 6d04d2aef3838c879e2a09e65bf95406aad729c8
+2026-09-15T06:37:25.8054721Z ##[group]Removing auth
+2026-09-15T06:37:25.8059380Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-15T06:37:25.8099548Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-15T06:37:25.8355387Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-15T06:37:25.8389401Z http.https://github.com/.extraheader
+2026-09-15T06:37:25.8400344Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-15T06:37:25.8442554Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-15T06:37:25.8689599Z ##[endgroup]
+2026-09-15T06:37:25.8951293Z ##[group]Run set -euo pipefail
+2026-09-15T06:37:25.8952688Z [36;1mset -euo pipefail[0m
+2026-09-15T06:37:25.8953923Z [36;1mgit rev-parse HEAD[0m
+2026-09-15T06:37:25.8955144Z [36;1mgit rev-parse HEAD^{tree}[0m
+2026-09-15T06:37:25.8956755Z [36;1mtest -z "$(git status --porcelain --untracked-files=all)"[0m
+2026-09-15T06:37:25.9001330Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-15T06:37:25.9002885Z ##[endgroup]
+2026-09-15T06:37:25.9194285Z 6d04d2aef3838c879e2a09e65bf95406aad729c8
+2026-09-15T06:37:25.9211023Z eeb5bf8f88141a5940894640a4f0c5a999a5e7bd
+2026-09-15T06:37:25.9592711Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-15T06:37:25.9599724Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-09-15T06:37:25.9601423Z with:
+2026-09-15T06:37:25.9602334Z   python-version: 3.13.5
+2026-09-15T06:37:25.9603427Z   check-latest: false
+2026-09-15T06:37:25.9612685Z   token: ***
+2026-09-15T06:37:25.9613657Z   update-environment: true
+2026-09-15T06:37:25.9614768Z   allow-prereleases: false
+2026-09-15T06:37:25.9615835Z   freethreaded: false
+2026-09-15T06:37:25.9616810Z ##[endgroup]
+2026-09-15T06:37:26.1069855Z ##[group]Installed versions
+2026-09-15T06:37:26.1093475Z Version 3.13.5 was not found in the local cache
+2026-09-15T06:37:26.1212343Z (node:2025) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-15T06:37:26.1223340Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-15T06:37:26.7822929Z Version 3.13.5 is available for downloading
+2026-09-15T06:37:26.7824685Z Download from "https://github.com/actions/python-versions/releases/download/3.13.5-15601068749/python-3.13.5-linux-24.04-x64.tar.gz"
+2026-09-15T06:37:27.9139526Z Extract downloaded archive
+2026-09-15T06:37:27.9286173Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8e349ea6-b7fc-4bd8-bbfc-ca179f59b64f -f /home/runner/work/_temp/e3243eba-9d54-4268-9d8d-fbc1c0ba21e1
+2026-09-15T06:37:30.4280045Z Execute installation script
+2026-09-15T06:37:30.4414091Z Check if Python hostedtoolcache folder exist...
+2026-09-15T06:37:30.4415254Z Create Python 3.13.5 folder
+2026-09-15T06:37:30.4435299Z Copy Python binaries to hostedtoolcache folder
+2026-09-15T06:37:30.9879873Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-09-15T06:37:30.9926092Z Upgrading pip...
+2026-09-15T06:37:33.7362071Z Looking in links: /tmp/tmp3anr4t93
+2026-09-15T06:37:33.7380901Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.13.5/x64/lib/python3.13/site-packages (25.1.1)
+2026-09-15T06:37:35.7240472Z Collecting pip
+2026-09-15T06:37:35.8088186Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+2026-09-15T06:37:35.8350836Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+2026-09-15T06:37:35.9941972Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 15.6 MB/s eta 0:00:00
+2026-09-15T06:37:35.9958258Z 
+2026-09-15T06:37:36.0145483Z Installing collected packages: pip
+2026-09-15T06:37:36.0147567Z Attempting uninstall: pip
+2026-09-15T06:37:36.0180120Z Found existing installation: pip 25.1.1
+2026-09-15T06:37:36.0526309Z Uninstalling pip-25.1.1:
+2026-09-15T06:37:36.0580027Z Successfully uninstalled pip-25.1.1
+2026-09-15T06:37:37.2854546Z Successfully installed pip-26.2.1
+2026-09-15T06:37:37.3419909Z Create complete file
+2026-09-15T06:37:37.3463333Z Successfully set up CPython (3.13.5)
+2026-09-15T06:37:37.3464971Z ##[endgroup]
+2026-09-15T06:37:37.3674529Z ##[group]Run python -m pip install -r requirements-test.txt
+2026-09-15T06:37:37.3675038Z [36;1mpython -m pip install -r requirements-test.txt[0m
+2026-09-15T06:37:37.3715889Z shell: /usr/bin/bash -e {0}
+2026-09-15T06:37:37.3716177Z env:
+2026-09-15T06:37:37.3716461Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:37.3716982Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
+2026-09-15T06:37:37.3717434Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:37.3717832Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:37.3718228Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:37.3718629Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
+2026-09-15T06:37:37.3719207Z ##[endgroup]
+2026-09-15T06:37:38.1696943Z Collecting numpy==2.3.5 (from -r /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/requirements-recorded.txt (line 3))
+2026-09-15T06:37:38.2706169Z   Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-09-15T06:37:38.4415422Z Collecting scipy==1.17.0 (from -r /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/requirements-recorded.txt (line 4))
+2026-09-15T06:37:38.4653818Z   Downloading scipy-1.17.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-09-15T06:37:38.5106266Z Collecting mpmath==1.3.0 (from -r requirements-test.txt (line 3))
+2026-09-15T06:37:38.5316687Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-09-15T06:37:38.5659805Z Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+2026-09-15T06:37:38.8224140Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 75.1 MB/s  0:00:00
+2026-09-15T06:37:38.8488057Z Downloading scipy-1.17.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.0 MB)
+2026-09-15T06:37:39.0332480Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 191.1 MB/s  0:00:00
+2026-09-15T06:37:39.0545954Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-09-15T06:37:39.0605190Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 79.2 MB/s  0:00:00
+2026-09-15T06:37:39.1938255Z Installing collected packages: mpmath, numpy, scipy
+2026-09-15T06:37:45.7339392Z 
+2026-09-15T06:37:45.7350289Z Successfully installed mpmath-1.3.0 numpy-2.3.5 scipy-1.17.0
+2026-09-15T06:37:45.7967757Z ##[group]Run python scripts/verify_import.py
+2026-09-15T06:37:45.7968162Z [36;1mpython scripts/verify_import.py[0m
+2026-09-15T06:37:45.8005175Z shell: /usr/bin/bash -e {0}
+2026-09-15T06:37:45.8005420Z env:
+2026-09-15T06:37:45.8005687Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8006126Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
+2026-09-15T06:37:45.8006556Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8006934Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8007324Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8007707Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
+2026-09-15T06:37:45.8008044Z ##[endgroup]
+2026-09-15T06:37:45.8532595Z {
+2026-09-15T06:37:45.8533204Z   "status": "PASS",
+2026-09-15T06:37:45.8533969Z   "source_members": 39,
+2026-09-15T06:37:45.8534936Z   "archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+2026-09-15T06:37:45.8535864Z   "source_archive_unchanged": true,
+2026-09-15T06:37:45.8536540Z   "original_import_manifest_unchanged": true,
+2026-09-15T06:37:45.8537206Z   "scientific_content_unchanged": false,
+2026-09-15T06:37:45.8537829Z   "authorized_changes_verified": [
+2026-09-15T06:37:45.8538420Z     "CLAIM_STATUS.md",
+2026-09-15T06:37:45.8539316Z     "proofs/THEORY.md",
+2026-09-15T06:37:45.8539896Z     "src/theory.py",
+2026-09-15T06:37:45.8540460Z     "src/validate.py"
+2026-09-15T06:37:45.8541025Z   ],
+2026-09-15T06:37:45.8541565Z   "authorized_additions_verified": [
+2026-09-15T06:37:45.8542316Z     "docs/NUMERICAL_CONTRACT.md",
+2026-09-15T06:37:45.8543011Z     "repairs/theory-01/NUMERICAL_PROOF.md",
+2026-09-15T06:37:45.8543738Z     "src/photon_support.py"
+2026-09-15T06:37:45.8544348Z   ],
+2026-09-15T06:37:45.8545012Z   "change_record": "provenance/changes/theory-repair-01.json",
+2026-09-15T06:37:45.8546047Z   "document_change_record": "provenance/changes/novelty-integration-01.json",
+2026-09-15T06:37:45.8546908Z   "authorized_document_changes_verified": [
+2026-09-15T06:37:45.8547564Z     "CLAIM_STATUS.md",
+2026-09-15T06:37:45.8548167Z     "REPORT.md",
+2026-09-15T06:37:45.8548911Z     "SOURCE_AUDIT.md",
+2026-09-15T06:37:45.8549535Z     "experiment/LAB_REVIEW.md"
+2026-09-15T06:37:45.8550172Z   ],
+2026-09-15T06:37:45.8550742Z   "authorized_document_additions_verified": [
+2026-09-15T06:37:45.8551491Z     "docs/CONTRIBUTIONS.md",
+2026-09-15T06:37:45.8552148Z     "experiment/REVIEW_RATIONALE.md"
+2026-09-15T06:37:45.8552795Z   ],
+2026-09-15T06:37:45.8553515Z   "followup_change_record": "provenance/changes/novelty-integration-02.json",
+2026-09-15T06:37:45.8554480Z   "authorized_followup_documents_verified": [
+2026-09-15T06:37:45.8555214Z     "CLAIM_STATUS.md",
+2026-09-15T06:37:45.8555807Z     "REPORT.md",
+2026-09-15T06:37:45.8556304Z     "SOURCE_AUDIT.md",
+2026-09-15T06:37:45.8556884Z     "docs/CONTRIBUTIONS.md",
+2026-09-15T06:37:45.8557561Z     "experiment/LAB_REVIEW.md",
+2026-09-15T06:37:45.8558199Z     "experiment/REVIEW_RATIONALE.md"
+2026-09-15T06:37:45.8559168Z   ],
+2026-09-15T06:37:45.8559771Z   "mathematics_changed_by_followup": false,
+2026-09-15T06:37:45.8560583Z   "handover_change_record": "provenance/changes/lab-handover-01.json",
+2026-09-15T06:37:45.8561440Z   "authorized_handover_documents_verified": [
+2026-09-15T06:37:45.8562144Z     "CLAIM_STATUS.md",
+2026-09-15T06:37:45.8562698Z     "README.md",
+2026-09-15T06:37:45.8563283Z     "docs/PHYSICAL_SETTING.md",
+2026-09-15T06:37:45.8563928Z     "docs/REPRODUCE.md",
+2026-09-15T06:37:45.8564504Z     "docs/ROADMAP.md",
+2026-09-15T06:37:45.8565097Z     "experiment/LAB_REVIEW.md",
+2026-09-15T06:37:45.8565719Z     "work_orders/CURRENT.md"
+2026-09-15T06:37:45.8566304Z   ],
+2026-09-15T06:37:45.8566838Z   "mathematics_changed_by_handover": false,
+2026-09-15T06:37:45.8567584Z   "historical_change_ledgers_unchanged": true,
+2026-09-15T06:37:45.8569483Z   "validator_change": "original I/O guard; approved numerical-method metadata update only"
+2026-09-15T06:37:45.8570476Z }
+2026-09-15T06:37:45.8629618Z ##[group]Run python -m unittest discover -s tests -v
+2026-09-15T06:37:45.8630076Z [36;1mpython -m unittest discover -s tests -v[0m
+2026-09-15T06:37:45.8667094Z shell: /usr/bin/bash -e {0}
+2026-09-15T06:37:45.8667355Z env:
+2026-09-15T06:37:45.8667627Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8668070Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
+2026-09-15T06:37:45.8668516Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8669075Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8669459Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:37:45.8669843Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
+2026-09-15T06:37:45.8670173Z ##[endgroup]
+2026-09-15T06:37:46.6740455Z test_changed_note_rejected (test_documentation_integration.DocumentationIntegrationTests.test_changed_note_rejected) ... ok
+2026-09-15T06:37:46.6750580Z test_claim_boundaries_are_visible (test_documentation_integration.DocumentationIntegrationTests.test_claim_boundaries_are_visible) ... ok
+2026-09-15T06:37:46.7061424Z test_document_chain_passes (test_documentation_integration.DocumentationIntegrationTests.test_document_chain_passes) ... ok
+2026-09-15T06:37:46.8053720Z test_document_ledger_cannot_authorize_source_or_missing_document (test_documentation_integration.DocumentationIntegrationTests.test_document_ledger_cannot_authorize_source_or_missing_document) ... ok
+2026-09-15T06:37:46.8056710Z test_predecessor_audit_preserved (test_documentation_integration.DocumentationIntegrationTests.test_predecessor_audit_preserved) ... ok
+2026-09-15T06:37:46.8181495Z test_reader_links_resolve (test_documentation_integration.DocumentationIntegrationTests.test_reader_links_resolve) ... ok
+2026-09-15T06:37:46.8191347Z test_reader_math_delimiters_and_headings (test_documentation_integration.DocumentationIntegrationTests.test_reader_math_delimiters_and_headings) ... ok
+2026-09-15T06:37:46.8202449Z test_report_equations_and_lab_questions_preserved (test_documentation_integration.DocumentationIntegrationTests.test_report_equations_and_lab_questions_preserved) ... ok
+2026-09-15T06:37:46.8570230Z test_stale_document_preimage_rejected (test_documentation_integration.DocumentationIntegrationTests.test_stale_document_preimage_rejected) ... ok
+2026-09-15T06:37:46.8576050Z test_duplicate_headings_and_fences (test_handover_documents.HandoverDocumentTests.test_duplicate_headings_and_fences) ... ok
+2026-09-15T06:37:46.8976854Z test_final_local_documentation (test_handover_documents.HandoverDocumentTests.test_final_local_documentation) ... ok
+2026-09-15T06:37:46.9037027Z test_rejects_broken_navigation_and_math (test_handover_documents.HandoverDocumentTests.test_rejects_broken_navigation_and_math) ... ok
+2026-09-15T06:37:46.9046238Z test_valid_links_math_and_script_reference (test_handover_documents.HandoverDocumentTests.test_valid_links_math_and_script_reference) ... ok
+2026-09-15T06:37:47.1620574Z test_cannot_authorize_science_protocol_evidence_or_outside_paths (test_handover_integrity.HandoverIntegrityTests.test_cannot_authorize_science_protocol_evidence_or_outside_paths) ... ok
+2026-09-15T06:37:47.3289381Z test_canonical_protocol_source_and_frozen_evidence_still_protected (test_handover_integrity.HandoverIntegrityTests.test_canonical_protocol_source_and_frozen_evidence_still_protected) ... ok
+2026-09-15T06:37:47.5454605Z test_contract_and_predecessor_cannot_be_retargeted (test_handover_integrity.HandoverIntegrityTests.test_contract_and_predecessor_cannot_be_retargeted) ... ok
+2026-09-15T06:37:47.6848180Z test_historical_reasons_cannot_be_rewritten (test_handover_integrity.HandoverIntegrityTests.test_historical_reasons_cannot_be_rewritten) ... ok
+2026-09-15T06:37:47.8352606Z test_invalid_hashes_rejected (test_handover_integrity.HandoverIntegrityTests.test_invalid_hashes_rejected) ... ok
+2026-09-15T06:37:47.8435998Z test_layer_is_exactly_the_authorized_seven_documents (test_handover_integrity.HandoverIntegrityTests.test_layer_is_exactly_the_authorized_seven_documents) ... ok
+2026-09-15T06:37:47.9539640Z test_missing_duplicate_and_added_paths_rejected (test_handover_integrity.HandoverIntegrityTests.test_missing_duplicate_and_added_paths_rejected) ... ok
+2026-09-15T06:37:47.9997014Z test_old_ledger_cannot_bless_new_numerical_source (test_handover_integrity.HandoverIntegrityTests.test_old_ledger_cannot_bless_new_numerical_source) ... ok
+2026-09-15T06:37:48.0000315Z test_previous_hash_is_checked_at_each_existing_layer (test_handover_integrity.HandoverIntegrityTests.test_previous_hash_is_checked_at_each_existing_layer) ... ok
+2026-09-15T06:37:48.2060628Z test_reason_must_be_nonempty_explanatory_text (test_handover_integrity.HandoverIntegrityTests.test_reason_must_be_nonempty_explanatory_text) ... ok
+2026-09-15T06:37:48.4610242Z test_stale_baseline_hash_rejected_for_every_document (test_handover_integrity.HandoverIntegrityTests.test_stale_baseline_hash_rejected_for_every_document) ... ok
+2026-09-15T06:37:48.7661200Z test_unrecorded_new_document_bytes_rejected (test_handover_integrity.HandoverIntegrityTests.test_unrecorded_new_document_bytes_rejected) ... ok
+2026-09-15T06:37:48.7666747Z test_visible_preimages_and_predecessor_chain (test_handover_integrity.HandoverIntegrityTests.test_visible_preimages_and_predecessor_chain) ... ok
+2026-09-15T06:37:48.7735828Z test_all_port_routes_and_common_su_phases (test_lab_reference.LabMatrixTests.test_all_port_routes_and_common_su_phases) ... ok
+2026-09-15T06:37:48.7749989Z test_embedding_preserves_active_input_and_receiver (test_lab_reference.LabMatrixTests.test_embedding_preserves_active_input_and_receiver) ... ok
+2026-09-15T06:37:48.7752170Z test_invalid_preparation_or_mode_map_rejected (test_lab_reference.LabMatrixTests.test_invalid_preparation_or_mode_map_rejected) ... ok
+2026-09-15T06:37:48.7965387Z test_native8_rule_against_independent_eigenproblem_and_amplitudes (test_lab_reference.LabMatrixTests.test_native8_rule_against_independent_eigenproblem_and_amplitudes) ... ok
+2026-09-15T06:37:48.8516073Z test_registered_forecasts_and_reverse_receiver (test_lab_reference.LabMatrixTests.test_registered_forecasts_and_reverse_receiver) ... ok
+2026-09-15T06:37:48.8518534Z test_walsh_entries_and_exact_integer_orthogonality (test_lab_reference.LabMatrixTests.test_walsh_entries_and_exact_integer_orthogonality) ... ok
+2026-09-15T06:37:48.8554002Z test_descriptive_conditions_are_not_hidden_by_pooling (test_lab_reference.LabRecordTests.test_descriptive_conditions_are_not_hidden_by_pooling) ... ok
+2026-09-15T06:37:48.8584154Z test_every_eight_bit_mask_accounted_in_embedding (test_lab_reference.LabRecordTests.test_every_eight_bit_mask_accounted_in_embedding) ... ok
+2026-09-15T06:37:48.9080088Z test_four_label_adapter_invokes_existing_fixed_N_contract (test_lab_reference.LabRecordTests.test_four_label_adapter_invokes_existing_fixed_N_contract) ... ok
+2026-09-15T06:37:48.9140165Z test_malformed_records_refused (test_lab_reference.LabRecordTests.test_malformed_records_refused) ... ok
+2026-09-15T06:37:48.9188096Z test_native8_descriptive_only_and_bit7_is_label7 (test_lab_reference.LabRecordTests.test_native8_descriptive_only_and_bit7_is_label7) ... ok
+2026-09-15T06:37:48.9208205Z test_outputs_never_replace_existing_or_frozen_evidence (test_lab_reference.LabRecordTests.test_outputs_never_replace_existing_or_frozen_evidence) ... ok
+2026-09-15T06:37:48.9223897Z test_rejected_no_multiple_and_leakage_remain_in_N (test_lab_reference.LabRecordTests.test_rejected_no_multiple_and_leakage_remain_in_N) ... ok
+2026-09-15T06:37:49.9241145Z test_runnable_cli_round_trip_and_generated_examples (test_lab_reference.LabRecordTests.test_runnable_cli_round_trip_and_generated_examples) ... ok
+2026-09-15T06:37:49.9242955Z test_bool_not_number (test_migration.ImportTests.test_bool_not_number) ... ok
+2026-09-15T06:37:50.4060293Z test_existing_external_output_rejected (test_migration.ImportTests.test_existing_external_output_rejected) ... ok
+2026-09-15T06:37:50.8698075Z test_frozen_output_rejected (test_migration.ImportTests.test_frozen_output_rejected) ... ok
+2026-09-15T06:37:51.3410385Z test_missing_output_rejected (test_migration.ImportTests.test_missing_output_rejected) ... ok
+2026-09-15T06:37:51.3411899Z test_nonfinite_rejected (test_migration.ImportTests.test_nonfinite_rejected) ... ok
+2026-09-15T06:37:51.3413135Z test_numeric_tolerance (test_migration.ImportTests.test_numeric_tolerance) ... ok
+2026-09-15T06:37:51.3414344Z test_schema_rejected (test_migration.ImportTests.test_schema_rejected) ... ok
+2026-09-15T06:37:51.3560988Z test_source_integrity (test_migration.ImportTests.test_source_integrity) ... ok
+2026-09-15T06:37:51.3565758Z test_synthetic_labels_retained (test_migration.ImportTests.test_synthetic_labels_retained) ... ok
+2026-09-15T06:37:51.3968576Z test_tampered_copy_rejected (test_migration.ImportTests.test_tampered_copy_rejected) ... ok
+2026-09-15T06:37:51.3970522Z test_trial_template_has_no_data (test_migration.ImportTests.test_trial_template_has_no_data) ... ok
+2026-09-15T06:37:51.4570663Z test_wrapper_existing_output_rejected (test_migration.ImportTests.test_wrapper_existing_output_rejected) ... ok
+2026-09-15T06:37:51.6110439Z test_committed_572_comparisons (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_committed_572_comparisons) ... ok
+2026-09-15T06:37:51.6112493Z test_committed_audit_preserved (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_committed_audit_preserved) ... ok
+2026-09-15T06:37:51.6121825Z test_corrected_hierarchy_and_resource_limits (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_corrected_hierarchy_and_resource_limits) ... ok
+2026-09-15T06:37:51.7608596Z test_duplicate_and_unjustified_followup_rejected (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_duplicate_and_unjustified_followup_rejected) ... ok
+2026-09-15T06:37:51.9085008Z test_followup_cannot_authorize_source_or_missing_paths (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_followup_cannot_authorize_source_or_missing_paths) ... ok
+2026-09-15T06:37:51.9539276Z test_followup_notes_are_protected (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_followup_notes_are_protected) ... ok
+2026-09-15T06:37:51.9651649Z test_new_layer_and_unchanged_old_ledgers (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_new_layer_and_unchanged_old_ledgers) ... ok
+2026-09-15T06:37:51.9711236Z test_separate_supplied_packet_preserved (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_separate_supplied_packet_preserved) ... ok
+2026-09-15T06:37:52.0536444Z test_stale_followup_preimages_rejected (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_stale_followup_preimages_rejected) ... ok
+2026-09-15T06:37:52.2016768Z test_supplied_717_comparisons (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_supplied_717_comparisons) ... ok
+2026-09-15T06:37:52.2019044Z test_F01_and_F03_text_repaired (test_photon_support.PhotonSupportTests.test_F01_and_F03_text_repaired) ... ok
+2026-09-15T06:37:52.2471838Z test_authorized_added_module_is_protected (test_photon_support.PhotonSupportTests.test_authorized_added_module_is_protected) ... ok
+2026-09-15T06:37:52.2872006Z test_change_ledger_cannot_omit_an_old_hash (test_photon_support.PhotonSupportTests.test_change_ledger_cannot_omit_an_old_hash) ... ok
+2026-09-15T06:37:53.0744820Z test_extreme_domain_and_nearly_uniform (test_photon_support.PhotonSupportTests.test_extreme_domain_and_nearly_uniform) ... ok
+2026-09-15T06:37:53.2077684Z test_frontier_tiny_budget_fails_explicitly (test_photon_support.PhotonSupportTests.test_frontier_tiny_budget_fails_explicitly) ... ok
+2026-09-15T06:37:53.2190686Z test_import_manifest_and_original_archive_stay_fixed (test_photon_support.PhotonSupportTests.test_import_manifest_and_original_archive_stay_fixed) ... ok
+2026-09-15T06:37:53.2275667Z test_nominal_recipe_and_pairwise_error (test_photon_support.PhotonSupportTests.test_nominal_recipe_and_pairwise_error) ... ok
+2026-09-15T06:37:53.2650622Z test_original_manifest_cannot_be_rebaselined (test_photon_support.PhotonSupportTests.test_original_manifest_cannot_be_rebaselined) ... ok
+2026-09-15T06:37:53.4748636Z test_penalty_boundary_neighbors (test_photon_support.PhotonSupportTests.test_penalty_boundary_neighbors) ... ok
+2026-09-15T06:37:55.4956836Z test_random_exact_enclosures (test_photon_support.PhotonSupportTests.test_random_exact_enclosures) ... ok
+2026-09-15T06:37:55.6924741Z test_reported_F02_counterexample (test_photon_support.PhotonSupportTests.test_reported_F02_counterexample) ... ok
+2026-09-15T06:37:55.6928124Z test_reverse_addition_is_outward (test_photon_support.PhotonSupportTests.test_reverse_addition_is_outward) ... ok
+2026-09-15T06:37:55.6934117Z test_reverse_caller_does_not_use_nominal_score (test_photon_support.PhotonSupportTests.test_reverse_caller_does_not_use_nominal_score) ... ok
+2026-09-15T06:37:55.6936102Z test_rounding_directions (test_photon_support.PhotonSupportTests.test_rounding_directions) ... ok
+2026-09-15T06:37:55.7060457Z test_uniform_root_is_exactly_enclosed (test_photon_support.PhotonSupportTests.test_uniform_root_is_exactly_enclosed) ... ok
+2026-09-15T06:37:55.7070066Z test_unsupported_domain_rejected_by_all_score_callers (test_photon_support.PhotonSupportTests.test_unsupported_domain_rejected_by_all_score_callers) ... ok
+2026-09-15T06:37:55.7104692Z test_delivery_bytes_and_work_order_preserved (test_robustness_import.RobustnessImportTests.test_delivery_bytes_and_work_order_preserved) ... ok
+2026-09-15T06:39:01.3909197Z {
+2026-09-15T06:39:01.3909801Z   "fresh_witness_verification": "PASS",
+2026-09-15T06:39:01.3910431Z   "checks": 11161,
+2026-09-15T06:39:01.3910929Z   "difference_count": 2491,
+2026-09-15T06:39:01.3911459Z   "differences": [
+2026-09-15T06:39:01.3911923Z     {
+2026-09-15T06:39:01.3912384Z       "path": "/cases/0/joint/lower",
+2026-09-15T06:39:01.3913034Z       "reference": "0.6999999992999997",
+2026-09-15T06:39:01.3913591Z       "fresh": "0.6999999992999985"
+2026-09-15T06:39:01.3914126Z     },
+2026-09-15T06:39:01.3914560Z     {
+2026-09-15T06:39:01.3915058Z       "path": "/cases/0/joint/lower_exact",
+2026-09-15T06:39:01.3916471Z       "reference": "5014800788632025635472496956904699575622509732020105960306076795775314633876767764537772404074081529761527122015947/71640011337811829394210778863010880435876943",
+2026-09-15T06:39:01.3918582Z       "fresh": "306079149696778638872645439491139706331462707767896005106723422561489640666585453428703220357298586551006455391/437255928575512042378679031681094351471146491230"
+2026-09-15T06:39:01.3920273Z     },
+2026-09-15T06:39:01.3920720Z     {
+2026-09-15T06:39:01.3921225Z       "path": "/cases/0/joint/effect_factors/0/0/1/0",
+2026-09-15T06:39:01.3921860Z       "reference": "0",
+2026-09-15T06:39:01.3922419Z       "fresh": "-2687278437067521/9671406556917033397649408"
+2026-09-15T06:39:01.3923056Z     },
+2026-09-15T06:39:01.3923502Z     {
+2026-09-15T06:39:01.3924004Z       "path": "/cases/0/joint/effect_factors/0/0/2/0",
+2026-09-15T06:39:01.3924738Z       "reference": "7896459509193089/1237940039285380274899124224",
+2026-09-15T06:39:01.3926106Z test_regeneration_and_optimizer_free_verification (test_robustness_import.RobustnessImportTests.test_regeneration_and_optimizer_free_verification) ... FAIL
+2026-09-15T06:39:01.3927633Z       "fresh": "8022884108831927/1208925819614629174706176"
+2026-09-15T06:39:01.3928283Z     },
+2026-09-15T06:39:01.3928956Z     {
+2026-09-15T06:39:01.3929477Z       "path": "/cases/0/joint/effect_factors/0/0/3/0",
+2026-09-15T06:39:01.3930148Z       "reference": "9007199254740991/18014398509481984",
+2026-09-15T06:39:01.3930772Z       "fresh": "4503599627370495/9007199254740992"
+2026-09-15T06:39:01.3931238Z     },
+2026-09-15T06:39:01.3931588Z     {
+2026-09-15T06:39:01.3932131Z       "path": "/cases/0/joint/effect_factors/0/1/1/0",
+2026-09-15T06:39:01.3932762Z       "reference": "0",
+2026-09-15T06:39:01.3933711Z       "fresh": "-1140497139964215/4835703278458516698824704"
+2026-09-15T06:39:01.3934419Z     },
+2026-09-15T06:39:01.3934852Z     {
+2026-09-15T06:39:01.3935579Z       "path": "/cases/0/joint/effect_factors/0/1/2/0",
+2026-09-15T06:39:01.3936373Z       "reference": "6584267015951079/4951760157141521099596496896",
+2026-09-15T06:39:01.3937140Z       "fresh": "1588564822822095/151115727451828646838272"
+2026-09-15T06:39:01.3937753Z     },
+2026-09-15T06:39:01.3938121Z     {
+2026-09-15T06:39:01.3938573Z       "path": "/cases/0/joint/effect_factors/0/1/3/0",
+2026-09-15T06:39:01.3939631Z       "reference": "-1/2",
+2026-09-15T06:39:01.3940189Z       "fresh": "-2251799813685249/4503599627370496"
+2026-09-15T06:39:01.3940766Z     },
+2026-09-15T06:39:01.3941182Z     {
+2026-09-15T06:39:01.3941674Z       "path": "/cases/0/joint/effect_factors/0/2/1/0",
+2026-09-15T06:39:01.3942278Z       "reference": "0",
+2026-09-15T06:39:01.3942828Z       "fresh": "-6123265068944633/2417851639229258349412352"
+2026-09-15T06:39:01.3943443Z     },
+2026-09-15T06:39:01.3943838Z     {
+2026-09-15T06:39:01.3944316Z       "path": "/cases/0/joint/effect_factors/0/2/2/0",
+2026-09-15T06:39:01.3945038Z       "reference": "-4472406399773923/19342813113834066795298816",
+2026-09-15T06:39:01.3945758Z       "fresh": "-6727466468932977/2417851639229258349412352"
+2026-09-15T06:39:01.3946373Z     },
+2026-09-15T06:39:01.3946788Z     {
+2026-09-15T06:39:01.3947273Z       "path": "/cases/0/joint/effect_factors/0/3/1/0",
+2026-09-15T06:39:01.3947912Z       "reference": "0",
+2026-09-15T06:39:01.3948458Z       "fresh": "6021694029659861/2417851639229258349412352"
+2026-09-15T06:39:01.3949325Z     },
+2026-09-15T06:39:01.3949738Z     {
+2026-09-15T06:39:01.3950218Z       "path": "/cases/0/joint/effect_factors/0/3/2/0",
+2026-09-15T06:39:01.3950975Z       "reference": "4570068786574007/19342813113834066795298816",
+2026-09-15T06:39:01.3951722Z       "fresh": "-5287604957113407/4835703278458516698824704"
+2026-09-15T06:39:01.3952345Z     },
+2026-09-15T06:39:01.3952779Z     {
+2026-09-15T06:39:01.3953271Z       "path": "/cases/0/joint/effect_factors/0/3/3/0",
+2026-09-15T06:39:01.3953970Z       "reference": "-4503599627370497/9007199254740992",
+2026-09-15T06:39:01.3954633Z       "fresh": "-9007199254740991/18014398509481984"
+2026-09-15T06:39:01.3955217Z     },
+2026-09-15T06:39:01.3955622Z     {
+2026-09-15T06:39:01.3956104Z       "path": "/cases/0/joint/effect_factors/1/0/1/0",
+2026-09-15T06:39:01.3956760Z       "reference": "0",
+2026-09-15T06:39:01.3957309Z       "fresh": "2687278437067521/9671406556917033397649408"
+2026-09-15T06:39:01.3957924Z     },
+2026-09-15T06:39:01.3958326Z     {
+2026-09-15T06:39:01.3959028Z       "path": "/cases/0/joint/effect_factors/1/0/2/0",
+2026-09-15T06:39:01.3959792Z       "reference": "-7896459509193089/1237940039285380274899124224",
+2026-09-15T06:39:01.3960572Z       "fresh": "8022884108831927/1208925819614629174706176"
+2026-09-15T06:39:01.3961190Z     },
+2026-09-15T06:39:01.3961594Z     {
+2026-09-15T06:39:01.3962077Z       "path": "/cases/0/joint/effect_factors/1/0/3/0",
+2026-09-15T06:39:01.3962769Z       "reference": "9007199254740991/18014398509481984",
+2026-09-15T06:39:01.3963422Z       "fresh": "4503599627370495/9007199254740992"
+2026-09-15T06:39:01.3963996Z     },
+2026-09-15T06:39:01.3964401Z     {
+2026-09-15T06:39:01.3964897Z       "path": "/cases/0/joint/effect_factors/1/1/1/0",
+2026-09-15T06:39:01.3965542Z       "reference": "0",
+2026-09-15T06:39:01.3966097Z       "fresh": "1140497139964215/4835703278458516698824704"
+2026-09-15T06:39:01.3966710Z     },
+2026-09-15T06:39:01.3967110Z     {
+2026-09-15T06:39:01.3967593Z       "path": "/cases/0/joint/effect_factors/1/1/2/0",
+2026-09-15T06:39:01.3968335Z       "reference": "-6584267015951079/4951760157141521099596496896",
+2026-09-15T06:39:01.3969459Z       "fresh": "1588564822822095/151115727451828646838272"
+2026-09-15T06:39:01.3970115Z     },
+2026-09-15T06:39:01.3970539Z     {
+2026-09-15T06:39:01.3971025Z       "path": "/cases/0/joint/effect_factors/1/1/3/0",
+2026-09-15T06:39:01.3971710Z       "reference": "-1/2",
+2026-09-15T06:39:01.3972525Z       "fresh": "-2251799813685249/4503599627370496"
+2026-09-15T06:39:01.3973112Z     },
+2026-09-15T06:39:01.3973725Z     {
+2026-09-15T06:39:01.3974268Z       "path": "/cases/0/joint/effect_factors/1/2/1/0",
+2026-09-15T06:39:01.3974949Z       "reference": "0",
+2026-09-15T06:39:01.3975530Z       "fresh": "-6123265068944633/2417851639229258349412352"
+2026-09-15T06:39:01.3976176Z     },
+2026-09-15T06:39:01.3976601Z     {
+2026-09-15T06:39:01.3977118Z       "path": "/cases/0/joint/effect_factors/1/2/2/0",
+2026-09-15T06:39:01.3977919Z       "reference": "-4472406399773923/19342813113834066795298816",
+2026-09-15T06:39:01.3978930Z       "fresh": "6727466468932977/2417851639229258349412352"
+2026-09-15T06:39:01.3979583Z     },
+2026-09-15T06:39:01.3980000Z     {
+2026-09-15T06:39:01.3980517Z       "path": "/cases/0/joint/effect_factors/1/3/1/0",
+2026-09-15T06:39:01.3981174Z       "reference": "0",
+2026-09-15T06:39:01.3981736Z       "fresh": "6021694029659861/2417851639229258349412352"
+2026-09-15T06:39:01.3982359Z     },
+2026-09-15T06:39:01.3982777Z     {
+2026-09-15T06:39:01.3983349Z       "path": "/cases/0/joint/effect_factors/1/3/2/0",
+2026-09-15T06:39:01.3984130Z       "reference": "4570068786574007/19342813113834066795298816",
+2026-09-15T06:39:01.3984867Z       "fresh": "5287604957113407/4835703278458516698824704"
+2026-09-15T06:39:01.3985469Z     },
+2026-09-15T06:39:01.3985863Z     {
+2026-09-15T06:39:01.3986349Z       "path": "/cases/0/joint/effect_factors/1/3/3/0",
+2026-09-15T06:39:01.3987035Z       "reference": "4503599627370497/9007199254740992",
+2026-09-15T06:39:01.3987921Z       "fresh": "9007199254740991/18014398509481984"
+2026-09-15T06:39:01.3989565Z     },
+2026-09-15T06:39:01.3990015Z     {
+2026-09-15T06:39:01.3990534Z       "path": "/cases/0/joint/effect_factors/2/0/1/0",
+2026-09-15T06:39:01.3991231Z       "reference": "0",
+2026-09-15T06:39:01.3991905Z       "fresh": "2687278437067521/9671406556917033397649408"
+2026-09-15T06:39:01.3992680Z     },
+2026-09-15T06:39:01.3993109Z     {
+2026-09-15T06:39:01.3993589Z       "path": "/cases/0/joint/effect_factors/2/0/2/0",
+2026-09-15T06:39:01.3994349Z       "reference": "-7896459509193089/1237940039285380274899124224",
+2026-09-15T06:39:01.3995108Z       "fresh": "-8022884108831927/1208925819614629174706176"
+2026-09-15T06:39:01.3995744Z     },
+2026-09-15T06:39:01.3996182Z     {
+2026-09-15T06:39:01.3996715Z       "path": "/cases/0/joint/effect_factors/2/0/3/0",
+2026-09-15T06:39:01.3997413Z       "reference": "9007199254740991/18014398509481984",
+2026-09-15T06:39:01.3998078Z       "fresh": "4503599627370495/9007199254740992"
+2026-09-15T06:39:01.3998900Z     },
+2026-09-15T06:39:01.3999362Z     {
+2026-09-15T06:39:01.3999912Z       "path": "/cases/0/joint/effect_factors/2/1/1/0",
+2026-09-15T06:39:01.4000586Z       "reference": "0",
+2026-09-15T06:39:01.4001404Z       "fresh": "-1140497139964215/4835703278458516698824704"
+2026-09-15T06:39:01.4006002Z     },
+2026-09-15T06:39:01.4006439Z     {
+2026-09-15T06:39:01.4006950Z       "path": "/cases/0/joint/effect_factors/2/1/2/0",
+2026-09-15T06:39:01.4007737Z       "reference": "6584267015951079/4951760157141521099596496896",
+2026-09-15T06:39:01.4008536Z       "fresh": "1588564822822095/151115727451828646838272"
+2026-09-15T06:39:01.4010523Z     },
+2026-09-15T06:39:01.4011195Z     {
+2026-09-15T06:39:01.4012282Z       "path": "/cases/0/joint/effect_factors/2/1/3/0",
+2026-09-15T06:39:01.4013190Z       "reference": "1/2",
+2026-09-15T06:39:01.4014246Z       "fresh": "2251799813685249/4503599627370496"
+2026-09-15T06:39:01.4014993Z     },
+2026-09-15T06:39:01.4015876Z     {
+2026-09-15T06:39:01.4016691Z       "path": "/cases/0/joint/effect_factors/2/2/1/0",
+2026-09-15T06:39:01.4017910Z       "reference": "0",
+2026-09-15T06:39:01.4018658Z       "fresh": "6123265068944633/2417851639229258349412352"
+2026-09-15T06:39:01.4020194Z     },
+2026-09-15T06:39:01.4020819Z     {
+2026-09-15T06:39:01.4021781Z       "path": "/cases/0/joint/effect_factors/2/2/2/0",
+2026-09-15T06:39:01.4022752Z       "reference": "4472406399773923/19342813113834066795298816",
+2026-09-15T06:39:01.4024423Z       "fresh": "6727466468932977/2417851639229258349412352"
+2026-09-15T06:39:01.4025295Z     },
+2026-09-15T06:39:01.4026457Z     {
+2026-09-15T06:39:01.4029961Z       "path": "/cases/0/joint/effect_factors/2/3/1/0",
+2026-09-15T06:39:01.4030534Z       "reference": "0",
+2026-09-15T06:39:01.4031128Z       "fresh": "6021694029659861/2417851639229258349412352"
+2026-09-15T06:39:01.4031706Z     },
+2026-09-15T06:39:01.4032004Z     {
+2026-09-15T06:39:01.4032394Z       "path": "/cases/0/joint/effect_factors/2/3/2/0",
+2026-09-15T06:39:01.4033040Z       "reference": "4570068786574007/19342813113834066795298816",
+2026-09-15T06:39:01.4033689Z       "fresh": "-5287604957113407/4835703278458516698824704"
+2026-09-15T06:39:01.4034192Z     },
+2026-09-15T06:39:01.4034486Z     {
+2026-09-15T06:39:01.4034872Z       "path": "/cases/0/joint/effect_factors/2/3/3/0",
+2026-09-15T06:39:01.4035459Z       "reference": "4503599627370497/9007199254740992",
+2026-09-15T06:39:01.4036022Z       "fresh": "9007199254740991/18014398509481984"
+2026-09-15T06:39:01.4036492Z     },
+2026-09-15T06:39:01.4036786Z     {
+2026-09-15T06:39:01.4037184Z       "path": "/cases/0/joint/effect_factors/3/0/1/0",
+2026-09-15T06:39:01.4037725Z       "reference": "0",
+2026-09-15T06:39:01.4038198Z       "fresh": "-2687278437067521/9671406556917033397649408"
+2026-09-15T06:39:01.4038981Z     },
+2026-09-15T06:39:01.4039301Z     {
+2026-09-15T06:39:01.4039693Z       "path": "/cases/0/joint/effect_factors/3/0/2/0",
+2026-09-15T06:39:01.4040324Z       "reference": "7896459509193089/1237940039285380274899124224",
+2026-09-15T06:39:01.4040977Z       "fresh": "-8022884108831927/1208925819614629174706176"
+2026-09-15T06:39:01.4041491Z     },
+2026-09-15T06:39:01.4041804Z     {
+2026-09-15T06:39:01.4042196Z       "path": "/cases/0/joint/effect_factors/3/0/3/0",
+2026-09-15T06:39:01.4042774Z       "reference": "9007199254740991/18014398509481984",
+2026-09-15T06:39:01.4043306Z       "fresh": "4503599627370495/9007199254740992"
+2026-09-15T06:39:01.4043780Z     },
+2026-09-15T06:39:01.4044068Z     {
+2026-09-15T06:39:01.4044435Z       "path": "/cases/0/joint/effect_factors/3/1/1/0",
+2026-09-15T06:39:01.4044968Z       "reference": "0",
+2026-09-15T06:39:01.4045423Z       "fresh": "1140497139964215/4835703278458516698824704"
+2026-09-15T06:39:01.4045927Z     },
+2026-09-15T06:39:01.4046229Z     {
+2026-09-15T06:39:01.4046611Z       "path": "/cases/0/joint/effect_factors/3/1/2/0",
+2026-09-15T06:39:01.4047269Z       "reference": "-6584267015951079/4951760157141521099596496896",
+2026-09-15T06:39:01.4047897Z       "fresh": "1588564822822095/151115727451828646838272"
+2026-09-15T06:39:01.4048378Z     }
+2026-09-15T06:39:01.4048669Z   ]
+2026-09-15T06:39:01.4049188Z }
+2026-09-15T06:39:02.1710083Z test_supplied_units (test_robustness_import.RobustnessImportTests.test_supplied_units) ... ok
+2026-09-15T06:39:02.1710795Z 
+2026-09-15T06:39:02.1711079Z ======================================================================
+2026-09-15T06:39:02.1711874Z FAIL: test_regeneration_and_optimizer_free_verification (test_robustness_import.RobustnessImportTests.test_regeneration_and_optimizer_free_verification)
+2026-09-15T06:39:02.1712911Z ----------------------------------------------------------------------
+2026-09-15T06:39:02.1713496Z Traceback (most recent call last):
+2026-09-15T06:39:02.1720481Z   File "/home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/tests/test_robustness_import.py", line 68, in test_regeneration_and_optimizer_free_verification
+2026-09-15T06:39:02.1721674Z     self.assertEqual(hashlib.sha256(b).hexdigest(),
+2026-09-15T06:39:02.1722408Z     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-15T06:39:02.1723201Z         '74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db')
+2026-09-15T06:39:02.1723872Z         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-15T06:39:02.1725030Z AssertionError: '29287b9d89188fa2a4abf7fd4769a35f6e0a7b8ab17ae58a808be12db890396b' != '74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db'
+2026-09-15T06:39:02.1726471Z - 29287b9d89188fa2a4abf7fd4769a35f6e0a7b8ab17ae58a808be12db890396b
+2026-09-15T06:39:02.1727502Z + 74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db
+2026-09-15T06:39:02.1727947Z 
+2026-09-15T06:39:02.1729237Z 
+2026-09-15T06:39:02.1729652Z ----------------------------------------------------------------------
+2026-09-15T06:39:02.1730360Z Ran 81 tests in 75.546s
+2026-09-15T06:39:02.1730679Z 
+2026-09-15T06:39:02.1730934Z FAILED (failures=1)
+2026-09-15T06:39:02.2284431Z ##[error]Process completed with exit code 1.
+2026-09-15T06:39:02.2447892Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-15T06:39:02.2449379Z Post job cleanup.
+2026-09-15T06:39:02.3459317Z [command]/usr/bin/git version
+2026-09-15T06:39:02.3529672Z git version 2.55.0
+2026-09-15T06:39:02.3609855Z Temporarily overriding HOME='/home/runner/work/_temp/e272851e-0c6b-4791-b620-1044f37c3e7a' before making global git config changes
+2026-09-15T06:39:02.3627407Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-15T06:39:02.3639942Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading
+2026-09-15T06:39:02.3650857Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-15T06:39:02.3711119Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-15T06:39:02.4450842Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-15T06:39:02.4553169Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-15T06:39:02.5525149Z Cleaning up orphan processes
+2026-09-15T06:39:02.5992495Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

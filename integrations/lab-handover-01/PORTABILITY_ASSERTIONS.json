@@ -1,0 +1,30 @@
+{
+  "scope": "Correction to a new handover integration assertion; supplied scientific assertions and evidence remain unchanged",
+  "path": "tests/test_robustness_import.py",
+  "previous_commit": "3e51f7da0fe1a5508814419bcd3a3d5aef936a02",
+  "previous_sha256": "7bc50630ea2d8f2b3d51e58753ba67700c97ad80a29b181aba0d7f35d77df02e",
+  "current_sha256": "c7e3a03dc27930b6d38074f5fdc7a4172b653db27070d96a5c425eaff667fef1",
+  "reason": "Controlled Haswell kernel selection reproduces the CI byte mismatch while all exact finite-model witnesses remain valid. A fresh optimizer proposal is not a frozen evidence artifact.",
+  "removed_assertion": "Fresh proposed RESULTS bytes must have the supplied frozen RESULTS hash.",
+  "retained_assertions": [
+    "Original archive, patch, study-file, work-order and frozen RESULTS hashes",
+    "Unchanged supplied tests and exact verifier with original numerical tolerances",
+    "Overwrite refusal and unchanged existing output bytes"
+  ],
+  "replacement_gates": [
+    "Exact models, order, schemas and diagnostic inventories",
+    "Supplied and fresh optimizer-free exact witness verification: 11161 checks and10828 positive matrices with identical named checks",
+    "Rational enclosure overlap and retained reported precision",
+    "Positive regret, zero regret, probability, payoff and forecast accounting",
+    "Tamper rejection and exact verification of a genuinely different equivalent factor encoding"
+  ],
+  "focused_tests": {
+    "count": 5,
+    "status": "PASS",
+    "seconds": 93.327
+  },
+  "full_suite_count_expected": 83,
+  "both_backend_results_compared": "PASS",
+  "review": "Independent agent implementation reviewed by root; root reproduced full Haswell hash and exact certificates.",
+  "test_construction_correction": "Initial gauge-test fixture selected an identically zero column; it now selects the greatest exact column norm. The failed development run is preserved, and the corrected equivalent/invalid-factor test passes."
+}

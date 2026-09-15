@@ -154,3 +154,16 @@ unchanged byte-hash assertion and emits differences on failure. No supplied
 science, tolerance, frozen hash or acceptance condition was changed. A separate
 local Python 3.13.5 focused rerun also passed. The initial mismatch's cause
 remains unidentified; no general byte-determinism guarantee is claimed.
+
+The [completed portability investigation](REGENERATION_PORTABILITY.md) supersedes
+that intermediate unknown-cause status: selecting the Haswell BLAS kernel
+reproduced the differing CI hash exactly, and its fresh rational witnesses
+passed the unchanged verifier. The overly strong new fresh-byte assertion is
+replaced by model, certificate, bound-compatibility, precision and claim checks.
+Original study code, tests, tolerances and every supplied hash remain unchanged.
+The initial failures and intermediate successes are retained as evidence.
+
+The corrected five-test portability suite passed, with the old/new assertion
+mapping and all development logs preserved in the portability record. The
+full suite now contains 83 tests. Both numerical-backend result sets pass its
+scientific comparison; final remote workflows remain separate verification.
