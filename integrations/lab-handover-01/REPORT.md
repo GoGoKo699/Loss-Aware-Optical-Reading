@@ -146,3 +146,11 @@ PR head and the actual post-merge main workflow before completion is claimed.
 [Final independent diff review](FINAL_DIFF_REVIEW.md) passed. The staged diff
 also passes Git whitespace checks with `core.whitespace=cr-at-eol`, preserving
 standard CSV CRLF record endings and their existing manifest hashes.
+
+The [actual CI diagnosis](CI_DIAGNOSTICS.md) preserves an initial intermittent
+fresh-result hash failure and the subsequent successful diagnostic workflows.
+The new robustness integration test now runs exact verification before the
+unchanged byte-hash assertion and emits differences on failure. No supplied
+science, tolerance, frozen hash or acceptance condition was changed. A separate
+local Python 3.13.5 focused rerun also passed. The initial mismatch's cause
+remains unidentified; no general byte-determinism guarantee is claimed.

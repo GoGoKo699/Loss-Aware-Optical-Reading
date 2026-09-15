@@ -1,0 +1,392 @@
+﻿2026-09-15T06:27:33.3610577Z Current runner version: '2.337.0'
+2026-09-15T06:27:33.3648735Z ##[group]Runner Image Provisioner
+2026-09-15T06:27:33.3650276Z Hosted Compute Agent
+2026-09-15T06:27:33.3651611Z Version: 20260828.587
+2026-09-15T06:27:33.3652796Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-15T06:27:33.3654138Z Build Date: 2026-08-28T16:44:25Z
+2026-09-15T06:27:33.3655303Z Worker ID: {98c23cba-e0c9-4d2f-8ea1-bedd6bfe2bdd}
+2026-09-15T06:27:33.3656833Z Azure Region: eastus
+2026-09-15T06:27:33.3657922Z ##[endgroup]
+2026-09-15T06:27:33.3660482Z ##[group]Operating System
+2026-09-15T06:27:33.3662055Z Ubuntu
+2026-09-15T06:27:33.3663019Z 24.04.5
+2026-09-15T06:27:33.3663940Z LTS
+2026-09-15T06:27:33.3664908Z ##[endgroup]
+2026-09-15T06:27:33.3665942Z ##[group]Runner Image
+2026-09-15T06:27:33.3667011Z Image: ubuntu-24.04
+2026-09-15T06:27:33.3668039Z Version: 20260907.300.1
+2026-09-15T06:27:33.3670452Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-15T06:27:33.3673762Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-15T06:27:33.3675516Z ##[endgroup]
+2026-09-15T06:27:33.3677547Z ##[group]GITHUB_TOKEN Permissions
+2026-09-15T06:27:33.3680763Z Contents: read
+2026-09-15T06:27:33.3682374Z Metadata: read
+2026-09-15T06:27:33.3683395Z ##[endgroup]
+2026-09-15T06:27:33.3686608Z Secret source: Actions
+2026-09-15T06:27:33.3688221Z Cache mode: write
+2026-09-15T06:27:33.3689406Z Prepare workflow directory
+2026-09-15T06:27:33.4187848Z Prepare all required actions
+2026-09-15T06:27:33.4261392Z Getting action download info
+2026-09-15T06:27:33.6524233Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-15T06:27:33.8007408Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-09-15T06:27:34.0060936Z Complete job name: verify
+2026-09-15T06:27:34.0883196Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-15T06:27:34.0892691Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-15T06:27:34.0893690Z with:
+2026-09-15T06:27:34.0894165Z   persist-credentials: false
+2026-09-15T06:27:34.0894782Z   repository: GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:27:34.0898907Z   token: ***
+2026-09-15T06:27:34.0899361Z   ssh-strict: true
+2026-09-15T06:27:34.0899823Z   ssh-user: git
+2026-09-15T06:27:34.0900269Z   clean: true
+2026-09-15T06:27:34.0900742Z   sparse-checkout-cone-mode: true
+2026-09-15T06:27:34.0901491Z   fetch-depth: 1
+2026-09-15T06:27:34.0901946Z   fetch-tags: false
+2026-09-15T06:27:34.0902406Z   show-progress: true
+2026-09-15T06:27:34.0902912Z   lfs: false
+2026-09-15T06:27:34.0903366Z   submodules: false
+2026-09-15T06:27:34.0903842Z   set-safe-directory: true
+2026-09-15T06:27:34.0904626Z ##[endgroup]
+2026-09-15T06:27:34.2034329Z Syncing repository: GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:27:34.2037735Z ##[group]Getting Git version info
+2026-09-15T06:27:34.2040070Z Working directory is '/home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading'
+2026-09-15T06:27:34.2135220Z [command]/usr/bin/git version
+2026-09-15T06:27:34.2323547Z git version 2.55.0
+2026-09-15T06:27:34.2330097Z ##[endgroup]
+2026-09-15T06:27:34.2362671Z Temporarily overriding HOME='/home/runner/work/_temp/8c6b14eb-7628-4d5d-82fc-066b356efdb6' before making global git config changes
+2026-09-15T06:27:34.2365681Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-15T06:27:34.2368959Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading
+2026-09-15T06:27:34.2436336Z Deleting the contents of '/home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading'
+2026-09-15T06:27:34.2440206Z ##[group]Initializing the repository
+2026-09-15T06:27:34.2485470Z [command]/usr/bin/git init /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading
+2026-09-15T06:27:34.2659401Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-15T06:27:34.2682175Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-15T06:27:34.2692148Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-15T06:27:34.2693711Z hint: call:
+2026-09-15T06:27:34.2694188Z hint:
+2026-09-15T06:27:34.2695197Z hint: 	git config --global init.defaultBranch <name>
+2026-09-15T06:27:34.2696486Z hint:
+2026-09-15T06:27:34.2697963Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-15T06:27:34.2702316Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-15T06:27:34.2704189Z hint:
+2026-09-15T06:27:34.2705620Z hint: 	git branch -m <name>
+2026-09-15T06:27:34.2708534Z hint:
+2026-09-15T06:27:34.2709708Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-15T06:27:34.2722138Z Initialized empty Git repository in /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/.git/
+2026-09-15T06:27:34.2727393Z [command]/usr/bin/git remote add origin https://github.com/GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:27:34.2764544Z ##[endgroup]
+2026-09-15T06:27:34.2766898Z ##[group]Disabling automatic garbage collection
+2026-09-15T06:27:34.2775403Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-15T06:27:34.3007853Z ##[endgroup]
+2026-09-15T06:27:34.3023221Z ##[group]Setting up auth
+2026-09-15T06:27:34.3024623Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-15T06:27:34.3033052Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-15T06:27:34.4401794Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-15T06:27:34.4406212Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-15T06:27:34.4410228Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-15T06:27:34.4417607Z ##[endgroup]
+2026-09-15T06:27:34.4419342Z ##[group]Fetching the repository
+2026-09-15T06:27:34.4422286Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +580ef25715adc13ac9522f91609c51e7b2d4c6f4:refs/remotes/pull/6/merge
+2026-09-15T06:27:34.9147355Z From https://github.com/GoGoKo699/Loss-Aware-Optical-Reading
+2026-09-15T06:27:34.9163086Z  * [new ref]         580ef25715adc13ac9522f91609c51e7b2d4c6f4 -> pull/6/merge
+2026-09-15T06:27:34.9169551Z ##[endgroup]
+2026-09-15T06:27:34.9172112Z ##[group]Determining the checkout info
+2026-09-15T06:27:34.9174284Z ##[endgroup]
+2026-09-15T06:27:34.9175774Z [command]/usr/bin/git sparse-checkout disable
+2026-09-15T06:27:34.9233208Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-15T06:27:34.9272474Z ##[group]Checking out the ref
+2026-09-15T06:27:34.9276983Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+2026-09-15T06:27:34.9526457Z Note: switching to 'refs/remotes/pull/6/merge'.
+2026-09-15T06:27:34.9527682Z 
+2026-09-15T06:27:34.9528624Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-15T06:27:34.9530842Z changes and commit them, and you can discard any commits you make in this
+2026-09-15T06:27:34.9533505Z state without impacting any branches by switching back to a branch.
+2026-09-15T06:27:34.9543165Z 
+2026-09-15T06:27:34.9544170Z If you want to create a new branch to retain commits you create, you may
+2026-09-15T06:27:34.9546719Z do so (now or later) by using -c with the switch command. Example:
+2026-09-15T06:27:34.9547923Z 
+2026-09-15T06:27:34.9549153Z   git switch -c <new-branch-name>
+2026-09-15T06:27:34.9550269Z 
+2026-09-15T06:27:34.9551335Z Or undo this operation with:
+2026-09-15T06:27:34.9552639Z 
+2026-09-15T06:27:34.9557749Z   git switch -
+2026-09-15T06:27:34.9558951Z 
+2026-09-15T06:27:34.9560228Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-15T06:27:34.9562113Z 
+2026-09-15T06:27:34.9563841Z HEAD is now at 580ef25 Merge ab49872fa5ef8eed95bb6f1ec907b5ca750213aa into de73c9b094036b756d1ff008eaccbc52cec46207
+2026-09-15T06:27:34.9569925Z ##[endgroup]
+2026-09-15T06:27:34.9618183Z [command]/usr/bin/git log -1 --format=%H
+2026-09-15T06:27:34.9649178Z 580ef25715adc13ac9522f91609c51e7b2d4c6f4
+2026-09-15T06:27:34.9660753Z ##[group]Removing auth
+2026-09-15T06:27:34.9665859Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-15T06:27:34.9705583Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-15T06:27:34.9956611Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-15T06:27:34.9996920Z http.https://github.com/.extraheader
+2026-09-15T06:27:35.0002841Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-15T06:27:35.0042064Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-15T06:27:35.0287866Z ##[endgroup]
+2026-09-15T06:27:35.0522622Z ##[group]Run set -euo pipefail
+2026-09-15T06:27:35.0523721Z [36;1mset -euo pipefail[0m
+2026-09-15T06:27:35.0524664Z [36;1mgit rev-parse HEAD[0m
+2026-09-15T06:27:35.0525577Z [36;1mgit rev-parse HEAD^{tree}[0m
+2026-09-15T06:27:35.0526662Z [36;1mtest -z "$(git status --porcelain --untracked-files=all)"[0m
+2026-09-15T06:27:35.0569734Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-15T06:27:35.0570777Z ##[endgroup]
+2026-09-15T06:27:35.0763047Z 580ef25715adc13ac9522f91609c51e7b2d4c6f4
+2026-09-15T06:27:35.0780645Z bbfa903497b087ec30cf56b8c09c9ebb3286259b
+2026-09-15T06:27:35.1101717Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-15T06:27:35.1105367Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-09-15T06:27:35.1106450Z with:
+2026-09-15T06:27:35.1107185Z   python-version: 3.13.5
+2026-09-15T06:27:35.1107991Z   check-latest: false
+2026-09-15T06:27:35.1112403Z   token: ***
+2026-09-15T06:27:35.1113170Z   update-environment: true
+2026-09-15T06:27:35.1113986Z   allow-prereleases: false
+2026-09-15T06:27:35.1114769Z   freethreaded: false
+2026-09-15T06:27:35.1115520Z ##[endgroup]
+2026-09-15T06:27:35.2885357Z ##[group]Installed versions
+2026-09-15T06:27:35.3162984Z (node:2047) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-15T06:27:35.3175439Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-15T06:27:35.3589363Z Version 3.13.5 was not found in the local cache
+2026-09-15T06:27:35.9045349Z Version 3.13.5 is available for downloading
+2026-09-15T06:27:35.9047968Z Download from "https://github.com/actions/python-versions/releases/download/3.13.5-15601068749/python-3.13.5-linux-24.04-x64.tar.gz"
+2026-09-15T06:27:36.9079250Z Extract downloaded archive
+2026-09-15T06:27:36.9250634Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8b56638c-0518-4a7c-8450-7cc3f9d9d73d -f /home/runner/work/_temp/269b42b2-36a4-4f50-b39c-2e48778b2998
+2026-09-15T06:27:39.5102844Z Execute installation script
+2026-09-15T06:27:39.5224856Z Check if Python hostedtoolcache folder exist...
+2026-09-15T06:27:39.5225998Z Create Python 3.13.5 folder
+2026-09-15T06:27:39.5239696Z Copy Python binaries to hostedtoolcache folder
+2026-09-15T06:27:40.0233744Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-09-15T06:27:40.0303409Z Upgrading pip...
+2026-09-15T06:27:43.4862219Z Looking in links: /tmp/tmp7x0681cw
+2026-09-15T06:27:43.4884264Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.13.5/x64/lib/python3.13/site-packages (25.1.1)
+2026-09-15T06:27:44.6022678Z Collecting pip
+2026-09-15T06:27:44.6402473Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+2026-09-15T06:27:44.6577159Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+2026-09-15T06:27:45.3362387Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 2.4 MB/s eta 0:00:00
+2026-09-15T06:27:45.3388222Z 
+2026-09-15T06:27:45.3547933Z Installing collected packages: pip
+2026-09-15T06:27:45.3549129Z Attempting uninstall: pip
+2026-09-15T06:27:45.3579811Z Found existing installation: pip 25.1.1
+2026-09-15T06:27:45.3942358Z Uninstalling pip-25.1.1:
+2026-09-15T06:27:45.4000482Z Successfully uninstalled pip-25.1.1
+2026-09-15T06:27:46.3403618Z Successfully installed pip-26.2.1
+2026-09-15T06:27:46.4099264Z Create complete file
+2026-09-15T06:27:46.4152767Z Successfully set up CPython (3.13.5)
+2026-09-15T06:27:46.4172299Z ##[endgroup]
+2026-09-15T06:27:46.4387500Z ##[group]Run python -m pip install -r requirements-test.txt
+2026-09-15T06:27:46.4388060Z [36;1mpython -m pip install -r requirements-test.txt[0m
+2026-09-15T06:27:46.4430090Z shell: /usr/bin/bash -e {0}
+2026-09-15T06:27:46.4430453Z env:
+2026-09-15T06:27:46.4430802Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:46.4431616Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
+2026-09-15T06:27:46.4432159Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:46.4432629Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:46.4433099Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:46.4433581Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
+2026-09-15T06:27:46.4433987Z ##[endgroup]
+2026-09-15T06:27:47.4329984Z Collecting numpy==2.3.5 (from -r /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/requirements-recorded.txt (line 3))
+2026-09-15T06:27:47.4819332Z   Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-09-15T06:27:47.7033066Z Collecting scipy==1.17.0 (from -r /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/requirements-recorded.txt (line 4))
+2026-09-15T06:27:47.7074739Z   Downloading scipy-1.17.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-09-15T06:27:47.9510871Z Collecting mpmath==1.3.0 (from -r requirements-test.txt (line 3))
+2026-09-15T06:27:47.9544445Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-09-15T06:27:47.9646521Z Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+2026-09-15T06:27:48.0433639Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 226.3 MB/s  0:00:00
+2026-09-15T06:27:48.0479095Z Downloading scipy-1.17.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.0 MB)
+2026-09-15T06:27:48.1907694Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 248.8 MB/s  0:00:00
+2026-09-15T06:27:48.1943869Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-09-15T06:27:48.2000253Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 91.4 MB/s  0:00:00
+2026-09-15T06:27:48.3341887Z Installing collected packages: mpmath, numpy, scipy
+2026-09-15T06:27:55.1317633Z 
+2026-09-15T06:27:55.1331976Z Successfully installed mpmath-1.3.0 numpy-2.3.5 scipy-1.17.0
+2026-09-15T06:27:55.2095484Z ##[group]Run python scripts/verify_import.py
+2026-09-15T06:27:55.2095927Z [36;1mpython scripts/verify_import.py[0m
+2026-09-15T06:27:55.2133218Z shell: /usr/bin/bash -e {0}
+2026-09-15T06:27:55.2133508Z env:
+2026-09-15T06:27:55.2133806Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2134312Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
+2026-09-15T06:27:55.2134799Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2135236Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2135669Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2136110Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
+2026-09-15T06:27:55.2136489Z ##[endgroup]
+2026-09-15T06:27:55.2680152Z {
+2026-09-15T06:27:55.2680815Z   "status": "PASS",
+2026-09-15T06:27:55.2682018Z   "source_members": 39,
+2026-09-15T06:27:55.2682956Z   "archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+2026-09-15T06:27:55.2683875Z   "source_archive_unchanged": true,
+2026-09-15T06:27:55.2684576Z   "original_import_manifest_unchanged": true,
+2026-09-15T06:27:55.2685257Z   "scientific_content_unchanged": false,
+2026-09-15T06:27:55.2685920Z   "authorized_changes_verified": [
+2026-09-15T06:27:55.2686504Z     "CLAIM_STATUS.md",
+2026-09-15T06:27:55.2687043Z     "proofs/THEORY.md",
+2026-09-15T06:27:55.2687557Z     "src/theory.py",
+2026-09-15T06:27:55.2688069Z     "src/validate.py"
+2026-09-15T06:27:55.2688577Z   ],
+2026-09-15T06:27:55.2689069Z   "authorized_additions_verified": [
+2026-09-15T06:27:55.2689766Z     "docs/NUMERICAL_CONTRACT.md",
+2026-09-15T06:27:55.2690388Z     "repairs/theory-01/NUMERICAL_PROOF.md",
+2026-09-15T06:27:55.2691241Z     "src/photon_support.py"
+2026-09-15T06:27:55.2691832Z   ],
+2026-09-15T06:27:55.2692537Z   "change_record": "provenance/changes/theory-repair-01.json",
+2026-09-15T06:27:55.2693624Z   "document_change_record": "provenance/changes/novelty-integration-01.json",
+2026-09-15T06:27:55.2694532Z   "authorized_document_changes_verified": [
+2026-09-15T06:27:55.2695205Z     "CLAIM_STATUS.md",
+2026-09-15T06:27:55.2695759Z     "REPORT.md",
+2026-09-15T06:27:55.2696286Z     "SOURCE_AUDIT.md",
+2026-09-15T06:27:55.2696861Z     "experiment/LAB_REVIEW.md"
+2026-09-15T06:27:55.2697476Z   ],
+2026-09-15T06:27:55.2698038Z   "authorized_document_additions_verified": [
+2026-09-15T06:27:55.2698750Z     "docs/CONTRIBUTIONS.md",
+2026-09-15T06:27:55.2699331Z     "experiment/REVIEW_RATIONALE.md"
+2026-09-15T06:27:55.2699980Z   ],
+2026-09-15T06:27:55.2700694Z   "followup_change_record": "provenance/changes/novelty-integration-02.json",
+2026-09-15T06:27:55.2701981Z   "authorized_followup_documents_verified": [
+2026-09-15T06:27:55.2702666Z     "CLAIM_STATUS.md",
+2026-09-15T06:27:55.2703186Z     "REPORT.md",
+2026-09-15T06:27:55.2703717Z     "SOURCE_AUDIT.md",
+2026-09-15T06:27:55.2704367Z     "docs/CONTRIBUTIONS.md",
+2026-09-15T06:27:55.2705110Z     "experiment/LAB_REVIEW.md",
+2026-09-15T06:27:55.2705824Z     "experiment/REVIEW_RATIONALE.md"
+2026-09-15T06:27:55.2706443Z   ],
+2026-09-15T06:27:55.2706970Z   "mathematics_changed_by_followup": false,
+2026-09-15T06:27:55.2707791Z   "handover_change_record": "provenance/changes/lab-handover-01.json",
+2026-09-15T06:27:55.2708665Z   "authorized_handover_documents_verified": [
+2026-09-15T06:27:55.2709388Z     "CLAIM_STATUS.md",
+2026-09-15T06:27:55.2709953Z     "README.md",
+2026-09-15T06:27:55.2710579Z     "docs/PHYSICAL_SETTING.md",
+2026-09-15T06:27:55.2711497Z     "docs/REPRODUCE.md",
+2026-09-15T06:27:55.2712102Z     "docs/ROADMAP.md",
+2026-09-15T06:27:55.2712718Z     "experiment/LAB_REVIEW.md",
+2026-09-15T06:27:55.2713334Z     "work_orders/CURRENT.md"
+2026-09-15T06:27:55.2713953Z   ],
+2026-09-15T06:27:55.2714549Z   "mathematics_changed_by_handover": false,
+2026-09-15T06:27:55.2715298Z   "historical_change_ledgers_unchanged": true,
+2026-09-15T06:27:55.2717183Z   "validator_change": "original I/O guard; approved numerical-method metadata update only"
+2026-09-15T06:27:55.2718200Z }
+2026-09-15T06:27:55.2795409Z ##[group]Run python -m unittest discover -s tests -v
+2026-09-15T06:27:55.2795892Z [36;1mpython -m unittest discover -s tests -v[0m
+2026-09-15T06:27:55.2833725Z shell: /usr/bin/bash -e {0}
+2026-09-15T06:27:55.2834039Z env:
+2026-09-15T06:27:55.2834390Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2834937Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
+2026-09-15T06:27:55.2835484Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2835955Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2836432Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+2026-09-15T06:27:55.2836910Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
+2026-09-15T06:27:55.2837323Z ##[endgroup]
+2026-09-15T06:27:56.1643671Z test_changed_note_rejected (test_documentation_integration.DocumentationIntegrationTests.test_changed_note_rejected) ... ok
+2026-09-15T06:27:56.1646572Z test_claim_boundaries_are_visible (test_documentation_integration.DocumentationIntegrationTests.test_claim_boundaries_are_visible) ... ok
+2026-09-15T06:27:56.1771420Z test_document_chain_passes (test_documentation_integration.DocumentationIntegrationTests.test_document_chain_passes) ... ok
+2026-09-15T06:27:56.2885772Z test_document_ledger_cannot_authorize_source_or_missing_document (test_documentation_integration.DocumentationIntegrationTests.test_document_ledger_cannot_authorize_source_or_missing_document) ... ok
+2026-09-15T06:27:56.2895383Z test_predecessor_audit_preserved (test_documentation_integration.DocumentationIntegrationTests.test_predecessor_audit_preserved) ... ok
+2026-09-15T06:27:56.3024194Z test_reader_links_resolve (test_documentation_integration.DocumentationIntegrationTests.test_reader_links_resolve) ... ok
+2026-09-15T06:27:56.3034607Z test_reader_math_delimiters_and_headings (test_documentation_integration.DocumentationIntegrationTests.test_reader_math_delimiters_and_headings) ... ok
+2026-09-15T06:27:56.3047026Z test_report_equations_and_lab_questions_preserved (test_documentation_integration.DocumentationIntegrationTests.test_report_equations_and_lab_questions_preserved) ... ok
+2026-09-15T06:27:56.3419276Z test_stale_document_preimage_rejected (test_documentation_integration.DocumentationIntegrationTests.test_stale_document_preimage_rejected) ... ok
+2026-09-15T06:27:56.3425998Z test_duplicate_headings_and_fences (test_handover_documents.HandoverDocumentTests.test_duplicate_headings_and_fences) ... ok
+2026-09-15T06:27:56.3805887Z test_final_local_documentation (test_handover_documents.HandoverDocumentTests.test_final_local_documentation) ... ok
+2026-09-15T06:27:56.3869981Z test_rejects_broken_navigation_and_math (test_handover_documents.HandoverDocumentTests.test_rejects_broken_navigation_and_math) ... ok
+2026-09-15T06:27:56.3879994Z test_valid_links_math_and_script_reference (test_handover_documents.HandoverDocumentTests.test_valid_links_math_and_script_reference) ... ok
+2026-09-15T06:27:56.6439739Z test_cannot_authorize_science_protocol_evidence_or_outside_paths (test_handover_integrity.HandoverIntegrityTests.test_cannot_authorize_science_protocol_evidence_or_outside_paths) ... ok
+2026-09-15T06:27:56.8127746Z test_canonical_protocol_source_and_frozen_evidence_still_protected (test_handover_integrity.HandoverIntegrityTests.test_canonical_protocol_source_and_frozen_evidence_still_protected) ... ok
+2026-09-15T06:27:57.0309900Z test_contract_and_predecessor_cannot_be_retargeted (test_handover_integrity.HandoverIntegrityTests.test_contract_and_predecessor_cannot_be_retargeted) ... ok
+2026-09-15T06:27:57.1715428Z test_historical_reasons_cannot_be_rewritten (test_handover_integrity.HandoverIntegrityTests.test_historical_reasons_cannot_be_rewritten) ... ok
+2026-09-15T06:27:57.3247385Z test_invalid_hashes_rejected (test_handover_integrity.HandoverIntegrityTests.test_invalid_hashes_rejected) ... ok
+2026-09-15T06:27:57.3376499Z test_layer_is_exactly_the_authorized_seven_documents (test_handover_integrity.HandoverIntegrityTests.test_layer_is_exactly_the_authorized_seven_documents) ... ok
+2026-09-15T06:27:57.4473484Z test_missing_duplicate_and_added_paths_rejected (test_handover_integrity.HandoverIntegrityTests.test_missing_duplicate_and_added_paths_rejected) ... ok
+2026-09-15T06:27:57.4939193Z test_old_ledger_cannot_bless_new_numerical_source (test_handover_integrity.HandoverIntegrityTests.test_old_ledger_cannot_bless_new_numerical_source) ... ok
+2026-09-15T06:27:57.4942319Z test_previous_hash_is_checked_at_each_existing_layer (test_handover_integrity.HandoverIntegrityTests.test_previous_hash_is_checked_at_each_existing_layer) ... ok
+2026-09-15T06:27:57.6763907Z test_reason_must_be_nonempty_explanatory_text (test_handover_integrity.HandoverIntegrityTests.test_reason_must_be_nonempty_explanatory_text) ... ok
+2026-09-15T06:27:57.9314734Z test_stale_baseline_hash_rejected_for_every_document (test_handover_integrity.HandoverIntegrityTests.test_stale_baseline_hash_rejected_for_every_document) ... ok
+2026-09-15T06:27:58.2377381Z test_unrecorded_new_document_bytes_rejected (test_handover_integrity.HandoverIntegrityTests.test_unrecorded_new_document_bytes_rejected) ... ok
+2026-09-15T06:27:58.2379475Z test_visible_preimages_and_predecessor_chain (test_handover_integrity.HandoverIntegrityTests.test_visible_preimages_and_predecessor_chain) ... ok
+2026-09-15T06:27:58.2448816Z test_all_port_routes_and_common_su_phases (test_lab_reference.LabMatrixTests.test_all_port_routes_and_common_su_phases) ... ok
+2026-09-15T06:27:58.2464423Z test_embedding_preserves_active_input_and_receiver (test_lab_reference.LabMatrixTests.test_embedding_preserves_active_input_and_receiver) ... ok
+2026-09-15T06:27:58.2466817Z test_invalid_preparation_or_mode_map_rejected (test_lab_reference.LabMatrixTests.test_invalid_preparation_or_mode_map_rejected) ... ok
+2026-09-15T06:27:58.2700478Z test_native8_rule_against_independent_eigenproblem_and_amplitudes (test_lab_reference.LabMatrixTests.test_native8_rule_against_independent_eigenproblem_and_amplitudes) ... ok
+2026-09-15T06:27:58.3238277Z test_registered_forecasts_and_reverse_receiver (test_lab_reference.LabMatrixTests.test_registered_forecasts_and_reverse_receiver) ... ok
+2026-09-15T06:27:58.3241263Z test_walsh_entries_and_exact_integer_orthogonality (test_lab_reference.LabMatrixTests.test_walsh_entries_and_exact_integer_orthogonality) ... ok
+2026-09-15T06:27:58.3275311Z test_descriptive_conditions_are_not_hidden_by_pooling (test_lab_reference.LabRecordTests.test_descriptive_conditions_are_not_hidden_by_pooling) ... ok
+2026-09-15T06:27:58.3305179Z test_every_eight_bit_mask_accounted_in_embedding (test_lab_reference.LabRecordTests.test_every_eight_bit_mask_accounted_in_embedding) ... ok
+2026-09-15T06:27:58.3794490Z test_four_label_adapter_invokes_existing_fixed_N_contract (test_lab_reference.LabRecordTests.test_four_label_adapter_invokes_existing_fixed_N_contract) ... ok
+2026-09-15T06:27:58.3855169Z test_malformed_records_refused (test_lab_reference.LabRecordTests.test_malformed_records_refused) ... ok
+2026-09-15T06:27:58.3903404Z test_native8_descriptive_only_and_bit7_is_label7 (test_lab_reference.LabRecordTests.test_native8_descriptive_only_and_bit7_is_label7) ... ok
+2026-09-15T06:27:58.3922650Z test_outputs_never_replace_existing_or_frozen_evidence (test_lab_reference.LabRecordTests.test_outputs_never_replace_existing_or_frozen_evidence) ... ok
+2026-09-15T06:27:58.3938390Z test_rejected_no_multiple_and_leakage_remain_in_N (test_lab_reference.LabRecordTests.test_rejected_no_multiple_and_leakage_remain_in_N) ... ok
+2026-09-15T06:27:59.4713190Z test_runnable_cli_round_trip_and_generated_examples (test_lab_reference.LabRecordTests.test_runnable_cli_round_trip_and_generated_examples) ... ok
+2026-09-15T06:27:59.4714454Z test_bool_not_number (test_migration.ImportTests.test_bool_not_number) ... ok
+2026-09-15T06:27:59.9955374Z test_existing_external_output_rejected (test_migration.ImportTests.test_existing_external_output_rejected) ... ok
+2026-09-15T06:28:00.5069877Z test_frozen_output_rejected (test_migration.ImportTests.test_frozen_output_rejected) ... ok
+2026-09-15T06:28:01.0209362Z test_missing_output_rejected (test_migration.ImportTests.test_missing_output_rejected) ... ok
+2026-09-15T06:28:01.0211460Z test_nonfinite_rejected (test_migration.ImportTests.test_nonfinite_rejected) ... ok
+2026-09-15T06:28:01.0212888Z test_numeric_tolerance (test_migration.ImportTests.test_numeric_tolerance) ... ok
+2026-09-15T06:28:01.0214395Z test_schema_rejected (test_migration.ImportTests.test_schema_rejected) ... ok
+2026-09-15T06:28:01.0332881Z test_source_integrity (test_migration.ImportTests.test_source_integrity) ... ok
+2026-09-15T06:28:01.0337121Z test_synthetic_labels_retained (test_migration.ImportTests.test_synthetic_labels_retained) ... ok
+2026-09-15T06:28:01.0744735Z test_tampered_copy_rejected (test_migration.ImportTests.test_tampered_copy_rejected) ... ok
+2026-09-15T06:28:01.0746614Z test_trial_template_has_no_data (test_migration.ImportTests.test_trial_template_has_no_data) ... ok
+2026-09-15T06:28:01.1412995Z test_wrapper_existing_output_rejected (test_migration.ImportTests.test_wrapper_existing_output_rejected) ... ok
+2026-09-15T06:28:01.3122980Z test_committed_572_comparisons (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_committed_572_comparisons) ... ok
+2026-09-15T06:28:01.3142738Z test_committed_audit_preserved (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_committed_audit_preserved) ... ok
+2026-09-15T06:28:01.3162989Z test_corrected_hierarchy_and_resource_limits (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_corrected_hierarchy_and_resource_limits) ... ok
+2026-09-15T06:28:01.4613772Z test_duplicate_and_unjustified_followup_rejected (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_duplicate_and_unjustified_followup_rejected) ... ok
+2026-09-15T06:28:01.6088165Z test_followup_cannot_authorize_source_or_missing_paths (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_followup_cannot_authorize_source_or_missing_paths) ... ok
+2026-09-15T06:28:01.6551764Z test_followup_notes_are_protected (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_followup_notes_are_protected) ... ok
+2026-09-15T06:28:01.6673508Z test_new_layer_and_unchanged_old_ledgers (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_new_layer_and_unchanged_old_ledgers) ... ok
+2026-09-15T06:28:01.6732839Z test_separate_supplied_packet_preserved (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_separate_supplied_packet_preserved) ... ok
+2026-09-15T06:28:01.7570653Z test_stale_followup_preimages_rejected (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_stale_followup_preimages_rejected) ... ok
+2026-09-15T06:28:01.9141834Z test_supplied_717_comparisons (test_novelty_followup_integration.NoveltyFollowupIntegrationTests.test_supplied_717_comparisons) ... ok
+2026-09-15T06:28:01.9143898Z test_F01_and_F03_text_repaired (test_photon_support.PhotonSupportTests.test_F01_and_F03_text_repaired) ... ok
+2026-09-15T06:28:01.9606761Z test_authorized_added_module_is_protected (test_photon_support.PhotonSupportTests.test_authorized_added_module_is_protected) ... ok
+2026-09-15T06:28:02.0015376Z test_change_ledger_cannot_omit_an_old_hash (test_photon_support.PhotonSupportTests.test_change_ledger_cannot_omit_an_old_hash) ... ok
+2026-09-15T06:28:02.7759802Z test_extreme_domain_and_nearly_uniform (test_photon_support.PhotonSupportTests.test_extreme_domain_and_nearly_uniform) ... ok
+2026-09-15T06:28:02.9098963Z test_frontier_tiny_budget_fails_explicitly (test_photon_support.PhotonSupportTests.test_frontier_tiny_budget_fails_explicitly) ... ok
+2026-09-15T06:28:02.9211961Z test_import_manifest_and_original_archive_stay_fixed (test_photon_support.PhotonSupportTests.test_import_manifest_and_original_archive_stay_fixed) ... ok
+2026-09-15T06:28:02.9299293Z test_nominal_recipe_and_pairwise_error (test_photon_support.PhotonSupportTests.test_nominal_recipe_and_pairwise_error) ... ok
+2026-09-15T06:28:02.9654939Z test_original_manifest_cannot_be_rebaselined (test_photon_support.PhotonSupportTests.test_original_manifest_cannot_be_rebaselined) ... ok
+2026-09-15T06:28:03.1753316Z test_penalty_boundary_neighbors (test_photon_support.PhotonSupportTests.test_penalty_boundary_neighbors) ... ok
+2026-09-15T06:28:05.1798026Z test_random_exact_enclosures (test_photon_support.PhotonSupportTests.test_random_exact_enclosures) ... ok
+2026-09-15T06:28:05.3743469Z test_reported_F02_counterexample (test_photon_support.PhotonSupportTests.test_reported_F02_counterexample) ... ok
+2026-09-15T06:28:05.3746507Z test_reverse_addition_is_outward (test_photon_support.PhotonSupportTests.test_reverse_addition_is_outward) ... ok
+2026-09-15T06:28:05.3753890Z test_reverse_caller_does_not_use_nominal_score (test_photon_support.PhotonSupportTests.test_reverse_caller_does_not_use_nominal_score) ... ok
+2026-09-15T06:28:05.3755865Z test_rounding_directions (test_photon_support.PhotonSupportTests.test_rounding_directions) ... ok
+2026-09-15T06:28:05.3882851Z test_uniform_root_is_exactly_enclosed (test_photon_support.PhotonSupportTests.test_uniform_root_is_exactly_enclosed) ... ok
+2026-09-15T06:28:05.3892694Z test_unsupported_domain_rejected_by_all_score_callers (test_photon_support.PhotonSupportTests.test_unsupported_domain_rejected_by_all_score_callers) ... ok
+2026-09-15T06:28:05.3928469Z test_delivery_bytes_and_work_order_preserved (test_robustness_import.RobustnessImportTests.test_delivery_bytes_and_work_order_preserved) ... ok
+2026-09-15T06:28:31.0239171Z test_regeneration_and_optimizer_free_verification (test_robustness_import.RobustnessImportTests.test_regeneration_and_optimizer_free_verification) ... FAIL
+2026-09-15T06:28:31.8482863Z test_supplied_units (test_robustness_import.RobustnessImportTests.test_supplied_units) ... ok
+2026-09-15T06:28:31.8483832Z 
+2026-09-15T06:28:31.8484271Z ======================================================================
+2026-09-15T06:28:31.8485758Z FAIL: test_regeneration_and_optimizer_free_verification (test_robustness_import.RobustnessImportTests.test_regeneration_and_optimizer_free_verification)
+2026-09-15T06:28:31.8487112Z ----------------------------------------------------------------------
+2026-09-15T06:28:31.8487869Z Traceback (most recent call last):
+2026-09-15T06:28:31.8496972Z   File "/home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading/tests/test_robustness_import.py", line 47, in test_regeneration_and_optimizer_free_verification
+2026-09-15T06:28:31.8498687Z     self.assertEqual(hashlib.sha256(b).hexdigest(),
+2026-09-15T06:28:31.8499419Z     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-15T06:28:31.8500212Z         '74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db')
+2026-09-15T06:28:31.8501417Z         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-15T06:28:31.8502804Z AssertionError: '29287b9d89188fa2a4abf7fd4769a35f6e0a7b8ab17ae58a808be12db890396b' != '74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db'
+2026-09-15T06:28:31.8504246Z - 29287b9d89188fa2a4abf7fd4769a35f6e0a7b8ab17ae58a808be12db890396b
+2026-09-15T06:28:31.8505216Z + 74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db
+2026-09-15T06:28:31.8505860Z 
+2026-09-15T06:28:31.8506038Z 
+2026-09-15T06:28:31.8506457Z ----------------------------------------------------------------------
+2026-09-15T06:28:31.8507158Z Ran 81 tests in 35.731s
+2026-09-15T06:28:31.8507557Z 
+2026-09-15T06:28:31.8507878Z FAILED (failures=1)
+2026-09-15T06:28:31.9153726Z ##[error]Process completed with exit code 1.
+2026-09-15T06:28:31.9322130Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-15T06:28:31.9323614Z Post job cleanup.
+2026-09-15T06:28:32.0339707Z [command]/usr/bin/git version
+2026-09-15T06:28:32.0421674Z git version 2.55.0
+2026-09-15T06:28:32.0496262Z Temporarily overriding HOME='/home/runner/work/_temp/6144a1fd-1dee-4cbf-bf7a-83013834992f' before making global git config changes
+2026-09-15T06:28:32.0497825Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-15T06:28:32.0499218Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Loss-Aware-Optical-Reading/Loss-Aware-Optical-Reading
+2026-09-15T06:28:32.0566491Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-15T06:28:32.0624975Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-15T06:28:32.1052219Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-15T06:28:32.1085519Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-15T06:28:32.1806901Z Cleaning up orphan processes
+2026-09-15T06:28:32.2125142Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

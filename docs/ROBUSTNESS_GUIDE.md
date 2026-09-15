@@ -64,6 +64,11 @@ checker passes 11,161 checks, including 10,828 exact positive-matrix checks,
 on both supplied and regenerated evidence. A separate run forbids optimizer
 calls and confirms zero calls. These are separate inventories, not one proof count.
 
+An initial GitHub regeneration produced a different byte hash; later diagnostic
+runs matched and passed the unchanged exact verifier and hash assertion. The
+cause remains unidentified, and cross-environment byte determinism is not
+claimed. See the [preserved CI diagnosis](../integrations/lab-handover-01/CI_DIAGNOSTICS.md).
+
 The optimizer proposes witnesses; exact rational inequalities verify the finite
 model bounds. The verifier shares model and arithmetic helpers with the study,
 so this is not formal verification of all software. The continuous analytic
