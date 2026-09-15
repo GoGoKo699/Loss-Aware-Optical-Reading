@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "unchanged_baseline_files": 143,
+  "authorized_existing_edits": [
+    "CLAIM_STATUS.md",
+    "README.md",
+    "docs/PHYSICAL_SETTING.md",
+    "docs/REPRODUCE.md",
+    "docs/ROADMAP.md",
+    "experiment/LAB_REVIEW.md",
+    "scripts/verify_import.py",
+    "work_orders/CURRENT.md"
+  ],
+  "no_deleted_baseline_files": true,
+  "scientific_src_proofs_original_tests_frozen_evidence_unchanged": true
+}

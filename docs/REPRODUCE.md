@@ -73,3 +73,34 @@ statistical pipeline interval certified. Read [the numerical contract](NUMERICAL
 Calibration, phase-reference isolation, source tails, independent fresh labels,
 and absence of optional stopping are still external assumptions, not quantities
 a passing numerical test establishes.
+
+## Laboratory recipes and imported robustness
+
+Start with [SU4](../experiment/SU4.md), [SU8](../experiment/SU8.md), or
+[the experiment index](../experiment/INDEX.md). Their reference scripts are
+software calculations, not instrument drivers. All example records are marked
+synthetic. Eight-mode masks use a separate descriptive path; use the explicit
+embedding adapter only for the four-active-mode task, preserving leakage as F.
+
+```bash
+python scripts/lab_reference.py --help
+python scripts/verify_handover.py
+python studies/robustness-01/test_local.py
+python studies/robustness-01/study.py --output results/runs/robustness-fresh
+python studies/robustness-01/verify_certificates.py --results results/runs/robustness-fresh/RESULTS.json --output results/runs/robustness-verified
+```
+
+Each output directory must be new. The study's original evidence and delivery
+archive are preserved; the [integration report](../integrations/lab-handover-01/REPORT.md)
+separates fresh local runs from original logs and actual remote checks.
+The supplied study regenerates 41 scenarios/381 diagnostics; the optimizer-free
+checker validates 11,161 checks including 10,828 exact positive matrices. Exact
+finite-model guarantees do not certify physical calibration or the whole
+statistical pipeline. Do not replace the registered plans with illustrative
+robustness forecasts.
+
+The handover's local environment is Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0
+and mpmath 1.3.0. The established CI separately uses Python 3.13.5. New unit
+groups cover target matrices, port maps, generated records, all-attempt
+accounting, documentation links and the restricted handover hash layer.
+No original numerical tolerance or frozen result is refreshed by these additions.

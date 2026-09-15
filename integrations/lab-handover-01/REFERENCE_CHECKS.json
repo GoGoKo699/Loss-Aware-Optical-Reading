@@ -1,0 +1,220 @@
+{
+  "source_sha256": {
+    "scripts/lab_reference.py": "af9e99af8ce0f610606853c7681b81b303645ddd2e2faac1ae4513951b7e14da",
+    "scripts/lab_records.py": "b1b54cd6481a52f7d1831d0dae717b8936f59bc6bea6e79a83010cde59e12934",
+    "tests/test_lab_reference.py": "4d50f7daa054d763fb00f6d1688294e07a969a9b4ad6d06d6fd3498073c0d003"
+  },
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p2",
+        "--sample-attempts",
+        "64",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p2-final-example"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p2-final-example\", \"route\": \"su4\", \"sample_attempts\": 64, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su4",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/commission-su4"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/commission-su4\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-embed",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/commission-su8-embed"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/commission-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-walsh",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/commission-su8-walsh"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/commission-su8-walsh\", \"route\": \"su8-walsh\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/m1"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/m1\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p1",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p1"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p1\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p2",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p2"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p2\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--chip",
+        "su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/m1-su8-embed"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/m1-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p1",
+        "--chip",
+        "su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p1-su8-embed"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p1-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p2",
+        "--chip",
+        "su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p2-su8-embed"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/p2-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su4",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/repo/examples/lab/p1/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/analyze-su4"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/analyze-su4\", \"N\": 64, \"counts\": {\"correct\": 35, \"wrong\": 0, \"inconclusive\": 29}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-embed",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/repo/examples/lab/commission-su8-embed/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/analyze-su8-embed"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/analyze-su8-embed\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-walsh",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/repo/examples/lab/commission-su8-walsh/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/analyze-su8-walsh"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/repo/results/runs/lab-reference-agent-final/analyze-su8-walsh\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_lab_reference.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_all_port_routes_and_common_su_phases (test_lab_reference.LabMatrixTests.test_all_port_routes_and_common_su_phases) ... ok\ntest_embedding_preserves_active_input_and_receiver (test_lab_reference.LabMatrixTests.test_embedding_preserves_active_input_and_receiver) ... ok\ntest_invalid_preparation_or_mode_map_rejected (test_lab_reference.LabMatrixTests.test_invalid_preparation_or_mode_map_rejected) ... ok\ntest_native8_rule_against_independent_eigenproblem_and_amplitudes (test_lab_reference.LabMatrixTests.test_native8_rule_against_independent_eigenproblem_and_amplitudes) ... ok\ntest_registered_forecasts_and_reverse_receiver (test_lab_reference.LabMatrixTests.test_registered_forecasts_and_reverse_receiver) ... ok\ntest_walsh_entries_and_exact_integer_orthogonality (test_lab_reference.LabMatrixTests.test_walsh_entries_and_exact_integer_orthogonality) ... ok\ntest_descriptive_conditions_are_not_hidden_by_pooling (test_lab_reference.LabRecordTests.test_descriptive_conditions_are_not_hidden_by_pooling) ... ok\ntest_every_eight_bit_mask_accounted_in_embedding (test_lab_reference.LabRecordTests.test_every_eight_bit_mask_accounted_in_embedding) ... ok\ntest_four_label_adapter_invokes_existing_fixed_N_contract (test_lab_reference.LabRecordTests.test_four_label_adapter_invokes_existing_fixed_N_contract) ... ok\ntest_malformed_records_refused (test_lab_reference.LabRecordTests.test_malformed_records_refused) ... ok\ntest_native8_descriptive_only_and_bit7_is_label7 (test_lab_reference.LabRecordTests.test_native8_descriptive_only_and_bit7_is_label7) ... ok\ntest_outputs_never_replace_existing_or_frozen_evidence (test_lab_reference.LabRecordTests.test_outputs_never_replace_existing_or_frozen_evidence) ... ok\ntest_rejected_no_multiple_and_leakage_remain_in_N (test_lab_reference.LabRecordTests.test_rejected_no_multiple_and_leakage_remain_in_N) ... ok\ntest_runnable_cli_round_trip_and_generated_examples (test_lab_reference.LabRecordTests.test_runnable_cli_round_trip_and_generated_examples) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.824s\n\nOK\n"
+    }
+  ]
+}

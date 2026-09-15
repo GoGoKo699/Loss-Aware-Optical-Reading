@@ -1,0 +1,14 @@
+{
+  "status": "SYNTHETIC_TEACHING_OUTPUT",
+  "recipe": "commission-su8-walsh",
+  "seed": 20260915,
+  "sample_attempts": 64,
+  "files": {
+    "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+    "commissioning_transfer_reference.csv": "45f599b9ae45e81cb3682c78d95bffc8fccaa9ca38d3c941dae31bf60431944e",
+    "forecast.json": "9e4d346bce427aa44814ecc74668ea42525b5926ec75d1a7622d526e3a2bf294",
+    "synthetic_summary.json": "87cbd4123bc9eb1d3015c20c88875b978aa881d8976160acc2db10b224863d0f",
+    "synthetic_trials.csv": "e0bbd1f95b3dd62bd17a39806a98463edf0aa6776df4346ff4ddcbbf6cd3613e",
+    "target_matrices.json": "badcb872df13f28b78f9c3e5dc6be9b50f56bf81ae8f32881c9469fe666238e8"
+  }
+}

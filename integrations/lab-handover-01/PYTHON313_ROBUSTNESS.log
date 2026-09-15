@@ -1,0 +1,8 @@
+test_delivery_bytes_and_work_order_preserved (test_robustness_import.RobustnessImportTests.test_delivery_bytes_and_work_order_preserved) ... ok
+test_regeneration_and_optimizer_free_verification (test_robustness_import.RobustnessImportTests.test_regeneration_and_optimizer_free_verification) ... ok
+test_supplied_units (test_robustness_import.RobustnessImportTests.test_supplied_units) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 42.523s
+
+OK

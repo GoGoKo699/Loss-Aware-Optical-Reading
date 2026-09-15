@@ -1,0 +1,4427 @@
+{
+  "status": "PASS",
+  "local_unit_tests": 81,
+  "inherited_checks": 5261,
+  "historical_audit_checks": 998,
+  "repaired_scientific_checks": 993,
+  "novelty_01_checks": 631,
+  "novelty_02_checks_run_in_units": 572,
+  "separate_followup_assertions_run_in_units": 717,
+  "original_test_files_changed": false,
+  "records": {
+    "results/runs/handover-reproduction/REPRODUCTION.json": {
+      "sha256": "339d9b24df316fe152e7c2c586939c66a0af2c855c25e11853b5d9c9619d6a10",
+      "result": {
+        "reference_comparison": "PASS",
+        "absolute_numeric_tolerance": 1e-08,
+        "files": {
+          "analyzer_accounting_check.json": {
+            "byte_identical": true,
+            "maximum_numeric_difference": 0.0
+          },
+          "dimension_transfer.csv": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 1.0533240946131173e-13
+          },
+          "high_precision_check.json": {
+            "byte_identical": true,
+            "maximum_numeric_difference": 0
+          },
+          "hypothetical_design_forecast.csv": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 2.3314683517128287e-15
+          },
+          "hypothetical_design_inputs.json": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 9.43689570931383e-16
+          },
+          "independent_dual_checks.csv": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 6.8226535532289745e-12
+          },
+          "phase_gauge_warning.json": {
+            "byte_identical": true,
+            "maximum_numeric_difference": 0.0
+          },
+          "preparation_recipes.csv": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 1.3322676295501878e-15
+          },
+          "quantum_frontier.csv": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 6.661338147750939e-15
+          },
+          "synthetic_certification_example.json": {
+            "byte_identical": true,
+            "maximum_numeric_difference": 0
+          },
+          "synthetic_reverse_example.json": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 6.38378239159465e-16
+          },
+          "uniform_exact_comparison.csv": {
+            "byte_identical": false,
+            "maximum_numeric_difference": 1.1102230246251565e-16
+          }
+        },
+        "archived_summary": {
+          "status": "PASS",
+          "checks": 5261,
+          "seed": 2026091417,
+          "max_algebraic_residual": 1.0046144484716451e-12,
+          "max_dual_solver_gap": 3.506639423278557e-12,
+          "runtime_seconds": 2.1595309540002745,
+          "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+          "sdp_solver_used": false,
+          "interval_arithmetic_used": false,
+          "lab_data_used": false,
+          "scope": "Proof-backed results plus numerical diagnostics. Searches and tests are not substitutes for universal proofs."
+        },
+        "fresh_summary": {
+          "status": "PASS",
+          "checks": 5261,
+          "seed": 2026091417,
+          "max_algebraic_residual": 1.0046144484716451e-12,
+          "max_dual_solver_gap": 7.259415291116511e-12,
+          "runtime_seconds": 3.6258996249998745,
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+          "sdp_solver_used": false,
+          "interval_arithmetic_used": true,
+          "lab_data_used": false,
+          "scope": "Proof-backed results plus numerical diagnostics. Photon support uses exact-rational enclosures after audit repair 01; other calculations are not interval certified. Searches and tests are not substitutes for universal proofs."
+        },
+        "validation_policy": "Same ordered checks and tolerances; residuals need not be byte identical.",
+        "approved_metadata_changes": {
+          "interval_arithmetic_used": [
+            false,
+            true
+          ],
+          "scope": [
+            "Proof-backed results plus numerical diagnostics. Searches and tests are not substitutes for universal proofs.",
+            "Proof-backed results plus numerical diagnostics. Photon support uses exact-rational enclosures after audit repair 01; other calculations are not interval certified. Searches and tests are not substitutes for universal proofs."
+          ]
+        },
+        "integrity": {
+          "status": "PASS",
+          "source_members": 39,
+          "archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+          "source_archive_unchanged": true,
+          "original_import_manifest_unchanged": true,
+          "scientific_content_unchanged": false,
+          "authorized_changes_verified": [
+            "CLAIM_STATUS.md",
+            "proofs/THEORY.md",
+            "src/theory.py",
+            "src/validate.py"
+          ],
+          "authorized_additions_verified": [
+            "docs/NUMERICAL_CONTRACT.md",
+            "repairs/theory-01/NUMERICAL_PROOF.md",
+            "src/photon_support.py"
+          ],
+          "change_record": "provenance/changes/theory-repair-01.json",
+          "document_change_record": "provenance/changes/novelty-integration-01.json",
+          "authorized_document_changes_verified": [
+            "CLAIM_STATUS.md",
+            "REPORT.md",
+            "SOURCE_AUDIT.md",
+            "experiment/LAB_REVIEW.md"
+          ],
+          "authorized_document_additions_verified": [
+            "docs/CONTRIBUTIONS.md",
+            "experiment/REVIEW_RATIONALE.md"
+          ],
+          "followup_change_record": "provenance/changes/novelty-integration-02.json",
+          "authorized_followup_documents_verified": [
+            "CLAIM_STATUS.md",
+            "REPORT.md",
+            "SOURCE_AUDIT.md",
+            "docs/CONTRIBUTIONS.md",
+            "experiment/LAB_REVIEW.md",
+            "experiment/REVIEW_RATIONALE.md"
+          ],
+          "mathematics_changed_by_followup": false,
+          "handover_change_record": "provenance/changes/lab-handover-01.json",
+          "authorized_handover_documents_verified": [
+            "CLAIM_STATUS.md",
+            "README.md",
+            "docs/PHYSICAL_SETTING.md",
+            "docs/REPRODUCE.md",
+            "docs/ROADMAP.md",
+            "experiment/LAB_REVIEW.md",
+            "work_orders/CURRENT.md"
+          ],
+          "mathematics_changed_by_handover": false,
+          "historical_change_ledgers_unchanged": true,
+          "validator_change": "original I/O guard; approved numerical-method metadata update only"
+        },
+        "git_start_commit": "0bd7bb56fc636df5bc2342e38b31ab23df29ba18",
+        "utc": "2026-09-15T06:14:06.896613+00:00",
+        "output_directory": "/workspace/scratch/d29a6922cf06/repo/results/runs/handover-reproduction",
+        "source_sha256": {
+          "src/validate.py": "9e4bf4964dd11502622c641d41ca98689e2050f2c959e2e13cdb2126e23da774",
+          "src/theory.py": "e8e9518902aab5d3955c5b432c54b904d06e10476bacc15ebafbbc67bdca2daa",
+          "src/photon_support.py": "a10f4f8fa98416d42b726fe8b9d398393df364dda5f486ef52a14e5bcce46a29",
+          "src/optics.py": "d17a07f3d9de80f1d6e3ba96547b341c084b3caf77fbca0e3480188fc27acdbc",
+          "src/analyze_trials.py": "799f07af67d244eed6c830356101f4d7118cb9d4ceeceed0f61aad7b306b64a9"
+        },
+        "purpose": "Post-audit repair regression against preserved checkpoint-07 evidence; not a new novelty audit.",
+        "lab_data_used": false
+      }
+    },
+    "results/runs/handover-repair/SUMMARY.json": {
+      "sha256": "f8e89275ad85938ae44a68fbdd4c3299362d35c34b45909a6767a79320842c26",
+      "result": {
+        "status": "PASS",
+        "utc": "2026-09-15T06:14:11.828826+00:00",
+        "historical_audit_checks": 998,
+        "repaired_scientific_checks": 993,
+        "scientific_case_order_and_tolerances_unchanged": true,
+        "derived_budget_name_differences": [
+          {
+            "historical": "frontier_achievability_2_0_0.0018515475775031265",
+            "repaired": "frontier_achievability_2_0_0.0018515475775031272"
+          },
+          {
+            "historical": "frontier_budget_2_0_0.0018515475775031265",
+            "repaired": "frontier_budget_2_0_0.0018515475775031272"
+          },
+          {
+            "historical": "frontier_achievability_2_0_0.007406190310012506",
+            "repaired": "frontier_achievability_2_0_0.007406190310012509"
+          },
+          {
+            "historical": "frontier_budget_2_0_0.007406190310012506",
+            "repaired": "frontier_budget_2_0_0.007406190310012509"
+          },
+          {
+            "historical": "frontier_achievability_2_1_0.0042843612973060274",
+            "repaired": "frontier_achievability_2_1_0.004284361297306034"
+          },
+          {
+            "historical": "frontier_budget_2_1_0.0042843612973060274",
+            "repaired": "frontier_budget_2_1_0.004284361297306034"
+          },
+          {
+            "historical": "frontier_achievability_2_1_0.01713744518922411",
+            "repaired": "frontier_achievability_2_1_0.017137445189224138"
+          },
+          {
+            "historical": "frontier_budget_2_1_0.01713744518922411",
+            "repaired": "frontier_budget_2_1_0.017137445189224138"
+          },
+          {
+            "historical": "frontier_achievability_2_1_0.1221280452927227",
+            "repaired": "frontier_achievability_2_1_0.12212804529272275"
+          },
+          {
+            "historical": "frontier_budget_2_1_0.1221280452927227",
+            "repaired": "frontier_budget_2_1_0.12212804529272275"
+          },
+          {
+            "historical": "frontier_achievability_2_2_0.006077986455161755",
+            "repaired": "frontier_achievability_2_2_0.006077986455161759"
+          },
+          {
+            "historical": "frontier_budget_2_2_0.006077986455161755",
+            "repaired": "frontier_budget_2_2_0.006077986455161759"
+          },
+          {
+            "historical": "frontier_achievability_2_2_0.02431194582064702",
+            "repaired": "frontier_achievability_2_2_0.024311945820647034"
+          },
+          {
+            "historical": "frontier_budget_2_2_0.02431194582064702",
+            "repaired": "frontier_budget_2_2_0.024311945820647034"
+          },
+          {
+            "historical": "frontier_achievability_2_2_0.15918712167902113",
+            "repaired": "frontier_achievability_2_2_0.15918712167902116"
+          },
+          {
+            "historical": "frontier_budget_2_2_0.15918712167902113",
+            "repaired": "frontier_budget_2_2_0.15918712167902116"
+          },
+          {
+            "historical": "frontier_achievability_3_0_0.0024438545642167715",
+            "repaired": "frontier_achievability_3_0_0.002443854564216774"
+          },
+          {
+            "historical": "frontier_budget_3_0_0.0024438545642167715",
+            "repaired": "frontier_budget_3_0_0.002443854564216774"
+          },
+          {
+            "historical": "frontier_achievability_3_0_0.009775418256867086",
+            "repaired": "frontier_achievability_3_0_0.009775418256867096"
+          },
+          {
+            "historical": "frontier_budget_3_0_0.009775418256867086",
+            "repaired": "frontier_budget_3_0_0.009775418256867096"
+          },
+          {
+            "historical": "frontier_achievability_3_1_0.004061889929752249",
+            "repaired": "frontier_achievability_3_1_0.004061889929752242"
+          },
+          {
+            "historical": "frontier_budget_3_1_0.004061889929752249",
+            "repaired": "frontier_budget_3_1_0.004061889929752242"
+          },
+          {
+            "historical": "frontier_achievability_3_1_0.016247559719008996",
+            "repaired": "frontier_achievability_3_1_0.01624755971900897"
+          },
+          {
+            "historical": "frontier_budget_3_1_0.016247559719008996",
+            "repaired": "frontier_budget_3_1_0.01624755971900897"
+          },
+          {
+            "historical": "frontier_achievability_3_1_0.2599031114615543",
+            "repaired": "frontier_achievability_3_1_0.25990311146155426"
+          },
+          {
+            "historical": "frontier_budget_3_1_0.2599031114615543",
+            "repaired": "frontier_budget_3_1_0.25990311146155426"
+          },
+          {
+            "historical": "frontier_achievability_3_2_0.012955251835240612",
+            "repaired": "frontier_achievability_3_2_0.012955251835240654"
+          },
+          {
+            "historical": "frontier_budget_3_2_0.012955251835240612",
+            "repaired": "frontier_budget_3_2_0.012955251835240654"
+          },
+          {
+            "historical": "frontier_achievability_3_2_0.05182100734096245",
+            "repaired": "frontier_achievability_3_2_0.051821007340962615"
+          },
+          {
+            "historical": "frontier_budget_3_2_0.05182100734096245",
+            "repaired": "frontier_budget_3_2_0.051821007340962615"
+          },
+          {
+            "historical": "frontier_achievability_3_2_0.19242744366925552",
+            "repaired": "frontier_achievability_3_2_0.19242744366925568"
+          },
+          {
+            "historical": "frontier_budget_3_2_0.19242744366925552",
+            "repaired": "frontier_budget_3_2_0.19242744366925568"
+          },
+          {
+            "historical": "frontier_achievability_3_2_0.3839042204088342",
+            "repaired": "frontier_achievability_3_2_0.3839042204088343"
+          },
+          {
+            "historical": "frontier_budget_3_2_0.3839042204088342",
+            "repaired": "frontier_budget_3_2_0.3839042204088343"
+          },
+          {
+            "historical": "frontier_achievability_4_0_0.027114012725724942",
+            "repaired": "frontier_achievability_4_0_0.02711401272572493"
+          },
+          {
+            "historical": "frontier_budget_4_0_0.027114012725724942",
+            "repaired": "frontier_budget_4_0_0.02711401272572493"
+          },
+          {
+            "historical": "frontier_achievability_4_0_0.10845605090289977",
+            "repaired": "frontier_achievability_4_0_0.10845605090289973"
+          },
+          {
+            "historical": "frontier_budget_4_0_0.10845605090289977",
+            "repaired": "frontier_budget_4_0_0.10845605090289973"
+          },
+          {
+            "historical": "frontier_achievability_4_1_0.004896858523484266",
+            "repaired": "frontier_achievability_4_1_0.004896858523484261"
+          },
+          {
+            "historical": "frontier_budget_4_1_0.004896858523484266",
+            "repaired": "frontier_budget_4_1_0.004896858523484261"
+          },
+          {
+            "historical": "frontier_achievability_4_1_0.019587434093937064",
+            "repaired": "frontier_achievability_4_1_0.019587434093937043"
+          },
+          {
+            "historical": "frontier_budget_4_1_0.019587434093937064",
+            "repaired": "frontier_budget_4_1_0.019587434093937043"
+          },
+          {
+            "historical": "frontier_achievability_4_1_0.6198966752574157",
+            "repaired": "frontier_achievability_4_1_0.6198966752574155"
+          },
+          {
+            "historical": "frontier_budget_4_1_0.6198966752574157",
+            "repaired": "frontier_budget_4_1_0.6198966752574155"
+          },
+          {
+            "historical": "frontier_achievability_4_2_0.011663920023866814",
+            "repaired": "frontier_achievability_4_2_0.01166392002386684"
+          },
+          {
+            "historical": "frontier_budget_4_2_0.011663920023866814",
+            "repaired": "frontier_budget_4_2_0.01166392002386684"
+          },
+          {
+            "historical": "frontier_achievability_4_2_0.04665568009546726",
+            "repaired": "frontier_achievability_4_2_0.04665568009546736"
+          },
+          {
+            "historical": "frontier_budget_4_2_0.04665568009546726",
+            "repaired": "frontier_budget_4_2_0.04665568009546736"
+          },
+          {
+            "historical": "frontier_achievability_4_2_0.24822336604854156",
+            "repaired": "frontier_achievability_4_2_0.24822336604854164"
+          },
+          {
+            "historical": "frontier_budget_4_2_0.24822336604854156",
+            "repaired": "frontier_budget_4_2_0.24822336604854164"
+          },
+          {
+            "historical": "frontier_achievability_5_1_0.004252163225492783",
+            "repaired": "frontier_achievability_5_1_0.004252163225492786"
+          },
+          {
+            "historical": "frontier_budget_5_1_0.004252163225492783",
+            "repaired": "frontier_budget_5_1_0.004252163225492786"
+          },
+          {
+            "historical": "frontier_achievability_5_1_0.017008652901971132",
+            "repaired": "frontier_achievability_5_1_0.017008652901971143"
+          },
+          {
+            "historical": "frontier_budget_5_1_0.017008652901971132",
+            "repaired": "frontier_budget_5_1_0.017008652901971143"
+          },
+          {
+            "historical": "frontier_achievability_5_2_0.005752579041250739",
+            "repaired": "frontier_achievability_5_2_0.005752579041250737"
+          },
+          {
+            "historical": "frontier_budget_5_2_0.005752579041250739",
+            "repaired": "frontier_budget_5_2_0.005752579041250737"
+          },
+          {
+            "historical": "frontier_achievability_5_2_0.023010316165002955",
+            "repaired": "frontier_achievability_5_2_0.023010316165002948"
+          },
+          {
+            "historical": "frontier_budget_5_2_0.023010316165002955",
+            "repaired": "frontier_budget_5_2_0.023010316165002948"
+          },
+          {
+            "historical": "frontier_achievability_5_2_0.30555397422544284",
+            "repaired": "frontier_achievability_5_2_0.3055539742254428"
+          },
+          {
+            "historical": "frontier_budget_5_2_0.30555397422544284",
+            "repaired": "frontier_budget_5_2_0.3055539742254428"
+          },
+          {
+            "historical": "frontier_achievability_8_1_0.030436431704720646",
+            "repaired": "frontier_achievability_8_1_0.030436431704720657"
+          },
+          {
+            "historical": "frontier_budget_8_1_0.030436431704720646",
+            "repaired": "frontier_budget_8_1_0.030436431704720657"
+          },
+          {
+            "historical": "frontier_achievability_8_1_0.12174572681888259",
+            "repaired": "frontier_achievability_8_1_0.12174572681888263"
+          },
+          {
+            "historical": "frontier_budget_8_1_0.12174572681888259",
+            "repaired": "frontier_budget_8_1_0.12174572681888263"
+          },
+          {
+            "historical": "frontier_achievability_8_1_0.2943412752067001",
+            "repaired": "frontier_achievability_8_1_0.29434127520670006"
+          },
+          {
+            "historical": "frontier_budget_8_1_0.2943412752067001",
+            "repaired": "frontier_budget_8_1_0.29434127520670006"
+          },
+          {
+            "historical": "frontier_achievability_8_1_0.5075799502313454",
+            "repaired": "frontier_achievability_8_1_0.5075799502313453"
+          },
+          {
+            "historical": "frontier_budget_8_1_0.5075799502313454",
+            "repaired": "frontier_budget_8_1_0.5075799502313453"
+          },
+          {
+            "historical": "frontier_achievability_8_2_0.016767257191901332",
+            "repaired": "frontier_achievability_8_2_0.016767257191901287"
+          },
+          {
+            "historical": "frontier_budget_8_2_0.016767257191901332",
+            "repaired": "frontier_budget_8_2_0.016767257191901287"
+          },
+          {
+            "historical": "frontier_achievability_8_2_0.06706902876760533",
+            "repaired": "frontier_achievability_8_2_0.06706902876760515"
+          },
+          {
+            "historical": "frontier_budget_8_2_0.06706902876760533",
+            "repaired": "frontier_budget_8_2_0.06706902876760515"
+          },
+          {
+            "historical": "frontier_achievability_8_2_0.33512919412797376",
+            "repaired": "frontier_achievability_8_2_0.3351291941279736"
+          },
+          {
+            "historical": "frontier_budget_8_2_0.33512919412797376",
+            "repaired": "frontier_budget_8_2_0.3351291941279736"
+          }
+        ],
+        "original_audit_git_blob": "8a089ef95ad186490546fed181a94eabd2975c34",
+        "baseline_main": "d07e4e2180992ab52ee08d0a0cad689154d2e9bd",
+        "audit_commit": "10410caf761ad858236d22c4a2f5d9a53bc94dff",
+        "max_scientific_residual": 1.1606256511420554e-08,
+        "elapsed_seconds": 7.439125136999792,
+        "integrity": {
+          "status": "PASS",
+          "source_members": 39,
+          "archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+          "source_archive_unchanged": true,
+          "original_import_manifest_unchanged": true,
+          "scientific_content_unchanged": false,
+          "authorized_changes_verified": [
+            "CLAIM_STATUS.md",
+            "proofs/THEORY.md",
+            "src/theory.py",
+            "src/validate.py"
+          ],
+          "authorized_additions_verified": [
+            "docs/NUMERICAL_CONTRACT.md",
+            "repairs/theory-01/NUMERICAL_PROOF.md",
+            "src/photon_support.py"
+          ],
+          "change_record": "provenance/changes/theory-repair-01.json",
+          "document_change_record": "provenance/changes/novelty-integration-01.json",
+          "authorized_document_changes_verified": [
+            "CLAIM_STATUS.md",
+            "REPORT.md",
+            "SOURCE_AUDIT.md",
+            "experiment/LAB_REVIEW.md"
+          ],
+          "authorized_document_additions_verified": [
+            "docs/CONTRIBUTIONS.md",
+            "experiment/REVIEW_RATIONALE.md"
+          ],
+          "followup_change_record": "provenance/changes/novelty-integration-02.json",
+          "authorized_followup_documents_verified": [
+            "CLAIM_STATUS.md",
+            "REPORT.md",
+            "SOURCE_AUDIT.md",
+            "docs/CONTRIBUTIONS.md",
+            "experiment/LAB_REVIEW.md",
+            "experiment/REVIEW_RATIONALE.md"
+          ],
+          "mathematics_changed_by_followup": false,
+          "handover_change_record": "provenance/changes/lab-handover-01.json",
+          "authorized_handover_documents_verified": [
+            "CLAIM_STATUS.md",
+            "README.md",
+            "docs/PHYSICAL_SETTING.md",
+            "docs/REPRODUCE.md",
+            "docs/ROADMAP.md",
+            "experiment/LAB_REVIEW.md",
+            "work_orders/CURRENT.md"
+          ],
+          "mathematics_changed_by_handover": false,
+          "historical_change_ledgers_unchanged": true,
+          "validator_change": "original I/O guard; approved numerical-method metadata update only"
+        },
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mpmath": "1.3.0",
+        "photon_support_uses_exact_rational_enclosures": true,
+        "entire_pipeline_interval_certified": false,
+        "laboratory_data": false,
+        "scope": "F01-F03 bounded repair regression. Historical defect assertions apply only to historical source; new fix tests are in tests/test_photon_support.py."
+      }
+    },
+    "results/runs/handover-novelty-01/RESULTS.json": {
+      "sha256": "aaf6d71e854a421db0eb63ae579118139ac243c07f5be65bd113ccabc2e5c22f",
+      "result": {
+        "status": "PASS",
+        "seed": 2026091501,
+        "baseline_commit": "80c73751806f45411251711bcfb6bccebc887f0a",
+        "checks": 631,
+        "groups": {
+          "srm": 144,
+          "usd": 135,
+          "input_filter": 114,
+          "herzog": 156,
+          "binary_contrast": 40,
+          "nulling": 36,
+          "high_energy": 6
+        },
+        "max_residual": 2.70924301656178e-10,
+        "source_git_blobs": {
+          "src/theory.py": "e038afe2a21c6e54e3fc6eaccfbcb07c9de3ff60",
+          "src/photon_support.py": "133f2b8cb6c41edf6ec873740b58c04eb94e632b",
+          "proofs/THEORY.md": "daa095381a2c21f1a9a9f660fe68cd8354e56bd6"
+        },
+        "source_bytes_unchanged": true,
+        "scope": "Equation/normalization/measurement translations only. Not proof of originality; not a rerun of the full theory audit.",
+        "ledger": [
+          {
+            "group": "srm",
+            "name": "four_one_flip_unitary",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_0_measurement",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_0_constant_diagonal",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_0_success",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_0_gram_minimum",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_0_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_0_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_0_normalization",
+            "residual": 1.3877787807814457e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_0_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_0_support",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_1_measurement",
+            "residual": 4.996003610813204e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_1_constant_diagonal",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_1_success",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_1_gram_minimum",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_1_feasible",
+            "residual": 1.9390955854903247e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_1_harmonic_mean",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_1_normalization",
+            "residual": 4.5102810375396984e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_1_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_1_support",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_2_measurement",
+            "residual": 1.1102230246251565e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_2_constant_diagonal",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_2_success",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_2_gram_minimum",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_2_feasible",
+            "residual": 7.437627347887778e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_2_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_2_normalization",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_2_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_2_support",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_3_measurement",
+            "residual": 9.992007221626409e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_3_constant_diagonal",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_3_success",
+            "residual": 3.885780586188048e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_3_gram_minimum",
+            "residual": 6.938893903907228e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_3_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_3_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_3_normalization",
+            "residual": 2.185751579730777e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_3_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_3_support",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_4_measurement",
+            "residual": 4.996003610813204e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_4_constant_diagonal",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "four_one_flip_4_success",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_4_gram_minimum",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_4_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "four_one_flip_4_harmonic_mean",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_4_normalization",
+            "residual": 3.434752482434078e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_4_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "four_one_flip_4_support",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_unitary",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_0_measurement",
+            "residual": 3.3460555702082177e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_0_constant_diagonal",
+            "residual": 5.325678796933589e-33,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_0_success",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_0_gram_minimum",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_0_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_0_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_0_normalization",
+            "residual": 1.3877787807814457e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_0_support",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_1_measurement",
+            "residual": 1.1434879961788085e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_1_constant_diagonal",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_1_success",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_1_gram_minimum",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_1_feasible",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_1_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_1_normalization",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_1_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_1_support",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_2_measurement",
+            "residual": 2.4584976275676314e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_2_constant_diagonal",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_2_success",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_2_gram_minimum",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_2_feasible",
+            "residual": 6.938893903907228e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_2_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_2_normalization",
+            "residual": 1.2212453270876722e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_2_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_2_support",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_3_measurement",
+            "residual": 2.23986664849526e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_3_constant_diagonal",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_3_success",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_3_gram_minimum",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_3_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_3_harmonic_mean",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_3_normalization",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_3_support",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_4_measurement",
+            "residual": 1.162368410269356e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_4_constant_diagonal",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_2_4_success",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_4_gram_minimum",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_4_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_2_4_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_4_normalization",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_2_4_support",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_unitary",
+            "residual": 2.6410326222348487e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_0_measurement",
+            "residual": 6.231004360680745e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_0_constant_diagonal",
+            "residual": 8.882062457244236e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_0_success",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_0_gram_minimum",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_0_feasible",
+            "residual": 1.159571164132192e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_0_harmonic_mean",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_0_normalization",
+            "residual": 1.8041124150158794e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_0_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_0_support",
+            "residual": 8.881784197001252e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_1_measurement",
+            "residual": 3.5945327434484545e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_1_constant_diagonal",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_1_success",
+            "residual": 2.0816681711721685e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_1_gram_minimum",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_1_feasible",
+            "residual": 5.980899640562615e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_1_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_1_normalization",
+            "residual": 1.8214596497756474e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_1_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_1_support",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_2_measurement",
+            "residual": 4.591378294904315e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_2_constant_diagonal",
+            "residual": 2.2237691509795566e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_2_success",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_2_gram_minimum",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_2_feasible",
+            "residual": 3.0588053791247294e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_2_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_2_normalization",
+            "residual": 1.3877787807814457e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_2_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_2_support",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_3_measurement",
+            "residual": 1.0055025944351811e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_3_constant_diagonal",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_3_success",
+            "residual": 4.996003610813204e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_3_gram_minimum",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_3_feasible",
+            "residual": 1.3010426069826053e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_3_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_3_normalization",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_3_support",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_4_measurement",
+            "residual": 5.661048867003677e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_4_constant_diagonal",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_3_4_success",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_4_gram_minimum",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_4_feasible",
+            "residual": 8.306757572544775e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_3_4_harmonic_mean",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_4_normalization",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_3_4_support",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_unitary",
+            "residual": 1.1704836984704332e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_0_measurement",
+            "residual": 6.677715631902331e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_0_constant_diagonal",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_0_success",
+            "residual": 4.996003610813204e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_0_gram_minimum",
+            "residual": 2.0816681711721685e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_0_feasible",
+            "residual": 1.227316859253591e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_0_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_0_normalization",
+            "residual": 4.163336342344337e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_0_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_0_support",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_1_measurement",
+            "residual": 3.887073460983518e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_1_constant_diagonal",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_1_success",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_1_gram_minimum",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_1_feasible",
+            "residual": 3.139805244076092e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_1_harmonic_mean",
+            "residual": 6.938893903907228e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_1_normalization",
+            "residual": 5.689893001203927e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_1_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_1_support",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_2_measurement",
+            "residual": 5.060964027014015e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_2_constant_diagonal",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_2_success",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_2_gram_minimum",
+            "residual": 9.020562075079397e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_2_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_2_harmonic_mean",
+            "residual": 3.469446951953614e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_2_normalization",
+            "residual": 1.3877787807814457e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_2_support",
+            "residual": 3.885780586188048e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_3_measurement",
+            "residual": 8.91821263889184e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_3_constant_diagonal",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_3_success",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_3_gram_minimum",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_3_feasible",
+            "residual": 5.0864054272247674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_3_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_3_normalization",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_3_support",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_4_measurement",
+            "residual": 3.989772246403464e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_4_constant_diagonal",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_4_4_success",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_4_gram_minimum",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_4_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_4_4_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_4_normalization",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_4_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_4_4_support",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_unitary",
+            "residual": 1.5281821919268772e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_0_measurement",
+            "residual": 7.284068474521618e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_0_constant_diagonal",
+            "residual": 2.2213086652395356e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_0_success",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_0_gram_minimum",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_0_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_0_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_0_normalization",
+            "residual": 2.5326962749261384e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_0_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_0_support",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_1_measurement",
+            "residual": 6.753223014464258e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_1_constant_diagonal",
+            "residual": 5.551548787055442e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_1_success",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_1_gram_minimum",
+            "residual": 1.3877787807814457e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_1_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_1_harmonic_mean",
+            "residual": 6.938893903907228e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_1_normalization",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_1_support",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_2_measurement",
+            "residual": 1.6657282934078131e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_2_constant_diagonal",
+            "residual": 8.882868333007365e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_2_success",
+            "residual": 9.992007221626409e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_2_gram_minimum",
+            "residual": 1.1796119636642288e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_2_feasible",
+            "residual": 1.9940511183556626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_2_harmonic_mean",
+            "residual": 6.938893903907228e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_2_normalization",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_2_support",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_3_measurement",
+            "residual": 5.721958498152797e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_3_constant_diagonal",
+            "residual": 3.338294934133959e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_3_success",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_3_gram_minimum",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_3_feasible",
+            "residual": 3.680094450642777e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_3_harmonic_mean",
+            "residual": 6.938893903907228e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_3_normalization",
+            "residual": 4.649058915617843e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_3_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_3_support",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_4_measurement",
+            "residual": 5.14865602257418e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_4_constant_diagonal",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_5_4_success",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_4_gram_minimum",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_4_feasible",
+            "residual": 1.885527517913901e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_5_4_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_4_normalization",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_5_4_support",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_unitary",
+            "residual": 7.062098392711005e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_0_measurement",
+            "residual": 1.0663129956658134e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_0_constant_diagonal",
+            "residual": 3.3351835234438796e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_0_success",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_0_gram_minimum",
+            "residual": 2.1510571102112408e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_0_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_0_harmonic_mean",
+            "residual": 6.938893903907228e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_0_normalization",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_0_support",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_1_measurement",
+            "residual": 7.607797261640477e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_1_constant_diagonal",
+            "residual": 4.441434166503682e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_1_success",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_1_gram_minimum",
+            "residual": 1.1796119636642288e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_1_feasible",
+            "residual": 4.945026381717012e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_1_harmonic_mean",
+            "residual": 3.469446951953614e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_1_normalization",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_1_support",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_2_measurement",
+            "residual": 9.107333836607941e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_2_constant_diagonal",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_2_success",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_2_gram_minimum",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_2_feasible",
+            "residual": 1.3297744533655144e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_2_harmonic_mean",
+            "residual": 3.469446951953614e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_2_normalization",
+            "residual": 4.128641872824801e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_2_support",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_3_measurement",
+            "residual": 1.8385843027689748e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_3_constant_diagonal",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_3_success",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_3_gram_minimum",
+            "residual": 1.0061396160665481e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_3_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_3_harmonic_mean",
+            "residual": 3.469446951953614e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_3_normalization",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_3_support",
+            "residual": 3.885780586188048e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_4_measurement",
+            "residual": 1.669261945753108e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_4_constant_diagonal",
+            "residual": 5.552090819334005e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "fourier_8_4_success",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_4_gram_minimum",
+            "residual": 4.631711680858075e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_4_feasible",
+            "residual": 6.274676634990189e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "fourier_8_4_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_4_normalization",
+            "residual": 1.249000902703301e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "fourier_8_4_support",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_unitary",
+            "residual": 3.8163916471489756e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_0_measurement",
+            "residual": 5.55122354228426e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_0_constant_diagonal",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_0_success",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_0_gram_minimum",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_0_feasible",
+            "residual": 1.43982048506075e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_0_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_0_normalization",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_0_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_0_support",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_1_measurement",
+            "residual": 7.773497006583637e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_1_constant_diagonal",
+            "residual": 1.1102230246251565e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_1_success",
+            "residual": 3.885780586188048e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_1_gram_minimum",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_1_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_1_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_1_normalization",
+            "residual": 1.8735013540549517e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_1_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_1_support",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_2_measurement",
+            "residual": 6.108188895792524e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_2_constant_diagonal",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_2_success",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_2_gram_minimum",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_2_feasible",
+            "residual": 2.00213921381952e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_2_harmonic_mean",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_2_normalization",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_2_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_2_support",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_3_measurement",
+            "residual": 4.443059973708341e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_3_constant_diagonal",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_3_success",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_3_gram_minimum",
+            "residual": 1.249000902703301e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_3_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_3_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_3_normalization",
+            "residual": 7.494005416219807e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_3_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_3_support",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_4_measurement",
+            "residual": 1.4441612592703963e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_4_constant_diagonal",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.13_4_success",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_4_gram_minimum",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_4_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.13_4_harmonic_mean",
+            "residual": 3.469446951953614e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_4_normalization",
+            "residual": 1.474514954580286e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_4_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.13_4_support",
+            "residual": 6.938893903907228e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_unitary",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_0_measurement",
+            "residual": 5.632837842890299e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_0_constant_diagonal",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_0_success",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_0_gram_minimum",
+            "residual": 3.469446951953614e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_0_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_0_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_0_normalization",
+            "residual": 3.209238430557093e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_0_support",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_1_measurement",
+            "residual": 2.9982898424845195e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_1_constant_diagonal",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_1_success",
+            "residual": 1.2212453270876722e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_1_gram_minimum",
+            "residual": 1.5785983631388945e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_1_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_1_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_1_normalization",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_1_support",
+            "residual": 1.3877787807814457e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_2_measurement",
+            "residual": 8.882868333007365e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_2_constant_diagonal",
+            "residual": 6.667118051786499e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_2_success",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_2_gram_minimum",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_2_feasible",
+            "residual": 1.772534629696864e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_2_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_2_normalization",
+            "residual": 1.942890293094024e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_2_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_2_support",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_3_measurement",
+            "residual": 1.3544862649120409e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_3_constant_diagonal",
+            "residual": 9.995861419348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_3_success",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_3_gram_minimum",
+            "residual": 1.8691645453650096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_3_feasible",
+            "residual": 2.4183129457289176e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_3_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_3_normalization",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_3_support",
+            "residual": 6.106226635438361e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_4_measurement",
+            "residual": 4.775249788392736e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_4_constant_diagonal",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_0.57_4_success",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_4_gram_minimum",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_4_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_0.57_4_harmonic_mean",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_4_normalization",
+            "residual": 1.5265566588595902e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_4_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_0.57_4_support",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_unitary",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_0_measurement",
+            "residual": 1.1792037227924548e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_0_constant_diagonal",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_0_success",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_0_gram_minimum",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_0_feasible",
+            "residual": 1.3893373601175004e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_0_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_0_normalization",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_0_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_0_support",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_1_measurement",
+            "residual": 7.86023513804339e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_1_constant_diagonal",
+            "residual": 3.342213888644167e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_1_success",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_1_gram_minimum",
+            "residual": 8.326672684688674e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_1_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_1_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_1_normalization",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_1_support",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_2_measurement",
+            "residual": 7.773353377698748e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_2_constant_diagonal",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_2_success",
+            "residual": 8.881784197001252e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_2_gram_minimum",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_2_feasible",
+            "residual": 2.7759799898763445e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_2_harmonic_mean",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_2_normalization",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_2_support",
+            "residual": 1.2212453270876722e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_3_measurement",
+            "residual": 3.7238012298709097e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_3_constant_diagonal",
+            "residual": 4.443059973708341e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_3_success",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_3_gram_minimum",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_3_feasible",
+            "residual": 4.780653954303271e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_3_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_3_normalization",
+            "residual": 7.355227538141662e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_3_dominates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_3_support",
+            "residual": 1.1102230246251565e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_4_measurement",
+            "residual": 6.418693934964832e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_4_constant_diagonal",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "srm",
+            "name": "complex_hadamard_1.17_4_success",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_4_gram_minimum",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_4_feasible",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "usd",
+            "name": "complex_hadamard_1.17_4_harmonic_mean",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_4_normalization",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "input_filter",
+            "name": "complex_hadamard_1.17_4_support",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.0_rates",
+            "residual": 4.996003610813204e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.0_identity",
+            "residual": 5.637851296924623e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.08333333333333333_rates",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.08333333333333333_identity",
+            "residual": 1.951563910473908e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.16666666666666666_rates",
+            "residual": 3.608224830031759e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.16666666666666666_identity",
+            "residual": 4.9873299934333204e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.25_rates",
+            "residual": 4.163336342344337e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.25_identity",
+            "residual": 1.5178830414797062e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.3333333333333333_rates",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.3333333333333333_identity",
+            "residual": 1.951563910473908e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.41666666666666663_rates",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.41666666666666663_identity",
+            "residual": 1.951563910473908e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.5_rates",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.5_identity",
+            "residual": 1.5178830414797062e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.5833333333333333_rates",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.5833333333333333_identity",
+            "residual": 1.5178830414797062e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.6666666666666666_rates",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.6666666666666666_identity",
+            "residual": 1.951563910473908e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.75_rates",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.75_identity",
+            "residual": 1.951563910473908e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.8333333333333333_rates",
+            "residual": 2.2898349882893854e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.8333333333333333_identity",
+            "residual": 1.951563910473908e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.9166666666666666_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_0.9166666666666666_identity",
+            "residual": 3.686287386450715e-18,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_1.0_rates",
+            "residual": 2.70924301656178e-10,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.001_1.0_identity",
+            "residual": 2.709242346524837e-10,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.0_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.0_identity",
+            "residual": 6.938893903907228e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.08333333333333333_rates",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.08333333333333333_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.16666666666666666_rates",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.16666666666666666_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.25_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.25_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.3333333333333333_rates",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.3333333333333333_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.41666666666666663_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.41666666666666663_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.5_rates",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.5_identity",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.5833333333333333_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.5833333333333333_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.6666666666666666_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.6666666666666666_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.75_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.75_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.8333333333333333_rates",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.8333333333333333_identity",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.9166666666666666_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_0.9166666666666666_identity",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_1.0_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.07_1.0_identity",
+            "residual": 1.3877787807814457e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.0_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.0_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.08333333333333333_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.08333333333333333_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.16666666666666666_rates",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.16666666666666666_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.25_rates",
+            "residual": 2.7755575615628914e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.25_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.3333333333333333_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.3333333333333333_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.41666666666666663_rates",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.41666666666666663_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.5_rates",
+            "residual": 2.7755575615628914e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.5_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.5833333333333333_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.5833333333333333_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.6666666666666666_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.6666666666666666_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.75_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.75_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.8333333333333333_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.8333333333333333_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.9166666666666666_rates",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_0.9166666666666666_identity",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_1.0_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "0.7_1.0_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.0_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.0_identity",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.08333333333333333_rates",
+            "residual": 2.5673907444456745e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.08333333333333333_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.16666666666666666_rates",
+            "residual": 4.163336342344337e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.16666666666666666_identity",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.25_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.25_identity",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.3333333333333333_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.3333333333333333_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.41666666666666663_rates",
+            "residual": 4.996003610813204e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.41666666666666663_identity",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.5_rates",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.5_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.5833333333333333_rates",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.5833333333333333_identity",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.6666666666666666_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.6666666666666666_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.75_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.75_identity",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.8333333333333333_rates",
+            "residual": 7.771561172376096e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.8333333333333333_identity",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.9166666666666666_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_0.9166666666666666_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_1.0_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "1.0_1.0_identity",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.0_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.0_identity",
+            "residual": 1.5543122344752192e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.08333333333333333_rates",
+            "residual": 1.56472057533108e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.08333333333333333_identity",
+            "residual": 1.5543122344752192e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.16666666666666666_rates",
+            "residual": 1.1310397063368782e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.16666666666666666_identity",
+            "residual": 1.2212453270876722e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.25_rates",
+            "residual": 1.1397133237167623e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.25_identity",
+            "residual": 1.2212453270876722e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.3333333333333333_rates",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.3333333333333333_identity",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.41666666666666663_rates",
+            "residual": 3.937822290467352e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.41666666666666663_identity",
+            "residual": 3.9968028886505635e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.5_rates",
+            "residual": 7.181755190543981e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.5_identity",
+            "residual": 5.551115123125783e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.5833333333333333_rates",
+            "residual": 5.329070518200751e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.5833333333333333_identity",
+            "residual": 5.329070518200751e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.6666666666666666_rates",
+            "residual": 6.106226635438361e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.6666666666666666_identity",
+            "residual": 6.106226635438361e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.75_rates",
+            "residual": 6.994405055138486e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.75_identity",
+            "residual": 6.994405055138486e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.8333333333333333_rates",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.8333333333333333_identity",
+            "residual": 3.3306690738754696e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.9166666666666666_rates",
+            "residual": 9.992007221626409e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_0.9166666666666666_identity",
+            "residual": 1.2212453270876722e-15,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_1.0_rates",
+            "residual": 1.0408340855860843e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "3.0_1.0_identity",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.0_rates",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.0_identity",
+            "residual": 2.930988785010413e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.08333333333333333_rates",
+            "residual": 4.4860735135335283e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.08333333333333333_identity",
+            "residual": 4.4853010194856324e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.16666666666666666_rates",
+            "residual": 4.464641547088921e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.16666666666666666_identity",
+            "residual": 4.463096558993129e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.25_rates",
+            "residual": 4.187860995485959e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.25_identity",
+            "residual": 4.196643033083092e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.3333333333333333_rates",
+            "residual": 3.244941208097041e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.3333333333333333_identity",
+            "residual": 3.241851231905457e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.41666666666666663_rates",
+            "residual": 7.397945103737591e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.41666666666666663_identity",
+            "residual": 7.394085344003543e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.5_rates",
+            "residual": 3.0577537030174184e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.5_identity",
+            "residual": 3.064215547965432e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.5833333333333333_rates",
+            "residual": 1.527096591541488e-13,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.5833333333333333_identity",
+            "residual": 1.5265566588595902e-13,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.6666666666666666_rates",
+            "residual": 7.06594071447908e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.6666666666666666_identity",
+            "residual": 7.049916206369744e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.75_rates",
+            "residual": 1.6986412276764895e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.75_identity",
+            "residual": 1.709743457922741e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.8333333333333333_rates",
+            "residual": 9.9253938401489e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.8333333333333333_identity",
+            "residual": 9.914291609902648e-14,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.9166666666666666_rates",
+            "residual": 3.8036240823657863e-13,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_0.9166666666666666_identity",
+            "residual": 3.8036240823657863e-13,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_1.0_rates",
+            "residual": 1.8214596497756474e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "herzog",
+            "name": "6.0_1.0_identity",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "0_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "0_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "1_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "1_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "2_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "2_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "3_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "3_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "4_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "4_Helstrom",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "5_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "5_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "6_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "6_Helstrom",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "7_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "7_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "8_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "8_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "9_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "9_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "10_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "10_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "11_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "11_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "12_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "12_Helstrom",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "13_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "13_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "14_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "14_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "15_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "15_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "16_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "16_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "17_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "17_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "18_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "18_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "19_matrix",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "binary_contrast",
+            "name": "19_Helstrom",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "0_original_gram",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "0_displaced_gram",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "0_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "1_original_gram",
+            "residual": 1.6653345369377348e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "1_displaced_gram",
+            "residual": 6.661338147750939e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "1_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "2_original_gram",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "2_displaced_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "2_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "3_original_gram",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "3_displaced_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "3_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "4_original_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "4_displaced_gram",
+            "residual": 8.881784197001252e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "4_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "5_original_gram",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "5_displaced_gram",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "5_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "6_original_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "6_displaced_gram",
+            "residual": 8.881784197001252e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "6_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "7_original_gram",
+            "residual": 2.220446049250313e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "7_displaced_gram",
+            "residual": 8.881784197001252e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "7_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "8_original_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "8_displaced_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "8_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "9_original_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "9_displaced_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "9_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "10_original_gram",
+            "residual": 5.551115123125783e-17,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "10_displaced_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "10_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "11_original_gram",
+            "residual": 1.1102230246251565e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "11_displaced_gram",
+            "residual": 4.440892098500626e-16,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "nulling",
+            "name": "11_PPM_amplitudes",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "high_energy",
+            "name": "extra_branch_identity",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "high_energy",
+            "name": "extra_strictly_exceeds_nulling",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "high_energy",
+            "name": "USD_feasibility",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "high_energy",
+            "name": "failure_probabilities",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "high_energy",
+            "name": "achieved_score",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          },
+          {
+            "group": "high_energy",
+            "name": "mean_budget_line",
+            "residual": 0.0,
+            "tolerance": 1e-09
+          }
+        ],
+        "examples": {
+          "uniform_endpoints": [
+            {
+              "x": 0.001,
+              "constant_overlap": 0.999000499833375,
+              "ME_success": 0.2740770780735185,
+              "USD_success": 0.000999500166624978
+            },
+            {
+              "x": 0.07,
+              "constant_overlap": 0.9323938199059483,
+              "ME_success": 0.4653529919805901,
+              "USD_success": 0.06760618009405173
+            },
+            {
+              "x": 0.7,
+              "constant_overlap": 0.4965853037914095,
+              "ME_success": 0.8586096698183794,
+              "USD_success": 0.5034146962085905
+            },
+            {
+              "x": 1.0,
+              "constant_overlap": 0.36787944117144233,
+              "ME_success": 0.9194761522718224,
+              "USD_success": 0.6321205588285577
+            },
+            {
+              "x": 3.0,
+              "constant_overlap": 0.049787068367863944,
+              "ME_success": 0.9982251024641149,
+              "USD_success": 0.950212931632136
+            },
+            {
+              "x": 6.0,
+              "constant_overlap": 0.0024787521766663585,
+              "ME_success": 0.9999954032068719,
+              "USD_success": 0.9975212478233336
+            }
+          ],
+          "high_energy_scope": {
+            "r": 0.01,
+            "effective_pulse_energy": 3.0,
+            "optimized_nulling_receiver": 0.7362632708334493,
+            "feasible_arbitrary_POVM": 0.8244705334781822,
+            "mean_effective_budget": 0.7,
+            "mean_budget_supporting_line_at_pulse": 1.3595231173463271
+          },
+          "known_reversal": {
+            "transmission": 0.7,
+            "photon_USD": 0.7,
+            "classical_USD": 0.5034146962085905,
+            "photon_ME": 0.7749999999999999,
+            "classical_ME": 0.8586096698183794
+          }
+        }
+      }
+    }
+  },
+  "visual_rendering_checked": false,
+  "lab_data": false,
+  "final_reference_tests": 14,
+  "final_reference_test_sha256": "42936145741f31ab65ae0354e6f4b8e947c3aa2d44221afd5eadb4deab031008"
+}

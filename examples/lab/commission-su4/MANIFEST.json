@@ -1,0 +1,14 @@
+{
+  "status": "SYNTHETIC_TEACHING_OUTPUT",
+  "recipe": "commission-su4",
+  "seed": 20260915,
+  "sample_attempts": 64,
+  "files": {
+    "RECORD_SCHEMA.json": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+    "commissioning_transfer_reference.csv": "3bfb9734bd4d0f7249382a28a1980835862f62a33a6bde9d9c47f66620d2d839",
+    "forecast.json": "b9e3679e5f4a4664024107d41354391c8e4e7ffce3a4a24dbfc4084793623931",
+    "synthetic_summary.json": "69399e4dd347aaf73b5e579c959484573379b7828d80785ae08af989732d41d9",
+    "synthetic_trials.csv": "26a48eff28d6c671e2da85de7b03f755142cfd1c7d74fa85c95f9d7f558633ab",
+    "target_matrices.json": "804de444253c73f63ae2b9dab5a0daa087ab18c9d496c4b41c85107a4d7daafc"
+  }
+}

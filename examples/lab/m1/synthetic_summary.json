@@ -1,0 +1,107 @@
+{
+  "status": "DESCRIPTIVE_ONLY",
+  "route": "su4",
+  "N": 64,
+  "counts": {
+    "correct": 23,
+    "wrong": 0,
+    "inconclusive": 41
+  },
+  "per_condition_preparation": [
+    {
+      "condition_id": "m1",
+      "preparation_id": "lambda_5",
+      "calibration_id": "EXAMPLE_ONLY",
+      "phase_code_id": "physical_four_one_pi_flips_common_optical_phase",
+      "receiver_id": "D_Jhalf_minus_I_fixed",
+      "energy_bound_id": "EXAMPLE_ONLY",
+      "counts": {
+        "correct": 23,
+        "wrong": 0,
+        "inconclusive": 41
+      },
+      "N": 64,
+      "C": 0.359375,
+      "E": 0.0,
+      "F": 0.640625
+    }
+  ],
+  "pooled_rates_warning": "Use per_condition_preparation to compare retuned inputs; pooled rates combine different conditions",
+  "C": 0.359375,
+  "E": 0.0,
+  "F": 0.640625,
+  "label_counts": [
+    17,
+    15,
+    14,
+    18
+  ],
+  "all_mask_counts": [
+    41,
+    5,
+    6,
+    0,
+    6,
+    0,
+    0,
+    0,
+    6,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "mask_width": 4,
+  "confusion_columns": [
+    0,
+    1,
+    2,
+    3,
+    "inconclusive"
+  ],
+  "confusion_rows_hidden_label": [
+    [
+      5,
+      0,
+      0,
+      0,
+      12
+    ],
+    [
+      0,
+      6,
+      0,
+      0,
+      9
+    ],
+    [
+      0,
+      0,
+      6,
+      0,
+      8
+    ],
+    [
+      0,
+      0,
+      0,
+      6,
+      12
+    ]
+  ],
+  "failure_diagnostics_may_overlap": {
+    "no_click": 41,
+    "multiple_click": 0,
+    "leakage": 0,
+    "integrity_rejected": 0
+  },
+  "fail_only_remapping": [],
+  "data_status": [
+    "SYNTHETIC_NOT_AN_EXPERIMENT"
+  ],
+  "calibration_or_source_claims": "None established by descriptive accounting",
+  "seed": 20260915
+}

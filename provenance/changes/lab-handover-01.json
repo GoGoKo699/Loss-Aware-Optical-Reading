@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "base_commit": "de73c9b094036b756d1ff008eaccbc52cec46207",
+  "previous_record": "provenance/changes/novelty-integration-02.json",
+  "previous_record_sha256": "f363b6343ce93093f6f5474ea4e1c4aca7c8d5d80a943f1aafb865346efb857d",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "interpretation_only": true,
+  "changes": [
+    {
+      "path": "CLAIM_STATUS.md",
+      "old_sha256": "20896a2e7a613bd997b77bde7dea25f140b1762c6eeaf84c965401048ecd7116",
+      "new_sha256": "be34c9bcedd9e9e44c427f2da9617dbc9d647b605d57068a32359fb1252b3117",
+      "reason": "Record confirmed processors and bounded robustness/Walsh example status without altering canonical claims."
+    },
+    {
+      "path": "README.md",
+      "old_sha256": "5665bb7a14c0db3448600b17ab1c29f05920aae126103e13194b921890225efe",
+      "new_sha256": "b7b9110f28af13e3bf1eaa030ec3a79c522000857554b3b2c89ef76f2419cf2d",
+      "reason": "Owner-authorized experiment-first navigation with separate confirmed SU4/SU8 routes and accurate claim hierarchy."
+    },
+    {
+      "path": "docs/PHYSICAL_SETTING.md",
+      "old_sha256": "d2fbb932a6436ce90f942b030b92f20d36f6dda63b568d7672678289890313ab",
+      "new_sha256": "3b7fb85e8dbc2c55c2b4967a9850086d58c80399cadbae59cbe256b9a98e2536",
+      "reason": "Record confirmed SU4 and SU8 availability separately from unsupplied physical interfaces/calibration."
+    },
+    {
+      "path": "docs/REPRODUCE.md",
+      "old_sha256": "829246ef60b6681dbfdbd5ec3cc0e2b41298b46499ec0a017579a775e1fb568f",
+      "new_sha256": "f03e65d30264917a5996cc39c119ccfd58bb96c97843f21ce0d313468480cb06",
+      "reason": "Add handover and robustness reference/check routes while preserving historical numerical contracts."
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "old_sha256": "9977d3130167188f6d6b5ebceec2415120a60481b07708b08ab54b2229120b50",
+      "new_sha256": "ea82fd364fda4822c08d49f4e109658e199178abf038ef934790cf301158be9b",
+      "reason": "Reflect completed bounded robustness import and present lab routes without authorizing extensions."
+    },
+    {
+      "path": "experiment/LAB_REVIEW.md",
+      "old_sha256": "ccd011603280c3fb1bee7b9a53e1f0a14431ba52f89262719bbe2269b181750f",
+      "new_sha256": "21b7f87e9595c7030278c1bda6dcc1ac8750992da929c289ad71bad5685fdda0",
+      "reason": "Add confirmed-chip entry routes while preserving all five required-response questions exactly."
+    },
+    {
+      "path": "work_orders/CURRENT.md",
+      "old_sha256": "fe6a277cfc4a1830385e08ddc1c1e16d4c2bf67aa0ad03d77d53a3b35684ac5e",
+      "new_sha256": "2735a0ef4d8b77de776e7c3390cd9ea3261f478f79a785df53431b6d34bcd582",
+      "reason": "Dispatch the current authorized handover; previous dispatch preserved verbatim."
+    }
+  ]
+}
