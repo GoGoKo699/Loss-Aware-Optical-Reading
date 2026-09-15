@@ -50,6 +50,37 @@ bounds, complete attempt records, blinding, and the frozen statistical plan in
 [FIRST_EXPERIMENT.md](FIRST_EXPERIMENT.md). Both chips are available; those
 supporting interfaces and calibration values have not been supplied.
 
+## Relevance to photonic quantum computing
+
+Successful theory and experiments would contribute to **photonic measurement,
+control and photon-efficient information extraction**. For the
+[specified task family](../docs/CONTRIBUTIONS.md), input-only retuning attains the
+joint input/measurement optimum with a fixed decoder. This could reduce receiver
+reconfiguration as loss or required reliability changes; calibration effort,
+preparation cost and throughput savings still need measurement.
+
+[P1](P1.md) could establish better unconditional decision performance than every
+allowed classical coherent-state mixture at the same mean incident signal-photon
+budget, even with an unrestricted permitted classical receiver. This is an
+illumination-constrained quantum advantage, **not a computational speedup**.
+Together with [M1](M1.md) and [P2](P2.md), it would provide a task-level benchmark
+for programmable chips: verify the optics, test the preparation rule, and identify
+where single photons help or coherent illumination wins.
+
+The [robustness results](../docs/ROBUSTNESS_GUIDE.md) distinguish information
+destroyed by noise from information still available to a better receiver. Their
+model-specific guarantees could guide whether to retune the input, calibrate the
+same decoder, or change the receiver. Near-optimality and source-class advantage
+remain separate requirements.
+
+This is a destructive reading task, not arbitrary quantum-state readout or a new
+universal computing architecture. One photon across eight paths is not an
+eight-qubit processor. No entangling-gate, quantum-error-correction, fault-tolerance,
+total-energy or wall-clock improvement is established. Applying the design rule
+to a computing subroutine requires a separate mapping of its allowed inputs,
+operations and objective; changing an algorithm's input can change its answer.
+These are prospective contributions, not measured results or novelty clearance.
+
 ## Where the next questions go
 
 | Question | Local route |
