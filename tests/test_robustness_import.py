@@ -44,12 +44,29 @@ class RobustnessImportTests(unittest.TestCase):
             out=Path(tmp)/'fresh';verified=Path(tmp)/'verified'
             self.run_script('study.py','--output',out)
             b=(out/'RESULTS.json').read_bytes()
-            self.assertEqual(hashlib.sha256(b).hexdigest(),
-                '74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db')
             self.run_script('verify_certificates.py','--results',out/'RESULTS.json','--output',verified)
             result=json.loads((verified/'VERIFICATION.json').read_text())
             self.assertEqual(result['status'],'PASS')
             self.assertEqual(result['checks'],11161)
+            with tarfile.open(STUDY/'EVIDENCE.tar.xz', 'r:xz') as archive:
+                reference = json.loads(archive.extractfile('RESULTS.json').read())
+            differences = []
+            def compare(a, c, path=''):
+                if isinstance(a, dict) and isinstance(c, dict) and a.keys() == c.keys():
+                    for key in a:
+                        compare(a[key], c[key], path+'/'+key)
+                elif isinstance(a, list) and isinstance(c, list) and len(a) == len(c):
+                    for index, (aa, cc) in enumerate(zip(a, c)):
+                        compare(aa, cc, path+'/'+str(index))
+                elif a != c:
+                    differences.append({'path':path, 'reference':str(a)[:160], 'fresh':str(c)[:160]})
+            compare(reference, json.loads(b))
+            if differences:
+                print(json.dumps({'fresh_witness_verification':result['status'],
+                    'checks':result['checks'], 'difference_count':len(differences),
+                    'differences':differences[:40]}, indent=2), flush=True)
+            self.assertEqual(hashlib.sha256(b).hexdigest(),
+                '74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db')
             # A second invocation must refuse to replace the fresh evidence.
             p=subprocess.run([sys.executable,str(STUDY/'study.py'),'--output',str(out)],capture_output=True,text=True,timeout=20)
             self.assertNotEqual(p.returncode,0)
