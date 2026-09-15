@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "date": "2026-09-15",
+  "main_commit": "de73c9b094036b756d1ff008eaccbc52cec46207",
+  "main_tree": "a072bbe43effca4c99ea7839c6802c530ac94099",
+  "robustness_branch": "research/robustness-01",
+  "robustness_commit": "ddb17c5040e17cb0078121081afe15de70158fe8",
+  "open_pull_requests": [],
+  "equivalent_handover_branches": [],
+  "private": true,
+  "local_access": "All 151 blobs fetched through authenticated GitHub API and verified by Git blob SHA; complete tree reconstructed and checked against remote tree. Signed baseline commit reconstructed and matched exactly; shallow local checkout, not a successful git clone. Direct HTTPS Git authentication unavailable.",
+  "initial_local_status_porcelain": "",
+  "branch": "handover/lab-01",
+  "supplied_archive_sha256": "ee21bb13afbd913779b5d2eae7b4f15a58d919500a7ed38b09deafb7e929c81b"
+}
