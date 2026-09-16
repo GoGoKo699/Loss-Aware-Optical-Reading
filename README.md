@@ -158,4 +158,12 @@ in the [roadmap](docs/ROADMAP.md), with their present limits.
 Original project material is available under the [MIT License](LICENSE).
 Third-party material retains its own terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
-Contact: gogoko699@gmail.com.
+## Experimental status and collaboration
+
+**Experimental validation is still pending.** The theoretical analysis,
+reference code, and experimental procedures are available in this repository;
+laboratory results have not yet been collected.
+
+Experimental and theoretical collaborators are welcome. To discuss implementing
+the protocols, device characterization, or further analysis, please contact
+[gogoko699@gmail.com](mailto:gogoko699@gmail.com).
