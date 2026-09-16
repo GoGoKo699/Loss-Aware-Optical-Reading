@@ -136,6 +136,8 @@ class HandoverDocumentTests(unittest.TestCase):
             ('experiment/P1.md', 4), ('experiment/P2.md', 4),
             ('experiment/SU4.md', 6), ('experiment/SU8.md', 7),
             ('experiment/COMMISSIONING.md', 7),
+            ('REPORT.md', 11), ('docs/ROBUSTNESS_REPORT.md', 3),
+            ('docs/ROBUSTNESS_PROOFS.md', 16), ('docs/NUMERICAL_PROOF.md', 7),
         ]
         for name, count in pages:
             with self.subTest(document=name):

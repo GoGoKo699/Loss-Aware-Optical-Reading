@@ -1,0 +1,698 @@
+{
+  "commit": "ba00d9ce64333ad08ef3b61108aa6df959cc5fc7",
+  "tree": "605719db8b64ec45d75454dbe4338d56140d8593",
+  "cwd": "/workspace/scratch/d29a6922cf06/repo",
+  "output_prefix": "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes",
+  "commands": [
+    {
+      "page": "experiment/INDEX.md",
+      "line": 33,
+      "literal": "python scripts/lab_reference.py --recipe commission-su4 --output results/runs/first-su4",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su4"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su4",
+      "exit_code": 0,
+      "elapsed_seconds": 0.7111399840000558,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su4\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/INDEX.md",
+      "line": 34,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-embed --output results/runs/first-su8-four",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su8-four"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su8-four",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6944746200001646,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su8-four\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/INDEX.md",
+      "line": 35,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-walsh --output results/runs/first-su8-eight",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-walsh",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su8-eight"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-walsh --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su8-eight",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6516884970001229,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/first-su8-eight\", \"route\": \"su8-walsh\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU4.md",
+      "line": 124,
+      "literal": "python scripts/lab_reference.py --recipe commission-su4 --output results/runs/su4-commission",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-commission"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-commission",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6421201869998185,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-commission\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU4.md",
+      "line": 125,
+      "literal": "python scripts/lab_reference.py --recipe m1 --chip su4 --output results/runs/su4-m1",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe m1 --chip su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1",
+      "exit_code": 0,
+      "elapsed_seconds": 0.668765863000317,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU4.md",
+      "line": 126,
+      "literal": "python scripts/lab_records.py --route su4 --trials results/runs/su4-m1/synthetic_trials.csv --output results/runs/su4-m1-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su4",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5280425939999986,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su4-m1-analysis\", \"N\": 256, \"counts\": {\"correct\": 97, \"wrong\": 1, \"inconclusive\": 158}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU8.md",
+      "line": 71,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-embed --output results/runs/su8-four-commission",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-commission"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-commission",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6878414470002099,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-commission\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU8.md",
+      "line": 72,
+      "literal": "python scripts/lab_reference.py --recipe m1 --chip su8-embed --output results/runs/su8-four-m1",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--chip",
+        "su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe m1 --chip su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5935703000000103,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU8.md",
+      "line": 73,
+      "literal": "python scripts/lab_records.py --route su8-embed --trials results/runs/su8-four-m1/synthetic_trials.csv --output results/runs/su8-four-m1-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-embed",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-embed --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5421455249997962,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-four-m1-analysis\", \"N\": 256, \"counts\": {\"correct\": 97, \"wrong\": 1, \"inconclusive\": 158}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU8.md",
+      "line": 144,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-walsh --output results/runs/su8-walsh-commission",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-walsh",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-commission"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-walsh --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-commission",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5336351290002312,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-commission\", \"route\": \"su8-walsh\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/SU8.md",
+      "line": 145,
+      "literal": "python scripts/lab_records.py --route su8-walsh --trials results/runs/su8-walsh-commission/synthetic_trials.csv --output results/runs/su8-walsh-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-walsh",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-commission/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-walsh --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-commission/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4648918450002384,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/su8-walsh-analysis\", \"N\": 256, \"counts\": {\"correct\": 256, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/COMMISSIONING.md",
+      "line": 91,
+      "literal": "python scripts/lab_reference.py --recipe commission-su4 --output results/runs/commission-su4",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su4"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su4",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5701984709999124,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su4\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/COMMISSIONING.md",
+      "line": 92,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-embed --output results/runs/commission-su8-embed",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-embed"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-embed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5549277790000815,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/COMMISSIONING.md",
+      "line": 93,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-walsh --output results/runs/commission-su8-walsh",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-walsh",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-walsh --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6101241030000892,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh\", \"route\": \"su8-walsh\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/COMMISSIONING.md",
+      "line": 116,
+      "literal": "python scripts/lab_records.py --route su8-walsh --trials results/runs/commission-su8-walsh/synthetic_trials.csv --output results/runs/commission-su8-walsh-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-walsh",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-walsh --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5350112619998981,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/commission-su8-walsh-analysis\", \"N\": 256, \"counts\": {\"correct\": 256, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/M1.md",
+      "line": 94,
+      "literal": "python scripts/lab_reference.py --recipe m1 --chip su4 --output results/runs/m1-reference",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe m1 --chip su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5518956440000693,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/M1.md",
+      "line": 95,
+      "literal": "python scripts/lab_records.py --route su4 --trials results/runs/m1-reference/synthetic_trials.csv --output results/runs/m1-reference-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su4",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.570720517999689,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-reference-analysis\", \"N\": 256, \"counts\": {\"correct\": 97, \"wrong\": 1, \"inconclusive\": 158}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/M1.md",
+      "line": 101,
+      "literal": "python scripts/lab_reference.py --recipe m1 --chip su8-embed --output results/runs/m1-su8-reference",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--chip",
+        "su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe m1 --chip su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6495261109998864,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/M1.md",
+      "line": 102,
+      "literal": "python scripts/lab_records.py --route su8-embed --trials results/runs/m1-su8-reference/synthetic_trials.csv --output results/runs/m1-su8-reference-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-embed",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-embed --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.480821350000042,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/m1-su8-reference-analysis\", \"N\": 256, \"counts\": {\"correct\": 97, \"wrong\": 1, \"inconclusive\": 158}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P1.md",
+      "line": 109,
+      "literal": "python scripts/lab_reference.py --recipe p1 --chip su4 --output results/runs/p1-reference",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p1",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p1 --chip su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5722870280001189,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P1.md",
+      "line": 110,
+      "literal": "python scripts/lab_records.py --route su4 --trials results/runs/p1-reference/synthetic_trials.csv --output results/runs/p1-reference-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su4",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.48628733499981536,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-reference-analysis\", \"N\": 256, \"counts\": {\"correct\": 139, \"wrong\": 0, \"inconclusive\": 117}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P2.md",
+      "line": 141,
+      "literal": "python scripts/lab_reference.py --recipe p2 --chip su4 --output results/runs/p2-reference",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p2",
+        "--chip",
+        "su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p2 --chip su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6639819129995885,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P2.md",
+      "line": 142,
+      "literal": "python scripts/lab_records.py --route su4 --trials results/runs/p2-reference/synthetic_trials.csv --output results/runs/p2-reference-analysis",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su4",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5286727070001689,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-reference-analysis\", \"N\": 256, \"counts\": {\"correct\": 92, \"wrong\": 0, \"inconclusive\": 164}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 12,
+      "literal": "python scripts/lab_reference.py --recipe commission-su4 --output results/runs/lab-commission-su4",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su4",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su4"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su4 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su4",
+      "exit_code": 0,
+      "elapsed_seconds": 0.591979419999916,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su4\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 13,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-embed --output results/runs/lab-commission-su8-embed",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su8-embed"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su8-embed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6792375680001896,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 14,
+      "literal": "python scripts/lab_reference.py --recipe commission-su8-walsh --output results/runs/lab-commission-su8-walsh",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-walsh",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su8-walsh"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-walsh --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su8-walsh",
+      "exit_code": 0,
+      "elapsed_seconds": 0.616524260999995,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-commission-su8-walsh\", \"route\": \"su8-walsh\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 15,
+      "literal": "python scripts/lab_reference.py --recipe m1 --output results/runs/lab-m1",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-m1"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe m1 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-m1",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6527999289996842,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-m1\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 16,
+      "literal": "python scripts/lab_reference.py --recipe p1 --output results/runs/lab-p1",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p1",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-p1"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p1 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-p1",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6039704539998638,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-p1\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 17,
+      "literal": "python scripts/lab_reference.py --recipe p2 --output results/runs/lab-p2",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p2",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-p2"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p2 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-p2",
+      "exit_code": 0,
+      "elapsed_seconds": 0.46615393999991284,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-p2\", \"route\": \"su4\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 44,
+      "literal": "python scripts/lab_records.py --route su4 --trials examples/lab/p1/synthetic_trials.csv --output results/runs/lab-descriptive-p1",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su4",
+        "--trials",
+        "examples/lab/p1/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-p1"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials examples/lab/p1/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-p1",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5711070080001264,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-p1\", \"N\": 64, \"counts\": {\"correct\": 35, \"wrong\": 0, \"inconclusive\": 29}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 45,
+      "literal": "python scripts/lab_records.py --route su8-embed --trials examples/lab/commission-su8-embed/synthetic_trials.csv --output results/runs/lab-descriptive-embed",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-embed",
+        "--trials",
+        "examples/lab/commission-su8-embed/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-embed"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-embed --trials examples/lab/commission-su8-embed/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-embed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4930681470000309,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-embed\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "examples/lab/README.md",
+      "line": 46,
+      "literal": "python scripts/lab_records.py --route su8-walsh --trials examples/lab/commission-su8-walsh/synthetic_trials.csv --output results/runs/lab-descriptive-walsh",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-walsh",
+        "--trials",
+        "examples/lab/commission-su8-walsh/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-walsh"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-walsh --trials examples/lab/commission-su8-walsh/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-walsh",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4994318999997631,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/lab-descriptive-walsh\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P1.md (explicit prose variant)",
+      "line": null,
+      "literal": null,
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p1",
+        "--chip",
+        "su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p1 --chip su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5291628199997831,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P1.md (explicit prose variant)",
+      "line": null,
+      "literal": null,
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-embed",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-embed --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5714168110002902,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p1-su8-reference-analysis\", \"N\": 256, \"counts\": {\"correct\": 139, \"wrong\": 0, \"inconclusive\": 117}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P2.md (explicit prose variant)",
+      "line": null,
+      "literal": null,
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p2",
+        "--chip",
+        "su8-embed",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p2 --chip su8-embed --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5152792829999271,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference\", \"route\": \"su8-embed\", \"sample_attempts\": 256, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": ""
+    },
+    {
+      "page": "experiment/P2.md (explicit prose variant)",
+      "line": null,
+      "literal": null,
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_records.py",
+        "--route",
+        "su8-embed",
+        "--trials",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference/synthetic_trials.csv",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference-analysis"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-embed --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference-analysis",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4129454009998881,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/p2-su8-reference-analysis\", \"N\": 256, \"counts\": {\"correct\": 92, \"wrong\": 0, \"inconclusive\": 164}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+      "stderr": ""
+    }
+  ]
+}

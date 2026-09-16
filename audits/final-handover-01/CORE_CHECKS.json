@@ -1,0 +1,258 @@
+{
+  "status": "PASS",
+  "date": "2026-09-16",
+  "audited_baseline": "ba00d9ce64333ad08ef3b61108aa6df959cc5fc7",
+  "verified_implementation_commit": "f8a7b72fe9d0e4dcc7447e60569bf762d5c6208f",
+  "verified_implementation_tree": "874a9b8a8ba8f7c0ff3ef352d6f5769087fc6608",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "mpmath": "1.3.0"
+  },
+  "execution_note": "Science checks ran on the audited baseline. The final unit suite started with the staged implementation tree, subsequently committed byte-for-byte. Final integrity/navigation/generation checks ran on that committed implementation. Scientific routines and source/proof evidence were unchanged.",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "result": "107 baseline tests PASS; first presentation tree 115 tests, one obsolete-markup assertion failed; corrected final tree 116 tests PASS",
+      "logs": [
+        "unit.log",
+        "final-unit.log",
+        "final-unit-retry.log"
+      ]
+    },
+    {
+      "command": "python scripts/reproduce.py --output NEW_DIRECTORY",
+      "result": "5261 checks PASS; reference comparison PASS at 1e-8"
+    },
+    {
+      "command": "python repairs/theory-01/verify.py --output NEW_DIRECTORY",
+      "result": "998 historical audit and 993 repaired scientific checks PASS"
+    },
+    {
+      "command": "python studies/robustness-01/test_local.py",
+      "result": "8 tests PASS"
+    },
+    {
+      "command": "python studies/robustness-01/study.py --output NEW_DIRECTORY",
+      "result": "41 cases, 381 diagnostics PASS"
+    },
+    {
+      "command": "python studies/robustness-01/verify_certificates.py --results FRESH_RESULTS.json --output NEW_DIRECTORY",
+      "result": "11161 checks; 10828 exact positive matrices PASS"
+    },
+    {
+      "command": "python audits/final-handover-01/verify_no_optimizer.py --results FRESH_RESULTS.json --output NEW_DIRECTORY",
+      "result": "Same certificate checks PASS with zero trapped optimizer calls"
+    },
+    {
+      "command": "python scripts/verify_import.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python scripts/verify_handover.py",
+      "result": "28 documents; 307 local links; 33 script references; 31 tables; 183 rows PASS"
+    },
+    {
+      "command": "python scripts/build_readable_math.py --check",
+      "result": "Three pinned-source reading copies PASS"
+    }
+  ],
+  "interpreter": "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+  "fresh_output_root": "/workspace/scratch/d29a6922cf06/final-handover-01-runs/core",
+  "thread_policy": "OPENBLAS_NUM_THREADS=1 and OMP_NUM_THREADS=1 for unit, repair, study and local study tests",
+  "source_preservation": "All 67 tracked baseline files in studies/, repairs/, baseline/, results/, proofs/, src/ and provenance/changes/ remain byte-for-byte unchanged. Within these protected trees, the only change is the newly added final-handover ledger.",
+  "archive": "CORE_EXECUTION.tar.xz",
+  "archive_sha256": "89460b2054c411ea4e3c8c560e535b821b6bd5e32d2641d0881c52cec201078a",
+  "members": {
+    "final-integrity.json": {
+      "sha256": "cf61b1f72f932b3bb1596bc9f3d1171dbb6c5b69b1a186ccc2d8e89db064381b",
+      "bytes": 3469
+    },
+    "final-navigation.json": {
+      "sha256": "5f4ec66dfbf77b74a7edca8a52ab38ecbb00bc14ec599b03298393143247d442",
+      "bytes": 708
+    },
+    "final-reader-generation.json": {
+      "sha256": "081d206d12f21013d665d96bc8e6984b2e85f4d52458782b030834748e5a7bfe",
+      "bytes": 399
+    },
+    "final-unit-retry.log": {
+      "sha256": "540c6ad8ed69b1c146b130e196c6ce68ccb9087434f80ca834d1ca9dad541c82",
+      "bytes": 17044
+    },
+    "final-unit.log": {
+      "sha256": "cb38b16c21d4d67e24301ca8c71fd9b7eb231f2778599f6c051f97b2cac2d9ca",
+      "bytes": 17752
+    },
+    "optimizer-trap/OPTIMIZER_TRAP.json": {
+      "sha256": "d6527675142de6009ffbd3bcb1cb1b617be73f013389c55e141b567b9109ec29",
+      "bytes": 234
+    },
+    "optimizer-trap/VERIFICATION.json": {
+      "sha256": "a39808bad9b2b47a08aede2959717825ad0c62a06ee408ca088f0df3ff528e84",
+      "bytes": 387320
+    },
+    "optimizer-trap.log": {
+      "sha256": "d104941ee0b2f12f3540ae4f512efc31d5d61323d0407e3b1f87d468d461ea8d",
+      "bytes": 323
+    },
+    "repair/HIGH_PENALTY.json": {
+      "sha256": "3f6b8906f5207558cb152801b15e91a7eb340810a3446dfd44b274586464e0a2",
+      "bytes": 2421
+    },
+    "repair/SCIENTIFIC_CHECKS.json": {
+      "sha256": "704fcd3f38b138b3996352fb7cbb4efea8c7dc811df7881d75cc45d9aad6f528",
+      "bytes": 104072
+    },
+    "repair/SCIENTIFIC_DIAGNOSTICS.json": {
+      "sha256": "0377d53160351cb5bb50c92a7e6f40328b9e6edaf002d06a5181cd2639395dfe",
+      "bytes": 56534
+    },
+    "repair/SUMMARY.json": {
+      "sha256": "6e2db5274bcb768b165c96ceae6ae9bf6b4311dfff39f4a71123808a884f9e06",
+      "bytes": 14792
+    },
+    "repair/historical-audit/CHECKS.json": {
+      "sha256": "9c48ef21012e16041747e3ba650e26b5116b006b6d82600fc18d7a0ff7e988c6",
+      "bytes": 105119
+    },
+    "repair/historical-audit/DIAGNOSTICS.json": {
+      "sha256": "0e7aaebc6c8b82ba91e2690766e1fd3647001233cbc438ba02975eab6ba74bca",
+      "bytes": 58874
+    },
+    "repair/historical-audit/SUMMARY.json": {
+      "sha256": "30840a8630ac897f4b30149fdc6ff1de715579bb1cc782c12d5e5748746e9300",
+      "bytes": 1170
+    },
+    "repair/historical-audit.log": {
+      "sha256": "06afc936e0274f7b4d72ec876dbeefac480d8bf0f7207b88f2524e0efa9bc75b",
+      "bytes": 1409
+    },
+    "repair.log": {
+      "sha256": "2eae1387e766e7efc54994fdb0492fdca10ec930e8907b48ec9acf1007b4f249",
+      "bytes": 15017
+    },
+    "reproduction/REPRODUCTION.json": {
+      "sha256": "8a147767afc11518005e149b7e5debdf02a48cf1885691e6b9704b98b466fd48",
+      "bytes": 7597
+    },
+    "reproduction/analyzer_accounting_check.json": {
+      "sha256": "a6f69a6fd17926f7a9b70c78ab820e4fa3ab93100392fd8f0bbf5718cdb2e83e",
+      "bytes": 196
+    },
+    "reproduction/dimension_transfer.csv": {
+      "sha256": "a2b2eb3879cf166f0ade4066e37c4c7149fd71f0847b4797a53c6b73d18991c4",
+      "bytes": 940
+    },
+    "reproduction/high_precision_check.json": {
+      "sha256": "81ac11baa33d2ed839bf4aa32c95501092a8754e9bf2ec55e8a577ca73ad13ca",
+      "bytes": 246
+    },
+    "reproduction/hypothetical_design_forecast.csv": {
+      "sha256": "077a7d454f1bbb2f3073a85e74477c5da92a61b5cdaa618d9e4412438dbd48fa",
+      "bytes": 1428
+    },
+    "reproduction/hypothetical_design_inputs.json": {
+      "sha256": "a271e3ab1116c37f3e76f0f12c430c60aa5d47badc9ad5f83ce0341f38837d17",
+      "bytes": 25435
+    },
+    "reproduction/independent_dual_checks.csv": {
+      "sha256": "9855a6b99f803fea5c6f44bfce67fc9f4b5497cd2b4c6c735c9a2b6a481dc5ad",
+      "bytes": 1305
+    },
+    "reproduction/phase_gauge_warning.json": {
+      "sha256": "54d4ee94f8d5d0070210aa6b593d2924137124ee37afdbd16d0d716a5a704bd0",
+      "bytes": 227
+    },
+    "reproduction/preparation_recipes.csv": {
+      "sha256": "7388edfb381c26bace928c5a8927b3c4a420db318d82802d3a6989808b051e9b",
+      "bytes": 2086
+    },
+    "reproduction/quantum_frontier.csv": {
+      "sha256": "ff84fa5630a130b1e392b14b4a6dfdda435231532814d4dee08326711a5aae39",
+      "bytes": 4416
+    },
+    "reproduction/run.log": {
+      "sha256": "b33daeb6c9ca5e008b646ac9a9bcd4eec493e8ebcb79aaf9f52db0a12d60e2fa",
+      "bytes": 1167
+    },
+    "reproduction/synthetic_certification_example.json": {
+      "sha256": "8a03072b9bd3ad1180e421992d1d402f8d86d7ae1135b2c9111d1b3ac96ce794",
+      "bytes": 493
+    },
+    "reproduction/synthetic_reverse_example.json": {
+      "sha256": "40de7d472f3242c46afac4eec05b603d965f610ce9561a15cc04d1d3c711ced9",
+      "bytes": 441
+    },
+    "reproduction/uniform_exact_comparison.csv": {
+      "sha256": "cbfbe3b411224b4780c7b3394aeae7661473deff7736860927b44ff5b7b97270",
+      "bytes": 609
+    },
+    "reproduction/validation.json": {
+      "sha256": "2dc7999338023587cd0b81fa4fca406861c9edcb749e4c069003c4676bcc86fe",
+      "bytes": 577595
+    },
+    "reproduction.log": {
+      "sha256": "6b5a158dbb8b43b30ee419fd569b5bf7521c2d0dc54f70edf751e5ed831ed553",
+      "bytes": 1292
+    },
+    "robust-local.log": {
+      "sha256": "0c08967bf4a0f47f32368cd3dfa0340f282cc2aadbfea1b3dc0b9e29d6a23bb6",
+      "bytes": 860
+    },
+    "robustness/ENVIRONMENT.json": {
+      "sha256": "93abadc008248c256336a8bac7769a00dbf5584d95e1505dc28cdd6544bfc409",
+      "bytes": 583
+    },
+    "robustness/RESULTS.json": {
+      "sha256": "74c0b5ca9f114be36501426f28dc012fcfdb6b872ed6bb8533d463b6cddd14db",
+      "bytes": 357589
+    },
+    "robustness-verified/VERIFICATION.json": {
+      "sha256": "a39808bad9b2b47a08aede2959717825ad0c62a06ee408ca088f0df3ff528e84",
+      "bytes": 387320
+    },
+    "robustness-verified.log": {
+      "sha256": "a42be54b40aa7842a231fc8ce4393763f129b20a1f510f0b290a99f357a85123",
+      "bytes": 324
+    },
+    "robustness.log": {
+      "sha256": "3a4f6a6a80386cba62b6323c2edf06e0d3b0bc077906857017f304867c652139",
+      "bytes": 8231
+    },
+    "unit.log": {
+      "sha256": "faf7fb6cc2c1d4b0930256c77f4847cd468e58377f72b67f55a5a3bc0d580e5d",
+      "bytes": 15571
+    }
+  },
+  "limitations": "Exact finite-model witnesses are not physical calibration. Only declared photon-support/finite-model certificates are exact; the full classical/statistical pipeline is not interval certified. No laboratory data or priority clearance.",
+  "actual_initial_shell_commands": [
+    {
+      "name": "unit",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /workspace/scratch/d29a6922cf06/ci-env/bin/python -m unittest discover -s tests -v > /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/unit.log 2>&1"
+    },
+    {
+      "name": "reproduction",
+      "command": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/reproduce.py --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/reproduction > /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/reproduction.log 2>&1"
+    },
+    {
+      "name": "repair",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /workspace/scratch/d29a6922cf06/ci-env/bin/python repairs/theory-01/verify.py --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/repair > /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/repair.log 2>&1"
+    },
+    {
+      "name": "robustness",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /workspace/scratch/d29a6922cf06/ci-env/bin/python studies/robustness-01/study.py --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/robustness > /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/robustness.log 2>&1"
+    },
+    {
+      "name": "robust_local",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /workspace/scratch/d29a6922cf06/ci-env/bin/python studies/robustness-01/test_local.py > /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/robust-local.log 2>&1"
+    }
+  ],
+  "actual_additional_shell_commands": [
+    "python studies/robustness-01/verify_certificates.py --results /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/robustness/RESULTS.json --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/robustness-verified",
+    "python audits/final-handover-01/verify_no_optimizer.py --results /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/robustness/RESULTS.json --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/optimizer-trap",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m unittest discover -s tests -v > /workspace/scratch/d29a6922cf06/final-handover-01-runs/core/final-unit-retry.log 2>&1"
+  ],
+  "additional_command_interpreter_note": "python in actual_additional_shell_commands was /workspace/scratch/d29a6922cf06/ci-env/bin/python; stdout/stderr were retained in the corresponding archive logs."
+}

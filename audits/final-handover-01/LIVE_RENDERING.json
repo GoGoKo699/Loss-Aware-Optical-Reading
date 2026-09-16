@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-16",
+  "implementation_commit": "f8a7b72fe9d0e4dcc7447e60569bf762d5c6208f",
+  "method": "Authenticated-free Chrome visit of public GitHub blob pages, DOM snapshots and actual viewport screenshots. No local renderer substituted for these observations.",
+  "observations": [
+    {
+      "url": "https://github.com/GoGoKo699/Loss-Aware-Optical-Reading/blob/f8a7b72fe9d0e4dcc7447e60569bf762d5c6208f/docs/ROBUSTNESS_REPORT.md#2-symmetric-random-dephasing-preserves-the-exact-simplification",
+      "math_renderers": 3,
+      "renderer_errors": [],
+      "shadow_roots": 0
+    },
+    {
+      "url": "https://github.com/GoGoKo699/Loss-Aware-Optical-Reading/blob/f8a7b72fe9d0e4dcc7447e60569bf762d5c6208f/docs/ROBUSTNESS_PROOFS.md#3-a-conservative-certificate-for-arbitrary-small-coherent-map-errors",
+      "math_renderers": 16,
+      "renderer_errors": [],
+      "shadow_roots": 0
+    },
+    {
+      "url": "https://github.com/GoGoKo699/Loss-Aware-Optical-Reading/blob/f8a7b72fe9d0e4dcc7447e60569bf762d5c6208f/docs/NUMERICAL_PROOF.md#5-reverse-certificate",
+      "math_renderers": 7,
+      "renderer_errors": [],
+      "shadow_roots": 0
+    },
+    {
+      "url": "https://github.com/GoGoKo699/Loss-Aware-Optical-Reading/blob/f8a7b72fe9d0e4dcc7447e60569bf762d5c6208f/REPORT.md",
+      "math_renderers": 41,
+      "renderer_errors": [],
+      "shadow_roots": 0
+    }
+  ],
+  "visual_findings": "REPORT section3 contrast, classical bound and calibration bound are visible without red error panels. Inline norm and trial grid set render correctly. Robustness report section2, robustness proofs section3 and numerical proof section5 display formulas and set delimiters correctly.",
+  "baseline_checks": "At ba00d9, commissioning table, contributions sectionB and Walsh8 code/table rendered correctly; README entry table offered both confirmed chips. REPORT section3 showed three real equation error panels before repair.",
+  "limits": "Targeted desktop viewport review, not exhaustive mobile/all-archive visual certification. Math renderer element counts include inline mathematics. Error-node query is supplementary; screenshot observations are the visual evidence.",
+  "screenshots_committed": false
+}

@@ -16,6 +16,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
 from verify_import import (
+    _final_handover_approvals, _final_handover_hash,
     _license_approval, _license_hash,
     TABLE_CLEANUP_RECORD, _table_cleanup_hash,
     verify, LAYOUT_RECORD, LAYOUT_PATHS, LAYOUT_PREIMAGES, LAYOUT_BASE_COMMIT,
@@ -65,11 +66,13 @@ class LayoutIntegrationTests(unittest.TestCase):
         table_cleanup = {entry['path']: entry for entry in
                          json.loads((ROOT/TABLE_CLEANUP_RECORD).read_text())['changes']}
         license_approval = _license_approval(ROOT)
+        final_handover, _ = _final_handover_approvals(ROOT)
         for entry in ledger['changes']:
             self.assertEqual(entry['old_sha256'], LAYOUT_PREIMAGES[entry['path']])
             expected = _math_approval_hash(entry['path'], entry['new_sha256'], math_approval)
             expected = _table_cleanup_hash(entry['path'], expected, table_cleanup)
             expected = _license_hash(entry['path'], expected, license_approval)
+            expected = _final_handover_hash(entry['path'], expected, final_handover)
             self.assertEqual(expected,
                              hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest())
 

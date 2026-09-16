@@ -85,7 +85,7 @@ imperfect-source forecast, registered statistics or acquisition plan.
 
 - [Practical worksheet](../experiment/UNCERTAINTY.md): laboratory values left to supply.
 - [Original calibration worksheet](../studies/robustness-01/CALIBRATION_WORKSHEET.md): near-optimality and source-class advantage conditions.
-- [Full study report](../studies/robustness-01/REPORT.md): model-specific results and boundaries.
-- [Proofs](../studies/robustness-01/PROOFS.md): common bases, dephasing, phase errors and map bounds.
+- [Full study report](ROBUSTNESS_REPORT.md): model-specific results and boundaries.
+- [Proofs](ROBUSTNESS_PROOFS.md): common bases, dephasing, phase errors and map bounds.
 - [Study commands and manifest](../studies/robustness-01/README.md): reproducible code and exact witnesses.
 - [Independent import review](../integrations/lab-handover-01/ROBUSTNESS_REVIEW.md): precise checks and environment.

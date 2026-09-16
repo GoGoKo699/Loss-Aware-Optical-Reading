@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "base_commit": "ba00d9ce64333ad08ef3b61108aa6df959cc5fc7",
+  "base_tree": "605719db8b64ec45d75454dbe4338d56140d8593",
+  "previous_record": "provenance/changes/license-01.json",
+  "previous_record_sha256": "3b61cf56e77b2b1063be649a22f391f05aa2b57851c6d6ca01b37bc6fa94dad0",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "interpretation_only": true,
+  "mathematical_content_changed": false,
+  "authorization": "The owner requested a final sanity check before release and laboratory handover. Prior explicit handover/layout-repair and reviewed history-preserving merge authorization continues to apply to the bounded reader defects confirmed in this audit. This layer does not authorize a release, visibility change, laboratory message or hardware execution.",
+  "scope": "Exactly four existing reader documents and three generated reader copies. All eight predecessor ledgers, supplied study and repair bytes, source archives, numerical routines, canonical proofs, protocols and frozen evidence remain unchanged. scripts/build_readable_math.py regenerates only the three named copies from pinned originals; scripts/verify_handover.py extends static coverage to REPORT.md. Integrity and presentation tests record these bounded changes without altering scientific assertions or tolerances.",
+  "changes": [
+    {
+      "path": "README.md",
+      "old_sha256": "113af6192e55a803c68dacc8b34286284415afecb058b1988aaf2a9fc1e49275",
+      "new_sha256": "4c1736b8874efdb5bd5876041e2b1699ff085e18f9b523e59eec2dd0c40cc20e",
+      "reason": "Route the existing robustness-proofs navigation link to the generated readable copy; preserve all scientific, experiment and licensing text."
+    },
+    {
+      "path": "REPORT.md",
+      "old_sha256": "85bb81ffccc33fcee17a2e3566945d9e3b8386f069d25779cab2f00c2ee9febd",
+      "new_sha256": "9a2f5c690001ac62e32deb2224f955313018b9b5a1a59878e8f9801738b2405c",
+      "reason": "Repair GitHub math transport with fenced display blocks, braced fraction arguments, HTML-safe comparisons and protected inline math; update only the stale hardware-availability qualification to match the previously confirmed SU4/SU8 availability while retaining outstanding interface and calibration requirements."
+    },
+    {
+      "path": "docs/ROBUSTNESS_GUIDE.md",
+      "old_sha256": "bbd4b9e2a4fb6d2fb02f90b440bcc75a4b2f5c218f77be52adfab025ec7f3006",
+      "new_sha256": "c013e0914bb44f976199cee50d5e0147c6d4daf6f60f8a6be199c4cdbd882036",
+      "reason": "Route the existing full-report and proofs links to generated readable copies of the unchanged supplied robustness study."
+    },
+    {
+      "path": "docs/NUMERICAL_CONTRACT.md",
+      "old_sha256": "7d146191822bc6dda171f78285a3f64441a86b638092d6a332f6697b2481b133",
+      "new_sha256": "b5068d87593430eedb852d0c2fc058a9ff446ee58c09084ba005bf7e20afc504",
+      "reason": "Route the existing numerical-proof link to the generated readable copy of the unchanged repair proof."
+    }
+  ],
+  "additions": [
+    {
+      "path": "docs/ROBUSTNESS_REPORT.md",
+      "sha256": "499cf7161f8efeddce3eaef79852b4cd19df095f94130da183e3648785fda0fd",
+      "source_path": "studies/robustness-01/REPORT.md",
+      "source_sha256": "bfce35293ec634b4ac825cce52cf500c35a5fb87a9d9964d865303dfe67030b2",
+      "reason": "Generate a readable current copy of the frozen supplied report: preserve scientific prose and values, repair math transport and relative links, omit two exactly pinned obsolete delivery-status paragraphs, and link explicitly to the preserved original and integration record."
+    },
+    {
+      "path": "docs/ROBUSTNESS_PROOFS.md",
+      "sha256": "06ba0ac4a6a992026ff46d2c39f635629fecfd80463e0acf71a012d1664d0c6f",
+      "source_path": "studies/robustness-01/PROOFS.md",
+      "source_sha256": "722155ce5c119a81defb63c1432013d260003e30028ef9441110baf67f1b6fed",
+      "reason": "Generate a readable copy of the frozen supplied proofs with equivalent math transport and rebased links; preserve the original scientific prose and values and link explicitly to the original source."
+    },
+    {
+      "path": "docs/NUMERICAL_PROOF.md",
+      "sha256": "46994ff7ec9eebe33a33edfb52d4ee593cc3f8a2595586699046d7bd295f4a8e",
+      "source_path": "repairs/theory-01/NUMERICAL_PROOF.md",
+      "source_sha256": "b20dc1174675bac9d701127930ed2c9bd1b11b53a64438e1ee5dd8951c48010e",
+      "reason": "Generate a readable copy of the frozen repair proof with equivalent math transport and rebased links; preserve the original scientific prose and values and link explicitly to the original source."
+    }
+  ],
+  "test_adjustments": [
+    {
+      "path": "tests/test_handover_integrity.py",
+      "test": "test_visible_preimages_and_predecessor_chain",
+      "previous_assertion": "The historical authorized hash chain ends at the current reader-document bytes.",
+      "new_assertion": "The unchanged historical chain must match the final-handover layer old hash before its final reader-document hash is compared with current bytes.",
+      "reason": "Preserve every predecessor ledger byte while allowing only the bounded later presentation/navigation repair; scientific assertions and tolerances remain unchanged."
+    },
+    {
+      "path": "tests/test_layout_integration.py",
+      "test": "test_exact_recorded_baseline_and_old_new_bytes",
+      "previous_assertion": "The historical authorized hash chain ends at the current reader-document bytes.",
+      "new_assertion": "The unchanged historical chain must match the final-handover layer old hash before its final reader-document hash is compared with current bytes.",
+      "reason": "Preserve every predecessor ledger byte while allowing only the bounded later presentation/navigation repair; scientific assertions and tolerances remain unchanged."
+    },
+    {
+      "path": "tests/test_math_approval_integration.py",
+      "test": "test_exact_authorized_chain_and_current_bytes",
+      "previous_assertion": "The historical authorized hash chain ends at the current reader-document bytes.",
+      "new_assertion": "The unchanged historical chain must match the final-handover layer old hash before its final reader-document hash is compared with current bytes.",
+      "reason": "Preserve every predecessor ledger byte while allowing only the bounded later presentation/navigation repair; scientific assertions and tolerances remain unchanged."
+    },
+    {
+      "path": "tests/test_license_integration.py",
+      "test": "test_exact_preimage_current_bytes_and_predecessor",
+      "previous_assertion": "The historical authorized hash chain ends at the current reader-document bytes.",
+      "new_assertion": "The unchanged historical chain must match the final-handover layer old hash before its final reader-document hash is compared with current bytes.",
+      "reason": "Preserve every predecessor ledger byte while allowing only the bounded later presentation/navigation repair; scientific assertions and tolerances remain unchanged."
+    },
+    {
+      "path": "tests/test_handover_documents.py",
+      "test": "test_reported_pages_keep_math_out_of_markdown_preprocessing",
+      "previous_assertion": "The previously reported reader pages contain no dollar-display delimiters and retain their expected fenced-math counts.",
+      "new_assertion": "Keep all previous assertions and also check REPORT.md (11 fenced blocks), docs/ROBUSTNESS_REPORT.md (3), docs/ROBUSTNESS_PROOFS.md (16) and docs/NUMERICAL_PROOF.md (7).",
+      "reason": "Extend presentation coverage to the current main report and the generated source-preserving reader copies; no existing assertion is removed or relaxed."
+    },
+    {
+      "path": "tests/test_documentation_integration.py",
+      "test": "test_report_equations_and_lab_questions_preserved",
+      "previous_assertion": "Extract 11 original bracket-delimited displays and require exact payload equality with current dollar-delimited displays; preserve exact laboratory-question equality.",
+      "new_assertion": "Accept original bracket, legacy dollar and fenced-math display delimiters; require exactly 11 original and 11 current displays and exact payload equality after only the report-specific equivalent fraction spellings and j<k comparison spelling are normalized. Keep the exact laboratory-question assertion unchanged.",
+      "reason": "The browser-confirmed presentation repair changes math transport but not equations. The old dollar-only extractor found no current displays. A new negative test retains sensitivity to a changed coefficient, relation or sign; no scientific assertion or tolerance is weakened."
+    }
+  ]
+}

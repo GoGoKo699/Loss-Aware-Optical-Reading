@@ -208,10 +208,14 @@ def verify_documents(root: Path, documents: list[Path]) -> dict:
 
 
 def verify(root: Path = ROOT) -> dict:
-    documents = {root/'README.md', root/'CLAIM_STATUS.md', root/'work_orders/CURRENT.md'}
+    documents = {root/'README.md', root/'REPORT.md', root/'CLAIM_STATUS.md',
+                 root/'work_orders/CURRENT.md'}
     for name in ('docs', 'experiment'):
         documents.update((root/name).rglob('*.md'))
-    return verify_documents(root, sorted(documents))
+    result = verify_documents(root, sorted(documents))
+    from build_readable_math import build
+    result['generated_reading_copies'] = build(root)['copies']
+    return result
 
 
 if __name__ == '__main__':

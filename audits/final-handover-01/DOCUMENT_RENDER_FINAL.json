@@ -1,0 +1,1892 @@
+{
+  "commit": "ba00d9ce64333ad08ef3b61108aa6df959cc5fc7",
+  "runtime": {
+    "node": "v24.19.0",
+    "markdown_it": "14.1.0",
+    "mathjax": "3.2.2",
+    "parse5": "7.2.1"
+  },
+  "primary_documents": 28,
+  "linked_support_documents": 11,
+  "math_expressions": 144,
+  "mathjax_errors": 0,
+  "tables": 38,
+  "table_body_rows": 226,
+  "local_links": 344,
+  "findings": [
+    {
+      "file": "studies/robustness-01/PROOFS.md",
+      "line": 56,
+      "category": "markdown-before-math-change",
+      "transported_payload": "\\Gamma_A(\\rho)=A\\rho A^\\dagger\n;\\oplus;\\mathrm{Tr}[(I-A^\\dagger A)\\rho]|\\mathrm{vac}\\rangle\\langle\\mathrm{vac}|.",
+      "error": null
+    },
+    {
+      "file": "studies/robustness-01/PROOFS.md",
+      "line": 72,
+      "category": "markdown-before-math-change",
+      "transported_payload": "0\\le\\Delta\\le\\min{1,24\\epsilon}.",
+      "error": null
+    },
+    {
+      "file": "studies/robustness-01/PROOFS.md",
+      "line": 78,
+      "category": "markdown-before-math-change",
+      "transported_payload": "\\Delta\\le\\min{1,\\beta_0+12\\epsilon}-L_D.",
+      "error": null
+    },
+    {
+      "file": "studies/robustness-01/PROOFS.md",
+      "line": 112,
+      "category": "markdown-before-math-change",
+      "transported_payload": "B_v=\\frac32 v,aa^T-\n\\left(\\frac72+\\frac32v\\right)\\mathrm{diag}(\\eta).",
+      "error": null
+    },
+    {
+      "file": "studies/robustness-01/PROOFS.md",
+      "line": 119,
+      "category": "markdown-before-math-change",
+      "transported_payload": "J=\\max{0,\\lambda_{\\max}(B_v)}.",
+      "error": null
+    },
+    {
+      "file": "studies/robustness-01/PROOFS.md",
+      "line": 279,
+      "category": "markdown-before-math-change",
+      "transported_payload": "K=R,\\mathrm{diag}(1,1,1,1-d)R^\\dagger,\n\\qquad A_j=K T O_j,",
+      "error": null
+    },
+    {
+      "file": "studies/robustness-01/REPORT.md",
+      "line": 52,
+      "category": "markdown-before-math-change",
+      "transported_payload": "\\max\\left{0,\\lambda_{\\max}\\left[\n\\frac32v,aa^T-\\left(\\frac72+\\frac32v\\right)\n\\mathrm{diag}(\\eta)\\right]\\right},\\qquad a_i=\\sqrt{\\eta_i}.",
+      "error": "MathJax error after Markdown transport"
+    },
+    {
+      "file": "studies/robustness-01/REPORT.md",
+      "line": 128,
+      "category": "markdown-before-math-change",
+      "transported_payload": "0\\le\\Delta\\le\\min{1,24\\epsilon}.",
+      "error": null
+    },
+    {
+      "file": "repairs/theory-01/NUMERICAL_PROOF.md",
+      "line": 91,
+      "category": "markdown-before-math-change",
+      "transported_payload": "\\min{1,U+2(1+\\lambda)\\epsilon}.",
+      "error": null
+    }
+  ],
+  "pages": [
+    {
+      "file": "CLAIM_STATUS.md",
+      "scope": "primary",
+      "sha256": "81d99b44e8af559959ab67f282a74667e0cfcfd0e9e578ca5a1d0a6ecd0ea563",
+      "tables": 3,
+      "table_body_rows": 27,
+      "local_links": 16,
+      "math": []
+    },
+    {
+      "file": "README.md",
+      "scope": "primary",
+      "sha256": "4c1736b8874efdb5bd5876041e2b1699ff085e18f9b523e59eec2dd0c40cc20e",
+      "tables": 3,
+      "table_body_rows": 14,
+      "local_links": 27,
+      "math": []
+    },
+    {
+      "file": "REPORT.md",
+      "scope": "primary",
+      "sha256": "9a2f5c690001ac62e32deb2224f955313018b9b5a1a59878e8f9801738b2405c",
+      "tables": 1,
+      "table_body_rows": 3,
+      "local_links": 16,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 34,
+          "tex_sha256": "cd4eb4f06561efb0b4300416ad9f8fc57b017a4be879268a3579c519fc032939",
+          "svg_sha256": "5e0bf745ae834bbd616c1617d9200c4177fe6d54a6b58b160179a33952e973a7",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 47,
+          "tex_sha256": "8de58537710ca9bf6de1d6e732181bd48f040376c3b4b6662af91908eba683ce",
+          "svg_sha256": "80cd87f8f3631547308351ba4ea66021fe3e514f28a815669e2f278677e39820",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 54,
+          "tex_sha256": "31618945a2204d4ba8c3a2cacdbbfc26866c95eefd2d9b8fcf7328a945b8ad89",
+          "svg_sha256": "98c473caaa8258ecb5ed84b4ac00009285a211ad395c713fd65bbf357984a607",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 94,
+          "tex_sha256": "6d39f80da5000e721fba31b1900fede68c86d8b765bd052f8af374287b671f25",
+          "svg_sha256": "b724e6aceeffd7f66ae9f034d8714b79c989e0b3cc95b93bc2821472779f2ffb",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 101,
+          "tex_sha256": "c9a429b8281d610d19881fa0a7bd94067e324991d6c6fb9a6218ce646f0e9549",
+          "svg_sha256": "032a59995a060849cea3ee5d80f0375f9d0f9e607364ba31b70babaa3f323a35",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 123,
+          "tex_sha256": "cc9775b07089a24ba35c231e02adaf097baa005e58f36c15fdf5a3cef78315b3",
+          "svg_sha256": "525bda97e86116a1616e4ec5690df5a21390be4a91d8e21d7a1865ea62fe4abd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 130,
+          "tex_sha256": "32d85719834fdffbf296c52a8480f930dcf3fa202882d2e6bf2c0171046ce718",
+          "svg_sha256": "d56d5437ba1dfc5c9995a28fe3a8ff0771352acde2c3c8d8a5aa1ab97726a92a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 154,
+          "tex_sha256": "23623a2b4049c0cde07ba458ed8f4ce5a5ba97e5d0d80655e7afb5997a8d1188",
+          "svg_sha256": "208c1526d4361cfcd53d7da6b523a9a7859628880e25915f662f7f37808dccd2",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 161,
+          "tex_sha256": "58ad40049399cecf130ca8171de1779e2ddb507b91999612084dfe7b8e62397c",
+          "svg_sha256": "156f6934a92b7bd20950f9e510eb94db9325e933ee653b1330084b2f4dad847d",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 217,
+          "tex_sha256": "99aba35be5b5654e4c60170518be1a31fc2b65a8f14cac05da7697b4d7eb74f7",
+          "svg_sha256": "6652cd0f9ddadc25b964b16490d0ccbbd8da6e703bd7cdc9a8f4e235dffef1a5",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 258,
+          "tex_sha256": "4207cba5a995b5834ddd43439a6eaf4ff90317ed232509059c4832b76b6fc0cf",
+          "svg_sha256": "0c73becbfff4989a4bca0574373646466ecc05f1e8ddb4630e14e5b5973d5416",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 43,
+          "tex_sha256": "05868acf8e951264504e35dd61e0b8d7452b382d774ec389c07a4d18bea0c315",
+          "svg_sha256": "3e3ccb9243ed86f8525f3cade78906299cad840a09db7101f56697592382c9ab",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 44,
+          "tex_sha256": "583cf6290785d72cc1b71808962dd4bd72ca369f004fb5cb587694fc1b26149f",
+          "svg_sha256": "5c13b16d37ac31304ca0b24da07d9e4c165dcfd5e175d32b0de002f287857745",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 45,
+          "tex_sha256": "46a76a5c0b11fc5e79507b55010075c2d195fa1dfcbe4557624be1185610b86a",
+          "svg_sha256": "2475babfddec06a7e1de4820c9e260f413626630e5c6369dce0969713fb8b091",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 45,
+          "tex_sha256": "7c41282d78fd32e314107decf10a698e1feb5143ebd253ac3b6e725c0e8406cc",
+          "svg_sha256": "9d132646c1f3d9d41036b24ee6480f74a7817f7e8b7980b410aa2e261ac1d89b",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 58,
+          "tex_sha256": "1dc141c312d4268d4cc64093ade44461df84e66de7c6ba3e4ada228bddb44912",
+          "svg_sha256": "ac418576305e263b25429ac2484604ca31e43475a31c115e15f93c257e650cb0",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 58,
+          "tex_sha256": "594e519ae499312b29433b7dd8a97ff068defcba9755b6d5d00e84c524d67b06",
+          "svg_sha256": "064bfba4cb9bfe0e78e14ebd647f6a13262a194b53efe004922d1e2d7796c7bf",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 59,
+          "tex_sha256": "3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43",
+          "svg_sha256": "cf8ab4cfb4850ba4ca3881503cf0c49374fb79b1c2581a20f2e3e4c84fe829e7",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 62,
+          "tex_sha256": "d7c590e0d6afce80c075293d167ad519a91ef62a57c9cacaf5b8d8d5cc3b51d1",
+          "svg_sha256": "ab202f28a2208fe763ecda4d7d29422f2f93bb8f5c5394909b4e7c029e7b3454",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 64,
+          "tex_sha256": "830fe77bde912ca8261f3983e1593b5a340b4e87deb9843f647bce02273b686c",
+          "svg_sha256": "ad8deba25e5a3dd6f91ebd064d80875875cc141826e200023aa9b0f997a8368c",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 65,
+          "tex_sha256": "619e7d66f68f952f10da6462edf68f9319c1e87fa74f4013d14064c759f603ef",
+          "svg_sha256": "d1457ee2fee5141e4691338bffe77c373bd6ef7ba9458e85d8a439b8010a81fd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 66,
+          "tex_sha256": "32cd54db063c31677640f51793c90860e3bf1172cb60340bc55606a59eb4b506",
+          "svg_sha256": "89196e04ef1483fcf519fa2902f7383ac649f1d7505cca5361673e6621691311",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 67,
+          "tex_sha256": "619e7d66f68f952f10da6462edf68f9319c1e87fa74f4013d14064c759f603ef",
+          "svg_sha256": "d1457ee2fee5141e4691338bffe77c373bd6ef7ba9458e85d8a439b8010a81fd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 68,
+          "tex_sha256": "6e87ecdbb8b3461ce70e819e5a5e2752fe210311ce667f7d5864da0613024585",
+          "svg_sha256": "7d3a908a6898d7742af5cb975463ec8a320968a179696c5ef5403a33760c0336",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 90,
+          "tex_sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8",
+          "svg_sha256": "af4c628af8524a9988c651d2bb6149e7928ca2f0e0c6190fed6f3384b55e84d5",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 91,
+          "tex_sha256": "cd49aea090c2adc2d19213d6b22dae907a7592b3ca824d1b5ba3a2accbbae9d7",
+          "svg_sha256": "79688ad826dd479855836eb09a2fa723e691df26d601abccf77dbc27d521ccc1",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 91,
+          "tex_sha256": "492247e1bab15272d1e53b8015c042bf6fa0cb8f23ec52cad93d6ba80dafb804",
+          "svg_sha256": "2de4a4cfdffadc0d7f370ed75c6d65ee33fed19ea277219bc10ce01cc3ef7ce5",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 106,
+          "tex_sha256": "5dab30be4b286fa6a8e0174f9f4157275f9c527d56bb861d9a265f250d944c32",
+          "svg_sha256": "8c1d73d08e6ca50ebea2baabb6f425f0c35bbdaa72088d4b93db79f7c1ad5b18",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 106,
+          "tex_sha256": "aafe168ca89caaec9b1b80881a326e6620548f9cbd556c65eaec492c6476b23d",
+          "svg_sha256": "8d38f034b79072a7beba9e8ca10bbfb1fee9e67532abbe6b4d2d48f031b78cfe",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 110,
+          "tex_sha256": "94e0bfbd7a7821cb130557efcebfd78728ff32e2149b194995d7ce87b2d6bf04",
+          "svg_sha256": "7bfba6b9bd4243f6181b7bf0a22eed0b9cf909c272afae1857feaa6e7e00ac36",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 121,
+          "tex_sha256": "c0307cd43e859d2328336995fbdfe090052be86e79d9d194c9f0d94a7d145826",
+          "svg_sha256": "427a6020356b5147c699ca5f6218bc13c7d7e6b441093f1281109fc2c5d21a5b",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 138,
+          "tex_sha256": "de77e8aa947e38cec42d03d36b6c0734eccd095fd8cf11af9e6c0a5526835c85",
+          "svg_sha256": "d44b6ca3cd04512ce497e5d9987466b8de15e671999958333ef221b3a5f5fe5a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 151,
+          "tex_sha256": "4488e0ef4704acf9705c384894c70e97a15012b0495657d5e1713c4052f8820d",
+          "svg_sha256": "f109c3b32b49b1ce158bb53d3e7cfbd5511ffed09cdc386c8b427fd9757c5132",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 159,
+          "tex_sha256": "8c0fcafcea0e1ffca48ff8c91671396981c81fbab3a34fe68f2057dfd9114583",
+          "svg_sha256": "860e4a06e25eef7574e6729f089d9b9e3c322159d6fd88e2c7521224461b351a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 170,
+          "tex_sha256": "993220b6cfa7601991829be0b040ce5cbb170312d925173e6b6924682fefde39",
+          "svg_sha256": "d63099c14ed3c3f4fc8e264be5a95f68b3ce897f575fc72b75c28efcaaa53209",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 170,
+          "tex_sha256": "4b94deda66b5337f1917351e6df5c0af3497a41bede640af520475425f093f6c",
+          "svg_sha256": "b6436eb160c8acb07d8da2477bd69c268f331932e50c7c8cb6ca2348c8e72686",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 189,
+          "tex_sha256": "f4e3f6f2bd5476d902f4952f0a71786192d00d85a4ee524045dfc1ec638e1410",
+          "svg_sha256": "89a04330f9a07f7060aa4065917812f2d7dc3490e2e0e3e8d795438df1a6e4fe",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 189,
+          "tex_sha256": "42c92db04ba75e5b652a5672edcaec9b3ccc20c01313f03465a69f1f7b925e0d",
+          "svg_sha256": "b005b3620adc1bb5551aaf47b6205ae585d74063d9f05f506a2280f787c410d4",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 190,
+          "tex_sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8",
+          "svg_sha256": "af4c628af8524a9988c651d2bb6149e7928ca2f0e0c6190fed6f3384b55e84d5",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 196,
+          "tex_sha256": "656a4778a5389cf842b08812b733cd1d01f14fc2ad98a5f4ad9ee3339abcef5c",
+          "svg_sha256": "f6c48d12e8cdf8d5294cc546c19b5fd11d39b7d4e1ef67cafd5272fb4c3c7664",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "inline",
+          "line": 214,
+          "tex_sha256": "77449d53c5be9d11da2cae5b61c8ba483f1251a3e896e14ab9d506f42a935088",
+          "svg_sha256": "b4067f990d5ad587fe2c9970c96496bd7c3388f6598b9c4c12ef1a3897488aa2",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "docs/CONTRIBUTIONS.md",
+      "scope": "primary",
+      "sha256": "bae9c077e4f8074de7b97dbc48280dd918a40e4dfdc64bdc32bd3c7727f85f33",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 8,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 27,
+          "tex_sha256": "027789dd2828757271c89334e28f466eaeabf480be97fe4fca0564decdbd2b2a",
+          "svg_sha256": "ba0208b023df1e8a9468aae8e7371b3f6233e4aa09a45fffe50a57ebf5bfd34d",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 62,
+          "tex_sha256": "50bf9cc93536993232dbe67351e9d5a3941276b4dd1bf8899df18c43060a7001",
+          "svg_sha256": "3b2a8f4c94099eea31fc1774cc7afd009c732961c7365d835c9fcfedc4ef6280",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 69,
+          "tex_sha256": "c4578d1be15f5131ba35907e44eccaf5e9433beb8fbd9082cecac0b40bb68a47",
+          "svg_sha256": "cc8a1df1c02dc604f8a98a58efd6e8c94148f65bfc2d67cb83c3916cb198808c",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "docs/NUMERICAL_CONTRACT.md",
+      "scope": "primary",
+      "sha256": "b5068d87593430eedb852d0c2fc058a9ff446ee58c09084ba005bf7e20afc504",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 1,
+      "math": []
+    },
+    {
+      "file": "docs/PHILOSOPHY_DRAFT.md",
+      "scope": "primary",
+      "sha256": "f8f017aad26fff019b5fedf675adc9be0d05ff38cbdb19bc4b3ee6457c847fbd",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 2,
+      "math": []
+    },
+    {
+      "file": "docs/PHYSICAL_SETTING.md",
+      "scope": "primary",
+      "sha256": "8ca9a2d0a7dd0be06d81903af03403bc3c659665d2709844ca0620681a3e1112",
+      "tables": 1,
+      "table_body_rows": 10,
+      "local_links": 5,
+      "math": []
+    },
+    {
+      "file": "docs/READING_CROSSWALK.md",
+      "scope": "primary",
+      "sha256": "369119a0aaf31d8a8f8da2a40e0a8dbdead723795397e7d6876a6c869f33a012",
+      "tables": 2,
+      "table_body_rows": 10,
+      "local_links": 48,
+      "math": []
+    },
+    {
+      "file": "docs/REPRODUCE.md",
+      "scope": "primary",
+      "sha256": "f03e65d30264917a5996cc39c119ccfd58bb96c97843f21ce0d313468480cb06",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 5,
+      "math": []
+    },
+    {
+      "file": "docs/ROADMAP.md",
+      "scope": "primary",
+      "sha256": "ea82fd364fda4822c08d49f4e109658e199178abf038ef934790cf301158be9b",
+      "tables": 1,
+      "table_body_rows": 4,
+      "local_links": 7,
+      "math": []
+    },
+    {
+      "file": "docs/ROBUSTNESS_GUIDE.md",
+      "scope": "primary",
+      "sha256": "c013e0914bb44f976199cee50d5e0147c6d4daf6f60f8a6be199c4cdbd882036",
+      "tables": 1,
+      "table_body_rows": 5,
+      "local_links": 9,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 40,
+          "tex_sha256": "f0bc1cf2cc4bca9638dbe2251d7d61b7eb0d24c4f01752a916774ad60c09d3a5",
+          "svg_sha256": "1846969e04fc7245d4255eedc2f8dd404bc3ff7d8b517d328e94750ad2af5704",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "docs/THEORY_ROUTE.md",
+      "scope": "primary",
+      "sha256": "7d34e4c8a969d1f69eff7232ea518bc6d959ed25c33914f458769bce035271d4",
+      "tables": 2,
+      "table_body_rows": 6,
+      "local_links": 20,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 26,
+          "tex_sha256": "dd013efc10f46ebdb00b027415d3e9855748063d8030d08a0c1702525348be68",
+          "svg_sha256": "a922070b4f346c9f3b2a1ed82bcc299a099980ee17fad120beac92c374e51ec2",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 35,
+          "tex_sha256": "cb7346c07563b79cd9bb2bf0ae725841589219f767cd0d8ba44abd7497419034",
+          "svg_sha256": "4f70eed307aea9c3682fe97cd21a8cb862ddecfd3cf3d2a352475f93c37e608d",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 51,
+          "tex_sha256": "9c63687fa981dd3f3a90826c3840b66fe8ef2a62567ee88e5823ce13f4630e2c",
+          "svg_sha256": "3c98ed46c940eb5b084724d89a1923e6086a9e898f9d11188ad83ba658f2f092",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 58,
+          "tex_sha256": "b78361ce492f3b9a309717e03042d46526d7c777be09e5c552b243d5e1ae4d43",
+          "svg_sha256": "360545a2f1ef16e61047d60961711268cb774fccfcad580ea611dfbaf5391c7a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 76,
+          "tex_sha256": "0ec625d2627ee863eb8d97f252129e1fa5d7a20e17f4ab1cc999f65449991dbe",
+          "svg_sha256": "809d26a7aa739782dd1b324c2a8b683c418362e108e4ce1e6583e23af06cec70",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 81,
+          "tex_sha256": "62109b292bc5f44260099d96adbc1b6dfc7e80e7a1e516bdab278464cfa78c51",
+          "svg_sha256": "6fb53fdf4f3da20f7f2dfa9e1b970c1a795536a9c24ef684a922707090bb08ef",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 93,
+          "tex_sha256": "69d501ac7670626d3142ec62e2bf643a95b89500f77511b0a65008372ac32756",
+          "svg_sha256": "ac1748e336fcb8b74fa4e041cf8a8ed3fdd0addd7d42a8d5f9127613553868f3",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 107,
+          "tex_sha256": "a36002e88c0682d7d9d3111a2276ff8ecedb5f25210f1602b0e0943399fa7d70",
+          "svg_sha256": "7dce761d83152d1334d92bc82868121bd42bdd61d810e2e8febc1c7ee552b323",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 119,
+          "tex_sha256": "0fb576a0da06a21d2c9d1609657703b452ad141b8a612a2a0b8dfb968dbccd85",
+          "svg_sha256": "6cb5ec3dd51074d04712e32bce11b94025beea1c27381c5ae7236724abc377a0",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 146,
+          "tex_sha256": "e0861b65f029c19651d0ea4088d7c66a068e076ba8c4fd890b21f9c5f1779820",
+          "svg_sha256": "f5de9af3ff514d197344e784634001cfcad94224095749b2fe6fddfc99829f24",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 155,
+          "tex_sha256": "d75d664f78debdc409c3e7c999fefb01d55e4c376dac4b882b6fd069b6c94763",
+          "svg_sha256": "7da97e5b1f90eb11d3aa95923fa53d26b5ff745e99c36e7bdfb4f1529a188654",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 206,
+          "tex_sha256": "75110ebcc476229791ab87015fde90b1fb1b12ead91918dfa369b232512756a1",
+          "svg_sha256": "4cedfc12bf11b3d3725eb55a04eafdd9f8d637bb779834d6388882153e8c8ebf",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 214,
+          "tex_sha256": "34377dd0140094b25d7616287d316d9ca8378f69f65436a6ecfb7bfe4ff908f4",
+          "svg_sha256": "3b2a8f4c94099eea31fc1774cc7afd009c732961c7365d835c9fcfedc4ef6280",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 261,
+          "tex_sha256": "f027d427ada909891168ff70902f57c01f2f7e85805507b25ec9613395e18706",
+          "svg_sha256": "763990ea41ac4f5b02291fc7cbddf301c2cd0db469257020e1724a9f55842c23",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 278,
+          "tex_sha256": "7e0e826f654b4ccfdc27ed98d8c7e0803c735b2e859a8e23494b8bc524229046",
+          "svg_sha256": "a33a9da98c013e87ed57d5d97efa9f6f9f4af32dfbe602138ebce20154bdb5cc",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "experiment/COMMISSIONING.md",
+      "scope": "primary",
+      "sha256": "0b7ee9db47a21bebc1c6902764fd171a233fd8e0d89fd9a99fe2f5316bd338db",
+      "tables": 1,
+      "table_body_rows": 3,
+      "local_links": 15,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 27,
+          "tex_sha256": "90cd2885c469fc52a9403b549c58c709d9afd70d56654d97050cb6fe2f402849",
+          "svg_sha256": "62f7d6200e1394f85b287db23a9aee3f92e4b37cc01fae71bf8aa74d584492d9",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 31,
+          "tex_sha256": "c134de995072cd65c9f0fdb3732af4188aac831c28d30f6d0ef963eb743570e3",
+          "svg_sha256": "1e8cc45cd999b1b58e9dcf48f94c8e52b057080732ef304bc1b3d40530ef8234",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 40,
+          "tex_sha256": "ff15d08453b76e524850b0330a190b2b76a245aa2184748655f80a8a4d3b0e94",
+          "svg_sha256": "88266c5821983fd4de2be9cae301bb740b17db0778eb98921aed759d5f1d1180",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 44,
+          "tex_sha256": "b7f9fcd7781358f2bddb9cb5884b49c8be668931bd686f15965badd065f74a21",
+          "svg_sha256": "ebcb5d7b43770d8149c3fee9caeb3de5eede3a827c32bd2b3fa3d55745366537",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 53,
+          "tex_sha256": "9aefae198aa39880866fa741c313b3b5854ea43f7dabd19ee51d8dba67568395",
+          "svg_sha256": "f5a2c1064b9f5a853308e0938ec50234130a362ca70a066eb14d79a5d050ac39",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 57,
+          "tex_sha256": "6b85cfff1e8b44c615be1db157633e59fc1feaacc77fa9d880c38823e955d29b",
+          "svg_sha256": "6031ca513acbc6ceda41ae2a816657d341106e1c1444e79a708ca97af14a7d76",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 67,
+          "tex_sha256": "67d2e3738b9f0652ad24557e9a6d0e4785dbd897b155cf1e21c71e745a733f66",
+          "svg_sha256": "88fcef92a4ea568df50fc63dad15b6fea6b019c5595616351390ecdb16063162",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "experiment/FIRST_EXPERIMENT.md",
+      "scope": "primary",
+      "sha256": "3bfaceace27b652a3fe2a22c43c1282dc3118c5f43bab8faa93ff64951ec6be2",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 0,
+      "math": []
+    },
+    {
+      "file": "experiment/INDEX.md",
+      "scope": "primary",
+      "sha256": "b19613cd565bd3b65506b75d2d823c8f4ec9c6330925f2a9b88c95e8e8de74fb",
+      "tables": 2,
+      "table_body_rows": 13,
+      "local_links": 25,
+      "math": []
+    },
+    {
+      "file": "experiment/INTERFACES.md",
+      "scope": "primary",
+      "sha256": "1546f9212a3814220075367ab26531587c79725369000da122698fcdbf1305ba",
+      "tables": 4,
+      "table_body_rows": 29,
+      "local_links": 6,
+      "math": []
+    },
+    {
+      "file": "experiment/LAB_REVIEW.md",
+      "scope": "primary",
+      "sha256": "21b7f87e9595c7030278c1bda6dcc1ac8750992da929c289ad71bad5685fdda0",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 9,
+      "math": []
+    },
+    {
+      "file": "experiment/M1.md",
+      "scope": "primary",
+      "sha256": "ec3613bea0fd19efcdc94ca83f2a3a02c3f1f0c13309e4eeb1502676e6b478e7",
+      "tables": 1,
+      "table_body_rows": 4,
+      "local_links": 12,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 23,
+          "tex_sha256": "aa63ca620afd835bcc25c0f1a5a0f891bc81b47c62798d2b699d05bb0fc0a38f",
+          "svg_sha256": "dbe3b01e24b4b4c57c9f2d1e4f832b95ab2c072898ca7faf944f25c8d3940993",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 44,
+          "tex_sha256": "98c5739740d78e5b540ca54d33bd686214125ba749c9681a0d33c9a7b412db6d",
+          "svg_sha256": "f42f89c681cb407a8016767ffd106dec75abce37c89183ee95beb28847f3aa68",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 52,
+          "tex_sha256": "122622bd786b751dfe0121df3410c5163db6d17c190b9d7946132faca1c24a03",
+          "svg_sha256": "132d0afc58716a0c096b85ec0b42c41e1274d68b9100d1702b9a81e9867f07c7",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "experiment/P1.md",
+      "scope": "primary",
+      "sha256": "bdb7a77114ef1a7da6ba918cbec0feae516d9eeb88d44045faa6131a20e880ea",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 13,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 22,
+          "tex_sha256": "b40d59de5a812a78144a85cb3dea9641df5c62b3c77d636d489c2924ec707cb2",
+          "svg_sha256": "ccdc61e4798027ea30b0494d1d52972539da621fd76a8dd9994e996fce3f5f2a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 31,
+          "tex_sha256": "2a1b4a3b470a805c3264ba04ad843e7a725b6834a7a2dffe30af6a8e2031efb6",
+          "svg_sha256": "d716276a736a066d6afbc0c94276bbfa4a28c3bec0549b614aef90d0f65dc366",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 83,
+          "tex_sha256": "ab2ef9a67ab7ba995e49c25934dfd3caef8f33300bc5b8c6b4bcdaa49c24fc0d",
+          "svg_sha256": "e9ef62ffd20320854ad1f68e23f93d598783fb95da544e9f2b267e9a8baae8c0",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 89,
+          "tex_sha256": "4b53fb08e2c6f2059b104fce5fe4720ac9e41d8cdf25b9069c7f0adde738227d",
+          "svg_sha256": "2350f0c2c2fb9cb39bcd338bc3681d60e235919b83a101d0d3631c54f761e8a4",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "experiment/P2.md",
+      "scope": "primary",
+      "sha256": "5099d72191f08589b40610bc9f484d510d711717d37b77287e1968f79bd9cf5e",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 11,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 24,
+          "tex_sha256": "aa63ca620afd835bcc25c0f1a5a0f891bc81b47c62798d2b699d05bb0fc0a38f",
+          "svg_sha256": "dbe3b01e24b4b4c57c9f2d1e4f832b95ab2c072898ca7faf944f25c8d3940993",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 36,
+          "tex_sha256": "a26417e9bdc59d1d4cd0420356b2fe40746120b2dfeb008ca6fe24e04ce978cb",
+          "svg_sha256": "be853947853e14a5134d8cb942eab7ee4c963cda35fe9d36d282aa2298fcaecd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 50,
+          "tex_sha256": "39ddb88ac0a893fa8b13167eaf4dc986a2912d8056737914f1c652fca6ee76bf",
+          "svg_sha256": "69acb3683d7aba86fa5bcaf281252aa839a3cf08ffe4b32d79d5f116a086f5d5",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 114,
+          "tex_sha256": "c5f9d349ff8e8d849500384387f1e78fce3f6ecb67e7373862b6ef3003688c1b",
+          "svg_sha256": "75fc334635c013d1e3885dd8337054d6ddc5cb0d533b7802459242543dfafa96",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "experiment/REVIEW_RATIONALE.md",
+      "scope": "primary",
+      "sha256": "270fd55ba8dcdb6f902d7f746e3885bd1cd9a67a9d7ec49129b77f3667db31d8",
+      "tables": 1,
+      "table_body_rows": 3,
+      "local_links": 4,
+      "math": []
+    },
+    {
+      "file": "experiment/SU4.md",
+      "scope": "primary",
+      "sha256": "57a216128e905f162e032921d32d806f03fa80e759cb3555d4f671eeceb332b7",
+      "tables": 2,
+      "table_body_rows": 8,
+      "local_links": 14,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 26,
+          "tex_sha256": "f4f6001e85512955c129bb85f4faccc9c0807c86990df03f0bb958de1de75e2b",
+          "svg_sha256": "3e3ed204c95cedd6196630ee9488c4c668c9a744a2583d095e0c2f6971e684a5",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 32,
+          "tex_sha256": "13f9be693bb7dd6549f279c175999152eb34085b4740bd7cbe86c49b4e58d01c",
+          "svg_sha256": "5445e29bb104d0806a8f84b9ec78d7ecc642db7eed3d5e92288717304c094e79",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 36,
+          "tex_sha256": "61af8ab731e73b66eb5a583d0f0be8e8f33a0ce84ec9add11febbb9b98b5fc6c",
+          "svg_sha256": "6cdbb67581eeab06470047cf94ad2a64f7def09e02722077da9bbfc9eee9d4e6",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 40,
+          "tex_sha256": "178975006dc977264f7bdd6eb356c42184173881d3a0fe420efe666383084c21",
+          "svg_sha256": "57aab55603f8f717d10e9a641888f744db7dc1d9d5235a524079c84801759274",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 68,
+          "tex_sha256": "720dea56338c2a0a1c785ddba675561f41b60b4551a3c0bb9199011b925f6914",
+          "svg_sha256": "219ca7dd332c48616ea67fa8544edb138a059115a6b6fc5516e676c1d6b8e62f",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 105,
+          "tex_sha256": "40482c7e8b95bf0773aca67abd4ba204a124507afbf5fd318e1fff8cd73180c2",
+          "svg_sha256": "3c7bbd2ec5991ca1d7de15499824bf9ccb4a89e940c22cf58a66fe4f9806b028",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "experiment/SU8.md",
+      "scope": "primary",
+      "sha256": "f5e6fff30cdb81add4020fc872fc9a3702e8f4c5bfffe9e287a3ca2827578d32",
+      "tables": 2,
+      "table_body_rows": 14,
+      "local_links": 14,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 21,
+          "tex_sha256": "052c177d1ef7c001131e222e95ded8b2c6d2b03cded1a62ce18c2e8d39b9d41d",
+          "svg_sha256": "a211fa5b973355c1c6e79213e8421c9a12ac786da32495c0715f8ed006171a2a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 25,
+          "tex_sha256": "27936c3ecc5f50e50e212864d945813d887892adba8482a9a1e70395a912e5f6",
+          "svg_sha256": "115892a354eb866dabebd4baf9ef01ab09165596f10849502d3d8c27abb59ce9",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 30,
+          "tex_sha256": "3519abf4bec11dc5d6b868b7278037e3439e476dd1c1c341852800bc1d3d24ed",
+          "svg_sha256": "dab8a19ad40478295f12bafac5ad15ecddf2a07d143e04f1ae770ca02a60296d",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 87,
+          "tex_sha256": "08be2853c554c52eeba1c8f3724a3ea04674f81457fae0349fd445a908f0dc7d",
+          "svg_sha256": "2424ca5b1dc7161e3869735df64e6f7e3b73fae0a0c19bc725fe7aa1adeae1c1",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 111,
+          "tex_sha256": "f0cdc38ed6cf38fdb661dbdf0049ada2b6e071994051b5d7cc645e61d22dffe7",
+          "svg_sha256": "9773bf472d331325be1d9dc14a564e184356a91315e8bef1eafa76d7b1047f2f",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 126,
+          "tex_sha256": "8c7e2eb834daa157b7a6e8445bd3dbe6ee3c00bd9e6bf67d0684199dc031b789",
+          "svg_sha256": "2236e490790fec7b96a107bb3d4abdd62b8f9d99b5d9ee932978f9ee69dc6802",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 134,
+          "tex_sha256": "ef1a40f852beb7faf58fc5d616c9761459d172d66b60c9b0a4277ec100942efc",
+          "svg_sha256": "25d68175145a0f1d9bc3d6ec21f1e6f3d3eb8ea59edaa81ebbfabb8a494587e3",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "experiment/UNCERTAINTY.md",
+      "scope": "primary",
+      "sha256": "2b2e2816a5efe57440e0e688054068c9c559ec6423457868a2bc8cb69e38b34f",
+      "tables": 2,
+      "table_body_rows": 19,
+      "local_links": 7,
+      "math": []
+    },
+    {
+      "file": "work_orders/CURRENT.md",
+      "scope": "primary",
+      "sha256": "2735a0ef4d8b77de776e7c3390cd9ea3261f478f79a785df53431b6d34bcd582",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 5,
+      "math": []
+    },
+    {
+      "file": "docs/ROBUSTNESS_REPORT.md",
+      "scope": "primary",
+      "sha256": "499cf7161f8efeddce3eaef79852b4cd19df095f94130da183e3648785fda0fd",
+      "tables": 2,
+      "table_body_rows": 11,
+      "local_links": 5,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 37,
+          "tex_sha256": "115c1db1355eaa31bac1fa8d1e3de6db64fc5512fd303bd6902f82ed36e613a9",
+          "svg_sha256": "8c6fc1a8b09da109a5b0ba01e17f413ea2f8a62a9a8954f8d5a281d3d00b03ec",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 45,
+          "tex_sha256": "5bf00c8092d7dceaf680d3592fd388a8f5fb8b267b06307f0a4e8cbded5497ab",
+          "svg_sha256": "c3e713f2de9a09c3c866d9362208732aecf2624ff260f28e1555f88003607e9c",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 121,
+          "tex_sha256": "05b2c9d77d6b03de2f02c5bdd09376e5d5ea6d149e41a7e9cba27cebaaa8874c",
+          "svg_sha256": "4cf8bad4ad95c9f8fe61f9fe2aa64b76dac0639cc6a45485609d7e9170e204d2",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "docs/ROBUSTNESS_PROOFS.md",
+      "scope": "primary",
+      "sha256": "06ba0ac4a6a992026ff46d2c39f635629fecfd80463e0acf71a012d1664d0c6f",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 2,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 35,
+          "tex_sha256": "660ce256e2b7bca650a8c98fbe52b5abad88078bb3449625c22edd3e26f83ffd",
+          "svg_sha256": "c02d6faa27d8ef92da8108f5d770ffeee34cf649ddc3c427664968b8edef7e4a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 56,
+          "tex_sha256": "f6373ee1ac9d1f876e04805f0eddc699a41dadc7aedb0e1ea4d736569e8086fa",
+          "svg_sha256": "4fe41d90ae34ba9c0f2959db3dc9937b2bd570f1202b053dc64bd37d553c9f29",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 72,
+          "tex_sha256": "05b2c9d77d6b03de2f02c5bdd09376e5d5ea6d149e41a7e9cba27cebaaa8874c",
+          "svg_sha256": "4cf8bad4ad95c9f8fe61f9fe2aa64b76dac0639cc6a45485609d7e9170e204d2",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 78,
+          "tex_sha256": "dcfd6cd1a486f79904a50ccecaeb99d8b1b3d443e9a3df39a834832598278b0f",
+          "svg_sha256": "f605b53f5990eabedad5b6aae5f644f9429184920c4852ba062d1a18813127f4",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 99,
+          "tex_sha256": "ded8c0b52d44c64f6d344449008f2b48616dcb60aefeba5f039a3b5f57109e80",
+          "svg_sha256": "089d703c4eb354b1c012ead4995183f63d66f156ecbe22b64d4f1ed666bad6ee",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 112,
+          "tex_sha256": "bf1e5f0173cfba1b7e4af35c59f366252e99654722fc2b241e62e1a261699391",
+          "svg_sha256": "eb0fe94183fe335481b69a4c4ce926211d2348472470847915a7b043c0f3c61b",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 119,
+          "tex_sha256": "348b7913313f8cbc312a50b8192cb9f257765c99db97d8c03d4c5a636ef94d51",
+          "svg_sha256": "8a99b22f792239e027fd978a8fa1d6d84fe391e115a1dcb909a0d341ed21fd8a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 133,
+          "tex_sha256": "753c7a846329ec58c7b3619f38b6a2b2f3b0b8b9737f4b5f7f7144b9956b340a",
+          "svg_sha256": "0a7f0009bb91beea4d7b852214f1404768c4b91a103b4924fba6610bd00fdf18",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 170,
+          "tex_sha256": "ed58c38ead942040d10b37bca07a098eaac1cc6241a28260e59804a194468a0e",
+          "svg_sha256": "412ac625a249d3321ee79ef25c742f7fd3fcadf49a0ca2849d5a24a7da658551",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 183,
+          "tex_sha256": "703f40a5c82a0791feff7e12389907c15a08a90b5bcd39cd1d46b296927ef95a",
+          "svg_sha256": "26e9903ceb4d78704450f3db602934b1f799027658f50e9fc058e342d2fcf6eb",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 201,
+          "tex_sha256": "1492ee2506a79324a703e3a42e4fff84519b0d47dbe69efa5e099bb991bd9f50",
+          "svg_sha256": "d5cdc92ba9dfc1e30cb00c5a6687a41c6dc6c1a57326dc98b10d0b2b16519f8f",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 225,
+          "tex_sha256": "9829c8aa624ff3cd9e03e8964f12e51c5f282bf49e8fea2e8a0324bd1bbbd459",
+          "svg_sha256": "472a4592454095408ab099267d211bbef15341cb7dccd12d4a7a54513365e2eb",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 237,
+          "tex_sha256": "d8613a5bf5671132e073da4d19a278e65f1cb8bf7ca6891b69d4c80aaf9915e9",
+          "svg_sha256": "8182ef6c9da00b4fa670177afa963aae69c527105bd4f6e4fd91b07f41549517",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 248,
+          "tex_sha256": "0e99a65daa72398520856de754e6026ab85de8415be0cf49db07ec06f64bccd9",
+          "svg_sha256": "6147fe46f8b5a26f800340f107aba9c32243b87fd5b17f0117daf414f63bbafd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 257,
+          "tex_sha256": "d5a311388b0c8241850a9f08d92359109f69a0c71015b96deec90cb9917a246e",
+          "svg_sha256": "8e4df542008b84eba7c05802d257b6aff442b6be999fa6b73c3624209f883059",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 279,
+          "tex_sha256": "bead5c367d4367f3304a91f05d317a1aa0fd6670a6e50a9e2a2ba911bd20c79b",
+          "svg_sha256": "ec6833371092af5126ae13bd13752248236cec5b667d8565321c7a4b844c0282",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "docs/NUMERICAL_PROOF.md",
+      "scope": "primary",
+      "sha256": "46994ff7ec9eebe33a33edfb52d4ee593cc3f8a2595586699046d7bd295f4a8e",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 1,
+      "math": [
+        {
+          "kind": "fenced",
+          "line": 10,
+          "tex_sha256": "e15694f985e5a5e34590f27ce4806e13f8fe925d194f70693e4a53a828b59c43",
+          "svg_sha256": "5500edd6904405ee82f908573331eea070436849f149a76646d1f7bdffb8d4a9",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 16,
+          "tex_sha256": "444949e88f89ae0a26c4f088bda3f3f8ac97e168fd35cc14341fbc482d0ab798",
+          "svg_sha256": "1db532c54602f74da361ecac7d01c66ded4acfb55d0535a70728781857781d4a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 42,
+          "tex_sha256": "f1d883fc2cd3a539944067a54272de459df65c217031752ffc938b854d36d771",
+          "svg_sha256": "4f035d7cbf9b145deb83c77e3d6615bd3ff62c15590296647d7f4c8dad8ae61b",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 55,
+          "tex_sha256": "a402000be94e23e93a64b05c1d6641f9a75348b982f5be0a71815ec7933db8fb",
+          "svg_sha256": "8254ec640650766d577ca2cd342f7f13c710be8518fb81a65a8dd80d2a3e172e",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 70,
+          "tex_sha256": "f6255aae41f01357311e41c61742014fc6d5161a96bc8dacdcbffa251fd490b0",
+          "svg_sha256": "ee49d11e9902a5e5c9775d427e20a9ba556e0ebd79934fded5f6f41930c16b09",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 76,
+          "tex_sha256": "7b30324f27638f589d9b99b477de7804c94570c626d9c4c636324d5246c4a09f",
+          "svg_sha256": "06b3369a160f6bc9574b76184d6aef53e1ce30eda2b6930ff4eaea786153da58",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "fenced",
+          "line": 91,
+          "tex_sha256": "de97c18a2e9f8e6bd53b13552cc2d4cb3ceb7835e3c6d2ac67946ad86350964e",
+          "svg_sha256": "259391a37fd242b4ed2589c069969d51383020cb71784e198d430f5d16148afd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "SOURCE_AUDIT.md",
+      "scope": "linked-support",
+      "sha256": "04a72930a94daba1df17d632746259eb58eb9e42ea7c080df81139c1bf47141f",
+      "tables": 2,
+      "table_body_rows": 13,
+      "local_links": 9,
+      "math": []
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "scope": "linked-support",
+      "sha256": "eab2e2986b7e427092f018d1f9a559006a07e44c43f65ea61c55777b4795d52d",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 2,
+      "math": []
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "scope": "linked-support",
+      "sha256": "e9898e924249a6ee4327efadd603cf042fbba1cabb248f50a5360eb612eece18",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 9,
+      "math": []
+    },
+    {
+      "file": "proofs/THEORY.md",
+      "scope": "linked-support",
+      "sha256": "8812b1d009479d7efe688aed4c6998f558d4968ef121f2247bad06fd1ac9114f",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 2,
+      "math": []
+    },
+    {
+      "file": "studies/robustness-01/PROOFS.md",
+      "scope": "linked-support",
+      "sha256": "722155ce5c119a81defb63c1432013d260003e30028ef9441110baf67f1b6fed",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 1,
+      "math": [
+        {
+          "kind": "dollar-display",
+          "line": 35,
+          "tex_sha256": "660ce256e2b7bca650a8c98fbe52b5abad88078bb3449625c22edd3e26f83ffd",
+          "svg_sha256": "c02d6faa27d8ef92da8108f5d770ffeee34cf649ddc3c427664968b8edef7e4a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 56,
+          "tex_sha256": "f6373ee1ac9d1f876e04805f0eddc699a41dadc7aedb0e1ea4d736569e8086fa",
+          "svg_sha256": "4fe41d90ae34ba9c0f2959db3dc9937b2bd570f1202b053dc64bd37d553c9f29",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 72,
+          "tex_sha256": "05b2c9d77d6b03de2f02c5bdd09376e5d5ea6d149e41a7e9cba27cebaaa8874c",
+          "svg_sha256": "4cf8bad4ad95c9f8fe61f9fe2aa64b76dac0639cc6a45485609d7e9170e204d2",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 78,
+          "tex_sha256": "dcfd6cd1a486f79904a50ccecaeb99d8b1b3d443e9a3df39a834832598278b0f",
+          "svg_sha256": "f605b53f5990eabedad5b6aae5f644f9429184920c4852ba062d1a18813127f4",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 99,
+          "tex_sha256": "ded8c0b52d44c64f6d344449008f2b48616dcb60aefeba5f039a3b5f57109e80",
+          "svg_sha256": "089d703c4eb354b1c012ead4995183f63d66f156ecbe22b64d4f1ed666bad6ee",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 112,
+          "tex_sha256": "6494149d7070f8a242b92f786c4645f9d72dc085e884cdabdd7978d60ab60c2c",
+          "svg_sha256": "eb0fe94183fe335481b69a4c4ce926211d2348472470847915a7b043c0f3c61b",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 119,
+          "tex_sha256": "348b7913313f8cbc312a50b8192cb9f257765c99db97d8c03d4c5a636ef94d51",
+          "svg_sha256": "8a99b22f792239e027fd978a8fa1d6d84fe391e115a1dcb909a0d341ed21fd8a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 133,
+          "tex_sha256": "fad7d3e6b7db561611b313fc1dbd85ad73e03d71e6b78433df6fb4278fdf5f3e",
+          "svg_sha256": "0a7f0009bb91beea4d7b852214f1404768c4b91a103b4924fba6610bd00fdf18",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 170,
+          "tex_sha256": "ed58c38ead942040d10b37bca07a098eaac1cc6241a28260e59804a194468a0e",
+          "svg_sha256": "412ac625a249d3321ee79ef25c742f7fd3fcadf49a0ca2849d5a24a7da658551",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 183,
+          "tex_sha256": "703f40a5c82a0791feff7e12389907c15a08a90b5bcd39cd1d46b296927ef95a",
+          "svg_sha256": "26e9903ceb4d78704450f3db602934b1f799027658f50e9fc058e342d2fcf6eb",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 201,
+          "tex_sha256": "1492ee2506a79324a703e3a42e4fff84519b0d47dbe69efa5e099bb991bd9f50",
+          "svg_sha256": "d5cdc92ba9dfc1e30cb00c5a6687a41c6dc6c1a57326dc98b10d0b2b16519f8f",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 225,
+          "tex_sha256": "9829c8aa624ff3cd9e03e8964f12e51c5f282bf49e8fea2e8a0324bd1bbbd459",
+          "svg_sha256": "472a4592454095408ab099267d211bbef15341cb7dccd12d4a7a54513365e2eb",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 237,
+          "tex_sha256": "396cc42ae8e6c051a970ac233fdbfd05ab36cb23b224eff8e6e6bd5ea8cae9a7",
+          "svg_sha256": "8182ef6c9da00b4fa670177afa963aae69c527105bd4f6e4fd91b07f41549517",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 248,
+          "tex_sha256": "0e99a65daa72398520856de754e6026ab85de8415be0cf49db07ec06f64bccd9",
+          "svg_sha256": "6147fe46f8b5a26f800340f107aba9c32243b87fd5b17f0117daf414f63bbafd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 257,
+          "tex_sha256": "d5a311388b0c8241850a9f08d92359109f69a0c71015b96deec90cb9917a246e",
+          "svg_sha256": "8e4df542008b84eba7c05802d257b6aff442b6be999fa6b73c3624209f883059",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 279,
+          "tex_sha256": "bead5c367d4367f3304a91f05d317a1aa0fd6670a6e50a9e2a2ba911bd20c79b",
+          "svg_sha256": "ec6833371092af5126ae13bd13752248236cec5b667d8565321c7a4b844c0282",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "studies/robustness-01/REPORT.md",
+      "scope": "linked-support",
+      "sha256": "bfce35293ec634b4ac825cce52cf500c35a5fb87a9d9964d865303dfe67030b2",
+      "tables": 2,
+      "table_body_rows": 11,
+      "local_links": 3,
+      "math": [
+        {
+          "kind": "dollar-display",
+          "line": 44,
+          "tex_sha256": "115c1db1355eaa31bac1fa8d1e3de6db64fc5512fd303bd6902f82ed36e613a9",
+          "svg_sha256": "8c6fc1a8b09da109a5b0ba01e17f413ea2f8a62a9a8954f8d5a281d3d00b03ec",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 52,
+          "tex_sha256": "c27f39bd1922a83d9f8e077dc5fba9f6b315370d0cc16bb8e9b55ceff0e375cf",
+          "svg_sha256": "c3e713f2de9a09c3c866d9362208732aecf2624ff260f28e1555f88003607e9c",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": "MathJax error after Markdown transport"
+        },
+        {
+          "kind": "dollar-display",
+          "line": 128,
+          "tex_sha256": "05b2c9d77d6b03de2f02c5bdd09376e5d5ea6d149e41a7e9cba27cebaaa8874c",
+          "svg_sha256": "4cf8bad4ad95c9f8fe61f9fe2aa64b76dac0639cc6a45485609d7e9170e204d2",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "studies/robustness-01/CALIBRATION_WORKSHEET.md",
+      "scope": "linked-support",
+      "sha256": "7f8b7519ce2702e3144bb9de6a4c9cfbf385a40e9b1bcd8257a734d0974cda6e",
+      "tables": 2,
+      "table_body_rows": 12,
+      "local_links": 0,
+      "math": [
+        {
+          "kind": "dollar-display",
+          "line": 58,
+          "tex_sha256": "785b2a7ff55ad3f59dc12b230bae200ae41b532a69d07001e67b29eb81687b96",
+          "svg_sha256": "f00b1e454ee605aeff1e16460f712697408cf1842b2079244b56ebcc5522e004",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        }
+      ]
+    },
+    {
+      "file": "studies/robustness-01/SOURCES.md",
+      "scope": "linked-support",
+      "sha256": "f4cbbc6f69454529e85b3c26d3e7b6611bdd117c65b91eba27e4b870c5acc485",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 0,
+      "math": []
+    },
+    {
+      "file": "studies/robustness-01/README.md",
+      "scope": "linked-support",
+      "sha256": "2612f017e2d3bb88a6263a1d2622ce6cd8cdf1e3e706b7046097c558056606ee",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 5,
+      "math": []
+    },
+    {
+      "file": "examples/lab/README.md",
+      "scope": "linked-support",
+      "sha256": "e432e19b4fd4cd0a8fb50078783c6d771e20569e1d50dbca730edaba5c4bc2e5",
+      "tables": 1,
+      "table_body_rows": 7,
+      "local_links": 6,
+      "math": []
+    },
+    {
+      "file": "repairs/theory-01/NUMERICAL_PROOF.md",
+      "scope": "linked-support",
+      "sha256": "b20dc1174675bac9d701127930ed2c9bd1b11b53a64438e1ee5dd8951c48010e",
+      "tables": 0,
+      "table_body_rows": 0,
+      "local_links": 0,
+      "math": [
+        {
+          "kind": "dollar-display",
+          "line": 10,
+          "tex_sha256": "e15694f985e5a5e34590f27ce4806e13f8fe925d194f70693e4a53a828b59c43",
+          "svg_sha256": "5500edd6904405ee82f908573331eea070436849f149a76646d1f7bdffb8d4a9",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 16,
+          "tex_sha256": "444949e88f89ae0a26c4f088bda3f3f8ac97e168fd35cc14341fbc482d0ab798",
+          "svg_sha256": "1db532c54602f74da361ecac7d01c66ded4acfb55d0535a70728781857781d4a",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 42,
+          "tex_sha256": "f1d883fc2cd3a539944067a54272de459df65c217031752ffc938b854d36d771",
+          "svg_sha256": "4f035d7cbf9b145deb83c77e3d6615bd3ff62c15590296647d7f4c8dad8ae61b",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 55,
+          "tex_sha256": "a402000be94e23e93a64b05c1d6641f9a75348b982f5be0a71815ec7933db8fb",
+          "svg_sha256": "8254ec640650766d577ca2cd342f7f13c710be8518fb81a65a8dd80d2a3e172e",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 70,
+          "tex_sha256": "f6255aae41f01357311e41c61742014fc6d5161a96bc8dacdcbffa251fd490b0",
+          "svg_sha256": "ee49d11e9902a5e5c9775d427e20a9ba556e0ebd79934fded5f6f41930c16b09",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 76,
+          "tex_sha256": "7b30324f27638f589d9b99b477de7804c94570c626d9c4c636324d5246c4a09f",
+          "svg_sha256": "06b3369a160f6bc9574b76184d6aef53e1ce30eda2b6930ff4eaea786153da58",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": false,
+          "markdown_transport_error": null
+        },
+        {
+          "kind": "dollar-display",
+          "line": 91,
+          "tex_sha256": "de97c18a2e9f8e6bd53b13552cc2d4cb3ceb7835e3c6d2ac67946ad86350964e",
+          "svg_sha256": "259391a37fd242b4ed2589c069969d51383020cb71784e198d430f5d16148afd",
+          "parse_error": null,
+          "html_transport_changed": false,
+          "markdown_transport_changed": true,
+          "markdown_transport_error": null
+        }
+      ]
+    }
+  ],
+  "scope_note": "CommonMark with GFM table rule; base+ams MathJax; raw-HTML transport is controlled risk reproduction, not the live GitHub pipeline."
+}

@@ -31,11 +31,11 @@ this tradeoff within the stated single-photon architecture.
 
 The first experiment uses four equiprobable phase operations
 
-$$
+```math
 O_j=I-2|j\rangle\langle j|,
 \qquad
-D=\frac12J-I.
-$$
+D=\frac{1}{2}J-I.
+```
 
 Exactly one path undergoes a pi phase flip. This is four-symbol phase reading,
 not arbitrary fault diagnosis and not a five-hypothesis healthy/fault test.
@@ -44,16 +44,16 @@ Let $C,E,F$ be unconditional correct, wrong, and inconclusive probabilities.
 Fix a wrong-answer penalty $\lambda$, and score each attempted interrogation
 by $1,-\lambda,0$. For $\lambda\ge1/3$, define
 
-$$
+```math
 v_i=\sqrt{\eta_i},\qquad
 B_\lambda=\frac{1+\lambda}{4}vv^T-\lambda\,\mathrm{diag}(\eta).
-$$
+```
 
 The exact optimum, over every allowed input and final measurement, is
 
-$$
+```math
 \boxed{\max(C-\lambda E)=\lambda_{\max}(B_\lambda).}
-$$
+```
 
 Prepare path probabilities $p_i=z_i^2$, where $z$ is the normalized positive
 principal eigenvector, and keep the receiver at $D$. A scalar root equation
@@ -91,17 +91,17 @@ For uniform transmission $t$, the complete four-symbol classical finite-error
 frontier is explicit in this model. Put $c=e^{-t\mu}$, with mean signal budget $\mu$.
 Then
 
-$$
+```math
 P_{\mathrm{cl,ME}}=
 \frac{[\sqrt{1+3c}+3\sqrt{1-c}]^2}{16}.
-$$
+```
 
 Before the minimum-error endpoint, the exact optimum is
 
-$$
+```math
 C_{\mathrm{cl}}^*(\epsilon)=
 \left[\sqrt{1-c}+\sqrt{\epsilon/3}\right]^2.
-$$
+```
 
 It is capped at $P_{\mathrm{cl,ME}}$ when $\epsilon\ge1-P_{\mathrm{cl,ME}}$.
 A matching physical POVM certificate is supplied. The upper bound includes
@@ -120,17 +120,17 @@ mixtures. Neither the curve nor its square-root measurement is claimed as new.
 
 For calibrated passive maps $A_j$, let
 
-$$
-H_\Delta=\frac1{m(m-1)}\sum_{j<k}(A_j-A_k)^\dagger(A_j-A_k),
+```math
+H_\Delta=\frac{1}{m(m-1)}\sum_{j\lt k}(A_j-A_k)^\dagger(A_j-A_k),
 \qquad \kappa=\|H_\Delta\|.
-$$
+```
 
 For any allowed classical source and receiver,
 
-$$
+```math
 \boxed{C\le\min\left\{1-E,
 [\sqrt{1-e^{-\kappa\mu}}+\sqrt{E/(m-1)}]^2\right\}.}
-$$
+```
 
 This is generally an upper bound, not an exact arbitrary-device optimum. It
 allows unequal and even hypothesis-dependent attenuation, subject to the
@@ -148,19 +148,19 @@ operator up to normalization; the multiclass average is used here as a converse
 quantity, not a proved globally optimal source-selection rule. See
 [reduction R6](audits/novelty-01/REDUCTIONS.md).
 
-If simultaneous calibration gives $\|A_j-\widehat A_j\|\le\epsilon_j$, a
+If simultaneous calibration gives $`\|A_j-\widehat A_j\|\le\epsilon_j`$, a
 rigorous bound is
 
-$$
+```math
 \kappa_U=\left[\sqrt{\widehat\kappa}+
-\sqrt{\frac{\sum_{j<k}(\epsilon_j+\epsilon_k)^2}{m(m-1)}}\right]^2.
-$$
+\sqrt{\frac{\sum_{j\lt k}(\epsilon_j+\epsilon_k)^2}{m(m-1)}}\right]^2.
+```
 
 At $m=4,\lambda=5$, the simpler registered score bound is
 
-$$
+```math
 C-5E\le \frac{15}{14}(1-e^{-\kappa_U\mu_U}),
-$$
+```
 
 capped at one. This bound is deliberately conservative. A violation establishes
 an advantage even when the exact unequal-loss classical frontier is unknown.
@@ -186,7 +186,7 @@ label-dependent drift and side channels need their own simultaneous bounds.
 | P2: severe imbalance | Show an actually implemented coherent receiver above the entire specified photon-class ceiling | Known coherent preparation, hidden section, fixed background displacement, click detection |
 | M1: input-only retuning | Test the predicted change of best preparation as the error penalty changes | The same photon receiver, several preregistered input vectors |
 
-A suitable initial grid is $\eta=t(1,1,1,r)$, with $r\in\{1,.8,.5,.2,.05\}$
+A suitable initial grid is $\eta=t(1,1,1,r)$, with $`r\in\{1,.8,.5,.2,.05\}`$
 and an experimentally attainable $t$. These are provisional design points,
 not hardware specifications. The actual values and run sizes must be frozen
 using independent pilot calibration before held-out acquisition.
@@ -214,10 +214,10 @@ does not by itself supply this interface.
 For a preselected penalty and fixed N, let $\widehat S$ be the mean trial score.
 A conservative lower confidence bound is
 
-$$
+```math
 \widehat S-(1+\lambda)
 \sqrt{\frac{\log(1/\alpha_{\mathrm{stat}})}{2N}}.
-$$
+```
 
 This follows from the bounded-score Hoeffding argument given in the proofs. It
 is not a normal approximation to the detected-event ratio. It requires the
@@ -255,9 +255,9 @@ is .003. Common phase noise and static map uncertainty are distinct assumptions.
 
 At the moderate-imbalance point the exact finite-support model predicts
 
-$$
+```math
 C=.59005719,\quad E=.000707285,\quad F=.40923552.
-$$
+```
 
 The predicted score is .58652077 versus a classical upper bound .53562201.
 The non-primary coherent controls at the other grid points use the same nominal
@@ -296,7 +296,8 @@ supporting diagnostics, not universal certificates. The later
 [bounded repair](repairs/theory-01/REPORT.md) now provide exact-rational outward
 photon-support enclosures within the documented domain. This does not interval-
 certify every classical or statistical routine. No outside referee, formal proof
-assistant, experimental run, or device-availability confirmation is claimed.
+assistant or experimental run is claimed. Both the SU4 and SU8 chips are
+confirmed available; supporting interfaces and calibration remain to be supplied.
 The original numerical record above remains historical evidence, not a fresh
 execution claimed by this wording update.
 
