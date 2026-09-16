@@ -372,6 +372,49 @@ def _license_hash(path: str, expected: str, approval: dict) -> str:
     return approval['new_sha256']
 
 
+COLLABORATION_RECORD = 'provenance/changes/readme-collaboration-01.json'
+COLLABORATION_BASE_COMMIT = '20cabd06edd36564192dec9f1413ad7fd84d15d9'
+COLLABORATION_BASE_TREE = '58bd10481e2ddb1e21a5c0434320006ba0184046'
+COLLABORATION_PREVIOUS_BLOB = 'b7e9a1871f5c556eea8c6652780c868887e52139'
+COLLABORATION_README_PREIMAGE = '4c1736b8874efdb5bd5876041e2b1699ff085e18f9b523e59eec2dd0c40cc20e'
+COLLABORATION_NOTICE = '## Experimental status and collaboration\n\n**Experimental validation is still pending.** This repository contains theory,\nreference calculations and proposed procedures, not measured experimental results.\nCollaborators interested in photonic implementation, calibration or theoretical\ndevelopment are welcome. Please contact\n[gogoko699@gmail.com](mailto:gogoko699@gmail.com).\n\n'
+
+
+def _collaboration_amendment(root: Path, changes: dict) -> dict:
+    """Compose one exact README insertion; keep predecessor entries immutable."""
+    ledger = json.loads((root/COLLABORATION_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('interpretation_only') is not True or
+        ledger.get('mathematical_content_changed') is not False or
+        ledger.get('base_commit') != COLLABORATION_BASE_COMMIT or
+        ledger.get('base_tree') != COLLABORATION_BASE_TREE or
+        ledger.get('previous_record') != FINAL_HANDOVER_RECORD or
+        ledger.get('previous_record_git_blob') != COLLABORATION_PREVIOUS_BLOB or
+        _git_blob((root/FINAL_HANDOVER_RECORD).read_bytes()) != COLLABORATION_PREVIOUS_BLOB):
+        raise ValueError('Invalid collaboration documentation ledger contract')
+    entries = ledger.get('changes', [])
+    if len(entries) != 1 or entries[0].get('path') != 'README.md' or ledger.get('additions'):
+        raise ValueError('Collaboration ledger is not the authorized README change')
+    entry = entries[0]
+    if (entry.get('old_sha256') != COLLABORATION_README_PREIMAGE or
+        changes['README.md']['new_sha256'] != COLLABORATION_README_PREIMAGE):
+        raise ValueError('Collaboration documentation previous hash mismatch')
+    reason, value = entry.get('reason'), entry.get('new_sha256')
+    if (not isinstance(reason, str) or not reason.strip() or
+        not isinstance(value, str) or len(value) != 64 or
+        any(c not in '0123456789abcdef' for c in value)):
+        raise ValueError('Invalid collaboration documentation hash or reason')
+    current = _safe_path(root, 'README.md').read_bytes()
+    anchor = b'## From hardware to a recorded answer\n'
+    insertion = COLLABORATION_NOTICE.encode('utf-8')
+    if (current.count(insertion+anchor) != 1 or sha(current) != value or
+        sha(current.replace(insertion+anchor, anchor, 1)) != COLLABORATION_README_PREIMAGE):
+        raise ValueError('Protected collaboration document changed: README.md')
+    effective = {path: dict(record) for path, record in changes.items()}
+    effective['README.md']['new_sha256'] = value
+    return effective
+
+
+
 def _final_handover_approvals(root: Path) -> tuple[dict, dict]:
     """Bound the final display/navigation repair and its frozen-source copies."""
     ledger = json.loads((root/FINAL_HANDOVER_RECORD).read_text())
@@ -405,7 +448,8 @@ def _final_handover_approvals(root: Path) -> tuple[dict, dict]:
                 raise ValueError('Final-handover documentation baseline hash mismatch: '+path)
         elif (entry.get('source_path'), entry['source_sha256']) != FINAL_HANDOVER_READER_SOURCES[path]:
             raise ValueError('Final-handover reader source mismatch: '+path)
-    return changes, additions
+    # The returned approval map is current; its on-disk predecessor is unchanged.
+    return _collaboration_amendment(root, changes), additions
 
 
 def _final_handover_hash(path: str, expected: str, changes: dict) -> str:
@@ -577,6 +621,8 @@ def verify(root: Path = ROOT) -> dict:
             'authorized_reader_copies_verified':sorted(reader_additions),
             'reader_source_documents_unchanged':True,
             'mathematics_changed_by_final_handover':False,
+            'readme_collaboration_change_record':COLLABORATION_RECORD,
+            'readme_collaboration_only_insertion':True,
             'historical_change_ledgers_unchanged':True,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 

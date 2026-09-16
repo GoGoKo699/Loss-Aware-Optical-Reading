@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "base_commit": "20cabd06edd36564192dec9f1413ad7fd84d15d9",
+  "base_tree": "58bd10481e2ddb1e21a5c0434320006ba0184046",
+  "previous_record": "provenance/changes/final-handover-01.json",
+  "previous_record_git_blob": "b7e9a1871f5c556eea8c6652780c868887e52139",
+  "interpretation_only": true,
+  "mathematical_content_changed": false,
+  "authorization": "Add the requested pending-experiments status and collaboration invitation with the existing public contact email.",
+  "scope": "One insertion in README.md after readiness information. All other README bytes, historical ledgers, science, protocols, evidence, license and visibility remain unchanged. The integrity checker composes this amendment into its final effective document approvals without changing the historical record or existing tests.",
+  "changes": [
+    {
+      "path": "README.md",
+      "old_sha256": "4c1736b8874efdb5bd5876041e2b1699ff085e18f9b523e59eec2dd0c40cc20e",
+      "new_sha256": "05db2ded67e85e797e21b990d8dfeb9a352069e2895923060167011d7fef7555",
+      "reason": "State that experimental validation is still pending and invite experimental or theoretical collaboration by email."
+    }
+  ],
+  "additions": []
+}
