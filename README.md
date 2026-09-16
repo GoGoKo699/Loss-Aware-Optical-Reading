@@ -23,6 +23,14 @@ must supply its interfaces, calibration and uncertainty budget. Processor
 availability is confirmed; it does not specify ports, control sections, sources,
 detectors or inter-chip connections. No laboratory data have been acquired here.
 
+## Experimental status and collaboration
+
+**Experimental validation is still pending.** This repository contains theory,
+reference calculations and proposed procedures, not measured experimental results.
+Collaborators interested in photonic implementation, calibration or theoretical
+development are welcome. Please contact
+[gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
 ## From hardware to a recorded answer
 
 1. **Prepare.** Set a normalized path-amplitude vector before the hidden label is
