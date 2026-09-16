@@ -25,6 +25,20 @@ READERS = ('README.md', 'CLAIM_STATUS.md', 'SOURCE_AUDIT.md', 'REPORT.md',
            'experiment/REVIEW_RATIONALE.md', 'work_orders/CURRENT.md')
 
 
+def report_displays(text: str) -> list[str]:
+    """Extract legacy and fenced displays without changing their equation payload."""
+    pattern = r'\\\[(.*?)\\\]|\$\$(.*?)\$\$|^```math[ \t]*$(.*?)^```[ \t]*$'
+    return [next(value for value in match.groups() if value is not None)
+            for match in re.finditer(pattern, text, flags=re.M | re.S)]
+
+
+def canonical_report_math(expression: str) -> str:
+    """Normalize only the three equivalent spellings used in this report repair."""
+    return (expression.replace(r'\frac12', r'\frac{1}{2}')
+            .replace(r'\frac1{m(m-1)}', r'\frac{1}{m(m-1)}')
+            .replace('j<k', r'j\lt k'))
+
+
 class DocumentationIntegrationTests(unittest.TestCase):
     def copy_root(self, directory):
         target = Path(directory)/'repo'
@@ -81,12 +95,29 @@ class DocumentationIntegrationTests(unittest.TestCase):
             prefix = 'photonic_single_photon_checkpoint_07/'
             before = archive.read(prefix+'REPORT.md').decode()
             old_questions = archive.read(prefix+'experiment/LAB_REVIEW.md').decode()
-        old_math = re.findall(r'\\\[(.*?)\\\]', before, flags=re.S)
-        new_math = re.findall(r'\$\$(.*?)\$\$', (ROOT/'REPORT.md').read_text(), flags=re.S)
+        old_math = report_displays(before)
+        new_math = report_displays((ROOT/'REPORT.md').read_text())
         self.assertEqual(len(old_math), 11)
-        self.assertEqual(old_math, new_math)
+        self.assertEqual(len(new_math), 11)
+        self.assertEqual([canonical_report_math(value) for value in old_math],
+                         [canonical_report_math(value) for value in new_math])
         section = lambda s: s.split('## Required responses')[1].split('## What to send back')[0]
         self.assertEqual(section(old_questions), section((ROOT/'experiment/LAB_REVIEW.md').read_text()))
+
+    def test_report_math_normalization_rejects_formula_changes(self):
+        current = (ROOT/'REPORT.md').read_text()
+        expected = [canonical_report_math(value) for value in report_displays(current)]
+        mutations = (
+            (r'\frac{1}{2}J-I.', r'\frac{1}{3}J-I.'),
+            (r'\sum_{j\lt k}', r'\sum_{j\gt k}'),
+            (r'\frac{1}{2}J-I.', r'\frac{1}{2}J+I.'),
+        )
+        for original, replacement in mutations:
+            with self.subTest(replacement=replacement):
+                self.assertIn(original, current)
+                altered = report_displays(current.replace(original, replacement, 1))
+                self.assertEqual(len(altered), 11)
+                self.assertNotEqual(expected, [canonical_report_math(value) for value in altered])
 
     def test_reader_links_resolve(self):
         for name in READERS:

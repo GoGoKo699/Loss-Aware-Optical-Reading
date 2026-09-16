@@ -1,0 +1,18 @@
+{
+  "task": "Final sanity check before release and experimental-laboratory handover",
+  "repository": "GoGoKo699/Loss-Aware-Optical-Reading",
+  "audit_branch": "audit/final-handover-01",
+  "audited_commit": "ba00d9ce64333ad08ef3b61108aa6df959cc5fc7",
+  "audited_tree": "605719db8b64ec45d75454dbe4338d56140d8593",
+  "initial_local_branch": "maintenance/license-01",
+  "initial_local_head": "9fe8e388f217e12bd80a26222d29a6e3cd4840d3",
+  "initial_local_tree": "132512c33fe99b70cc178c578677fbdbbbc6edf5",
+  "initial_local_status": "clean",
+  "initial_remote_visibility": "public",
+  "initial_remote_license": "MIT",
+  "initial_open_pull_requests": [],
+  "initial_releases": [],
+  "reconciliation": "Public HTTPS git fetch succeeded. New main merges the prior licensed main and the documentation-only photonic-computing-relevance change in experiment/INDEX.md. A dedicated audit branch was created at the live main without resets.",
+  "scope": "Final implementation/readiness review and fresh execution of established checks. No new scientific search, experiment, correspondence, release, tag or visibility change. Prior merge authorization remains available for reviewed audit evidence.",
+  "recorded_runtime": "Python3.13.5 NumPy2.3.5 SciPy1.17.0 mpmath1.3.0"
+}

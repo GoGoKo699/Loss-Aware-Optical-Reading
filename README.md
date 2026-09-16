@@ -139,7 +139,7 @@ See [contributions](docs/CONTRIBUTIONS.md), [claim status](CLAIM_STATUS.md) and
 | Learn the experiment's theory | [Self-contained theory route](docs/THEORY_ROUTE.md): states, measurements, C/E/F, then optimization and benchmarks |
 | Connect to familiar material | [Optional reading crosswalk](docs/READING_CROSSWALK.md): Capmany–Pérez engineering chapters and Barnett–Croke discrimination review |
 | Decide how an error changes interpretation | [Robustness guide](docs/ROBUSTNESS_GUIDE.md) and [practical uncertainty worksheet](experiment/UNCERTAINTY.md) |
-| Inspect complete arguments | [Canonical proofs](proofs/THEORY.md), [numerical contract](docs/NUMERICAL_CONTRACT.md), [robustness proofs](studies/robustness-01/PROOFS.md) |
+| Inspect complete arguments | [Canonical proofs](proofs/THEORY.md), [numerical contract](docs/NUMERICAL_CONTRACT.md), [robustness proofs](docs/ROBUSTNESS_PROOFS.md) |
 | Reproduce or trace evidence | [Reproduction](docs/REPRODUCE.md), [handover integration](integrations/lab-handover-01/REPORT.md), [current scope](work_orders/CURRENT.md) |
 
 The classical comparator includes arbitrary permitted receivers, coherent

@@ -55,7 +55,7 @@ noise from becoming a large score error when multiplied by lambda.
 The separate float secular routine is only a diagnostic; the certificate does
 not rely on it. Exact-rational endpoint signs and direction-checked float
 conversion establish the support enclosure. See
-[the numerical proof](../repairs/theory-01/NUMERICAL_PROOF.md).
+[the numerical proof](NUMERICAL_PROOF.md).
 
 ## What is not machine-certified by this change
 

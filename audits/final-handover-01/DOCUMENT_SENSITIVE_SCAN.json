@@ -1,0 +1,187 @@
+{
+  "scope": "Current tracked tree and recursively readable ZIP/tar archives; no history, encrypted archives, entropy inference, or binary OCR. Heuristic scan is not a guarantee of absence. Matched values are never recorded.",
+  "starting_commit": "ba00d9ce64333ad08ef3b61108aa6df959cc5fc7",
+  "stats": {
+    "tracked_files": 291,
+    "text_items_scanned": 505,
+    "archive_containers": 19,
+    "archive_members": 243,
+    "bytes_examined": 13530558,
+    "skipped_oversized": 0
+  },
+  "archive_paths": [
+    "audits/novelty-01/EVIDENCE.tar.xz",
+    "audits/novelty-02/EVIDENCE.tar.xz",
+    "audits/theory-01/EVIDENCE.tar.xz",
+    "baseline/photonic_single_photon_checkpoint_06.zip",
+    "baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz",
+    "integrations/lab-handover-01/BACKEND_PORTABILITY_EVIDENCE.tar.xz",
+    "integrations/lab-handover-01/CI_DIAGNOSTIC_SUCCESSES.tar.xz",
+    "integrations/lab-handover-01/PORTABILITY_TEST_LOGS.tar.xz",
+    "integrations/lab-handover-01/ROBUSTNESS_LOCAL_EXECUTION.tar.xz",
+    "integrations/lab-handover-01/ROBUSTNESS_LOCAL_EXECUTION.tar.xz!patch-roundtrip/studies/robustness-01/EVIDENCE.tar.xz",
+    "integrations/lab-handover-01/SUPPLIED_ROBUSTNESS.zip",
+    "integrations/lab-handover-01/SUPPLIED_ROBUSTNESS.zip!studies/robustness-01/EVIDENCE.tar.xz",
+    "integrations/novelty-02/LOCAL_EXECUTION.tar.xz",
+    "integrations/novelty-02/SUPPLIED_FOLLOWUP.tar.xz",
+    "provenance/archives/photonic_single_photon_checkpoint_07.zip",
+    "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip",
+    "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz",
+    "repairs/theory-01/REMOTE_EVIDENCE.tar.xz",
+    "studies/robustness-01/EVIDENCE.tar.xz"
+  ],
+  "findings": [
+    {
+      "path": "CONTRIBUTING.md",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "README.md",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "audits/novelty-01/comparison_checks.py",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "audits/novelty-02/comparison_checks.py",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "audits/theory-01/diagnostics.py",
+      "category": "email_address",
+      "matches": 2
+    },
+    {
+      "path": "baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/src/validate.py",
+      "category": "email_address",
+      "matches": 5
+    },
+    {
+      "path": "integrations/lab-handover-01/CI_DIAGNOSTIC_SUCCESSES.tar.xz!pr.log",
+      "category": "personal_home_path",
+      "matches": 13
+    },
+    {
+      "path": "integrations/lab-handover-01/CI_DIAGNOSTIC_SUCCESSES.tar.xz!push.log",
+      "category": "personal_home_path",
+      "matches": 13
+    },
+    {
+      "path": "integrations/lab-handover-01/INITIAL_PR_FAILURE.log",
+      "category": "personal_home_path",
+      "matches": 13
+    },
+    {
+      "path": "integrations/lab-handover-01/REGENERATED_WITNESS_DIAGNOSIS.log",
+      "category": "personal_home_path",
+      "matches": 13
+    },
+    {
+      "path": "integrations/lab-handover-01/ROBUSTNESS_LOCAL_EXECUTION.tar.xz!patch-roundtrip/studies/robustness-01/verify_certificates.py",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "integrations/lab-handover-01/SUPPLIED_ROBUSTNESS.zip!robustness-01.patch",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "integrations/lab-handover-01/SUPPLIED_ROBUSTNESS.zip!studies/robustness-01/verify_certificates.py",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/src/validate.py",
+      "category": "email_address",
+      "matches": 5
+    },
+    {
+      "path": "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/src/optics.py",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "provenance/migration07/run/REPRODUCTION.json",
+      "category": "personal_home_path",
+      "matches": 1
+    },
+    {
+      "path": "repairs/theory-01/REMOTE_EVIDENCE.tar.xz!repair-integration-logs/install.log",
+      "category": "personal_home_path",
+      "matches": 2
+    },
+    {
+      "path": "repairs/theory-01/REMOTE_EVIDENCE.tar.xz!repair-integration-logs/regression.log",
+      "category": "personal_home_path",
+      "matches": 1
+    },
+    {
+      "path": "repairs/theory-01/REMOTE_EVIDENCE.tar.xz!repair-integration/REPRODUCTION.json",
+      "category": "personal_home_path",
+      "matches": 1
+    },
+    {
+      "path": "scripts/initialize.py",
+      "category": "email_address",
+      "matches": 2
+    },
+    {
+      "path": "src/optics.py",
+      "category": "email_address",
+      "matches": 1
+    },
+    {
+      "path": "studies/robustness-01/verify_certificates.py",
+      "category": "email_address",
+      "matches": 1
+    }
+  ],
+  "binary_items_not_text_scanned": [
+    {
+      "path": "baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!eta.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!input_amplitudes.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!receiver.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!oracle_code_columns.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!surviving_outputs.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!eta.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!input_amplitudes.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!receiver.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!oracle_code_columns.npy",
+      "suffix": ".npy"
+    },
+    {
+      "path": "provenance/archives/photonic_single_photon_checkpoint_07.zip!photonic_single_photon_checkpoint_07/baseline/photonic_single_photon_checkpoint_06.zip!photonic_single_photon_checkpoint_06/results/candidate_matrices.npz!surviving_outputs.npy",
+      "suffix": ".npy"
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "records": [
+    {
+      "recipe": "commission-su4",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su4",
+        "--sample-attempts",
+        "64",
+        "--seed",
+        "20260915",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su4 --sample-attempts 64 --seed 20260915 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4\", \"route\": \"su4\", \"sample_attempts\": 64, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "file": "target_matrices.json",
+          "byte_identical": true,
+          "old_sha256": "804de444253c73f63ae2b9dab5a0daa087ab18c9d496c4b41c85107a4d7daafc",
+          "new_sha256": "804de444253c73f63ae2b9dab5a0daa087ab18c9d496c4b41c85107a4d7daafc",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "forecast.json",
+          "byte_identical": false,
+          "old_sha256": "b9e3679e5f4a4664024107d41354391c8e4e7ffce3a4a24dbfc4084793623931",
+          "new_sha256": "4def32b314f636f5553f9e79d76db0a6905446aec5893b6a66ecb66e2d0f1d64",
+          "old_environment": {
+            "python": "3.12.14",
+            "numpy": "2.3.5"
+          },
+          "new_environment": {
+            "python": "3.13.5",
+            "numpy": "2.3.5"
+          },
+          "max_numeric_difference_excluding_environment": 0.0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "synthetic_trials.csv",
+          "byte_identical": true,
+          "old_sha256": "26a48eff28d6c671e2da85de7b03f755142cfd1c7d74fa85c95f9d7f558633ab",
+          "new_sha256": "26a48eff28d6c671e2da85de7b03f755142cfd1c7d74fa85c95f9d7f558633ab",
+          "passed": true
+        },
+        {
+          "file": "synthetic_summary.json",
+          "byte_identical": true,
+          "old_sha256": "69399e4dd347aaf73b5e579c959484573379b7828d80785ae08af989732d41d9",
+          "new_sha256": "69399e4dd347aaf73b5e579c959484573379b7828d80785ae08af989732d41d9",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "RECORD_SCHEMA.json",
+          "byte_identical": true,
+          "old_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "new_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "commissioning_transfer_reference.csv",
+          "byte_identical": true,
+          "old_sha256": "3bfb9734bd4d0f7249382a28a1980835862f62a33a6bde9d9c47f66620d2d839",
+          "new_sha256": "3bfb9734bd4d0f7249382a28a1980835862f62a33a6bde9d9c47f66620d2d839",
+          "passed": true
+        }
+      ],
+      "analysis": {
+        "argv": [
+          "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+          "scripts/lab_records.py",
+          "--route",
+          "su4",
+          "--trials",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4/synthetic_trials.csv",
+          "--output",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4-analysis"
+        ],
+        "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4-analysis",
+        "exit_code": 0,
+        "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su4-analysis\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "recipe": "commission-su8-embed",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-embed",
+        "--sample-attempts",
+        "64",
+        "--seed",
+        "20260915",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-embed --sample-attempts 64 --seed 20260915 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed\", \"route\": \"su8-embed\", \"sample_attempts\": 64, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "file": "target_matrices.json",
+          "byte_identical": true,
+          "old_sha256": "f69880c77db2f945c0c0f1c03f7eff2c849c39eb999ef2ed7604cd579dd6374f",
+          "new_sha256": "f69880c77db2f945c0c0f1c03f7eff2c849c39eb999ef2ed7604cd579dd6374f",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "forecast.json",
+          "byte_identical": false,
+          "old_sha256": "097a0b816c6b6cf5683cd916b9988e834773844bca8386e94d8d7bf54b8e6ea9",
+          "new_sha256": "3e77823ebad53f4fd7e65d91357d19d12b39075cd61ba9c223ba3232140cbe59",
+          "old_environment": {
+            "python": "3.12.14",
+            "numpy": "2.3.5"
+          },
+          "new_environment": {
+            "python": "3.13.5",
+            "numpy": "2.3.5"
+          },
+          "max_numeric_difference_excluding_environment": 0.0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "synthetic_trials.csv",
+          "byte_identical": true,
+          "old_sha256": "93e7811a71abb2bb52bb013b51c6fb09c2dbd6a5ee23cc4dc79c8960321cd162",
+          "new_sha256": "93e7811a71abb2bb52bb013b51c6fb09c2dbd6a5ee23cc4dc79c8960321cd162",
+          "passed": true
+        },
+        {
+          "file": "synthetic_summary.json",
+          "byte_identical": true,
+          "old_sha256": "aa400b03da0332d33f883c0145fefb81f5d44f13e498310d18e4ee85a2c1666d",
+          "new_sha256": "aa400b03da0332d33f883c0145fefb81f5d44f13e498310d18e4ee85a2c1666d",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "RECORD_SCHEMA.json",
+          "byte_identical": true,
+          "old_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "new_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "commissioning_transfer_reference.csv",
+          "byte_identical": true,
+          "old_sha256": "c17733f72dbcb3e8433f6beb300aa66c06c939701f340b728585ef755357818a",
+          "new_sha256": "c17733f72dbcb3e8433f6beb300aa66c06c939701f340b728585ef755357818a",
+          "passed": true
+        }
+      ],
+      "analysis": {
+        "argv": [
+          "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+          "scripts/lab_records.py",
+          "--route",
+          "su8-embed",
+          "--trials",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed/synthetic_trials.csv",
+          "--output",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed-analysis"
+        ],
+        "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-embed --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed-analysis",
+        "exit_code": 0,
+        "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-embed-analysis\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "recipe": "commission-su8-walsh",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "commission-su8-walsh",
+        "--sample-attempts",
+        "64",
+        "--seed",
+        "20260915",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe commission-su8-walsh --sample-attempts 64 --seed 20260915 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh\", \"route\": \"su8-walsh\", \"sample_attempts\": 64, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "file": "target_matrices.json",
+          "byte_identical": true,
+          "old_sha256": "badcb872df13f28b78f9c3e5dc6be9b50f56bf81ae8f32881c9469fe666238e8",
+          "new_sha256": "badcb872df13f28b78f9c3e5dc6be9b50f56bf81ae8f32881c9469fe666238e8",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "forecast.json",
+          "byte_identical": false,
+          "old_sha256": "9e4d346bce427aa44814ecc74668ea42525b5926ec75d1a7622d526e3a2bf294",
+          "new_sha256": "b249bc73c07f1f420bcdab626b0f0eb7592488baaa384fb53b5b33ce2379b5d5",
+          "old_environment": {
+            "python": "3.12.14",
+            "numpy": "2.3.5"
+          },
+          "new_environment": {
+            "python": "3.13.5",
+            "numpy": "2.3.5"
+          },
+          "max_numeric_difference_excluding_environment": 0.0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "synthetic_trials.csv",
+          "byte_identical": true,
+          "old_sha256": "e0bbd1f95b3dd62bd17a39806a98463edf0aa6776df4346ff4ddcbbf6cd3613e",
+          "new_sha256": "e0bbd1f95b3dd62bd17a39806a98463edf0aa6776df4346ff4ddcbbf6cd3613e",
+          "passed": true
+        },
+        {
+          "file": "synthetic_summary.json",
+          "byte_identical": true,
+          "old_sha256": "87cbd4123bc9eb1d3015c20c88875b978aa881d8976160acc2db10b224863d0f",
+          "new_sha256": "87cbd4123bc9eb1d3015c20c88875b978aa881d8976160acc2db10b224863d0f",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "RECORD_SCHEMA.json",
+          "byte_identical": true,
+          "old_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "new_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "commissioning_transfer_reference.csv",
+          "byte_identical": true,
+          "old_sha256": "45f599b9ae45e81cb3682c78d95bffc8fccaa9ca38d3c941dae31bf60431944e",
+          "new_sha256": "45f599b9ae45e81cb3682c78d95bffc8fccaa9ca38d3c941dae31bf60431944e",
+          "passed": true
+        }
+      ],
+      "analysis": {
+        "argv": [
+          "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+          "scripts/lab_records.py",
+          "--route",
+          "su8-walsh",
+          "--trials",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh/synthetic_trials.csv",
+          "--output",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh-analysis"
+        ],
+        "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su8-walsh --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh-analysis",
+        "exit_code": 0,
+        "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-commission-su8-walsh-analysis\", \"N\": 64, \"counts\": {\"correct\": 64, \"wrong\": 0, \"inconclusive\": 0}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "recipe": "m1",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "m1",
+        "--sample-attempts",
+        "64",
+        "--seed",
+        "20260915",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe m1 --sample-attempts 64 --seed 20260915 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1\", \"route\": \"su4\", \"sample_attempts\": 64, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "file": "target_matrices.json",
+          "byte_identical": true,
+          "old_sha256": "128f5ce4fd8b9a06a9b93317943611679b9a6b8e13fd038e1e2057664d9c3a39",
+          "new_sha256": "128f5ce4fd8b9a06a9b93317943611679b9a6b8e13fd038e1e2057664d9c3a39",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "forecast.json",
+          "byte_identical": false,
+          "old_sha256": "576443ebb5a165e5d5aae95a3efee748355b47723b16534da52f46a258bb4c78",
+          "new_sha256": "ab5674798c0686b3b4db728361b5bb499878a65cc66ed770c46dffcf2f7cb41b",
+          "old_environment": {
+            "python": "3.12.14",
+            "numpy": "2.3.5"
+          },
+          "new_environment": {
+            "python": "3.13.5",
+            "numpy": "2.3.5"
+          },
+          "max_numeric_difference_excluding_environment": 0.0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "synthetic_trials.csv",
+          "byte_identical": true,
+          "old_sha256": "cdea9f41cce9986f897f48bae06ba290e98236d7b552156b0e3d8e2f18dd3ba2",
+          "new_sha256": "cdea9f41cce9986f897f48bae06ba290e98236d7b552156b0e3d8e2f18dd3ba2",
+          "passed": true
+        },
+        {
+          "file": "synthetic_summary.json",
+          "byte_identical": true,
+          "old_sha256": "80a4b6f2da69762cce78c4a575533efa39da20c6b7a67c25f93dafcbcbd730e9",
+          "new_sha256": "80a4b6f2da69762cce78c4a575533efa39da20c6b7a67c25f93dafcbcbd730e9",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "RECORD_SCHEMA.json",
+          "byte_identical": true,
+          "old_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "new_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        }
+      ],
+      "analysis": {
+        "argv": [
+          "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+          "scripts/lab_records.py",
+          "--route",
+          "su4",
+          "--trials",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1/synthetic_trials.csv",
+          "--output",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1-analysis"
+        ],
+        "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1-analysis",
+        "exit_code": 0,
+        "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-m1-analysis\", \"N\": 64, \"counts\": {\"correct\": 23, \"wrong\": 0, \"inconclusive\": 41}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "recipe": "p1",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p1",
+        "--sample-attempts",
+        "64",
+        "--seed",
+        "20260915",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p1 --sample-attempts 64 --seed 20260915 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1\", \"route\": \"su4\", \"sample_attempts\": 64, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "file": "target_matrices.json",
+          "byte_identical": true,
+          "old_sha256": "4b089561a36ee00ce9748fd91384707af3f3dd49241368ba1d15dbbd2f7b3e45",
+          "new_sha256": "4b089561a36ee00ce9748fd91384707af3f3dd49241368ba1d15dbbd2f7b3e45",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "forecast.json",
+          "byte_identical": false,
+          "old_sha256": "2b8f8b06f7df4069ee6adb977ff2d588c17eb6889ee198884d1113f536010466",
+          "new_sha256": "49e5639d59faa11bd8fb6cc5619ecf1660241ab62b93351161103077d9410499",
+          "old_environment": {
+            "python": "3.12.14",
+            "numpy": "2.3.5"
+          },
+          "new_environment": {
+            "python": "3.13.5",
+            "numpy": "2.3.5"
+          },
+          "max_numeric_difference_excluding_environment": 0.0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "synthetic_trials.csv",
+          "byte_identical": true,
+          "old_sha256": "3f29402ce99ae7ae928b7c1ef2e2d9dd076eff3c1fe7dec0412bea4b4b9df2a3",
+          "new_sha256": "3f29402ce99ae7ae928b7c1ef2e2d9dd076eff3c1fe7dec0412bea4b4b9df2a3",
+          "passed": true
+        },
+        {
+          "file": "synthetic_summary.json",
+          "byte_identical": true,
+          "old_sha256": "d13dfa5d0b0797b8f1454aa7ddd48df07181ce6d0d5cef2c94931f011cbdef94",
+          "new_sha256": "d13dfa5d0b0797b8f1454aa7ddd48df07181ce6d0d5cef2c94931f011cbdef94",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "RECORD_SCHEMA.json",
+          "byte_identical": true,
+          "old_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "new_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        }
+      ],
+      "analysis": {
+        "argv": [
+          "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+          "scripts/lab_records.py",
+          "--route",
+          "su4",
+          "--trials",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1/synthetic_trials.csv",
+          "--output",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1-analysis"
+        ],
+        "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1-analysis",
+        "exit_code": 0,
+        "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p1-analysis\", \"N\": 64, \"counts\": {\"correct\": 35, \"wrong\": 0, \"inconclusive\": 29}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "recipe": "p2",
+      "argv": [
+        "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+        "scripts/lab_reference.py",
+        "--recipe",
+        "p2",
+        "--sample-attempts",
+        "64",
+        "--seed",
+        "20260915",
+        "--output",
+        "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2"
+      ],
+      "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_reference.py --recipe p2 --sample-attempts 64 --seed 20260915 --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2",
+      "exit_code": 0,
+      "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2\", \"route\": \"su4\", \"sample_attempts\": 64, \"status\": \"HYPOTHETICAL_MODEL_NOT_LAB_DATA\"}\n",
+      "stderr": "",
+      "comparisons": [
+        {
+          "file": "target_matrices.json",
+          "byte_identical": true,
+          "old_sha256": "b415f6fc064dc7589d19a5880dfe027418c66b19784d1d153496e9d6aeaf06aa",
+          "new_sha256": "b415f6fc064dc7589d19a5880dfe027418c66b19784d1d153496e9d6aeaf06aa",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "forecast.json",
+          "byte_identical": false,
+          "old_sha256": "90f6e52e338c9d94b493f774644ef9317e885bc33b690f79c39575e66ad25452",
+          "new_sha256": "d959bac32bda003cfef2b4b6a850ae32f182ff89c1d2ea055a432b62ec735aaa",
+          "old_environment": {
+            "python": "3.12.14",
+            "numpy": "2.3.5"
+          },
+          "new_environment": {
+            "python": "3.13.5",
+            "numpy": "2.3.5"
+          },
+          "max_numeric_difference_excluding_environment": 0.0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "synthetic_trials.csv",
+          "byte_identical": true,
+          "old_sha256": "d736cf5333d8bca1d929f831e8728b5b564da09df7a91fb4978363089640ee14",
+          "new_sha256": "d736cf5333d8bca1d929f831e8728b5b564da09df7a91fb4978363089640ee14",
+          "passed": true
+        },
+        {
+          "file": "synthetic_summary.json",
+          "byte_identical": true,
+          "old_sha256": "e52e7bdd22d9ae5169da7f2a4acaf765ad0fb61f8aa43d020a0aba3284444ca8",
+          "new_sha256": "e52e7bdd22d9ae5169da7f2a4acaf765ad0fb61f8aa43d020a0aba3284444ca8",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        },
+        {
+          "file": "RECORD_SCHEMA.json",
+          "byte_identical": true,
+          "old_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "new_sha256": "c07f938bf0ae3991622d4dafb070fe62c3b27f30f66c4d83e533e3eb6690b949",
+          "max_numeric_difference_excluding_environment": 0,
+          "nonnumeric_differences_excluding_environment": [],
+          "passed": true
+        }
+      ],
+      "analysis": {
+        "argv": [
+          "/workspace/scratch/d29a6922cf06/ci-env/bin/python",
+          "scripts/lab_records.py",
+          "--route",
+          "su4",
+          "--trials",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2/synthetic_trials.csv",
+          "--output",
+          "/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2-analysis"
+        ],
+        "executed": "/workspace/scratch/d29a6922cf06/ci-env/bin/python scripts/lab_records.py --route su4 --trials /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2/synthetic_trials.csv --output /workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2-analysis",
+        "exit_code": 0,
+        "stdout": "{\"output\": \"/workspace/scratch/d29a6922cf06/final-handover-01-runs/recipes/compact-p2-analysis\", \"N\": 64, \"counts\": {\"correct\": 25, \"wrong\": 0, \"inconclusive\": 39}, \"status\": \"DESCRIPTIVE_ONLY\"}\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "failed": 0
+}

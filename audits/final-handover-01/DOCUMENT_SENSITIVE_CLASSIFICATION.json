@@ -1,0 +1,10 @@
+{
+  "category_counts": {
+    "intentional_public_contact": 4,
+    "matrix_expression_false_positive": 20,
+    "generic_ci_or_runtime_home_path": 57
+  },
+  "unclassified_paths": [],
+  "values_recorded": false,
+  "classification_method": "Intentional contact exact match; generic CI/runtime home prefixes; matrix expressions identified by spelling or Python operator token at the matched @."
+}

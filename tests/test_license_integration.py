@@ -11,6 +11,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
 from verify_import import (
+    _final_handover_approvals, _final_handover_hash,
     verify, LICENSE_RECORD, LICENSE_README_PREIMAGE,
     _license_approval, _license_hash,
 )
@@ -21,7 +22,9 @@ class LicenseIntegrationTests(unittest.TestCase):
         entry = _license_approval(ROOT)
         self.assertEqual(entry['path'], 'README.md')
         self.assertEqual(entry['old_sha256'], LICENSE_README_PREIMAGE)
-        self.assertEqual(entry['new_sha256'], hashlib.sha256((ROOT/'README.md').read_bytes()).hexdigest())
+        final_handover, _ = _final_handover_approvals(ROOT)
+        expected = _final_handover_hash('README.md', entry['new_sha256'], final_handover)
+        self.assertEqual(expected, hashlib.sha256((ROOT/'README.md').read_bytes()).hexdigest())
         with self.assertRaisesRegex(ValueError, 'previous hash mismatch'):
             _license_hash('README.md', '0'*64, entry)
         self.assertEqual(_license_hash('src/theory.py', '1'*64, entry), '1'*64)

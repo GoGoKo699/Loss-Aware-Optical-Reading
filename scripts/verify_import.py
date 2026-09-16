@@ -80,6 +80,30 @@ LICENSE_RECORD = 'provenance/changes/license-01.json'
 LICENSE_BASE_COMMIT = '5cc20457cbdc9b55a62bf92304e6f17caf49fa48'
 LICENSE_BASE_TREE = '89039afd56a8c3ad95a58a322df2a2d47de8cbdf'
 LICENSE_README_PREIMAGE = '22f28dbdf826a26e560b58b38d457be089814fd6c60a5d57614c6d5691445701'
+FINAL_HANDOVER_RECORD = 'provenance/changes/final-handover-01.json'
+FINAL_HANDOVER_BASE_COMMIT = 'ba00d9ce64333ad08ef3b61108aa6df959cc5fc7'
+FINAL_HANDOVER_BASE_TREE = '605719db8b64ec45d75454dbe4338d56140d8593'
+# Exact bytes at the reviewed main baseline. Only four current reader documents
+# may change; the three added copies never replace their frozen source records.
+FINAL_HANDOVER_PREIMAGES = {
+    'README.md': '113af6192e55a803c68dacc8b34286284415afecb058b1988aaf2a9fc1e49275',
+    'REPORT.md': '85bb81ffccc33fcee17a2e3566945d9e3b8386f069d25779cab2f00c2ee9febd',
+    'docs/ROBUSTNESS_GUIDE.md': 'bbd4b9e2a4fb6d2fb02f90b440bcc75a4b2f5c218f77be52adfab025ec7f3006',
+    'docs/NUMERICAL_CONTRACT.md': '7d146191822bc6dda171f78285a3f64441a86b638092d6a332f6697b2481b133',
+}
+FINAL_HANDOVER_PATHS = frozenset(FINAL_HANDOVER_PREIMAGES)
+FINAL_HANDOVER_READER_SOURCES = {
+    'docs/ROBUSTNESS_REPORT.md': (
+        'studies/robustness-01/REPORT.md',
+        'bfce35293ec634b4ac825cce52cf500c35a5fb87a9d9964d865303dfe67030b2'),
+    'docs/ROBUSTNESS_PROOFS.md': (
+        'studies/robustness-01/PROOFS.md',
+        '722155ce5c119a81defb63c1432013d260003e30028ef9441110baf67f1b6fed'),
+    'docs/NUMERICAL_PROOF.md': (
+        'repairs/theory-01/NUMERICAL_PROOF.md',
+        'b20dc1174675bac9d701127930ed2c9bd1b11b53a64438e1ee5dd8951c48010e'),
+}
+FINAL_HANDOVER_ADDITIONS = frozenset(FINAL_HANDOVER_READER_SOURCES)
 HISTORICAL_LEDGER_SHA256 = {
     CHANGE_RECORD: 'a4b1f7eb9ec25d8ba737de30abc7ea787dd25eaeb15289207d191c2cd20c6c10',
     DOCUMENT_RECORD: '9cc64044ccfdf2bc38a3900e8141089a383bd116d7ff259c729cffe47afa2b29',
@@ -88,6 +112,7 @@ HISTORICAL_LEDGER_SHA256 = {
     LAYOUT_RECORD: '4c92f5c0d232ab369ef6ab5bde63cd32d67f7dddf9699fd8fec4fdc4c9c4e83a',
     MATH_APPROVAL_RECORD: '633f19203678abe72938ee3b6661009a5a488c0c65861f3ab4d5002300f28fa5',
     TABLE_CLEANUP_RECORD: 'ea4ed2a9a3bfe4ecf702a8924e27963ad22d057389343c370392f7b00304fd22',
+    LICENSE_RECORD: '3b61cf56e77b2b1063be649a22f391f05aa2b57851c6d6ca01b37bc6fa94dad0',
 }
 
 
@@ -347,6 +372,51 @@ def _license_hash(path: str, expected: str, approval: dict) -> str:
     return approval['new_sha256']
 
 
+def _final_handover_approvals(root: Path) -> tuple[dict, dict]:
+    """Bound the final display/navigation repair and its frozen-source copies."""
+    ledger = json.loads((root/FINAL_HANDOVER_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('interpretation_only') is not True or
+        ledger.get('mathematical_content_changed') is not False or
+        ledger.get('original_archive_sha256') != ORIGINAL_ARCHIVE_SHA256 or
+        ledger.get('previous_record') != LICENSE_RECORD or
+        ledger.get('previous_record_sha256') != HISTORICAL_LEDGER_SHA256[LICENSE_RECORD] or
+        ledger.get('base_commit') != FINAL_HANDOVER_BASE_COMMIT or
+        ledger.get('base_tree') != FINAL_HANDOVER_BASE_TREE):
+        raise ValueError('Invalid final-handover documentation ledger contract')
+    entries = ledger.get('changes', [])
+    added_entries = ledger.get('additions', [])
+    changes = {entry['path']: entry for entry in entries}
+    additions = {entry['path']: entry for entry in added_entries}
+    if (len(changes) != len(entries) or changes.keys() != FINAL_HANDOVER_PATHS or
+        len(additions) != len(added_entries) or additions.keys() != FINAL_HANDOVER_ADDITIONS):
+        raise ValueError('Final-handover ledger is not the authorized document set')
+    for entry in entries + added_entries:
+        path, reason = entry['path'], entry.get('reason')
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError('Final-handover documentation reason is missing: '+path)
+        keys = ('old_sha256', 'new_sha256') if path in changes else ('sha256', 'source_sha256')
+        for key in keys:
+            value = entry.get(key)
+            if (not isinstance(value, str) or len(value) != 64 or
+                any(c not in '0123456789abcdef' for c in value)):
+                raise ValueError('Invalid final-handover documentation hash: '+path)
+        if path in changes:
+            if entry['old_sha256'] != FINAL_HANDOVER_PREIMAGES[path]:
+                raise ValueError('Final-handover documentation baseline hash mismatch: '+path)
+        elif (entry.get('source_path'), entry['source_sha256']) != FINAL_HANDOVER_READER_SOURCES[path]:
+            raise ValueError('Final-handover reader source mismatch: '+path)
+    return changes, additions
+
+
+def _final_handover_hash(path: str, expected: str, changes: dict) -> str:
+    entry = changes.get(path)
+    if entry is None:
+        return expected
+    if entry['old_sha256'] != expected:
+        raise ValueError('Final-handover documentation previous hash mismatch: '+path)
+    return entry['new_sha256']
+
+
 def verify(root: Path = ROOT) -> dict:
     manifest_bytes = (root/'provenance/IMPORT_MANIFEST.json').read_bytes()
     if _git_blob(manifest_bytes) != ORIGINAL_MANIFEST_GIT_BLOB:
@@ -376,6 +446,7 @@ def verify(root: Path = ROOT) -> dict:
     math_approval = _math_approval_approvals(root)
     table_cleanup = _table_cleanup_approvals(root)
     license_approval = _license_approval(root)
+    final_handover, reader_additions = _final_handover_approvals(root)
     sources = [e['source'] for e in manifest['files']]
     if len(sources) != len(set(sources)):
         raise ValueError('Duplicate source member')
@@ -407,6 +478,7 @@ def verify(root: Path = ROOT) -> dict:
             expected = _math_approval_hash(entry['path'], expected, math_approval)
             expected = _table_cleanup_hash(entry['path'], expected, table_cleanup)
             expected = _license_hash(entry['path'], expected, license_approval)
+            expected = _final_handover_hash(entry['path'], expected, final_handover)
             if sha(current) != expected:
                 raise ValueError('Protected working file changed: '+entry['path'])
             if approved is None and document is None:
@@ -418,7 +490,8 @@ def verify(root: Path = ROOT) -> dict:
                     raise ValueError('Non-permitted migration difference: '+name)
             count += 1
     for path, entry in additions.items():
-        if sha(_safe_path(root,path).read_bytes()) != entry['sha256']:
+        expected = _final_handover_hash(path, entry['sha256'], final_handover)
+        if sha(_safe_path(root,path).read_bytes()) != expected:
             raise ValueError('Protected added file changed: '+path)
     for path, entry in document_additions.items():
         expected = _followup_hash(path, entry['sha256'], followup)
@@ -427,6 +500,7 @@ def verify(root: Path = ROOT) -> dict:
         expected = _math_approval_hash(path, expected, math_approval)
         expected = _table_cleanup_hash(path, expected, table_cleanup)
         expected = _license_hash(path, expected, license_approval)
+        expected = _final_handover_hash(path, expected, final_handover)
         if sha(_safe_path(root,path).read_bytes()) != expected:
             raise ValueError('Protected documentation changed: '+path)
     # Includes the five navigation documents outside the older import set.
@@ -435,6 +509,7 @@ def verify(root: Path = ROOT) -> dict:
         expected = _math_approval_hash(path, expected, math_approval)
         expected = _table_cleanup_hash(path, expected, table_cleanup)
         expected = _license_hash(path, expected, license_approval)
+        expected = _final_handover_hash(path, expected, final_handover)
         if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected handover document changed: '+path)
     # Includes the eight previously unfrozen teaching/experiment explanations.
@@ -442,17 +517,28 @@ def verify(root: Path = ROOT) -> dict:
         expected = _math_approval_hash(path, entry['new_sha256'], math_approval)
         expected = _table_cleanup_hash(path, expected, table_cleanup)
         expected = _license_hash(path, expected, license_approval)
+        expected = _final_handover_hash(path, expected, final_handover)
         if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected layout document changed: '+path)
     for path, entry in math_approval.items():
         expected = _table_cleanup_hash(path, entry['new_sha256'], table_cleanup)
         expected = _license_hash(path, expected, license_approval)
+        expected = _final_handover_hash(path, expected, final_handover)
         if sha(_safe_path(root, path).read_bytes()) != expected:
             raise ValueError('Protected math/approval document changed: '+path)
     # Commissioning is newly protected here, at its recorded baseline preimage.
     for path, entry in table_cleanup.items():
         if sha(_safe_path(root, path).read_bytes()) != entry['new_sha256']:
             raise ValueError('Protected table-cleanup document changed: '+path)
+    # Check every named final document, including any not reached above.
+    for path, entry in final_handover.items():
+        if sha(_safe_path(root, path).read_bytes()) != entry['new_sha256']:
+            raise ValueError('Protected final-handover document changed: '+path)
+    for path, entry in reader_additions.items():
+        if sha(_safe_path(root, entry['source_path']).read_bytes()) != entry['source_sha256']:
+            raise ValueError('Frozen reader source changed: '+entry['source_path'])
+        if sha(_safe_path(root, path).read_bytes()) != entry['sha256']:
+            raise ValueError('Protected reader copy changed: '+path)
     # Check immutable predecessor bytes after their semantic checks. This keeps
     # older diagnostic failures informative while also rejecting silent rewrites
     # of historical reasons, metadata, or accepted hash-chain entries.
@@ -486,6 +572,11 @@ def verify(root: Path = ROOT) -> dict:
             'license_change_record':LICENSE_RECORD,
             'authorized_licensing_documents_verified':['README.md'],
             'mathematics_changed_by_licensing':False,
+            'final_handover_change_record':FINAL_HANDOVER_RECORD,
+            'authorized_final_handover_documents_verified':sorted(final_handover),
+            'authorized_reader_copies_verified':sorted(reader_additions),
+            'reader_source_documents_unchanged':True,
+            'mathematics_changed_by_final_handover':False,
             'historical_change_ledgers_unchanged':True,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 
