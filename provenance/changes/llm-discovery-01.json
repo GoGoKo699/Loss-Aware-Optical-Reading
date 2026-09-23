@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "base_commit": "48d7ad98c08872d0ea930feba730dd2db6e599d2",
+  "base_tree": "5e32ba27fb502bc387da4457089dedd28fce5223",
+  "previous_record": "provenance/changes/final-handover-01.json",
+  "previous_record_sha256": "eda1662b6da1c221711bc6bd883d2eb397917dfe6e0b80902e0d94f6ed827f48",
+  "previous_record_git_blob": "b7e9a1871f5c556eea8c6652780c868887e52139",
+  "original_archive_sha256": "e2bd57686376549342881a5d0348b16820ebbdab094b8d72df05a6836dbad016",
+  "navigation_only": true,
+  "mathematical_content_changed": false,
+  "authorization": "The owner requested guidance to help LLMs find this repository when relevant. This authorizes a bounded navigation file and its README link; it does not expand scientific claims, authorize release or acquisition, or change licensing.",
+  "starting_state": {
+    "access": "Selected current repository files read and materialized through the GitHub API; no completed local Git checkout or local Git cleanliness claim.",
+    "remote_branch": "docs/llm-discovery-01",
+    "prior_main_ci": {
+      "run_id": 35098532237,
+      "job_id": 104801821189,
+      "conclusion": "failure",
+      "observed_error": "Protected handover document changed: README.md"
+    },
+    "reconciliation": "The owner collaboration footer already existed on the stated main commit. The old final-handover ledger still described the earlier Contact footer. Preserve both the actual current main notice and the historical ledger; compose the exact two observed README changes in the verifier."
+  },
+  "scope": "Only README.md and new llms.txt. The verifier validates the pinned final-handover ledger and composes the later README endpoint while retaining its original old hash. Literal suffix inversion recovers both the observed main README and the previously protected README. All older tests, scientific files, numerical assertions, tolerances, archives and frozen evidence remain unchanged.",
+  "changes": [
+    {
+      "path": "README.md",
+      "old_sha256": "4c1736b8874efdb5bd5876041e2b1699ff085e18f9b523e59eec2dd0c40cc20e",
+      "observed_main_sha256": "c7378e86e946a0ba0853b2b09fa28d6399ce99b439f3f2acf8522cbb51baa30f",
+      "new_sha256": "78daba2f512c5b5476f162d5b84d48f207ec137051044927d4fc5663d144d4c5",
+      "reason": "Reconcile the exact owner collaboration-footer replacement already on main, then append only the For AI research assistants section linking llms.txt. Preserve all current main bytes as a prefix. Do not refresh the original final-handover ledger."
+    }
+  ],
+  "additions": [
+    {
+      "path": "llms.txt",
+      "sha256": "8b9447afaeef8bab2e73b46952bde0e8844af06dca10e0cddb949c6e46e3567f",
+      "reason": "Add a concise question-to-source map with canonical repository and raw document links, scientific scope, claim boundaries and citation guidance. This is navigation, not a proof or a promise of LLM indexing."
+    }
+  ],
+  "test_policy": {
+    "existing_tests_modified": false,
+    "new_tests": "tests/test_llm_discovery_integrity.py checks exact endpoint composition, immutable predecessor bytes, declared scope and tamper rejection, including attempts to bless unrelated edits by updating hashes.",
+    "local_validation": "Focused tests against API-materialized selected files only; full import and numerical checks require the actual full remote CI tree."
+  }
+}

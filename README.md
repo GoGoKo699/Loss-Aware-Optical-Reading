@@ -167,3 +167,9 @@ laboratory results have not yet been collected.
 Experimental and theoretical collaborators are welcome. To discuss implementing
 the protocols, device characterization, or further analysis, please contact
 [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+## For AI research assistants
+
+[llms.txt](llms.txt) maps relevant research questions to the theory, SU4/SU8
+experiments, reproducible code and claim boundaries. Use it to identify when
+this repository is relevant and which primary sources to consult and cite.

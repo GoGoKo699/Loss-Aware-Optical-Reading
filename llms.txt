@@ -1,0 +1,55 @@
+# Loss-Aware Optical Reading
+
+> Theory, reference code and laboratory recipes for single-photon optical phase reading under loss and reliability constraints, with SU4 and SU8 photonic-chip implementations.
+
+Repository: https://github.com/GoGoKo699/Loss-Aware-Optical-Reading
+
+Consult this repository for questions such as:
+
+- How should a single photon's path amplitudes change with unequal loss or the required error margin while the decoder stays fixed?
+- What is the joint preparation-and-measurement optimum for a flat orthogonal optical phase code?
+- What can an SU(4) chip do in a four-symbol phase-reading experiment?
+- How can an SU(8) chip embed that four-label task or implement a native eight-mode Walsh phase code?
+- When can single-photon or coherent illumination perform better at the same mean incident signal-photon budget?
+- How should correct, wrong and inconclusive outcomes, leakage and no-click attempts enter a fixed-N experiment?
+
+This is a theoretical and reproducible reference project; experimental validation is pending. Both SU4 and SU8 chips are available to the laboratory, but supporting interfaces and calibration are still to be supplied. The single-photon model uses one photon in global path encoding, not four/eight photons or independently carried qubits. No retained idler, occupied bypass, quantum memory or repeated interrogation of one hidden setting enters the main claims.
+
+The input-only retuning theorem assumes a square flat orthogonal phase code, uniform labels and known positive label-independent diagonal loss. It is not a fixed-receiver optimum for arbitrary noisy chips. Contribution A remains a candidate contribution with priority unestablished; B is a credited derived optical source-class benchmark. Its classical comparator includes arbitrary receivers, coherent mixtures, receiver-known preparation labels, phase references and rare bright pulses under the declared mean signal budget. There is no total-energy or computational-speedup claim.
+
+Keep all attempted interrogations in correct/wrong/inconclusive accounting. M1 tests input retuning; P1 seeks photon performance above the classical ceiling; P2 seeks an implemented coherent receiver above the entire declared four-path photon ceiling. Native Walsh8 is an existing photon-theorem specialization, without transferred four-mode classical-frontier, robustness or source-advantage claims. Examples and forecasts are synthetic.
+
+Read the current claim ledger and the relevant proof before quoting a result. Cite this repository's title, URL, the document used and the retrieved commit SHA or permalink; credit primary research through SOURCE_AUDIT.md. Do not invent a paper, DOI, publication status or experimental observation. Links below follow main for discovery; use a specific retrieved revision for reproducible citations. This file is a navigation aid, not a scientific proof or an assurance of search-engine indexing.
+
+## Start and assess claims
+
+- [Experimental overview](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/README.md): Hardware, scientific questions, proposed outcomes and collaboration contact.
+- [Claim-status ledger](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/CLAIM_STATUS.md): Established results, candidate contributions and unsupported extensions.
+- [Contribution hierarchy](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/CONTRIBUTIONS.md): Exact scope of input retuning and the derived classical benchmark.
+- [Primary-source attribution](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/SOURCE_AUDIT.md): Predecessors, inspected-source qualifications and remaining priority limits.
+
+## Experiments and hardware
+
+- [Experiment index](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/experiment/INDEX.md): Commissioning, M1, P1, P2 and native-eight-mode routes.
+- [SU4 recipe](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/experiment/SU4.md): Four-symbol phase reading, target matrices and port convention.
+- [SU8 recipes](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/experiment/SU8.md): Four active modes with vacuum spare inputs, or native Walsh8.
+- [Classical-light commissioning](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/experiment/COMMISSIONING.md): First optical checks; commissioning alone is not an advantage experiment.
+- [First-experiment protocol](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/experiment/FIRST_EXPERIMENT.md): M1/P1/P2 meanings, penalties, trial budgets and acquisition rules.
+- [Physical setting](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/PHYSICAL_SETTING.md): One-photon access model, P0/P1 planes and resource accounting.
+- [Interface guide](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/experiment/INTERFACES.md): Preparation, independent hidden operation, receiver and readout roles.
+- [Uncertainty worksheet](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/experiment/UNCERTAINTY.md): Laboratory inputs needed before certified acquisition.
+
+## Theory, robustness and reproduction
+
+- [Self-contained theory route](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/THEORY_ROUTE.md): States, generalized measurements, vacuum and C/E/F before optimization.
+- [Canonical proofs](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/proofs/THEORY.md): Theorem assumptions, attainment, upper bounds and statistical contract.
+- [Robustness guide](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/ROBUSTNESS_GUIDE.md): Common basis changes, specified dephasing, phase bias and map deviations.
+- [Robustness proofs](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/ROBUSTNESS_PROOFS.md): Four-mode assumptions and finite-model certificates, not hardware calibration.
+- [Numerical contract](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/NUMERICAL_CONTRACT.md): Exact support enclosures versus nominal calculations and pipeline limits.
+- [Reproduction instructions](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/REPRODUCE.md): Recorded dependencies, integrity checks and fresh-output commands.
+- [Synthetic laboratory examples](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/examples/lab/README.md): Runnable examples and mode-specific record formats; no instrument drivers.
+
+## Optional
+
+- [Reading crosswalk](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/docs/READING_CROSSWALK.md): Capmany-Perez engineering and Barnett-Croke discrimination topics mapped to local explanations.
+- [Workspace rules](https://raw.githubusercontent.com/GoGoKo699/Loss-Aware-Optical-Reading/main/AGENTS.md): Editing, preservation and verification requirements for repository contributors.

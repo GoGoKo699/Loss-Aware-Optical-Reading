@@ -116,6 +116,40 @@ HISTORICAL_LEDGER_SHA256 = {
 }
 
 
+LLM_DISCOVERY_RECORD = 'provenance/changes/llm-discovery-01.json'
+LLM_DISCOVERY_BASE_COMMIT = '48d7ad98c08872d0ea930feba730dd2db6e599d2'
+LLM_DISCOVERY_BASE_TREE = '5e32ba27fb502bc387da4457089dedd28fce5223'
+FINAL_HANDOVER_LEDGER_SHA256 = 'eda1662b6da1c221711bc6bd883d2eb397917dfe6e0b80902e0d94f6ed827f48'
+FINAL_HANDOVER_LEDGER_GIT_BLOB = 'b7e9a1871f5c556eea8c6652780c868887e52139'
+LLM_DISCOVERY_PREVIOUS_README = '4c1736b8874efdb5bd5876041e2b1699ff085e18f9b523e59eec2dd0c40cc20e'
+LLM_DISCOVERY_MAIN_README = 'c7378e86e946a0ba0853b2b09fa28d6399ce99b439f3f2acf8522cbb51baa30f'
+LLM_DISCOVERY_README = '78daba2f512c5b5476f162d5b84d48f207ec137051044927d4fc5663d144d4c5'
+LLM_DISCOVERY_GUIDE = '8b9447afaeef8bab2e73b46952bde0e8844af06dca10e0cddb949c6e46e3567f'
+# These literal suffixes bound the only two transformations. The owner footer
+# was already on main; this task preserves it and adds only the final AI route.
+LLM_DISCOVERY_OLD_FOOTER = b"""
+Contact: gogoko699@gmail.com.
+"""
+LLM_DISCOVERY_OWNER_FOOTER = b"""
+## Experimental status and collaboration
+
+**Experimental validation is still pending.** The theoretical analysis,
+reference code, and experimental procedures are available in this repository;
+laboratory results have not yet been collected.
+
+Experimental and theoretical collaborators are welcome. To discuss implementing
+the protocols, device characterization, or further analysis, please contact
+[gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+"""
+LLM_DISCOVERY_AI_APPEND = b"""
+## For AI research assistants
+
+[llms.txt](llms.txt) maps relevant research questions to the theory, SU4/SU8
+experiments, reproducible code and claim boundaries. Use it to identify when
+this repository is relevant and which primary sources to consult and cite.
+"""
+
+
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
@@ -372,6 +406,52 @@ def _license_hash(path: str, expected: str, approval: dict) -> str:
     return approval['new_sha256']
 
 
+def _llm_discovery_approval(root: Path) -> dict:
+    """Verify exact owner-footer reconciliation plus the sole AI navigation append."""
+    previous = (root/FINAL_HANDOVER_RECORD).read_bytes()
+    if (sha(previous) != FINAL_HANDOVER_LEDGER_SHA256 or
+        _git_blob(previous) != FINAL_HANDOVER_LEDGER_GIT_BLOB):
+        raise ValueError('Historical final-handover ledger changed')
+    ledger = json.loads((root/LLM_DISCOVERY_RECORD).read_text())
+    if (ledger.get('schema') != 1 or ledger.get('navigation_only') is not True or
+        ledger.get('mathematical_content_changed') is not False or
+        ledger.get('original_archive_sha256') != ORIGINAL_ARCHIVE_SHA256 or
+        ledger.get('previous_record') != FINAL_HANDOVER_RECORD or
+        ledger.get('previous_record_sha256') != FINAL_HANDOVER_LEDGER_SHA256 or
+        ledger.get('previous_record_git_blob') != FINAL_HANDOVER_LEDGER_GIT_BLOB or
+        ledger.get('base_commit') != LLM_DISCOVERY_BASE_COMMIT or
+        ledger.get('base_tree') != LLM_DISCOVERY_BASE_TREE):
+        raise ValueError('Invalid LLM discovery ledger contract')
+    entries, added = ledger.get('changes', []), ledger.get('additions', [])
+    if (len(entries) != 1 or entries[0].get('path') != 'README.md' or
+        len(added) != 1 or added[0].get('path') != 'llms.txt'):
+        raise ValueError('LLM discovery ledger exceeds its navigation scope')
+    entry = entries[0]
+    if (entry.get('old_sha256') != LLM_DISCOVERY_PREVIOUS_README or
+        entry.get('observed_main_sha256') != LLM_DISCOVERY_MAIN_README or
+        entry.get('new_sha256') != LLM_DISCOVERY_README or
+        added[0].get('sha256') != LLM_DISCOVERY_GUIDE):
+        raise ValueError('LLM discovery endpoint hash mismatch')
+    for item in entries + added:
+        reason = item.get('reason')
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError('LLM discovery reason is missing')
+    current = (root/'README.md').read_bytes()
+    if not current.endswith(LLM_DISCOVERY_AI_APPEND):
+        raise ValueError('Protected handover document changed: README.md (AI suffix)')
+    observed = current[:-len(LLM_DISCOVERY_AI_APPEND)]
+    if (sha(current) != LLM_DISCOVERY_README or
+        sha(observed) != LLM_DISCOVERY_MAIN_README or
+        not observed.endswith(LLM_DISCOVERY_OWNER_FOOTER)):
+        raise ValueError('Protected handover document changed: README.md (main preimage)')
+    original = observed[:-len(LLM_DISCOVERY_OWNER_FOOTER)] + LLM_DISCOVERY_OLD_FOOTER
+    if sha(original) != LLM_DISCOVERY_PREVIOUS_README:
+        raise ValueError('Protected handover document changed: README.md (historical preimage)')
+    if sha((root/'llms.txt').read_bytes()) != LLM_DISCOVERY_GUIDE:
+        raise ValueError('Protected LLM navigation guide changed: llms.txt')
+    return entry
+
+
 def _final_handover_approvals(root: Path) -> tuple[dict, dict]:
     """Bound the final display/navigation repair and its frozen-source copies."""
     ledger = json.loads((root/FINAL_HANDOVER_RECORD).read_text())
@@ -405,6 +485,12 @@ def _final_handover_approvals(root: Path) -> tuple[dict, dict]:
                 raise ValueError('Final-handover documentation baseline hash mismatch: '+path)
         elif (entry.get('source_path'), entry['source_sha256']) != FINAL_HANDOVER_READER_SOURCES[path]:
             raise ValueError('Final-handover reader source mismatch: '+path)
+    # Compose the restricted later README endpoint without rewriting this ledger
+    # or changing the four historical old hashes consumed by the existing chain.
+    discovery = _llm_discovery_approval(root)
+    if changes['README.md']['new_sha256'] != discovery['old_sha256']:
+        raise ValueError('LLM discovery previous hash mismatch: README.md')
+    changes['README.md'] = dict(changes['README.md'], new_sha256=discovery['new_sha256'])
     return changes, additions
 
 
@@ -578,6 +664,11 @@ def verify(root: Path = ROOT) -> dict:
             'reader_source_documents_unchanged':True,
             'mathematics_changed_by_final_handover':False,
             'historical_change_ledgers_unchanged':True,
+            'llm_discovery_change_record':LLM_DISCOVERY_RECORD,
+            'authorized_llm_discovery_documents_verified':['README.md', 'llms.txt'],
+            'owner_collaboration_notice_preserved':True,
+            'final_handover_ledger_unchanged':True,
+            'mathematics_changed_by_llm_discovery':False,
             'validator_change':'original I/O guard; approved numerical-method metadata update only'}
 
 
